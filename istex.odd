@@ -36,8 +36,11 @@
                 <moduleRef key="spoken"
                     except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
                 <moduleRef key="textstructure"
-                    except="argument back byline closer dateline div1 div2 div3 div4 div5 div6 div7 docEdition docImprint epigraph floatingText front group imprimatur opener postscript salute signed text titlePage titlePart trailer"
+                    except="argument back byline closer dateline div1 div2 div3 div4 div5 div6 div7 docEdition docImprint epigraph floatingText front group imprimatur opener postscript salute signed titlePage titlePart trailer"
                 />
+                <moduleRef key="standOff"/>
+                
+                
                 <elementSpec ident="bibl" module="core" mode="change">
                     <classes mode="replace">
                         <memberOf key="model.biblLike"/>
@@ -64,7 +67,7 @@
                         </alternate>
                     </content>
                     <exemplum xml:lang="fr">
-                        <p>Cas o&#xF9; un abstract contient un titre</p>
+                        <p>Cas où un abstract contient un titre</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples"
                             ><abstract><head>Méthode</head><p>Contenu de la
                                 méthode.</p><head>Expérience</head><p>Contenu de
@@ -426,7 +429,7 @@
                     <cite id="n1"><jtl>Nature</jtl>
         <vid>402</vid>, <ppf> 255</ppf>ndash;<ppl>262</ppl>; <cd year="1999">1999</cd></cite>-->
                     <exemplum xml:lang="fr">
-                        <p>Cas o&#xF9; un paragraphe contient titre de revue/livre + sa tomaison </p>
+                        <p>Cas où un paragraphe contient titre de revue/livre + sa tomaison </p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <p>Originally published as <ref type="cit" xml:id="n1">
                                 <title level="j" type="main">Nature</title>
@@ -435,7 +438,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>biblScope</gi> dans
+                        <p>Modèle modifié pour bénéficier de <gi>biblScope</gi> dans
                             <gi>ref</gi></p>
                     </remarks>
                     <remarks>
