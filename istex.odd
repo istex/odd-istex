@@ -53,7 +53,7 @@
                         <memberOf key="att.typed"/>
                     </classes>
                     <remarks>
-                        <p>Dans Istex on utilise plut&#xF4;t biblStruct</p>
+                        <p>Dans Istex on utilise plutôt biblStruct</p>
                     </remarks>
                 </elementSpec>
 
@@ -190,7 +190,7 @@
                         </egXML>
                     </exemplum>
                     <exemplum xml:lang="fr">
-                        <p>StandOff classification alignement avec le hub de mtadonnes</p>
+                        <p>StandOff classification alignement avec le hub de métadonnées</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="#subject-01">
                                 <keywords resp="#istex" change="#istex-01">
