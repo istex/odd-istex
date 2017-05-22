@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Channel capacity study of underwater wireless optical communications links based on Monte Carlo simulation</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>IOP
+Publishing</publisher>
+            <availability>
+               <p>© 2012 IOP Publishing Ltd</p>
+            </availability>
+            <date>2012</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="article">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Li</surname>
+                        <forename type="first">Jing</forename>
+                     </persName>
+                     <affiliation>
+                        <ref>1</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>1Electronic and Information Department, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                     <affiliation>
+                        <ref>2</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>2National Laboratory for Opto-electronics, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                  </author>
+                  <author>
+                     <persName>
+                        <surname>Ma</surname>
+                        <forename type="first">Yong</forename>
+                     </persName>
+                     <affiliation>
+                        <ref>1</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>1Electronic and Information Department, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                     <affiliation>
+                        <ref>2</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>2National Laboratory for Opto-electronics, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                  </author>
+                  <author>
+                     <persName>
+                        <surname>Zhou</surname>
+                        <forename type="first">Qunqun</forename>
+                     </persName>
+                     <affiliation>
+                        <ref>1</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>1Electronic and Information Department, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                     <affiliation>
+                        <ref>2</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>2National Laboratory for Opto-electronics, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                  </author>
+                  <author>
+                     <persName>
+                        <surname>Zhou</surname>
+                        <forename type="first">Bo</forename>
+                     </persName>
+                     <affiliation>
+                        <ref>1</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>1Electronic and Information Department, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                     <affiliation>
+                        <ref>2</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>2National Laboratory for Opto-electronics, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                  </author>
+                  <author>
+                     <persName>
+                        <surname>Wang</surname>
+                        <forename type="first">Hongyuan</forename>
+                     </persName>
+                     <affiliation>
+                        <ref>1</ref>
+                        <orgName type="institution">Huazhong University of Science and Technology</orgName>
+                        <address>
+                           <country key="CN">CHINA China</country>
+                        </address>1Electronic and Information Department, Huazhong University of Science and Technology, 1037 Luoyu Road, Wuhan 430074, People’s Republic of China
+            </affiliation>
+                  </author>
+                  <ref type="email" target="mayong@mail.hust.edu.cn">mayong@mail.hust.edu.cn</ref>
+                  <author role="short-author-list">J Li <hi rend="italic">et al</hi>
+                  </author>
+                  <title level="a" type="main">Channel capacity study of underwater wireless optical communications links based on Monte Carlo simulation</title>
+                  <title level="a" type="short">Channel capacity study of underwater wireless optical communications links based on Monte Carlo simulation</title>
+                  <title level="a" type="short-ascii">Channel capacity study of underwater wireless optical communications links based on Monte Carlo simulation</title>
+                  <title level="a" type="ascii">Channel capacity study of underwater wireless optical communications links based on Monte Carlo simulation</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="publisher-id">jopt</title>
+                  <title level="j" type="coden">JOOPCA</title>
+                  <idno type="pISSN">2040-8978</idno>
+                  <idno type="eISSN">2040-8986</idno>
+                  <imprint>
+                     <publisher>IOP
+Publishing</publisher>
+                     <date type="ePublished" when="2011-12-22"/>
+                     <date type="Published" when="2012-01"/>
+                     <biblScope unit="vol">14</biblScope>
+                     <biblScope unit="issue">1</biblScope>
+                     <idno type="artnum">015403</idno>
+                  </imprint>
+               </monogr>
+               <idno type="publisherID">jopt403333</idno>
+               <idno type="DOI">10.1088/2040-8978/14/1/015403</idno>
+               <idno type="manuscript">403333</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+            <head>Abstract</head>
+            <p>Channel  capacity of ocean water is limited by propagation distance and optical properties. Previous studies on this problem are based on water-tank experiments with different amounts of Maalox antacid. However, propagation distance is limited by the experimental set-up and the optical properties are different from ocean water. Therefore, the experiment result is not accurate for the physical design of underwater wireless communications links. This letter developed a Monte Carlo model to study channel capacity of underwater optical communications. Moreover, this model can flexibly configure various parameters of transmitter, receiver and channel, and is suitable for physical underwater optical communications links design.</p>
+         </abstract>
+         <textClass>
+            <keywords>
+               <term>channel capacity</term>
+               <term>underwater wireless optical communications</term>
+               <term>Monte Carlo
+simulation</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2011-08-10">Received</change>
+         <change when="2011-11-30">Accepted</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div n="1.">
+            <head>Introduction</head>
+            <p>There is an increasing emphasis on monitoring the underwater world for scientific, commercial and military purposes [<ref type="bibr" target="#jopt403333bib1">1</ref>–<ref type="bibr" target="#jopt403333bib3">3</ref>]. High data rates communication between various underwater vehicles and sensors is essential [<ref type="bibr" target="#jopt403333bib4">4</ref>]. Traditional acoustic transmission technology cannot meet the bandwidth requirement. Optical wireless communication provides an ideal alternative since its carrier frequency is higher by orders of magnitude [<ref type="bibr" target="#jopt403333bib5">5</ref>, <ref type="bibr" target="#jopt403333bib6">6</ref>]. Unfortunately, the propagation of light in water suffers from both absorption and scattering. The delayed arrival of scattering light relative to ballistic light will result in a scattering effect which causes image blurring and pulse stretching [<ref type="bibr" target="#jopt403333bib7">7</ref>–<ref type="bibr" target="#jopt403333bib9">9</ref>]. Therefore, the underwater optical communication channel exhibits low-pass characteristics and the channel capacity is limited.</p>
+            <p>One approach for evaluating the channel capacity is to measure the frequency at which the channel response decreases by half, or the −3 dB frequency [<ref type="bibr" target="#jopt403333bib9">9</ref>]. A laboratory tank experimental study has been made by Mullen <hi rend="italic">et al</hi> and the channel capacity of the propagation of modulated light in water has been measured [<ref type="bibr" target="#jopt403333bib9">9</ref>]. Different amounts of Maalox antacid are added to simulate various water turbidities. The experimental study of underwater wireless light communication gives the characteristics of propagation of light fields and verifies that data rates up to 1 GHz can be achieved at ranges up to 15 attenuation lengths in the co-polarized reception set-up. However, several variables of the water-tank experiment are fixed, including the propagation distance, receiver field of view and receiver position. This is not sufficient for the study of underwater wireless optical communication over a wide range of environmental conditions. Moreover, the channel capacity measured in the tank with fixed and limited propagation distance is considered to approximate the condition of varied sea water optical properties (namely absorption coefficient and scattering coefficient). Whereas for most physical systems, channel capacity estimation is needed for varied propagation distance with fixed optical properties. Given the same attenuation length <hi rend="italic">c</hi>
+               <hi rend="italic">d</hi> (the product of attenuation coefficient <hi rend="italic">c</hi> and propagation distance <hi rend="italic">d</hi>), scattering time delay for a bigger attenuation efficient is supposed to be a nearly scaled version of that for a smaller one. Thus, generally the channel capacity of a real undersea communications link is different from that measured in the laboratory. Besides, the experimental method cannot reveal the effect of different transmitter–receiver configurations. These are the reasons why we developed a computer simulation model to flexibly evaluate and study the channel capacity of undersea communications links.</p>
+            <p>The Monte Carlo method is the most general solution for radiance transfer equation of light propagation in scattering media [<ref type="bibr" target="#jopt403333bib10">10</ref>–<ref type="bibr" target="#jopt403333bib14">14</ref>]. It has several advantages over the experimental method. First, related variables can be adjusted conveniently according to real configurations [<ref type="bibr" target="#jopt403333bib15">15</ref>]. Second, since a large number (generally 10<hi rend="superscript">7</hi>) of photons is evaluated, the Monte Carlo model can reveal the statistical nature of the scattering channel [<ref type="bibr" target="#jopt403333bib16">16</ref>]. Therefore, the Monte Carlo method is suitable for the study of underwater wireless communication links and it is chosen in the study to evaluate the channel capacity of optical communication links in the sea [<ref type="bibr" target="#jopt403333bib17">17</ref>].</p>
+            <p>The remainder of this paper is organized as follows. Section <ref type="sec" target="#jopt403333s2">2</ref> gives the design details of Monte Carlo radiative transfer model in the underwater optical channel. Section <ref type="sec" target="#jopt403333s3">3</ref> validates our Monte Carlo model against the water-tank experiment’s result. Section <ref type="sec" target="#jopt403333s4">4</ref> presents a channel capacity study of various ocean waters. Discussions of water type’s impact on channel capacity are also given in this section. Section <ref type="sec" target="#jopt403333s5">5</ref> makes the conclusion.</p>
+         </div>
+         <div n="2.">
+            <head>Design of Monte Carlo radiative transfer model</head>
+            <p>Our aim is to analyze the effect of propagation distance and underwater optical property on channel capacity based on the Monte Carlo method. The statistical model evaluates the receiving intensity by accumulating each photon’s weight when it hits the receiver. Thus, the key is to develop the scattering model for every single photon, which is briefly described below.</p>
+            <p>The Monte Carlo scattering model for every single photon is divided into three phases. In the first phase, the scattering direction and random path length between two successive scattering positions is calculated. The scattering direction is determined by the azimuth angle θ and the scattering angle ψ. The azimuth angle is sampled from the uniform distribution from 0 to 2π, whereas the scattering angle calculation is divided into two cases. The scattering angle of the emitting photon is treated as a special case. In this case, the photon is injected into the sea and its scattering angle is uniformly sampled between 0 and the divergence angle of the laser. Otherwise, as the photon is scattered in the sea, the scattering angle is sampled from a random distribution obeying the Henyey–Greenstein phase function [<ref type="bibr" target="#jopt403333bib18">18</ref>]. While the angular distribution of light intensity caused by multiple scattering obeys the Mie phase function, it is the common method using the Henyey–Greenstein function to approximate. It should be noted that, to simplify the problem, the divergence of the laser is set as 0 in this paper. Thus, the initial direction of the photons is along the direction from the transmitter to the receiver.</p>
+            <p>In the second phase, the scattering direction is converted from local to global, as illustrated in figure <ref type="fig" target="#jopt403333fig1">1</ref>. The azimuth angle θ and the scattering angle ψ is obtained relative to the local coordinates <hi rend="italic">x</hi>′<hi rend="italic">y</hi>′<hi rend="italic">z</hi>′, where the <hi rend="italic">z</hi>′ axis is along the incidence direction. Thus, the outgoing scattering direction needs to be adjusted relative to the global coordinates <hi rend="italic">x</hi>
+               <hi rend="italic">y</hi>
+               <hi rend="italic">z</hi>. The origin of the global coordinates is set as the emitting point with the <hi rend="italic">z</hi> axis from transmitter to receiver. </p>
+            <figure xml:id="jopt403333fig1">
+               <head type="label">Figure 1.</head>
+               <figDesc>The local and global coordinates of single-photon scattering model.</figDesc>
+               <graphic url="jopt403333f1_pr.eps"/>
+               <graphic url="jopt403333f1_online.jpg"/>
+            </figure>
+            <p>In the third phase, the photon is moved from the current position to the next position according to the scattering direction and random path length. Meanwhile, the photon weight <hi rend="italic">W</hi> is adjusted according to single-scattering albedo, namely ω = <hi rend="italic">b</hi>/<hi rend="italic">c</hi> or ω = <hi rend="italic">b</hi>/(<hi rend="italic">a</hi> + <hi rend="italic">b</hi>), where <hi rend="italic">a</hi>, <hi rend="italic">b</hi> and <hi rend="italic">c</hi> are the absorption coefficient, the scattering coefficient and the attenuation coefficient, respectively.</p>
+            <p>The above two phases are recursively evaluated until either of two boundary conditions is satisfied, i.e. photon death or reception. As the number of scattering increases, the weight of the photon decreases and has less contribution to the final statistical data. Thus, a photon is termed as death if it is less than a predefined weight <hi rend="italic">W</hi>
+               <hi rend="subscript">min</hi>. In this paper, <hi rend="italic">W</hi>
+               <hi rend="subscript">min</hi> is set as 10<hi rend="superscript">−10</hi> to balance both simulation time and statistical accuracy. Photon reception is determined by the status of the photon hitting the receiving plane. If the photon is located within the receiving aperture and the scattering angle is less than the field of view (FOV), the photon is received.</p>
+            <p>Since there are massive photons to be traced and many of them are supposed never to arrive at the receiver aperture within the limited FOV, i.e. have little contribution for the total receiving signal amplitude. In other words, vast launching photons (≥10<hi rend="superscript">7</hi>) are needed for evaluating the stochastic characteristics of the receiving photons at the receiver. The simulation will be time-consuming and the result is not precise. Therefore, we utilize the semi-analytic approach proposed by Pool <hi rend="italic">et al</hi> [<ref type="bibr" target="#jopt403333bib19">19</ref>]. Once a photon is traced into the interaction volume restricted by the receiver’s FOV, a small but finite fraction of the photon will be directed to the receiver without further scattering. The probability of the portion is defined by the volume scattering function (VSF) of the medium and the small solid angle subtended by the detector aperture. By this method 10<hi rend="superscript">5</hi> photons are sufficient for our simulation. Thus the computational efficiency of the simulation is improved significantly.</p>
+         </div>
+         <div n="3.">
+            <head>Model validations</head>
+            <p>For channel capacity study of underwater wireless optical communications links, the initial effort is made by a water-tank experiment. Given the predefined propagation distance and optical property, the received signal intensities are measured for various modulation frequencies. The recorded result implies that the scattered underwater channel is low pass but cannot reveal the effect of propagation distance and water quality on channel capacity. To validate our model, the parameters of the Monte Carlo model are set in accordance with the water-tank experiment and the results are compared with the recorded experimental one.</p>
+            <p>To compare with Mullen’s water-tank experiment study of received signal amplitude, the simulation is taken using the same group of attenuation lengths <hi rend="italic">c</hi>
+               <hi rend="italic">d</hi>, i.e. 1.0, 2.0, 4.0, 7.7, 10.6, 12.8, 15.4, 17.6, 20.1, 22.0, 26.4, 30.4, 34.4, 38.4, 42.1, 45.8, 50.9 and 56.4 and a refractive index <hi rend="italic">n</hi> of 1.33 [<ref type="bibr" target="#jopt403333bib9">9</ref>]. The respective signal amplitude is accumulated over 1 ns which is the typical integration time of PMT. The receiving of a photon starts from the arrival of the ballistic signal. The propagation distance <hi rend="italic">d</hi> is set to the length of the tank, i.e. 3.66 m. The aperture of the receiving iris is 50 mm and the field of view of the receiver is 8° (full angle). The asymmetry factor <hi rend="italic">g</hi> is set as 0.9 [<ref type="bibr" target="#jopt403333bib16">16</ref>]. Moreover, the sampling interval of the program is set as 10 ps and the number of emitted photons is 10<hi rend="superscript">5</hi>.</p>
+            <p>In order to evaluate the channel capacity by our model, a comparison of the model and the experimental result is performed. Mullen’s work [<ref type="bibr" target="#jopt403333bib9">9</ref>] presents two results for us to compare. First, it gives the receiving intensity as a function of attenuation length (optical depth) for different modulation frequencies, as illustrated in figure <ref type="fig" target="#jopt403333fig2">2</ref>(a). Second, the −3 dB frequency (frequency at which the modulation depth falls to 0.5) versus attenuation length is also given, as illustrated in figure <ref type="fig" target="#jopt403333fig3">3</ref>(a). Therefore, our model validation process is divided into two phases, namely receiving intensity validation and water-tank channel capacity validation. The first phase can test the reliability of the signal amplitude, while the second phase can examine the validity of time-resolved receiving profile.</p>
+            <figure xml:id="jopt403333fig2">
+               <head type="label">Figure 2.</head>
+               <figDesc>Plot of the received signal amplitude and the ballistic component as a function of attenuation length. (a) Result reported in Mullen’s tank experiment [<ref type="bibr" target="#jopt403333bib10">10</ref>] and (b) result from Monte Carlo simulation. Receiving intensity of 11 different modulation frequencies from 0 to 1 GHz are measured in (a) and (b). Attenuation length <hi rend="italic">c</hi>
+                  <hi rend="italic">d</hi> is defined as the product of attenuation coefficient and the propagation distance.</figDesc>
+               <graphic url="jopt403333f2_pr.eps"/>
+               <graphic url="jopt403333f2_online.jpg"/>
+            </figure>
+            <figure xml:id="jopt403333fig3">
+               <head type="label">Figure 3.</head>
+               <figDesc>Plot of the −3 dB frequency (frequency at which the modulation depth falls to 0.5) versus attenuation length. (a) Result given in Mullen’s tank experiment [<ref type="bibr" target="#jopt403333bib9">9</ref>] and (b) result from Monte Carlo simulation. Note that (a) measures both the co-polarized and cross-polarized data and our simulation only calculates the previous one.</figDesc>
+               <graphic url="jopt403333f3_pr.eps"/>
+               <graphic url="jopt403333f3_online.jpg"/>
+            </figure>
+            <p>Figure <ref type="fig" target="#jopt403333fig2">2</ref>(b) presents the received signal amplitude computed from the Monte Carlo simulation result. The intensity of the ballistic signal is plotted in figure <ref type="fig" target="#jopt403333fig2">2</ref>(b) as well, which obeys the exponential decaying rule of exp(−<hi rend="italic">c</hi>
+               <hi rend="italic">d</hi>), where <hi rend="italic">c</hi> is the attenuation coefficient and <hi rend="italic">d</hi> is the propagation distance in the water tank. All intensities have been normalized. The curve set above the slant line is corresponding to the received intensity with different modulation frequencies, while the line below corresponds to the ballistic component. The same conclusion can be made by the Monte Carlo simulation as the previous section shows. The receiving intensity decreases while the modulation frequency increases. It implies that a light pulse with higher modulation frequency &gt;100 MHz may help suppress forward scattered light. This result is consistent with the conclusion presented in Mullen’s water-tank data [<ref type="bibr" target="#jopt403333bib9">9</ref>].</p>
+            <p>In compliance with the tank experiments, we can observe from the simulation that, as the attenuation length increases, the scattering component gradually dominates the received signal’s amplitude over the ballistic one. In other words, if the attenuation coefficient is fixed, the scattering effect is growing drastically quickly as the propagation distance increases. Although the tank experiment cannot give the detailed time-resolved profile of this phenomenon, it can be analyzed in our simulation, as presented in section <ref type="sec" target="#jopt403333s4">4</ref>. Together with the fact that the scattering component of the underwater wireless optical channel results in a low-pass filter-like response, it can be inferred from these two conclusions that the cutoff frequency decreases as the propagation increases undersea.</p>
+            <p>The simulation result fits Mullen’s published experimental one well except for the value of attenuation length of 10.6. This difference is due to the randomness of the Monte Carlo simulation model. Meanwhile, the simulation result is about an order of magnitude greater than that of the experimental one. This can be explained by the different normalization method and the predefined photon weight used in the simulation. In the experiment, the data is compared to a pre-measured light intensity without adding impurities; while we directly take the light intensity of the first attenuation length for easy handling.</p>
+            <p>Moreover, we validate our model by calculating the channel capacity from the simulated time domain profile. For an underwater optical communications link study, one common measure of the channel capacity is the frequency at which the channel response decreases by a factor of 2, or the −3 dB frequency [<ref type="bibr" target="#jopt403333bib9">9</ref>]. Once the impulse response function is simulated by our model, the frequency spectrum <hi rend="italic">H</hi>(<hi rend="italic">f</hi>) is calculated and channel capacity is evaluated by taken the value at the −3 dB point.</p>
+            <p>Figure <ref type="fig" target="#jopt403333fig3">3</ref> illustrates the channel capacity measured by Mullen (figure <ref type="fig" target="#jopt403333fig3">3</ref>(a)) and calculated by our program (figure <ref type="fig" target="#jopt403333fig3">3</ref>(b)) for seven attenuation lengths. The curves are plotted using piece-wise cubic interpolation. It should be mentioned that figure <ref type="fig" target="#jopt403333fig3">3</ref>(a) presents both the co-polarized and cross-polarized data, whereas our program is only capable of calculating the previous one, because polarization cannot be specified in the Monte Carlo simulation. The simulation result is nearly in accordance with the water-tank measurement. The difference between the experimental and simulation results can be explained by theoretical approximations of the Henyey–Greenstein function and limited photon samples used in the stochastic simulation. In compliance with the tank result, the channel capacity decreases from about 1 GHz to 200 MHz as the attenuation length increases from 15.4 to 56.4. Thus it can come to another conclusion that channel capacity decreases as the attenuation length increases undersea. More specifically, it is the increase of the scattering coefficient that causes the decrease of channel capacity, which will be fully described in section <ref type="sec" target="#jopt403333s4">4</ref>.</p>
+         </div>
+         <div n="4.">
+            <head>Simulation results and discussion</head>
+            <p>Using the above-mentioned model, a simulation experiment is carried out to study the relationship between the channel capacity of ocean water and the propagation distance. Once parameters regarding the transmitter–receiver configuration are defined, the corresponding channel response <hi rend="italic">h</hi>(<hi rend="italic">t</hi>) can be evaluated by piling photon trajectories arriving at the receiver lens with limited aperture.</p>
+            <p>The optical property of true water is used instead of that of the experimental water doping by Maalox suspension. As shown in table <ref type="table" target="#jopt403333t1">1</ref>, our simulation evaluates three kinds of ocean water, i.e. clear ocean, coastal ocean and harbor water. Absorption coefficients and scattering coefficients measured in three hydrologic stations are used [<ref type="bibr" target="#jopt403333bib20">20</ref>]. In typical ocean waters, the anisotropy factor <hi rend="italic">g</hi> for the Henyey–Greenstein function satisfies 0.75 ≤ <hi rend="italic">g</hi> ≤ 0.95 [<ref type="bibr" target="#jopt403333bib21">21</ref>, <ref type="bibr" target="#jopt403333bib22">22</ref>]. Here, we take the typical value <hi rend="italic">g</hi> = 0.9 [<ref type="bibr" target="#jopt403333bib16">16</ref>]. Meanwhile, high time resolution is required for bandwidth evaluation more than several GHz. Thus, we set the sampling time interval to 10 ps by which the channel capacity below 100 GHz can be evaluated. Other parameters regarding the configuration between transmitter and receiver are the same as the tank experiment, i.e. field of view of the receiver FOV= 8° (full angle) and the diameter of lens <hi rend="italic">d</hi> = 50 mm. It should be noted that full collimation between transmitter and receiver are presumed.   </p>
+            <figure type="table" xml:id="jopt403333t1">
+               <head>Table 1.</head>
+               <p>Optical properties for three ocean water types used in the simulation [<ref type="bibr" target="#jopt403333bib20">20</ref>].</p>
+               <ab>
+                  <table>
+                     <row>
+                        <cell role="th">Water type</cell>
+                        <cell role="th">
+                           <hi rend="italic">a</hi> (m<hi rend="superscript">−1</hi>)</cell>
+                        <cell role="th">
+                           <hi rend="italic">b</hi> (m<hi rend="superscript">−1</hi>)</cell>
+                        <cell role="th">
+                           <hi rend="italic">c</hi> (m<hi rend="superscript">−1</hi>)</cell>
+                     </row>
+                     <row>
+                        <cell role="td">Clear ocean<ref type="fn" target="#jopt403333t1fn1">
+                              <hi rend="superscript">a</hi>
+                           </ref>
+                        </cell>
+                        <cell role="td">0.114</cell>
+                        <cell role="td">0.0374</cell>
+                        <cell role="td">0.1514</cell>
+                     </row>
+                     <row>
+                        <cell role="td">Coastal ocean<ref type="fn" target="#jopt403333t1fn2">
+                              <hi rend="superscript">b</hi>
+                           </ref>
+                        </cell>
+                        <cell role="td">0.179</cell>
+                        <cell role="td">0.220</cell>
+                        <cell role="td">0.399</cell>
+                     </row>
+                     <row>
+                        <cell role="td">Harbor water<ref type="fn" target="#jopt403333t1fn3">
+                              <hi rend="superscript">c</hi>
+                           </ref>
+                        </cell>
+                        <cell role="td">0.366</cell>
+                        <cell role="td">1.829</cell>
+                        <cell role="td">2.195</cell>
+                     </row>
+                  </table>
+               </ab>
+               <ab type="table-wrap-foot">
+                  <note place="inline" xml:id="jopt403333t1fn1">
+                     <ref>a</ref>
+                     <p>Bahamas (station 8, tongue of the ocean, 1.6 km deep).</p>
+                  </note>
+                  <note place="inline" xml:id="jopt403333t1fn2">
+                     <ref>b</ref>
+                     <p>Catalina channel (station 11).</p>
+                  </note>
+                  <note place="inline" xml:id="jopt403333t1fn3">
+                     <ref>c</ref>
+                     <p>San Diego harbor (station 2040).</p>
+                  </note>
+               </ab>
+               <table/>
+            </figure>
+            <div n="4.1.">
+               <head>Simulation results for three ocean waters</head>
+               <p>The receiving impulse response profiles are calculated for three ocean water types. Figures <ref type="fig" target="#jopt403333fig4">4</ref>(a)–<ref type="fig" target="#jopt403333fig6">6</ref>(a), respectively, depict the typical simulation results for clear ocean, coastal ocean and harbor water when attenuation length <hi rend="italic">c</hi>
+                  <hi rend="italic">d</hi> = 15.4. The vertical coordinate represents the normalized receiving intensity. The horizontal coordinate denotes the receiving time relative to the arriving instant of the ballistic component, which is set as the origin. It can be observed that the time-resolved profile patterns for three ocean waters are generally different. For clear ocean, the ballistic component dominates the receiving amplitude, followed by a scattering component tail whose amplitude is much smaller and less significant, as illustrated in figure <ref type="fig" target="#jopt403333fig4">4</ref>(a). For coastal ocean, a scattering component peak which is comparable to the ballistic component emerges, as shown in figure <ref type="fig" target="#jopt403333fig5">5</ref>(a). This is due to the increase of the scattering coefficient in coastal ocean. For harbor ocean, the ballistic component is attenuated severely and hardly noticeable, whereas the scattering component depicts a wide receiving peak, as shown in figure <ref type="fig" target="#jopt403333fig6">6</ref>(a).</p>
+               <figure xml:id="jopt403333fig4">
+                  <head type="label">Figure 4.</head>
+                  <figDesc>Impulse response for clear ocean with attenuation length <hi rend="italic">c</hi>
+                     <hi rend="italic">d</hi> = 15.4 and scattering coefficient <hi rend="italic">b</hi> = 0.0374. (a) is the impulse time response profile, (b) is the filtered envelope for time response and (c) is the frequency response calculated by FFT.</figDesc>
+                  <graphic url="jopt403333f4_pr.eps"/>
+                  <graphic url="jopt403333f4_online.jpg"/>
+               </figure>
+               <figure xml:id="jopt403333fig5">
+                  <head type="label">Figure 5.</head>
+                  <figDesc>Impulse response for coastal ocean with attenuation length <hi rend="italic">c</hi>
+                     <hi rend="italic">d</hi> = 15.4 and scattering coefficient <hi rend="italic">b</hi> = 0.220. (a) is the impulse time response profile, (b) is the filtered envelope for time response and (c) is the frequency response calculated by FFT.</figDesc>
+                  <graphic url="jopt403333f5_pr.eps"/>
+                  <graphic url="jopt403333f5_online.jpg"/>
+               </figure>
+               <figure xml:id="jopt403333fig6">
+                  <head type="label">Figure 6.</head>
+                  <figDesc>Impulse response for harbor water with attenuation length <hi rend="italic">c</hi>
+                     <hi rend="italic">d</hi> = 15.4 and scattering coefficient <hi rend="italic">b</hi> = 1.829. (a) is the impulse time response profile, (b) is the filtered envelope for time response and (c) is the frequency response calculated by FFT.</figDesc>
+                  <graphic url="jopt403333f6_pr.eps"/>
+                  <graphic url="jopt403333f6_online.jpg"/>
+               </figure>
+               <p>It should be noted that high frequency oscillations exist in the receiving pulse response. It indicates the high frequency component corresponding to random white Gaussian noise introduced by the simulation. To get a better view of the profile pattern difference in three ocean waters, we adopt a Butterworth low-pass filter for digital filtering of data. To preserve the frequency component generated by the channel response, the filter is designed with pass-band frequency ω<hi rend="subscript">p</hi> = 10 GHz, stop-band frequency ω<hi rend="subscript">s</hi> = 100 GHz and pass-band losses <hi rend="italic">R</hi>
+                  <hi rend="subscript">p</hi> ≤ 0.1 dB, stop-band attenuation <hi rend="italic">R</hi>
+                  <hi rend="subscript">s</hi> ≥ 20 dB. The results of this processing are shown in figures <ref type="fig" target="#jopt403333fig4">4</ref>(b), <ref type="fig" target="#jopt403333fig5">5</ref>(b) and <ref type="fig" target="#jopt403333fig6">6</ref>(b), respectively. The amplitude is also normalized.</p>
+               <p>The plots in figures <ref type="fig" target="#jopt403333fig4">4</ref>(b)–<ref type="fig" target="#jopt403333fig6">6</ref>(b) clearly show that the receiving signal for an undersea communications link contains two components: ballistic component and scattering component. Different types of sea waters generally can be characterized by the amounts of these two components. As the scattering coefficient is small enough (e.g. clear ocean), the scattering component is negligible and only a ballistic peak emerges. With the increase of the scattering coefficient (e.g. coastal ocean), two components’ receiving peaks exist simultaneously. When the scattering coefficient is large enough (e.g. harbor water), the ballistic peak is insignificant and the scattering peak dominates the profile.</p>
+               <p>To calculate the channel capacity for different waters with predefined propagation distance, we then evaluate the frequency response of the filtered signal with FFT (fast Fourier transform). The results of this technique are illustrated in figures <ref type="fig" target="#jopt403333fig4">4</ref>(c), <ref type="fig" target="#jopt403333fig5">5</ref>(c) and <ref type="fig" target="#jopt403333fig6">6</ref>(c). Once more, the response is normalized and the frequency corresponding to 0.5 is taken as the channel capacity. It can be noticed that, with the increasing of scattering coefficient, the channel capacity decreases. In fact, the scattering coefficient in tank experiments is generally comparable to or greater than that of the harbor water. This is due to the limited tank length and over-doping of Maalox. Therefore, although tank results can provide a candidate reference for system design, the channel capacity measured in the laboratory cannot be applied to a physical undersea communications link directly.</p>
+            </div>
+            <div n="4.2.">
+               <head>Analysis of results</head>
+               <p>While figures <ref type="fig" target="#jopt403333fig4">4</ref>–<ref type="fig" target="#jopt403333fig6">6</ref> illustrate the typical simulation result of ocean water, the complete result of channel capacity for various optical depths is calculated and plotted in figure <ref type="fig" target="#jopt403333fig7">7</ref>. The calculated points are connected by piece-wise cubic interpolation. It can be seen that, for a specific water, channel capacity decreases as attenuation length increases, i.e. channel capacity decreases as propagation distance increases. </p>
+               <figure xml:id="jopt403333fig7">
+                  <head type="label">Figure 7.</head>
+                  <figDesc>Channel capacity in three ocean waters with 14 attenuation lengths. It is plotted by means of piece-wise cubic interpolation.</figDesc>
+                  <graphic url="jopt403333f7_pr.eps"/>
+                  <graphic url="jopt403333f7_online.jpg"/>
+               </figure>
+               <p>Figure <ref type="fig" target="#jopt403333fig7">7</ref> reveals several important aspects for consideration involving underwater wireless communications links design. First, the channel capacity of ocean water decreases significantly with the increase of the scattering coefficient. Generally, the channel capacity of clear ocean is a little larger than that of the coast ocean with the same attenuation length. Also the channel capacity of harbor water is less than that of coast ocean by an order of magnitude. Therefore, good water quality is crucial for high capacity communication links. For the set of attenuation lengths used in the simulation, the channel capacities of optical communication in clear and coast ocean are on the order of several hundreds of MHz; it is on the order of several tens of MHz in harbor water. Specifically, the channel capacity of clear ocean can achieve GHz as the attenuation length is less than about 15, which implies that GHz communication is possible in clear ocean for communication distances within 100 m. Second, for a given ocean environment, channel capacity approximately exhibits an exponential decay as propagation distance increases. This provides us with an easy estimation method in communication design for physical underwater optical links.</p>
+            </div>
+         </div>
+         <div n="5.">
+            <head>Conclusion</head>
+            <p>This paper proposed a Monte Carlo model for channel capacity evaluation in underwater optical communications. The simulation program based on the model is also developed. The simulation result and the water-tank experiment’s result exhibit a reasonable agreement. Moreover, the Monte Carlo model is utilized to simulate the channel capacity for three types of ocean waters, namely clean ocean, coastal ocean and harbor water. The simulations show that the water quality plays a significant role in channel capacity. As the water becomes more turbid, the channel capacity budget should decrease simultaneously. The results indicate that the channel capacities for clean water, coastal ocean and harbor water are of the order of hundreds of MHz, tens of MHz and MHz, respectively. The developed model and the program can benefit better understanding of the underwater optical channel and the practical design of an underwater optical communications link.</p>
+         </div>
+      </body>
+      <back>
+         <div type="acknowledgements">
+            <head>Acknowledgements</head>
+            <head>Acknowledgments</head>
+            <p>The authors would like to thank the National Natural Science Foundation of China under grant no. 61078062 and the National High Technology Research and Development Program of China under grant no. 2006AA09Z142.</p>
+         </div>
+         <div type="references">
+            <head>References</head>
+            <listBibl>
+               <biblStruct type="article" xml:id="jopt403333bib1">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Akyildiz</surname>
+                           <forename type="first">I F</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Pompoli</surname>
+                           <forename type="first">D</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Melodia</surname>
+                           <forename type="first">T</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Underwater acoustic sensor networks: research challenges</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Ad Hoc Netw.</title>
+                     <imprint>
+                        <date type="year">2005</date>
+                        <biblScope unit="vol">3</biblScope>
+                        <biblScope unit="page" from="257">257</biblScope>
+                        <biblScope unit="page" to="279">279</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="inproceedings" xml:id="jopt403333bib2">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Vasilescu</surname>
+                           <forename type="first">I</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Kotay</surname>
+                           <forename type="first">K</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Rus</surname>
+                           <forename type="first">D</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Corke</surname>
+                           <forename type="first">P</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Dunbabin</surname>
+                           <forename type="first">M</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Data collection, storage and retrieval with an underwater optical and acoustical sensor network</title>
+                  </analytic>
+                  <monogr>
+                     <meeting>Proc. 3rd Int. Conf. on Embedded Networked Sensor
+Systems</meeting>
+                     <imprint>
+                        <date type="year">2005</date>
+                        <biblScope unit="page" from="154">154</biblScope>
+                        <biblScope unit="page" to="165">165</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib3">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Embley</surname>
+                           <forename type="first">R W</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Long-term eruptive activity at submarine arc volcano</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Nature</title>
+                     <imprint>
+                        <date type="year">2006</date>
+                        <biblScope unit="vol">441</biblScope>
+                        <biblScope unit="page" from="494">494</biblScope>
+                        <biblScope unit="page" to="497">497</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib4">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Hanson</surname>
+                           <forename type="first">F</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Radic</surname>
+                           <forename type="first">S</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">High bandwidth underwater optical communication</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">2008</date>
+                        <biblScope unit="vol">47</biblScope>
+                        <biblScope unit="page" from="277">277</biblScope>
+                        <biblScope unit="page" to="283">283</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="inproceedings" xml:id="jopt403333bib5">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Cochenour</surname>
+                           <forename type="first">B</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Mullen</surname>
+                           <forename type="first">L</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Laux</surname>
+                           <forename type="first">A</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Phase coherent digital communications for wireless optical links in turbid underwater environments</title>
+                  </analytic>
+                  <monogr>
+                     <meeting>Proc. IEEE Oceans</meeting>
+                     <imprint>
+                        <date type="year">2007</date>
+                        <biblScope unit="page" from="1">1</biblScope>
+                        <biblScope unit="page" to="5">5</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib6">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Cochenour</surname>
+                           <forename type="first">B</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Mullen</surname>
+                           <forename type="first">L</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Laux</surname>
+                           <forename type="first">A</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Characterization of the beam-spread function for underwater wireless optical communications links</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">IEEE J. Ocean. Eng.</title>
+                     <imprint>
+                        <date type="year">2009</date>
+                        <biblScope unit="vol">33</biblScope>
+                        <biblScope unit="page" from="513">513</biblScope>
+                        <biblScope unit="page" to="521">521</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="inproceedings" xml:id="jopt403333bib7">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Cochenour</surname>
+                           <forename type="first">B</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Mullen</surname>
+                           <forename type="first">L</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Laux</surname>
+                           <forename type="first">A</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Effects of multiple scattering on the implementation of an underwater wireless optical communication link</title>
+                  </analytic>
+                  <monogr>
+                     <meeting>Proc. IEEE Oceans</meeting>
+                     <imprint>
+                        <date type="year">2006</date>
+                        <biblScope unit="page" from="1">1</biblScope>
+                        <biblScope unit="page" to="6">6</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib8">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Jaruwatanadilok</surname>
+                           <forename type="first">S</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Underwater wireless optical communication channel modeling and performance evaluation using vector radiative transfer theory</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">IEEE J. Sel. Areas
+Commun.</title>
+                     <imprint>
+                        <date type="year">2008</date>
+                        <biblScope unit="vol">26</biblScope>
+                        <biblScope unit="page" from="1620">1620</biblScope>
+                        <biblScope unit="page" to="1627">1627</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib9">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Mullen</surname>
+                           <forename type="first">L</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Laux</surname>
+                           <forename type="first">A</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cochenour</surname>
+                           <forename type="first">B</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Propagation of modulated light in water: implications for imaging and communications systems</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">2009</date>
+                        <biblScope unit="vol">48</biblScope>
+                        <biblScope unit="page" from="2607">2607</biblScope>
+                        <biblScope unit="page" to="2612">2612</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib10">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Plass</surname>
+                           <forename type="first">G N</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Kattawar</surname>
+                           <forename type="first">G W</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Monte Carlo calculations of light scattering from clouds</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">1968</date>
+                        <biblScope unit="vol">7</biblScope>
+                        <biblScope unit="page" from="415">415</biblScope>
+                        <biblScope unit="page" to="419">419</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib11">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Plass</surname>
+                           <forename type="first">G N</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Kattawar</surname>
+                           <forename type="first">G W</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Radiative transfer in an atmosphere-ocean system</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">1969</date>
+                        <biblScope unit="vol">8</biblScope>
+                        <biblScope unit="page" from="455">455</biblScope>
+                        <biblScope unit="page" to="466">466</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib12">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Bergougnoux</surname>
+                           <forename type="first">L</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Misguich-Ripault</surname>
+                           <forename type="first">J</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Firpo</surname>
+                           <forename type="first">J L</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Andre</surname>
+                           <forename type="first">J</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Monte Carlo calculation of backscattered light intensity by suspension: comparison with experimental data</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">1996</date>
+                        <biblScope unit="vol">35</biblScope>
+                        <biblScope unit="page" from="1735">1735</biblScope>
+                        <biblScope unit="page" to="1741">1741</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib13">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Funk</surname>
+                           <forename type="first">C J</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Multiple scattering calculations of light propagation in ocean water</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl.
+Opt.</title>
+                     <imprint>
+                        <date type="year">1973</date>
+                        <biblScope unit="vol">12</biblScope>
+                        <biblScope unit="page" from="301">301</biblScope>
+                        <biblScope unit="page" to="305">305</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib14">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Tinet</surname>
+                           <forename type="first">E</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Avrillier</surname>
+                           <forename type="first">S</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Tualle</surname>
+                           <forename type="first">J M</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Fast semi-analytical Monte Carlo simulation for time-resolved light propagation in tuibid media</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Opt. Soc. Am. <name type="jnl-part">A</name>
+                     </title>
+                     <imprint>
+                        <date type="year">1996</date>
+                        <biblScope unit="vol">13</biblScope>
+                        <biblScope unit="page" from="1903">1903</biblScope>
+                        <biblScope unit="page" to="1915">1915</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="book" xml:id="jopt403333bib15">
+                  <monogr>
+                     <author>
+                        <persName>
+                           <surname>Mobley</surname>
+                           <forename type="first">C D</forename>
+                        </persName>
+                     </author>
+                     <title level="j">Light and Water: Radiative Transfer in Natural Waters</title>
+                     <imprint>
+                        <date type="year">1994</date>
+                        <pubPlace>New York</pubPlace>
+                        <publisher>Academic</publisher>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib16">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Liang</surname>
+                           <forename type="first">J</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Yang</surname>
+                           <forename type="first">K</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Xia</surname>
+                           <forename type="first">M</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zhang</surname>
+                           <forename type="first">X</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lei</surname>
+                           <forename type="first">X</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Zheng</surname>
+                           <forename type="first">Y</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Tan</surname>
+                           <forename type="first">D</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Monte Carlo simulation for modulated pulse bathymetric light detecting and ranging systems</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Opt. A: Pure Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">2006</date>
+                        <biblScope unit="vol">8</biblScope>
+                        <biblScope unit="page" from="415">415</biblScope>
+                        <biblScope unit="page" to="422">422</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib17">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Pellen</surname>
+                           <forename type="first">F</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Intes</surname>
+                           <forename type="first">X</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Olivard</surname>
+                           <forename type="first">P</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Guern</surname>
+                           <forename type="first">Y</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Cariou</surname>
+                           <forename type="first">J</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Lotrian</surname>
+                           <forename type="first">J</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Determination of sea-water cut-off frequency by backscattering transfer function measurement</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">J. Phys. D: Appl. Phys.</title>
+                     <imprint>
+                        <date type="year">2000</date>
+                        <biblScope unit="vol">33</biblScope>
+                        <biblScope unit="page" from="349">349</biblScope>
+                        <biblScope unit="page" to="354">354</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib18">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Toublanc</surname>
+                           <forename type="first">D</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Henyey–Greenstein and Mie phase functions in Monte Carlo radiative transfer computations</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">1996</date>
+                        <biblScope unit="vol">35</biblScope>
+                        <biblScope unit="page" from="3270">3270</biblScope>
+                        <biblScope unit="page" to="3274">3274</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib19">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Poole</surname>
+                           <forename type="first">L R</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Venable</surname>
+                           <forename type="first">D D</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Campbell</surname>
+                           <forename type="first">J W</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Semi-analytic Monte Carlo radiative transfer model for oceanographic lidar systems</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">1981</date>
+                        <biblScope unit="vol">20</biblScope>
+                        <biblScope unit="page" from="3653">3653</biblScope>
+                        <biblScope unit="page" to="3656">3656</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="book" xml:id="jopt403333bib20">
+                  <monogr>
+                     <author>
+                        <persName>
+                           <surname>Petzold</surname>
+                           <forename type="first">T J</forename>
+                        </persName>
+                     </author>
+                     <title level="j">Volume Scattering Functions for Selected Ocean Waters (Scripps Institute of
+Oceanography La Jolla Ca Visibility Laboratory Report)</title>
+                     <imprint>
+                        <date type="year">1972</date>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib21">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Gordon</surname>
+                           <forename type="first">H R</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Ding</surname>
+                           <forename type="first">K</forename>
+                        </persName>
+                     </author>
+                     <author>
+                        <persName>
+                           <surname>Gong</surname>
+                           <forename type="first">W</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Radiative transfer in the ocean: computations relating to the asymptotic and near-asymptotic daylight field</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Appl. Opt.</title>
+                     <imprint>
+                        <date type="year">1993</date>
+                        <biblScope unit="vol">32</biblScope>
+                        <biblScope unit="page" from="1606">1606</biblScope>
+                        <biblScope unit="page" to="1619">1619</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct type="article" xml:id="jopt403333bib22">
+                  <analytic>
+                     <author>
+                        <persName>
+                           <surname>Leathers</surname>
+                           <forename type="first">R A</forename>
+                        </persName>
+                     </author>
+                     <title level="a" type="main">Ocean scalar irradiance near-surface maxima</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">Limnol. Oceanogr.</title>
+                     <imprint>
+                        <date type="year">1998</date>
+                        <biblScope unit="vol">43</biblScope>
+                        <biblScope unit="page" from="982">982</biblScope>
+                        <biblScope unit="page" to="986">986</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

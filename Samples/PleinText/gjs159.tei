@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="EN">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Finding ‘Voices’ in Virgil: Dekker’s Virgilian Approach to <hi rend="italic">The Magnificent Entertainment</hi> (1604)</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Oxford University Press</publisher>
+            <availability>
+               <p>© The Author (2012). Published by Oxford University Press. All rights reserved. For Permissions, please email:
+                    journals.permissions@oup.com</p>
+            </availability>
+            <date>2012</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="article">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Li</surname>
+                        <forename type="first">Chi-Fang Sophia</forename>
+                     </persName>
+                  </author>
+                  <title level="a" type="main">Finding ‘Voices’ in Virgil: Dekker’s Virgilian Approach to <hi rend="italic">The Magnificent Entertainment</hi> (1604)</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">Notes and Queries</title>
+                  <title level="j" type="publisher-id">notesj</title>
+                  <title level="j" type="hwp">notesj</title>
+                  <idno type="pISSN">0029-3970</idno>
+                  <idno type="eISSN">1471-6941</idno>
+                  <imprint>
+                     <publisher>Oxford University Press</publisher>
+                     <date type="Published" when="2012-12"/>
+                     <date type="ePublished" when="2012-10-18"/>
+                     <biblScope unit="vol">59</biblScope>
+                     <biblScope unit="issue">4</biblScope>
+                     <biblScope unit="page" from="560">560</biblScope>
+                     <biblScope unit="page" to="567">567</biblScope>
+                  </imprint>
+               </monogr>
+               <idno type="DOI">10.1093/notesj/gjs159</idno>
+               <idno type="publisherID">gjs159</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>THOMAS Dekker, along with Ben Jonson, Stephen Harrison, and the artists of the Italian and Dutch communities, was commissioned by the Stuart Court to design individual parts of <hi rend="italic">The
+                Magnificent Entertainment</hi> (1604) for King James I’s royal entry into London.<ref type="fn" target="#gjs159-FN1">
+               <hi rend="superscript">1</hi>
+            </ref> To glorify James as the first
+            emperor of united Britain (2515–19), these inventors all turned to Martial, Virgil, Ovid, Homer, Plutarch, Claudian <hi rend="italic">et al.</hi> where they could find genealogical and
+            imperial claims to endorse Britain’s Roman lineage and her place on the world stage.<ref type="fn" target="#gjs159-FN2">
+               <hi rend="superscript">2</hi>
+            </ref> Amongst these sources, the use of
+            Virgil’s literary motif—‘<hi rend="italic">translatio imperii</hi>’<ref type="fn" target="#gjs159-FN3">
+               <hi rend="superscript">3</hi>
+            </ref>—and the ‘land’ arguments
+            extracted from the <hi rend="italic">Aeneid</hi> and the pastoral writings constitute the fundamental approach to the making of Britain’s national narrative. Jonson in the pageant for his
+            Londinium arch located at Fenchurch borrows Virgil’s epic style and language of the ‘plough’ to write about the founding of the city from Brutus’ time to the birth
+            of a new nation (529–31, 545–48, 658–62, 780–85).<ref type="fn" target="#gjs159-FN4">
+               <hi rend="superscript">4</hi>
+            </ref> Appropriating the animistic and anthropomorphic voices
+            from Virgil’s <hi rend="italic">Aeneid</hi> to evoke the spirits of the place, Jonson envisions Tamesis as Tiber (605–9) and calls forth the presence of Genius Urbis to engage them
+            in dialogue that eulogizes James’ kingship and the glory of the city (765–865). In the pageant for the Temple of Janus located at Temple Bar, Jonson draws on the prophetic
+            voice of the <hi rend="italic">Aeneid</hi> to ‘elicit’ the ‘soul’ ‘out of Virgil’ (2392–93, 2400–01, 2540–45), creating a theatrical scene
+            for the return of the golden age: ‘REDEVNT SATVRNIA REGNA’ (2390–91).</p>
+         <p>As for Dekker the event narrator (as opposed to Dekker the individual inventor), he adopts Virgil’s epic voice that characterizes the <hi rend="italic">Aeneid</hi> as his storytelling
+            technique to outline other contributors’ parts in <hi rend="italic">The Magnificent Entertainment</hi>. Dekker informs the reader that the Italians not only cite Virgil’s lines and
+            dense political allusions (889–1017) to inaugurate James as the ‘surest hope of the state’ (‘Spes o fidissima rerum’, 947) and ‘the second hope of great
+            Rome’ (‘Spes altera’, 963) but also translate the Virgilian imagery of the ‘plenteous’ earth and perpetual ‘Spring’ from the Fourth Eclogue into
+            one of the square tables of the arch (995–98). Dekker writes, the ‘soul that gave life to’ ‘the speaking picture was’ <cit>
+               <quote>
+                  <p>Omnis feret omnia tellus.</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>(‘Every land shall bear all fruits’, 998, originally in <hi rend="italic">Eclogue</hi> 4.39).<ref type="fn" target="#gjs159-FN5">
+                        <hi rend="superscript">5</hi>
+                     </ref>
+                  </p>
+               </quote>
+            </cit>
+        </p>
+         <p>Although the Dutch community does not directly cite Virgil, Dekker tells the reader that their congratulatory eulogy—James as the restorer of the world, founder of peace, and champion
+            of religion (1086–98)—is in line with that of the Italians. The Virgilian imagery of ‘peace’ and ‘perpetual spring’ is also instituted in one of the
+            square engravings encased on the façade of the arch: the browsing sheep, nibbling lambs, and flying birds are the visual tropes that constitute the ‘arguments of a serene and
+            untroubled season whose happiness was proclaimed’ (1136–39). Moreover, as Dekker the event narrator finishes off Jonson’s part in the last pageant (2644–725) where
+            the theatrical character Electra (one of the Pleiades, mother of Dardanus and founder of Rome) gives her blessings to ‘so lasting glory to Augustus’ state’ (2643), he
+            cites a passage from the <hi rend="italic">Aeneid</hi> (I. 607–10) that sings the river and landscape to perpetuate the glory of Britain’s new monarch (2663–70).<ref type="fn" target="#gjs159-FN6">
+               <hi rend="superscript">6</hi>
+            </ref> Writing the national narrative for the ‘four kingdoms’ (1004–05), Dekker always seeks a univocal voice that
+            prophesies the empire’s future: ‘Concordes stabili Fatorum numine’ (‘Voicing in unison the fixed will of Destiny’, 1007, originally in
+                <hi rend="italic">Eclogues</hi> 4.47) is ‘the language of them all’ (1006).</p>
+         <p>However, this Virgil-inspired entertainment text is much more complex than it appears. It has been noticed that as an individual inventor, Dekker is not so much interested in inventing a
+            new iconography for James as in showcasing the state symbols of Queen Elizabeth.<ref type="fn" target="#gjs159-FN7">
+               <hi rend="superscript">7</hi>
+            </ref> In the published text, which documents
+            Dekker’s original intention, the cancelled performance of the female genius loci (personifying Elizabeth), Arabia Britannica (staged at Nova Faelix Arabia), the goddesses of Peace
+            and Plenty as well as Ceres and Pomona (at Hortus Euporiae), and Astraea, Arête, and Fortuna (at the New World Arch) are the theatrical apparatus advanced by Dekker that aims to
+            memorialize the old queen. As Frances Yates and Helen Cooper indicate that most Elizabethan symbolisms are rooted in the Virgilian tradition<ref type="fn" target="#gjs159-FN8">
+               <hi rend="superscript">8</hi>
+            </ref>, I am going to argue that as an individual inventor, Dekker’s Virgilian approach to <hi rend="italic">The Magnificent Entertainment</hi> is different from his
+            collaborators’. While Jonson and others adopt Virgil’s ‘epic voice’ to make claims for the empire’s origins and future, Dekker evokes the spirits and voices
+            of the place in Virgil’s writings to make claims for Britain’s ‘feminine’ ‘place’, the Elizabethan past. If the entire conception of <hi rend="italic">The
+                Magnificent Entertainment</hi> is modelled on Virgil’s <hi rend="italic">translatio imperii</hi> whose ‘epic’, prophetic ‘voice’ serves the speaking voice
+            for the empire, in the same text there must be ‘further voices’ to hearken to. By R. O. A. M. Lyne’s definition, Virgil’s ‘further voices’ contrast the
+            ‘patriotic and inspiriting’ epic voice which ‘speaks to those’ ‘with positive expectations’ for the new age. ‘Further voices’ in
+            Virgil’s narrative may be ‘disturbing’ and ‘even shocking’. They ‘add to, comment upon, question, and occasionally subvert the implications of the epic
+                voice’.<ref type="fn" target="#gjs159-FN9">
+               <hi rend="superscript">9</hi>
+            </ref> Just like the ways in which Virgil embeds ‘further voices’ in the <hi rend="italic">Aeneid</hi>, I am going
+            to demonstrate that Dekker in his parts uses Virgil’s ‘allusion’, ‘imagery’, and the strategy of ‘deviant focalization’<ref type="fn" target="#gjs159-FN10">
+               <hi rend="superscript">10</hi>
+            </ref> to speak otherwise. It is on these grounds that Dekker’s devices are considered singular because Virgil’s approach to politics for
+            Dekker the nostalgic Elizabethan is an implicit ‘ideological vehicle’<ref type="fn" target="#gjs159-FN11">
+               <hi rend="superscript">11</hi>
+            </ref> with which he could address the
+            ‘strange’, ‘outlandish’ ‘change’ that defines the ‘wonderful’ 1604 (<hi rend="italic">The Wonderful Year</hi>, B2<hi rend="superscript">r</hi>), a year that
+            experienced in relentless succession Elizabeth’s death, the onslaught of the plague, and the lavish celebration of James’ arrival. To tease out the meanings of Dekker’s
+            Virgilian arguments embedded in this seminal festival text published in Edinburgh (STC 6512) and London (STC 6510, 6513) that bears Dekker’s authorship,<ref type="fn" target="#gjs159-FN12">
+               <hi rend="superscript">12</hi>
+            </ref> I want to turn to some specific examples in <hi rend="italic">The Magnificent Entertainment</hi> to look at the unnoticed use of Virgil’s sources
+            in Dekker’s parts in conjunction with <hi rend="italic">The Wonderful Year</hi>, a plague pamphlet also by Dekker, which he ‘in priuate presented to the King’ (B2<hi rend="superscript">v</hi>)
+            as a companion text.</p>
+         <p>Reading Virgil, Dekker appropriates various Virgilian tropes to denote his critical position. The first one is the Trojan horse allusion implicitly referred to in the beginning of the text
+            where Dekker describes Londoners’ busy preparations for the construction of the triumphal arches. As soon as Dekker’s female genius loci finishes her speech, Dekker writes
+            about the whole city’s jubilance to indicate the change of regime. To find a festive ‘mood’, Dekker reworks a scene from the second book of the <hi rend="italic">Aeneid</hi>
+            (2.235–39) from which he takes three Latin quotations that describe the Trojans’ easy acceptance of the Greek gift to serve the mood of his new narrative. Dekker’s
+            refashioned narrative is as follows: <cit>
+               <quote>
+                  <p>In a moment, therefore of time are carpenters, joiners, carvers, and other artificers sweating at their chisels.</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>
+                     <hi rend="italic">Accingunt Omnes operi</hi>.</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>     Virgil</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>Not a finger but had an office: he was held unworthy even after to ‘suck the honeydew of peace’ that ‘against his coming, by whom our peace wears a triple
+                    wreath’, would offer to play the drone. The streets are surveyed: heights, breadths, and distances taken, as it were to make fortifications, for the solemnities. Seven pieces
+                    of ground like so many fields for a battle are plotted forth, upon which these arches of triumph must show themselves in their glory; aloft, in the end do they advance their proud
+                    foreheads.</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>
+                     <hi rend="italic">Circum pueri, innuptaeque puellae,</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Sacra canunt, funemque manu contingere gaudent.</hi>
+                  </p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>     Virgil</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>Even children, might they have been suffered, would gladly have spent their little strength about the engines that mounted up the frames, such a fire of love and joy was kindled in
+                    every breast (389–409).</p>
+               </quote>
+            </cit> At first glance Dekker seems to have only transcribed the ‘mood’ from Virgil to reflect Londoners’ keen anticipation for the king’s arrival. However,
+            it is necessary to note that the Latin quotations are intended to insinuate different ways of interpreting the event. Virgil’s text is as follows. <cit>
+               <quote>
+                  <p>Accingunt omnes operi pedibusque rotarum</p>
+                  <p>subiciunt lapsus et stuppea vincula collo</p>
+                  <p>intendunt. scandit fatalis machina muros,</p>
+                  <p>feta armis. pueri circum innuptaeque puellae</p>
+                  <p>sacra canunt funemque manu contingere gaudent;</p>
+                  <p>illa subit mediaeque minans inlabitur urbi. (<hi rend="italic">Aeneid</hi>, 2.235–39)</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>(‘All gird themselves for the work; under the feet they place gliding wheels, and about the neck stretch hemp bands. The fateful engine climbs our walls, big with arms. Around
+                    it boys and unwedded girls chant holy songs and delight to touch the cable with their hands. Up it moves, and glides threatening into the city’s midst’.)</p>
+               </quote>
+            </cit> It is implied in Virgil that despite Laocoön’s warning about the Greek gift, the Trojans still bring the wooden horse into the heart of the city. Dekker’s
+            refashioned text being framed in the Trojan mode, the implied Trojan horse is reconceived as the triumphal arches, and the ‘fatalis machina’ (‘fateful engine’) as
+            the ‘working engines that mount up the frames’.<ref type="fn" target="#gjs159-FN13">
+               <hi rend="superscript">13</hi>
+            </ref> The Trojans are re-imagined as naïve children in London, and the
+            Trojans’ ecstasy about the ending of the Trojan war as the ‘fire of love and joy’ ‘kindled in every breast’. As it is evident, Virgil’s tone in
+            Dekker’s passage serves as an embedded ‘point of view’.<ref type="fn" target="#gjs159-FN14">
+               <hi rend="superscript">14</hi>
+            </ref> Dekker’s use of Virgil’s text is discreet
+            not only because he was rigorously drilled in the translation exercises of classical texts<ref type="fn" target="#gjs159-FN15">
+               <hi rend="superscript">15</hi>
+            </ref> but because from Virgil Dekker could
+            find a critical voice to address the change. Elsewhere in <hi rend="italic">The Wonderful Year</hi> he also uses Virgil’s pastoral idioms to write a pastoral elegy for Elizabeth’s
+            passing, and castigates Londoners’ fickleness, their ‘immoderate joy’ as well as the radical cultural change in post-Elizabeth London
+            (B1<hi rend="superscript">r</hi>–B2<hi rend="superscript">v</hi>, B4<hi rend="superscript">r</hi>, C1<hi rend="superscript">r</hi>–C1<hi rend="superscript">v</hi>).<ref type="fn" target="#gjs159-FN16">
+               <hi rend="superscript">16</hi>
+            </ref> In it Dekker’s warning for the
+            Londoners corresponds to the implicit message in <hi rend="italic">The Magnificent Entertainment</hi>: <cit>
+               <quote>
+                  <p>Whilst Troy was swilling sack and sugar and mowsing fat venison, the mad Greekes made bonfires of their houses. Old Priam was drinking a health to the wodden horse and, before it
+                    would be pledg[e]d, had his throat cut … for in the Appenine height of this immoderate joy and securitie (that like Powles Steeple ouer-lookt the whole Cittie) Behold, that
+                    miracle-worker who in one minute turnd our generall mourning to a generall mirth does now again in a moment alter that gladnes to shri[e]ks &amp; lamentation
+                        (C2<hi rend="superscript">v</hi>–C3<hi rend="superscript">r</hi>).</p>
+               </quote>
+            </cit> If we set the aforesaid passages cheek by jowl, we may conclude that the implied Trojan horse allusion is purposefully done as Dekker’s scepticism is quietly
+            uncompromising.</p>
+         <p>Dekker’s uneasiness about 1604 determines the ways he conceptualized his devices for the triumphal arches. In <hi rend="italic">The Wonderful Year</hi>, he mentions that ever since
+            Elizabeth’s death, ‘Never did the English Nation behold so much black worne’ and all the ‘pauement’ that ‘should instead of greene rushes, be strewed
+            with blasted Rosemary, withered Hyacinthes, fatal Cipresse and Ewe[yew]’ are now ‘thickly mingled with heapes of dead mens bones’
+                (B2<hi rend="superscript">r</hi>–C4<hi rend="superscript">r</hi>).<ref type="fn" target="#gjs159-FN17">
+               <hi rend="superscript">17</hi>
+            </ref> Imagining the apocalyptic visions of successive deaths that devastated the English
+            soil, Dekker intends to use Virgil’s arguments of the plenteous earth to redefine and reassert the local characteristics and subjectivity of Elizabeth’s England, the heart of
+            James’ Empire.</p>
+         <p>Hortus Euporiae (the Garden of Peace and Plenty) is such an invention inspired by Virgil’s <hi rend="italic">Eclogues</hi> that portrays the herdsmen inhabiting the idyllic world where they
+            sing amoebaean songs to lament and embrace the political change or (un)happy love. The emotional context of the <hi rend="italic">Eclogues—</hi>the crises of civil war and tensions of the
+                land<ref type="fn" target="#gjs159-FN18">
+               <hi rend="superscript">18</hi>
+            </ref>—would furnish Dekker with a translatable setting for post-Elizabeth, post-plague England when the English felt
+            anxious about the ‘horror of a change’, which was going to alter ‘the Map of a Countrey’ (B2<hi rend="superscript">v</hi>). Central to the conception of Hortus Euporiae is the
+            Fourth Eclogue, whose ‘song of the woodland’ (IV.3) is sung by the suffering people who anticipate a peaceful future.<ref type="fn" target="#gjs159-FN19">
+               <hi rend="superscript">19</hi>
+            </ref>
+            Hoping the new ruler would initiate an age of peace and prosperity, Virgil prophesies the beginning of the new century ushered in by the birth of a child hailed as ‘Apollo’:
+                <cit>
+               <quote>
+                  <p>Ultima Cumaei venit iam carminis aetas;</p>
+                  <p>magnus ab integro saeclorum nascitur ordo.</p>
+                  <p>iam redit et Virgo, redeunt Saturnia regna;</p>
+                  <p>iam nova progenies caelo demittitur alto.</p>
+                  <p>tu modo nascenti puero, quo ferrea primum</p>
+                  <p>desinet ac toto surget gens aurea mundo,</p>
+                  <p>casta fave Lucina: tuus iam regnat Apollo. (<hi rend="italic">Eclogue</hi> IV, 4–10)</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>(‘Now is come the last age of Cumaean song; the great line of the centuries begins anew. Now the Virgin returns, the reign of Saturn returns; now a new generation descends
+                    from heaven on high. Only do you, pure Lucina, smile on the birth of the child, under whom the iron brood shall at last cease and a golden race spring up throughout the world. Your
+                    own Apollo now is king’.)</p>
+               </quote>
+            </cit>
+        </p>
+         <p>Virgil in this poem then envisions the bounteous land producing crops: ‘the earth untilled will pour forth its pretty gifts’, ‘every land will bear all fruits’ and
+            ‘the earth will not suffer the harrow’ (IV.18–20, 39–40). The gifts of the land are of assorted varieties and ‘colores’ (IV.42): ‘gadding ivy with
+            foxglove’ growing everywhere, ‘Egyptian bean blended with the laughing briar’, the land pouring forth ‘a cradle of smiling flowers’, ‘Assyrian spice
+            springing up on every soil’, the ‘yellow’ ‘plains’ ‘with waving corn’, and ‘the purple grape’ hanging on ‘wild brambles’
+            (IV.20–22, 25, 28–30). The imagery of plenty thus constitutes a significant wish-fulfilling trope that contrasts the turmoil of the real world, ‘the Waste Land of the
+            dying Roman Republic’.<ref type="fn" target="#gjs159-FN20">
+               <hi rend="superscript">20</hi>
+            </ref>
+         </p>
+         <p>Such imagery also corresponds to that of the field crops in the eulogy of Italy in Virgil’s <hi rend="italic">Georgics</hi> (II. 136–76) that celebrates the unification of Italy.<ref type="fn" target="#gjs159-FN21">
+               <hi rend="superscript">21</hi>
+            </ref> Virgil writes that Italy is a land of wondrous wealth filled with teeming crops and Bacchus juice. It is the home of olive and
+            fattened flocks (II.143–45). In this bounteous land that yields the hardest vine and grapes, spring and summer are perpetual (II.149, 190–92). Significantly, this rich soil,
+            the land of Saturn, is feminine as she is the mighty mother of crops and men and of Caesar (II.165–70). Writing the national eulogy, Virgil calls forth the power of the indigenous
+            place: <cit>
+               <quote>
+                  <p>Nunc locus arvorum ingeniis, quae robora cuique,</p>
+                  <p>quis color et quae sit rebus natura ferendis. (<hi rend="italic">Georgics</hi> II.177–78)</p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>(‘Now give we place to the genius of the soils, the strength of each, its hue, its native power for bearing’.)</p>
+               </quote>
+            </cit>
+        </p>
+         <p>Most importantly, as Virgil insinuatingly suggests, ‘Blessed is he’ who learns ‘the laws of nature’s working’ and ‘happy’ ‘is he who knows
+            the rural gods, Pan and aged Silvanus and the sisterhood of the Nymphs’ (II.490–94), the embodiment of the spirits of the place.</p>
+         <p>From the Fourth Eclogue (and the eulogy of Italy in the <hi rend="italic">Georgics</hi>), Dekker translates the Virgilian tropes of the bounteous earth, its gifts, and the peace king’s
+            arrival into the English setting where Hortus Euporiae would epitomize Virgil’s ideas of peace and plenty. Contrasting the classical triumphal arch dense with Roman attributes as
+            typified in Jonson’s Londinium, Hortus Euporiae is a unique invention embellished with fruits, flowers, and crops—England’s gifts to James—that fully express the
+            local spirits and colours of England.<ref type="fn" target="#gjs159-FN22">
+               <hi rend="superscript">22</hi>
+            </ref> Dekker tells us that the upper part of the arch is ‘a summer arbour closed with round
+            tops’. The ‘garnishments’ for the whole bower are ‘apples, pears, cherries, grapes, roses, lilies, and all other’ ‘fruits and flowers’
+            ‘moulded to the life’ (1722–24). In the middle part of the arch on the edge of a frieze runs along ‘the full breadth of the arbour’, and at its feet are
+            ‘planted ranks of artificial artichokes and roses’ (1787–89), the symbol of Tudor eglantine. Inside the arched hallways, ‘cucumbers, pompions, grapes and all other
+            fruits growing in the land’ are hanging ‘in clusters’ (1711–12) on the walls. As Dekker renders the Virgilian tropes in his English imaginings, the translated gifts
+            become the performing gifts given to James, which epitomize the Virgilian idea that ‘every land will bear all fruits’ (998), a visual representation that also echoes the
+            Italians’ eulogy for Britain.</p>
+         <p>To dramatize the ‘strength’ (‘robora’) and ‘hue’ (‘color’) of the mother land, Dekker locates the tutelary deities, Sylvanus and
+            ‘sylvans’ his ‘green followers’ (1692, ubiquitous in the <hi rend="italic">Eclogues</hi> and the <hi rend="italic">Georgics</hi>) in Hortus Euporiae to evoke the genius of the
+            soils. In the drama performed in the place of Peace and her daughter Plenty, Sylvanus plays Peace’s ‘messenger’ (1644), who escorts the king to walk into the garden where
+            he is hailed as another Apollo (1633). As Sylvanus makes his appearance, he also introduces the ‘principal persons’ (1732) of the arch: Peace and Plenty, whose iconographical
+            presence not only embodies Virgil’s ideas of peace and plenty but also implies the theatrical presence of Elizabeth, who, in visual art, is often associated with the two
+                goddesses.<ref type="fn" target="#gjs159-FN23">
+               <hi rend="superscript">23</hi>
+            </ref>
+         </p>
+         <p>As Dekker insinuatingly suggests, these two ‘maidens’ are ‘in memory of a Virgin’ ‘to whom they were nurse children’ (1668–69). This
+            ‘land’, as Dekker maintains, ‘should be her inheritance’ (1652–53). (In <hi rend="italic">The Wonderful Year</hi> a corresponding view can also be found where
+            Dekker always sees Elizabeth as the ‘great Land Lady’ of England, B3<hi rend="superscript">r</hi>–B4.) Peace being dramatized as the ‘Lady’ ‘of the place’
+            ‘who carefully prune[s] this garden’ (1845–48), her presence also recalls the cancelled performance of the female genius loci, whose voice should have been heard.
+            Continuously using Virgil’s arguments to stage Elizabeth’s state symbols, Dekker also presents Pomona and Ceres, the goddesses of ‘garden fruits’ and
+            ‘agriculture’ (1761–66, ubiquitous in Virgil’s pastoral writings), whose iconographical attributes, as Frances Yates and Helen Cooper observe, form part of the
+            religious apparatus for the cult of Elizabeth.<ref type="fn" target="#gjs159-FN24">
+               <hi rend="superscript">24</hi>
+            </ref>
+         </p>
+         <p>In <hi rend="italic">The Magnificent Entertainment</hi>, Dekker is as equally interested in presenting the iconography of Elizabeth as in creating ‘voices’ of her place. As James
+            walks into Elizabeth’s garden of plenty, he would not only see Elizabeth’s state iconography but also hear the players of the nine muses and the seven liberal arts
+            ‘sing’ the apotheosis of Daphnis, lines taken verbatim from Virgil’s <hi rend="italic">Aeneid</hi> (III.395) and the Fifth Eclogue (V.58–64): <cit>
+               <quote>
+                  <p>
+                     <hi rend="italic">Adertique vocatus Apollo.</hi>
+                  </p>
+               </quote>
+            </cit>
+        </p>
+         <p>Chorus in full voices answering it thus: <cit>
+               <quote>
+                  <p>
+                     <hi rend="italic">Ergo alacris sylvas, et caetera rura voluptas</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Panaque pastoreque tenet, Driadasque puellas,</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Nec lupus insidias pecori, nec retia cervis</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Ulla dolum meditantur, amat bonus otia Daphnis;</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Ipsi laetitia voces ad sidera iactant</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Intonsi montes: ipsae iam carmina rupes,</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">Ipsa sonant arbusta, Deus, Deus, ille!</hi> (1805–1813)<ref type="fn" target="#gjs159-FN25">
+                        <hi rend="superscript">25</hi>
+                     </ref>
+                  </p>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <p>(‘Apollo will be present at thy call. Therefore frolic glee seizes the woods and all the countryside, and Pan, and the shepherds, and the Dryad maids. The wolf plans no ambush
+                    for the flock and nets no snare for the stag; kindly Daphnis loves peace. The very mountains, with woods unshorn, joyously fling their voices starward; the very rocks, the very
+                    groves ring out the song: ‘A god is he, a god.’)</p>
+               </quote>
+            </cit>
+        </p>
+         <p>If Virgil in this eclogue intends to bring up the death of Daphnis (troping our ‘shepherd’, the embodiment of the spirit of the place, 5.43–44)<ref type="fn" target="#gjs159-FN26">
+               <hi rend="superscript">26</hi>
+            </ref> to insinuate the death of Julius Caesar (Italy’s former ruler before Octavian),<ref type="fn" target="#gjs159-FN27">
+               <hi rend="superscript">27</hi>
+            </ref>
+            Dekker also attempts to pick up this political signifier to highlight a specific cultural moment of the death of Daphne, England’s ‘Queene of shepheardes’.<ref type="fn" target="#gjs159-FN28">
+               <hi rend="superscript">28</hi>
+            </ref> Just as Virgil in his pastorals reiterates the importance of the presence and voices of the local spirits, Dekker at Hortus
+            Euporiae delivers the voices of the place to hail James as the inheritor of Elizabeth’s place, whose ‘genius’, ‘strength’, ‘hue’, and ‘power
+            of bearing’ are all indebted to the Virgin Mother (1829–55). Just as Virgil’s <hi rend="italic">Georgics</hi> is ‘permeated with religious feeling’ about
+            pre-Octavian Italy,<ref type="fn" target="#gjs159-FN29">
+               <hi rend="superscript">29</hi>
+            </ref> Hortus Euporiae is invested with numinous feelings and verdant memories of Elizabeth. Using Virgil to present
+            the complex moods of the pastoral world, Dekker in his invention also attempts to create a new aesthetic language (as testified in the picture language of Stephen Harrison’s
+            illustration) that characterizes the mood of the English.</p>
+         <p>In view of a nation that had to accept the ‘strange’ and ‘outlandish change’, Dekker assumes spiritual urgency and at the heart of the New World Arch staged three
+            state symbols of Elizabeth—Astraea, Arête, and Fortuna—to guard Britain. Amongst them, Astraea is the most powerful Virgilian symbol that associates Elizabeth with the
+            goddess of justice, peace, and virtue.<ref type="fn" target="#gjs159-FN30">
+               <hi rend="superscript">30</hi>
+            </ref> It is at this arch that Dekker maintains that the return of the golden age is built on the
+            premise that only when the virgin returns would the reign of Saturn return (2113–14).</p>
+         <p>As we can see from the aforesaid examples, Dekker’s position in <hi rend="italic">The Magnificent Entertainment</hi> is glaringly different from his collaborators because his topical
+            inventions and their ‘further voices’ are intended to defend the changed place that is still valued culturally. In Dekker’s Virgilian re-imaginings, Elizabeth is
+            consistently the genius loci, but Dekker reassures the reader, ‘It is no schism: be it so’ (296–97). Her divine presence in <hi rend="italic">The Magnificent Entertainment</hi>
+            is meant to triumph over time in a needed time when more than ‘40,000 [30,000]’ ‘ghosts’ ‘with the virulent poison of infection haue bin driuen out’ of
+            the ‘earthlie dwellings’ (C3<hi rend="superscript">r</hi>). From the ways in which Dekker uses Virgil in <hi rend="italic">The Magnificent Entertainment</hi> and <hi rend="italic">The Wonderful Year</hi>
+            (the diptych texts that harbour the cult of Elizabeth), we can see how Dekker uses Virgil’s allusion, imagery, voices, and ‘focalisation’ to ‘add to, comment
+            upon’ and ‘question’ the ‘implications of the epic voice’. In post-Elizabeth Britain where the English had to reconfigure their political and cultural
+            geography when ‘the Map of a Countrey [is] so pittifullie distracted by the horror of change’ (B2<hi rend="superscript">v</hi>), Dekker’s inventions are invested with a strong local
+            identity and cultural self-definition that aim to claim a memorial space for Elizabethan England. <hi rend="italic">The Magnificent Entertainment</hi> is not only a sophisticated text noted for
+            its multivocality and plurality of cultural values<ref type="fn" target="#gjs159-FN31">
+               <hi rend="superscript">31</hi>
+            </ref> but also a unique festival book that construes Virgil’s approach to hard
+                politics.<ref type="fn" target="#gjs159-FN32">
+               <hi rend="superscript">32</hi>
+            </ref>
+         </p>
+      </body>
+      <back>
+         <div type="fn-group">
+            <note place="inline" xml:id="gjs159-FN1">
+               <p>
+                  <hi rend="superscript">1</hi> Seven triumphal arches were constructed for the king’s entry. Jonson was responsible for the pageants for the first arch (Londinium) located at Fenchurch and the
+                    seventh arch (Temple of Janus) at Temple Bar. The Italian and the Dutch communities presented the second and the third arches in Gracechurch Street and at the Royal Exchange.
+                    Dekker’s inventions are the cancelled performance of the female genius loci (to be staged at Bishopsgate), and the pageants for the three triumphal arches, Nova Faelix Arabia
+                    in Soper Lane, Hortus Euporiae at Cheapside, and the New World Arch in Fleet Street. After the king’s royal entry into London, Dekker was entrusted to document the entire
+                    event entitled <hi rend="italic">The Magnificent Entertainment Given to King James I</hi> published in Edinburgh and London. Architect Stephen Harrison oversaw the construction of the
+                    arches.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN2">
+               <p>
+                  <hi rend="superscript">2</hi> For the identification of the Latin quotations, see Cyrus Hoy in <hi rend="italic">Introductions, Notes and Commentaries to the Texts in ‘The Dramatic Works of Thomas
+                        Dekker</hi>’, 4 vols (Cambridge, 1980), II, 128–58, and R. M. Smuts’ annotations (based on Hoy’s) in G. Taylor and J. Lavagnino’s
+                        <hi rend="italic">Thomas Middleton: the Complete Works</hi> (Oxford, 2007), 224–79.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN3">
+               <p>
+                  <hi rend="superscript">3</hi> See G. Parry, <hi rend="italic">The Golden Age restor’d: The culture of the Stuart Court, 1603–42</hi> (Manchester, 1981), 4, 6, 16–18.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN4">
+               <p>
+                  <hi rend="superscript">4</hi> Throughout the article <hi rend="italic">The Magnificent Entertainment</hi> is cited from G. Taylor and J. Lavagnino (eds), <hi rend="italic">Thomas Middleton: the Collected
+                        Works</hi> (Oxford, 2008), <hi rend="italic">The Wonderful Year</hi> (London, 1604) from STC (2nd edn)/6535, and Stephen Harrison’s <hi rend="italic">The Arches of Triumph</hi>
+                    (London, 1604) from STC (2nd edn)/12863. Virgil’s texts and their English translation are cited from Virgil, <hi rend="italic">Eclogues, Georgics, Aeneid I–VI</hi>, ed. G. P.
+                    Goold, trans. H. R. Fairclough (Harvard, 2006).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN5">
+               <p>
+                  <hi rend="superscript">5</hi> See Stephen Harrison, <hi rend="italic">The Arches of Triumph</hi> (London, 1604), B2<hi rend="superscript">r</hi>.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN6">
+               <p>
+                  <hi rend="superscript">6</hi> Dekker closes his narration with a passage taken verbatim from Virgil to describe Electra’s joy (2663–70): <cit>
+                     <quote>
+                        <p>All her [Electra’s] consolation being now to repeat over by rote those honours. … I hear her gladly and heartily speaking:</p>
+                     </quote>
+                  </cit>
+                    <cit>
+                     <quote>
+                        <p>
+                           <hi rend="italic">In freta dum Fluvii Current; dum montibus umbrae,</hi>
+                        </p>
+                        <p>
+                           <hi rend="italic">Lustrabunt Convexa, Polus dum sidera pascit</hi>,</p>
+                        <p>
+                           <hi rend="italic">Semper Honos, Nomenque tuum Laudesque manebunt</hi>.</p>
+                     </quote>
+                  </cit>
+                    <cit>
+                     <quote>
+                        <p>(‘While rivers run to ocean, while on the mountains shadows move over slopes, while heaven feeds the stars, ever shall your honour, your name, and your praises abide,
+                            whatever be the lands that summon me!’)</p>
+                     </quote>
+                  </cit>
+                </p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN7">
+               <p>
+                  <hi rend="superscript">7</hi> See G. Parry, <hi rend="italic">The Golden Age restor’d</hi>, 1, 18, and D. M. Bergeron, <hi rend="italic">English Civic Pageantry 1558–1642</hi> (Tempe, AZ, 2003),
+                    78–84.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN8">
+               <p>
+                  <hi rend="superscript">8</hi> See Frances A. Yates, ‘Queen Elizabeth as Astraea’, <hi rend="italic">Journal of the Warburg and Courtauld Institutes</hi>, x (1947), 27–82, and H. Cooper,
+                        <hi rend="italic">Pastoral: Medieval into Renaissance</hi> (Ipswich, 1977), 193–213.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN9">
+               <p>
+                  <hi rend="superscript">9</hi> See R. O. A. M. Lyne, <hi rend="italic">Further Voices in Vergil’s Aeneid</hi> (Oxford, 1987), 2, and Craig Kallendorf, <hi rend="italic">The Other Virgil:
+                        ‘Pessimistic’ Readings of the Aeneid in Early Modern Culture</hi> (Oxford, 2007), 75, 216–17.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN10">
+               <p>
+                  <hi rend="superscript">10</hi>
+                    <hi rend="italic">Ibid</hi>. For Virgil’s narrative style, see Don Fowler, ‘Virgilian narrative: story-telling’, in Charles Martindale (ed.), <hi rend="italic">The Cambridge
+                        Companion to Virgil</hi> (Cambridge, 1997), 259–70; Don Fowler, ‘Deviant focalisation in Vergil’s <hi rend="italic">Aeneid</hi>’, <hi rend="italic">Proceedings of
+                        the Cambridge Philological Society</hi>, xxxvi (1990), 42–63.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN11">
+               <p>
+                  <hi rend="superscript">11</hi> See A. Patterson, <hi rend="italic">Pastoral and Ideology: Virgil to Valéry</hi> (Berkeley, 1987), 7, 271, and C. Martindale, ‘Green politics: the
+                        <hi rend="italic">Eclogues’,</hi> in C. Martindale (ed.), <hi rend="italic">The Cambridge Companion to Virgil</hi>, 109.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN12">
+               <p>
+                  <hi rend="superscript">12</hi> According to R. M. Smuts’ reconstructed text of <hi rend="italic">The Magnificent Entertainment</hi>, which in total contains 2792 lines, Dekker’s parts make up
+                    59.2% (38–69, 200–451, 866–2120, 2182–217, 2644–725). I want to emphasize Dekker’s contribution because Dekker’s account, often
+                    under-valued as reportage, is inherently a social criticism that reacts to the political change in the wake of 1604.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN13">
+               <p>
+                  <hi rend="superscript">13</hi> The ‘fatalis machina’ is a common allusion for Renaissance writers. See Shakespeare’s <hi rend="italic">Titus Andronicus</hi>. A Roman lord asks Marcus:
+                    ‘tell us what Sinon hath bewitched our ears,/or who hath brought the fatal engine in/That gives our Troy, our Rome, the civil wound’ (V.iii.85–87).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN14">
+               <p>
+                  <hi rend="superscript">14</hi> The ‘point of view’ is D. Fowler’s term. See D. Fowler, ‘Virgilian narrative: story-telling’, in C. Martindale (ed.), <hi rend="italic">The
+                        Cambridge Companion to Virgil</hi>, 266.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN15">
+               <p>
+                  <hi rend="superscript">15</hi> Virgil was a ‘curriculum author’ in grammar school education. See Peter Mack, <hi rend="italic">Elizabethan Rhetoric: Theory and Practice</hi> (Oxford, 1994),
+                    13, 86; Margaret Tudeau-Clayton, <hi rend="italic">Jonson, Shakespeare and Early Modern Virgil</hi> (Cambridge, 2006), 47; and Colin Burrow, ‘Virgil in English Translation’,
+                    in C. Martindale (ed.), <hi rend="italic">The Cambridge Companion to Virgil</hi>, 21–37. For Virgil’s influence, see H. Cooper, <hi rend="italic">Pastoral: Medieval into
+                        Renaissance</hi>; A. Patterson, <hi rend="italic">Pastoral and Ideology: Virgil to Valéry</hi>; and C. Martindale (ed.), <hi rend="italic">Virgil and His Influence</hi>
+                    (Bristol, 1984).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN16">
+               <p>
+                  <hi rend="superscript">16</hi> G. Norlin points out in ‘The Conventions of the Pastoral Elegy’, <hi rend="italic">The American Journal of Philology</hi>, xxxii (1911), that Virgil’s
+                    fifth and tenth eclogues are the first pastoral elegy in Latin Literature, 294. Dekker writes, ‘Upon Thurseday it was treason to cry God saue King Iames of England, and upon
+                    Friday hye treason not to cry so’. Elizabeth being the ‘Courtier’s treasure’, ‘Merchant’s patronesse’, ‘Citizens mother’, and
+                    ‘Shepherds Goddesse’, her death is like a ‘tempest that shooke Cedars, terrified the tallest Pines and cleft in sunder euen the hardest hearts of Oake’.
+                    Dekker asks, ‘if such great trees were shaken, what thinke you became of the tender Eglantine and humble Hawthorne?’ Her passing is aestheticized as a falling
+                    ‘leafe’ that ‘went away in the Spring’. Consistently appropriating Virgil’s language to document the historical change, Dekker continues, ‘the
+                    losse of a Queene was paid with the double interest of a King and Queen … the Cedar of her gouernment, who stood alone and bare no fruit, is changed now to an oliue vpon
+                    whose spreading branches grow both Kings and Queenes’ (B1<hi rend="superscript">r</hi>–B2<hi rend="superscript">v</hi>, B4<hi rend="superscript">r</hi>, C1<hi rend="superscript">r</hi>–C1<hi rend="superscript">v</hi>).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN17">
+               <p>
+                  <hi rend="superscript">17</hi> For the ‘reality of the plague’, see F. P. Wilson, <hi rend="italic">Plague in Shakespeare’s London</hi> (Oxford, 1927); Sandra Clark, <hi rend="italic">Elizabethan
+                        Pamphleteers</hi> (London, 1983), 110–20; Paul Slack, <hi rend="italic">Impact of Plague in Tudor and Stuart England</hi> (Oxford, 1990); L. Manley, <hi rend="italic">Literature and
+                        Culture in Early Modern London</hi> (Cambridge, 1995), 118–22, 355–9; and J. Twyning, <hi rend="italic">London Dispossessed: Literature and Social Space in the Early
+                        Modern City</hi> (Basingstoke, 1998).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN18">
+               <p>
+                  <hi rend="superscript">18</hi> G. Lee points out that ‘The <hi rend="italic">Eclogues</hi> spring from the troubled times that followed the murder of Julius Caesar in March 44 <hi rend="smallCaps">bc</hi>’
+                    ‘when Italy was torn by civil war and the Mediterranean world split between contending Roman factions … Virgil’s pastoral world sometimes … mirrors the
+                    disturbances of his real world, the Waste Land of the dying Roman Republic’. See Virgil, <hi rend="italic">The Eclogues</hi>, trans. G. Lee (Harmondsworth, 1984), 19–20.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN19">
+               <p>
+                  <hi rend="superscript">19</hi>
+                    <hi rend="italic">Ibid</hi>. According to G. Lee, in the classical context this poem was written for the consulship of Gaius Asinius Pollio, who brought about a peace treaty between
+                    Antony and Octavian (future Augustus).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN20">
+               <p>
+                  <hi rend="superscript">20</hi>
+                    <hi rend="italic">Ibid</hi>.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN21">
+               <p>
+                  <hi rend="superscript">21</hi> Dekker seems to have consulted Virgil’s eulogy of Italy (that claims that neither the ancient civilizations of Turkey, India, and Araby, nor Media’s groves
+                    and Hermus’ land whose mud is gold would rival the glory of Italy, <hi rend="italic">Georgics</hi>, II, 136–39) when he wrote the Ode to Britain (38–69) for <hi rend="italic">The
+                        Magnificent Entertainment</hi>, in which Dekker asserts that none of the seven wonders of the world could rival the glory of Britain.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN22">
+               <p>
+                  <hi rend="superscript">22</hi> As Stephen Harrison in <hi rend="italic">The Arches of Triumph</hi> (1604) shows, the picture language of Hortus Euporiae (C4<hi rend="superscript">r</hi>) echoes that of the background
+                    landscape of <hi rend="italic">The Hampden Portrait of Queen Elizabeth I</hi> (<hi rend="italic">c</hi>.1563) by Steven Van Der Meulen. See Sotheby’s Catalogue L07123, <hi rend="italic">Important
+                        British Paintings 1500–1850: London, Thursday, 22 November 2007</hi> (London, 2007).</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN23">
+               <p>
+                  <hi rend="superscript">23</hi> For Elizabeth as Peace, see <hi rend="italic">Elizabeth I: the Peace Portrait</hi> (1580–5) by Marcus Gheeraerts the Elder and <hi rend="italic">Elizabeth I: the Ermine
+                        portrait</hi> (1585) by Nicholas Hilliard in R. Strong, <hi rend="italic">Gloriana: the Portraits of Queen Elizabeth I</hi> (London, 2003), 113–15, in which Elizabeth holds
+                    an olive branch that symbolizes peace. The dual presentation of Peace and Plenty is seen in the painting entitled <hi rend="italic">The Family of Henry VIII: An Allegory of the Tudor
+                        Succession</hi> (<hi rend="italic">c</hi>.1572) attributed to Lucas de Heere, in which Elizabeth holds the hand of Peace and is accompanied by Plenty. R. M. Smuts points out that
+                    although Ripa in <hi rend="italic">Iconographia</hi> gives several iconographical formulas of Peace, Dekker did not consult Ripa’s work. See R. M. Smuts in G. Taylor and J.
+                    Lavagnino (eds), <hi rend="italic">Thomas Middleton: the Collected Works</hi>, 257.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN24">
+               <p>
+                  <hi rend="superscript">24</hi> The use of Ceres is common in Elizabethan iconography. See H. Cooper, <hi rend="italic">Pastoral: Medieval into Renaissance</hi>, 199, 206.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN25">
+               <p>
+                  <hi rend="superscript">25</hi> In Virgil’s Fifth Eclogue, immediately following this passage is a line about the satyr’s dance: ‘Cantabunt mihi Damoetas et Lyctius Aegon;/saltantis
+                    Satyros imitabitur Alphesiboeus’ (‘Damoetas and Lyctian Aegon shall sing for me, and Alphesiboeus mimic the dancing Satyrs’, V.72–73). Stephen
+                    Harrison’s illustration that shows a few satyrs dancing in front of the arch (<hi rend="italic">The Arches of Triumph</hi>, 1604, C4<hi rend="superscript">r</hi>) may indicate his reading of this
+                    poem.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN26">
+               <p>
+                  <hi rend="superscript">26</hi> In Virgil’s Fifth Eclogue where Mopsus laments the death of Daphnis (the ‘shepherd’, V.20–44), Daphnis is compared to the ‘vine’
+                    that ‘gives glory to its tree’, as ‘the bull to the herd’, and ‘the corn to rich fields’, and him alone gives ‘glory to his
+                    people’.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN27">
+               <p>
+                  <hi rend="superscript">27</hi> See C. Bailey, <hi rend="italic">Religion in Virgil</hi> (New York, 1969), 187–92, and Virgil, <hi rend="italic">The Georgics</hi>, ed. and trans. L. P. Wilkinson (London,
+                    1982), 34.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN28">
+               <p>
+                  <hi rend="superscript">28</hi> See L. A. Montrose, ‘ “Eliza, Queene of shepheardes”, and the Pastoral of Power’, <hi rend="italic">ELR</hi>, x (1980), 153–82.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN29">
+               <p>
+                  <hi rend="superscript">29</hi> L. P. Wilkinson, <hi rend="italic">The Georgics of Virgil: A Critical Survey</hi> (Cambridge, 1969), 151.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN30">
+               <p>
+                  <hi rend="superscript">30</hi> Frances Yates points out in ‘Queen Elizabeth as Astraea’, <hi rend="italic">Journal of the Warburg and Courtauld Institutes</hi>, x (1947) that ‘it is, of
+                    course, to Virgil that she [Elizabeth/Astraea] owes her greatest fame’, 30.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN31">
+               <p>
+                  <hi rend="superscript">31</hi> See D. M. Bergeron, ‘King James’ Civic Pageant and Parliamentary Speech in March 2004’, <hi rend="italic">Albion: A Quarterly Journal of British
+                        Studies</hi>, xxxiv (2002), 213–14.</p>
+            </note>
+            <note place="inline" xml:id="gjs159-FN32">
+               <p>
+                  <hi rend="superscript">32</hi> The first draft of this paper was presented at the 10th Annual Literary London Conference on 22 July 2011 at University of London where Dr Adam Hansen asked a
+                    thought-provoking question, ‘Do you think Dekker is subversive?’. A revised version was delivered at the Fifth Taiwan Association of Classical, Medieval, and
+                    Renaissance Studies Conference at National Sun Yat-sen University in Taiwan on 5 November 2011 where the keynote speaker, Professor Martin Elsky (CUNY), gave me encouraging
+                    feedback. This essay was made possible by a research grant from the National Science of Taiwan (99–2410-H-110-017), which allowed me to consult Frances Yates material and the
+                    Photographic collection at the Warburg Institute. Deep thanks also to Professor Peter Mack, Dr Paul Taylor, and Dr Jonathan Rolls. I’m grateful to Professor Julian Gardner
+                    (Warwick) for putting me in touch with Dr Angela Dressen, the research librarian of Villa I Tatti of Harvard University.</p>
+            </note>
+         </div>
+      </back>
+   </text>
+</TEI>

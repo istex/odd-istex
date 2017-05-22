@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="EN">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Correcting Bede’s Corrector? A Runic Note in the Margins of Corpus Christi College, Cambridge MS 41</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Oxford University Press</publisher>
+            <availability>
+               <p>© The Author (2012). Published by Oxford University Press. All rights reserved. For Permissions, please email:
+                    journals.permissions@oup.com</p>
+            </availability>
+            <date>2012</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="article">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Birkett</surname>
+                        <forename type="first">Thomas E.</forename>
+                     </persName>
+                  </author>
+                  <title level="a" type="main">Correcting Bede’s Corrector? A Runic Note in the Margins of Corpus Christi College, Cambridge MS 41</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">Notes and Queries</title>
+                  <title level="j" type="publisher-id">notesj</title>
+                  <title level="j" type="hwp">notesj</title>
+                  <idno type="pISSN">0029-3970</idno>
+                  <idno type="eISSN">1471-6941</idno>
+                  <imprint>
+                     <publisher>Oxford University Press</publisher>
+                     <date type="Published" when="2012-12"/>
+                     <date type="ePublished" when="2012-10-12"/>
+                     <biblScope unit="vol">59</biblScope>
+                     <biblScope unit="issue">4</biblScope>
+                     <biblScope unit="page" from="465">465</biblScope>
+                     <biblScope unit="page" to="470">470</biblScope>
+                  </imprint>
+               </monogr>
+               <idno type="DOI">10.1093/notesj/gjs142</idno>
+               <idno type="publisherID">gjs142</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>CORPUS CHRISTI COLLEGE, Cambridge MS 41 is remarkable for the number of marginal texts that accompany the Old English Bede, including complete homilies, sequences of liturgical material and
+            charms that fill the margins of successive pages. These additions are all dated to shortly after the copying of the main text,<ref type="fn" target="#gjs142-FN1">
+               <hi rend="superscript">1</hi>
+            </ref> and
+            there have been a number of recent attempts to identify the stages in which this marginal archive was compiled, its relationship to the Bede and the rationale behind the rather curious
+            blending of the devotional and the profane.<ref type="fn" target="#gjs142-FN2">
+               <hi rend="superscript">2</hi>
+            </ref> The runic script appears on several occasions in the manuscript, used as a logograph in
+            the rendering of Solomon’s name in the marginal <hi rend="italic">Solomon and Saturn I</hi>, as a pen test reproducing the first four letters of the alphabet as runes on p. 436 and as a
+            short sequence in the left margin of p. 448, accompanying a section of the Bede documenting the early career of Wilfrid and his adventures on the continent (V/19). This last use of the
+            script, which may interact with an earlier correction in the text, provides a snapshot of scribal practice and politics in eleventh-century England, and has its own rather compelling
+            narrative.</p>
+         <p>Though the division between the world of epigraphy and the manuscript tradition is not as clear cut as it was once supposed to be,<ref type="fn" target="#gjs142-FN3">
+               <hi rend="superscript">3</hi>
+            </ref> as
+            an eleventh-century text the runes in CCCC 41 might be considered rather late to represent either a continuation of the Anglo-Saxon runic tradition exemplified by monuments such as the
+            Ruthwell and Bewcastle Crosses, or the familiar and dexterous application of the script by Cynewulf and the poets of the OE riddles. The runes that appear in this particular manuscript are
+            described rather dismissively as ‘scribbles’ by James, and they do have a distinctly awkward character.<ref type="fn" target="#gjs142-FN4">
+               <hi rend="superscript">4</hi>
+            </ref> The copyist of
+                <hi rend="italic">Solomon and Saturn I</hi> is not consistent in his application of the logograph <hi rend="italic">mon</hi> in the rendering of Solomon’s name, and adds a mark of
+            abbreviation as if unsure whether the reader will understand the concept, whilst transliterating an <hi rend="bold">abcd</hi> in runes rather than using the traditional futhorc order might be a
+            further indication of an antiquarian relationship to the script. In the runic note in question, the runes are again rather clumsily rendered, and certainly have a bookish
+            character—the <hi rend="bold">r</hi>, for example, looks like a <hi rend="italic">wynn</hi> rune with a leg appended at right angles to the stem of the letter;<ref type="fn" target="#gjs142-FN5">
+               <hi rend="superscript">5</hi>
+            </ref> the <hi rend="bold">i</hi> is of a short type as if confused with a Latin miniscule; whilst the <hi rend="bold">s</hi>, I suspect, amounts to little more than a tentative
+            guess at the runic form, Derolez pointing out its resemblance to an insular <hi rend="bold">g</hi>.<ref type="fn" target="#gjs142-FN6">
+               <hi rend="superscript">6</hi>
+            </ref> In fact, these forms have much in common
+            with those of the <hi rend="italic">De inventione litterarum</hi> tradition, a popular continental treatise on the invention of the alphabet, in which runes, some of them Anglo-Saxon in origin,
+            and many of a non-standard variety, appear as the script attributed to the Nordmanni.<ref type="fn" target="#gjs142-FN7">
+               <hi rend="superscript">7</hi>
+            </ref> It is likely that the person responsible for
+            the note used a runic alphabet (such as that preserved in Oxford, St John’s College MS 17) as a crib, and was certainly not a confident or habitual writer of runes. Indeed, if this
+            runic sequence is in the same hand as that of the runic <hi rend="bold">abcd</hi> on p. 436, it might be argued that this commentator even saw a need to practise writing this unfamiliar script
+            before committing to his marginal note.<ref type="fn" target="#gjs142-FN8">
+               <hi rend="superscript">8</hi>
+            </ref>
+         </p>
+         <p>The note itself was read by Derolez as a sequence of numerals, using the runes which approximated Latin x and i, followed by the word <hi rend="italic">swiþor</hi>, a reading which Page and
+            subsequent scholars have accepted.<ref type="fn" target="#gjs142-FN9">
+               <hi rend="superscript">9</hi>
+            </ref> The reading <hi rend="italic">swiþor</hi> is supported by the fact that this word also appears in
+            the left-hand margin of the main text, in the statement ‘willfrið wæs swiðor gehealden angel ðeode to biscope’ (Wilfrid was instead reserved to be bishop to
+            the English people). The whole inscription thus reads <hi rend="bold">xii .ond. xxx swiþor</hi> (12 and 30 more). The numerals suggest this is an amendment to a calculation of some kind, and
+            as there is a reference at the bottom of the manuscript page to Ealfrith’s endowment of 10 hides of land to Wilfrid on his return from pilgrimage in Rome, and on the facing page to
+            his granting of the monastery at Ripon along with 30 hides of land, the assumption that this note refers to this endowment is easy to make.</p>
+         <p>This reading also seems to be supported by a further non-runic note on the same page which reads .<hi rend="italic">x.hid</hi> (10 hides). It is identified as a modern hand by Miller, but
+            curiously attempts to reproduce the letter forms and language of the Old English text.<ref type="fn" target="#gjs142-FN10">
+               <hi rend="superscript">10</hi>
+            </ref> We know that medieval manuscripts were
+            sometimes forged in order to support later land claims, and this particular reader might have had some interest in the donation of land to Wilfrid at Stamford, perhaps using the evidence
+            of Bede’s <hi rend="italic">Historia</hi> in relation to some dispute over the holdings. It is also possible that he made his note in an approximation of Anglo-Saxon script to give it an
+            air of authority for whoever next consulted the manuscript, using an imitation of a contemporary script to legitimate the note. It may be that the runic commentator also had an interest in
+            the donation of land, and was adopting an analogous strategy of antiquation, using the runic script to invest it with a degree of cultural authority, perhaps considered pertinent to the
+            age of Bede. There could also be an association with engraving and monumentality being brought to bear here—the suggestion that writing in runes in essence helps to set the words in
+            stone, even within the margins of a book.</p>
+         <p>There are, however, a number of problems with reading this note as referring to the endowment of land. First, the numbers in question are 12 and 30, not 10 and 30, the text clearly stating
+            that ‘ða gaef he him sona .x. hida landes’ (then he gave him at once ten hides of land). This could be because the note is correcting the main text, the commentator feeling
+            it necessary to point out that Wilfrid received two more hides than mentioned in both Bede’s <hi rend="italic">Historia</hi> and the <hi rend="italic">Vita Wilfridi</hi>, two rather formidable
+            textual authorities. The second problem is rather more intractable. If the runic note refers to the land endowment, it is strange that it should appear where it does, squeezed near the top
+            of the left-hand margin of the page in what appears to be an attempt to enter into the textual fabric of Bede’s canonical work, and not in the bottom margin below the reference to
+            the endowment in the text (where the later note referring to <hi rend="italic">x hið</hi> itself appears).</p>
+         <p>The fact that the runic note is so detached from the reference to the land endowment raises the possibility that its placement is a pertinent one. As <ref type="fig" target="#gjs142-F1">Fig. 1</ref> illustrates, the runic note appears adjacent to a line in the Old English Bede which has already been corrected, which should perhaps give us some pause for thought (see
+                <ref type="fig" target="#gjs142-F1">Fig. 1</ref>.) This particular correction might more accurately be described as a re-writing, as it alters the name of a historical character,
+            substituting one Frankish queen (Balthild) for another (Brunhild). The context of this correction is Wilfrid’s return journey to Britain after having spent time in Rome under the
+            tutorage of Archdeacon Boniface. Wilfrid, having been detained in Lyons on his outward journey by the local bishop (mistakenly referred to as Bishop Dalfinus, but actually his brother
+            Archbishop Annemund) stops off again in Gaul on his way home, receiving the tonsure from Delfinus. The burgeoning friendship is cut short, however, by the execution of the Bishop at the
+            hands of the Frankish Queen Balthild, although the executioners refuse to put Wilfrid to death on learning ‘þæt he of Engle cumen wæs’ (that he had come from
+            the English) (V/19). <figure xml:id="gjs142-F1">
+               <head type="label">Fig. 1.</head>
+               <figDesc>Marginal runic note in CCCC MS 41, p. 448. Reproduced by permission of the Master and Fellows of Corpus Christi College, Cambridge.</figDesc>
+               <graphic url="gjs142f1p"/>
+            </figure>
+         </p>
+         <p>The emendation of Balthild to Brunhild has been made by a hand which Miller identifies as the first scribe of the manuscript.<ref type="fn" target="#gjs142-FN11">
+               <hi rend="superscript">11</hi>
+            </ref> The
+            emendation is a very pointed one, the letters written in a dark black ink, apparently the same ink as used for the text itself,<ref type="fn" target="#gjs142-FN12">
+               <hi rend="superscript">12</hi>
+            </ref>
+            and the first part of the name underlined, though not crossed out or erased. It is surely significant that the runic inscription occurs in the margins adjacent to this same rather
+            noteworthy emendation. The alteration of the name Balthild, the canonized Queen of Clovis II, to Brunhild, the Visigothic Princess and Queen of Austrasia renowned in later life for her
+            despotism, is not unique to this manuscript, occurring in several early copies of the <hi rend="italic">Historia</hi>, whilst an emendation to Brunechild can also be found in one manuscript of
+            Eddius’ <hi rend="italic">Vita Sancti Wilfridi</hi>, a text which Bede relied heavily upon when writing this section of his history.<ref type="fn" target="#gjs142-FN13">
+               <hi rend="superscript">13</hi>
+            </ref> There is certainly more reason for an emendation in the <hi rend="italic">Vita</hi>, as Balthild is referred to in no uncertain terms as an evil-hearted jezebel in her
+            slaying of nine bishops.<ref type="fn" target="#gjs142-FN14">
+               <hi rend="superscript">14</hi>
+            </ref> Bede tempers the rhetoric of Eddius slightly, but does not refute the charge that this Queen, later to be
+            canonized, ordered the death of Bishop Dalfinus, a claim that does not sit well with her saintly credentials, or with the tradition of the times that the <hi rend="italic">marie du palais</hi>,
+            Erchinoald, was responsible for ordering the killing.<ref type="fn" target="#gjs142-FN15">
+               <hi rend="superscript">15</hi>
+            </ref>
+         </p>
+         <p>The <hi rend="italic">Vita Sanctae Balthildis</hi>, written shortly after the death of the Queen in the nunnery into which she was retired, states that Balthild was of the Saxon race, and arrived
+            over the seas in captivity.<ref type="fn" target="#gjs142-FN16">
+               <hi rend="superscript">16</hi>
+            </ref> It is possible that she was an Anglo-Saxon princess sold into slavery, and though the
+                <hi rend="italic">Vita</hi> stresses a divine plan for her remarkable elevation to Frankish queen, reasons for this change of fortune should probably be sought in close Anglo-Frankish
+            relationships and ‘the contemporary politics of the British Isles’.<ref type="fn" target="#gjs142-FN17">
+               <hi rend="superscript">17</hi>
+            </ref> Clearly the depiction of her as a ruthless queen
+            inflicting a cruel death on Bishop Dalfinus would have been somewhat problematic for readers and copyists of both works, particularly those with a connection to the cult of St Balthild or
+            aware of the <hi rend="italic">Vita Sanctae Bathildis</hi> in which she is depicted as a successful and charitable Christian queen, protector of the poor and needy and generous benefactor of
+            religious houses.<ref type="fn" target="#gjs142-FN18">
+               <hi rend="superscript">18</hi>
+            </ref> Even the <hi rend="italic">Vita</hi>, however, does not entirely sidestep the political machinations and occasional
+            ruthless actions with which she maintained her regency. Indeed, Tatum suggests that it celebrates her autocratic behaviour and willingness to interfere in the Church,<ref type="fn" target="#gjs142-FN19">
+               <hi rend="superscript">19</hi>
+            </ref> unlike the <hi rend="italic">Vita Sancti Wilfridi</hi> which performs an expurgation of the life of this similarly ‘vigorous and forceful
+                personality’.<ref type="fn" target="#gjs142-FN20">
+               <hi rend="superscript">20</hi>
+            </ref>
+         </p>
+         <p>The claim that Balthild maintained a connection with her royal English roots, perhaps one of the reasons why Wilfrid is said to have been spared because of his nationality when his patron
+            was martyred, gained some credence with the discovery of a gold seal matrix in a field outside Norwich, bearing the name <hi rend="italic">Baldehildis</hi>.<ref type="fn" target="#gjs142-FN21">
+               <hi rend="superscript">21</hi>
+            </ref> The object is certainly a high status Frankish artefact, and has been dated to the seventh century,<ref type="fn" target="#gjs142-FN22">
+               <hi rend="superscript">22</hi>
+            </ref>
+            though it is unclear whether or not it represents the personal seal of this ‘unusually well-documented figure’.<ref type="fn" target="#gjs142-FN23">
+               <hi rend="superscript">23</hi>
+            </ref>
+            Nevertheless, it is certain that Balthild and the important nunnery at Chelles are ‘pieces of English history as well as of Frankish’, Hilda of Whitby herself spending time at
+            this continental establishment, and the exchange between Anglo-Saxon kingdoms and Neustria continuing throughout later centuries.<ref type="fn" target="#gjs142-FN24">
+               <hi rend="superscript">24</hi>
+            </ref>
+            One might imagine that many within the English Church would have been troubled by her ignominious guest appearance in the life of an Anglo-Saxon saint, himself a divisive figure, exiled
+            for over half of his forty-six year episcopacy.<ref type="fn" target="#gjs142-FN25">
+               <hi rend="superscript">25</hi>
+            </ref> Indeed, Wilfrid’s providential escape from death at the hands of Balthild
+            was almost certainly fabricated by Eddius Stephanus simply ‘to establish his saintly credentials at the beginning of the <hi rend="italic">Vita</hi>’.<ref type="fn" target="#gjs142-FN26">
+               <hi rend="superscript">26</hi>
+            </ref>
+         </p>
+         <p>On the convoluted journey towards sainthood, Balthild clearly trailed behind her contemporary Wilfrid, not being canonized until around two centuries after her death by Pope Nicholas
+            I—around the time the Bede was translated into Old English. This would have given rise to a contradiction in the <hi rend="italic">Historia</hi> that would perhaps not have been so
+            apparent to Bede writing at a time when Wilfrid was a confirmed Anglo-Saxon saint, and Balthild a foreign, un-canonized historical figure with a fledgling cult but also a reputation for
+            conflict with the aristocratic bishops of the time. Attributing the death of the local bishop to Brunhild would have been far more palatable—Brunhild, after all, was a queen of the
+            Franks who had reigned as regent in the early seventh century and who had been involved in numerous conflicts with the church and nobles, gaining a reputation for bloodshed.<ref type="fn" target="#gjs142-FN27">
+               <hi rend="superscript">27</hi>
+            </ref> Most importantly, she was not a saint. To most readers of Bede in the eleventh century, the fact that the chronology makes it
+            impossible that this colourful queen was involved with Wilfrid on any of his trips to Rome would have been far less problematic than the continued assertion that St Balthild had been
+            responsible for the murder of Wilfrid’s protector in Gaul. We might read this reoccurring correction as a rather ideological re-writing of history, swapping one queen for another in
+            order to adhere to the official hagiographical doctrine of the Church.</p>
+         <p>There may, however, have been at least one reader who was unhappy with this challenge to Bede’s <hi rend="italic">auctorite</hi> in deference to the Frankish saint. It seems that the
+            referent of the runic note in CCCC 41 might be this very correction, the runic numerals pointing out that the dates involved make the substitution impossible. If we read the note as
+            referring to years rather than hides of land, for which there is no confirmation in the note itself, then we might take it to imply ‘12 and 30 [years] more’, or ‘42 years
+            more’. Brunhild’s third and final regency ended with her death in <hi rend="italic">c</hi>.613. Balthild’s reign as regent began when her husband died between 655 and 657.
+            Between their two reigns is thus a gap of 42–44 years, depending on the year in which Clovis II died (or at least, the year the runic commentator believed him to have died).<ref type="fn" target="#gjs142-FN28">
+               <hi rend="superscript">28</hi>
+            </ref> The runic note in the margins may, therefore, be commenting on the mistaken substitution of one queen for another, pointing out the
+            chronological discrepancy and appealing to historical ‘fact’. Brunhild died some two decades before Wilfrid was born, and the substitution of her name in the Bede is far more
+            improbable than the intervention of a queen ruling over Neustria at the time the bishop was executed, even if she happens to be a saint.</p>
+         <p>If Miller is right in identifying the correction of Balthild to Brunhild as the work of the first scribe of the manuscript, perhaps a senior figure in the community in which it was copied,
+            this might also provide us with a rationale for the commentator’s decision to write the note in an archaic script that he was clearly not adept at using. It serves both to conceal
+            his hand, and to make his correction of the corrector less obvious to the casual reader, whilst also being invested with the authority of an early written tradition. The emendation and
+            comment may thus represent the meeting point between two sometimes conflicting principles—faithfulness to historiography and to hagiography, to the authority of historical record and
+            the sometimes competing authority of the narrative of sainthood. Far from correcting the venerable Bede, this runic comment may actually be taking his side, or the historical
+            source’s side, against the tendency to wilfully re-write the past to make it cohere with the present climate of the Church, evoking the script of early Anglo-Saxon England to
+                <hi rend="italic">bolster</hi> Bede’s words. We might even go as far as to say that this was a small stand that Bede, ‘a careful and scrupulous historian’,<ref type="fn" target="#gjs142-FN29">
+               <hi rend="superscript">29</hi>
+            </ref> often referred to as the father of English historiography, would have been largely supportive of.</p>
+      </body>
+      <back>
+         <div type="fn-group">
+            <note place="inline" xml:id="gjs142-FN1">
+               <p>
+                  <hi rend="superscript">1</hi> Ker suggests a single ‘unusual angular hand’ for the marginal texts, and dates it to the early to mid-eleventh century, N. R. Ker, <hi rend="italic">Catalogue of
+                        Manuscripts Containing Anglo-Saxon</hi> (Oxford, 1957), 45, a view accepted in most subsequent studies of the manuscript including R. J. S. Grant, ‘Cambrigde, Corpus
+                    Christi College 41’, <hi rend="italic">ASSMF</hi> xi (2003) 1–27 and S. M. Rowley, <hi rend="italic">The Old English Version of Bede’s Historia Ecclesiastica</hi>.
+                    Anglo-Saxon Studies 16 (Cambridge, 2011), 24.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN2">
+               <p>
+                  <hi rend="superscript">2</hi> Interesting recent studies include S. L. Keefer, ‘Margin as Archive: The Liturgical Marginalia of a Manuscript of the Old English Bede’,
+                        <hi rend="italic">Traditio</hi>, li (1996), 147–77 and Thomas A. Bredehoft, ‘Filling the Margins of CCCC 41: Textual Space and a Developing Archive’,
+                        <hi rend="italic">RES</hi>, lvii: 232 (2006), 721–32.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN3">
+               <p>
+                  <hi rend="superscript">3</hi> This is largely due to the efforts of R. Derolez, whose seminal study of <hi rend="italic">Runica Manuscripta</hi> (Brugge, 1954) established a corpus of Anglo-Saxon
+                    manuscript runes, and subsequent essay ‘Epigraphical Versus Manuscript English Runes: One or Two Worlds?’, <hi rend="italic">Academiae Analecta</hi> xlv:1 (1983), 69–93
+                    makes a compelling case for continuity in the Anglo-Saxon tradition. As David Parsons has pointed out, the dividing line between true epigraphy and manuscript practices such as the
+                    dry-point etching of runes on vellum is certainly not clear. ‘Anglo-Saxon Runes in Continental Manuscripts’ in Klaus Düwel (ed.), <hi rend="italic">Runische Schriftkultur in
+                        Kontinental skandinavischer und angelsächsischer Wechselbeziehung</hi> (Berlin, 1994), 195–220.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN4">
+               <p>
+                  <hi rend="superscript">4</hi> M. R. James, <hi rend="italic">A Descriptive Catalogue of the Manuscripts in the Library of Corpus Christi College Cambridge</hi> (Cambridge, 1912), I, 82.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN5">
+               <p>
+                  <hi rend="superscript">5</hi> This form is similar, but not identical, to that found in the futhorc on fol. 320 of St Gall, Stiftsbibliothek, MS 878 (mid-ninth century). See Derolez, <hi rend="italic">Runica
+                        Manuscripta</hi>, 80.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN6">
+               <p>
+                  <hi rend="superscript">6</hi> Derolez, <hi rend="italic">Runica Manuscripta</hi>, 421.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN7">
+               <p>
+                  <hi rend="superscript">7</hi> Derolez notes that the archetype for the letter ‘must have been a somewhat cursive type of <hi rend="italic">r</hi>’ and that ‘the stroke to the lower right
+                    was then developed into a horizontal, (or nearly horizontal) stroke’, <hi rend="italic">Runica Manuscripta</hi>, 368 and Fig. 50.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN8">
+               <p>
+                  <hi rend="superscript">8</hi> R. I. Page is of the opinion that this <hi rend="bold">abcd</hi> is written in a different hand, but as none of the letter forms are replicated in the note, and the latter
+                    inscription is more carefully copied, it is difficult to say anything conclusive. <hi rend="italic">An Introduction to English Runes</hi> (Woodbridge, 1973/1999), 198.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN9">
+               <p>
+                  <hi rend="superscript">9</hi> See Page, <hi rend="italic">An Introduction to English Runes</hi> (Woodbridge, 1973/1999), 198.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN10">
+               <p>
+                  <hi rend="superscript">10</hi> T. Miller (ed.), <hi rend="italic">The Old English Version of Bede’s Ecclesiastical History of the English People</hi>, EETS o.s. 95–96 (London, 1890–98),
+                    II, 573.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN11">
+               <p>
+                  <hi rend="superscript">11</hi> Miller suggests that the emendation to Brunhild in this MS. (which he calls B) is in the ‘1<hi rend="superscript">st</hi> hand, original ink’, <hi rend="italic">The Old English
+                        Version of Bede</hi>, II, 572.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN12">
+               <p>
+                  <hi rend="superscript">12</hi> Miller, <hi rend="italic">The Old English Bede</hi>, II, 572.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN13">
+               <p>
+                  <hi rend="superscript">13</hi> British Library Cotton Vespasian D. vi. This portion of the MS is usually dated to the eleventh century, and is one of only two surviving copies of the
+                        <hi rend="italic">Vita</hi>, both descended from ‘another MS which was not the archetype’, B. Colgrave (ed.), <hi rend="italic">The Life of Bishop Wilfrid by Eddius
+                        Stephanus</hi> (Cambridge, 1927), xv.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN14">
+               <p>
+                  <hi rend="superscript">14</hi> Colgrave (ed.), <hi rend="italic">The Life of Bishop Wilfrid</hi>, 14–15.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN15">
+               <p>
+                  <hi rend="superscript">15</hi>
+                    <hi rend="italic">Ibid</hi>., 154.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN16">
+               <p>
+                  <hi rend="superscript">16</hi> John E. Halborg, Jo Ann McNamara, and Gordon E. Whatley, <hi rend="italic">Sainted Women of the Dark Ages</hi> (Durham, NC, 1992), 268–9.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN17">
+               <p>
+                  <hi rend="superscript">17</hi> Paul Fouracre and Richard A. Gerberding, <hi rend="italic">Late Merovingian France: History and Hagiography, 640–720</hi> (Manchester, 1996), 104.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN18">
+               <p>
+                  <hi rend="superscript">18</hi> The religious houses she supported included St Denis, Corbie, Jouarre and Chelles, where she was later banished. Halborg, McNamara, and Whatley, <hi rend="italic">Sainted
+                        Women</hi>, 266.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN19">
+               <p>
+                  <hi rend="superscript">19</hi> S. Tatum, ‘<hi rend="italic">Auctoritas</hi> as <hi rend="italic">sanctitas</hi>: Balthild’s depiction as “queen-saint” in the <hi rend="italic">Vita
+                        Balthildis</hi>’, <hi rend="italic">European Review of History</hi>, xvi, 6 (2009), 809–834.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN20">
+               <p>
+                  <hi rend="superscript">20</hi> Peter Hunter Blair, <hi rend="italic">The World of Bede</hi> (London, 1970), 152.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN21">
+               <p>
+                  <hi rend="superscript">21</hi> L. Webster, ‘Norwich area, Norfolk: Gold swiveling bezel from a Frankish seal-ring’, Entry 57 in <hi rend="italic">Treasure Annual Report 1998–1999</hi>
+                    (London, 2000), 31–2. &lt;<ref type="uri" target="http://www.ncmd.co.uk/docs/treasurereport199899.pdf">http://www.ncmd.co.uk/docs/treasurereport199899.pdf</ref>&gt;, last accessed December 2010.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN22">
+               <p>
+                  <hi rend="superscript">22</hi> Webster, <hi rend="italic">Treasure Annual Report</hi>, 31.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN23">
+               <p>
+                  <hi rend="superscript">23</hi> S. Tatum, ‘<hi rend="italic">Auctoritas</hi> as <hi rend="italic">sanctitas</hi>’, 811. David Hinton agrees with Webster that the baldehildis matrix may have been used
+                    as a validating object, but also questions whether the bald-headed figure depicts a king of the Merovingians, ‘familiarly known as “the long-haired kings” ’
+                        <hi rend="italic">Gold and Gilt, Pots and Pins: Possessions and People in Medieval Britain</hi> (Oxford, 2005), 303, note 1 and 281, note 57.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN24">
+               <p>
+                  <hi rend="superscript">24</hi> Edward James, <hi rend="italic">The Franks</hi> (Oxford, 1988), 134.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN25">
+               <p>
+                  <hi rend="superscript">25</hi> Colgrave, <hi rend="italic">The Life of Bishop Wilfrid</hi>, ix.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN26">
+               <p>
+                  <hi rend="superscript">26</hi> Simon Coates, ‘The Role of Bishops in the Early Anglo-Saxon Church: A Reassessment’, <hi rend="italic">History</hi> xxci:262 (April 1996) 173–314, 186.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN27">
+               <p>
+                  <hi rend="superscript">27</hi> Important early sources for the life of Brunhild include Gregory of Tours’ <hi rend="italic">Historia Francorum</hi> (written during the lifetime of the queen) and
+                        <hi rend="italic">The Chronicle of Fredegar</hi>, written in the mid-seventh century.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN28">
+               <p>
+                  <hi rend="superscript">28</hi> Fouracre and Gerberding state that ‘the range for his death date has been firmly fixed by scholars’, falling in the autumn of 657, <hi rend="italic">Late Merovingian
+                        France</hi>, 106, note 64. If such a consensus exists, it has only been reached in recent years—the persisting attribution of his death to the year 655 may be a
+                    result of the reference to his reign lasting for 16 years in the earliest source, <hi rend="italic">Liber Historiæ Francorum</hi>. As he succeeded Dagobert in 639 this would indeed
+                    place his death in 655 according to such a reckoning. B. Krusch (ed.), <hi rend="italic">Liber Historiæ Francorum</hi>, II, MGH SS rer. Merov. (Hannover, 1888), 44, 316. It is
+                    difficult to speculate on what sources for Frankish history might have been available to the runic commentator, particularly if we are indeed dealing with ‘a provincial
+                    scriptorium of no great size’, Keefer, ‘Margin as Archive’, 147.</p>
+            </note>
+            <note place="inline" xml:id="gjs142-FN29">
+               <p>
+                  <hi rend="superscript">29</hi> Colgrave, <hi rend="italic">The Life of Bishop Wilfrid</hi>, xii.</p>
+            </note>
+         </div>
+      </back>
+   </text>
+</TEI>

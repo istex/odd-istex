@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="EN">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">
+               <hi rend="italic">The Voyages of the Cabots; Latest Phases of the Controversy</hi>. By <hi rend="smallCaps">Samuel Edward Dawson</hi>, Litt. D. (Laval). [From the Transactions of the Royal
+                    Society of Canada for 1897.] (Ottawa: James Hope and Co. 1897. Pp. 130, 3 maps.); <hi rend="italic">John and Sebastian Cabot; The Discovery of North America</hi>. By C. <hi rend="smallCaps">Raymond
+                        Beazley</hi>, Fellow of Merton College, Oxford. (New York: Longmans, Green and Co. 1898. Pp. xx, 311.); <hi rend="italic">Cabot's Discovery of North America</hi>. By G. E.
+                        <hi rend="smallCaps">Weare</hi>. (London: Macqueen. 1897. Pp. xi, 343, 12 maps and plates.)</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Oxford University Press</publisher>
+            <date>1898</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="bookReview">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Winship</surname>
+                        <forename type="first">George Parker</forename>
+                     </persName>
+                  </author>
+                  <title level="a" type="main">
+                     <hi rend="italic">The Voyages of the Cabots; Latest Phases of the Controversy</hi>. By <hi rend="smallCaps">Samuel Edward Dawson</hi>, Litt. D. (Laval). [From the Transactions of the Royal
+                    Society of Canada for 1897.] (Ottawa: James Hope and Co. 1897. Pp. 130, 3 maps.); <hi rend="italic">John and Sebastian Cabot; The Discovery of North America</hi>. By C. <hi rend="smallCaps">Raymond
+                        Beazley</hi>, Fellow of Merton College, Oxford. (New York: Longmans, Green and Co. 1898. Pp. xx, 311.); <hi rend="italic">Cabot's Discovery of North America</hi>. By G. E.
+                        <hi rend="smallCaps">Weare</hi>. (London: Macqueen. 1897. Pp. xi, 343, 12 maps and plates.)</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">The American Historical Review</title>
+                  <title level="j" type="hwp">ahr</title>
+                  <title level="j" type="publisher-id">ahr</title>
+                  <title level="j" type="abbrev">The American Historical Review</title>
+                  <idno type="pISSN">0002-8762</idno>
+                  <idno type="eISSN">1937-5239</idno>
+                  <imprint>
+                     <publisher>Oxford University Press</publisher>
+                     <date type="Published" when="1898-10"/>
+                     <biblScope unit="vol">4</biblScope>
+                     <biblScope unit="issue">1</biblScope>
+                     <biblScope unit="page" from="159">159</biblScope>
+                     <biblScope unit="page" to="162">162</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

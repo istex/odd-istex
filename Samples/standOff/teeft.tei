@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fichier générée le 18-05-2017 -->
+<!-- teeft - v1.0.1 - brown -->
+<TEI>
+  <standOff>
+    <teiHeader>
+      <fileDesc>
+        <titleStmt>
+          <title>Indexation de documents</title>
+          <respStmt>
+            <resp>enrichissement catégorisation ISTEX-RD</resp>
+            <name resp="istex-rd">ISTEX-RD</name>
+          </respStmt>
+        </titleStmt>
+        <publicationStmt>
+          <availability status="restricted">
+            <licence target="http://creativecommons.org/licenses/by/4.0/">
+              <p>L’élément standOff de ce document est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0)</p>
+              <p>Ce standOff a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique</p>
+            </licence>
+          </availability>
+        </publicationStmt>
+        <sourceDesc>
+          <biblStruct>
+            <idno type="ISTEX">087661D669BF44CA05AA6CE08ADD6399F6A439C4</idno>
+          </biblStruct>
+        </sourceDesc>
+        <encodingDesc>
+          <appInfo>
+            <application ident="rd-teeft" version="1.0.1">
+              <label>teeft</label>
+            </application>
+          </appInfo>
+        </encodingDesc>
+      </fileDesc>
+      <revisionDesc>
+        <change when="24-06-2016" who="istex-rd" xml:id="rd-teeft">indexation</change>
+      </revisionDesc>
+    </teiHeader>
+    <listAnnotation type="rd-teeft">
+      <annotationBlock corresp="text" xmls="https//www.tei-c.org/ns/1.0">
+        <keywords change="#istex-rd" resp="#istex-rd">
+          <term>
+            <term>wnt7a</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="129"/>
+              </f>
+              <f name="specificity">
+                <numeric value="1"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>catenin</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="78"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.6046511627906976"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>brdu</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="54"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.4186046511627906"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cell proliferation</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="54"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.4186046511627906"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>nsc</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="38"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.2945736434108527"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>axin</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="27"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.2093023255813953"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>adult brains</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="26"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.2015503875968992"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>subventricular</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="25"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.19379844961240306"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>sirna</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="24"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.18604651162790695"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>macmillan publishers</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="19"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.14728682170542634"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>control vector</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="18"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.13953488372093023"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>clonal</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="18"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.13953488372093023"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>subventricular zone</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="17"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.1317829457364341"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>activates</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="17"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.1317829457364341"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>wnt7a promoter</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="17"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.1317829457364341"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>neural</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="106"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.12928027475717271"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>luciferase</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="16"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.12403100775193798"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>asterisk</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="15"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.11627906976744186"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>frzb</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="14"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.10852713178294572"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>promoter</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="28"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.10243240375926928"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cyclin</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="13"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.1007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>supplementary information</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="13"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.1007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>receptor</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="12"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.09302325581395347"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>transduced</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="12"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.09302325581395347"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>quantification</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="12"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.09302325581395347"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>labelling</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="11"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.08527131782945736"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>january</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="11"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.08527131782945736"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>assay</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="22"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.08048260295371158"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>dentate</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="10"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.07751937984496123"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>sirnas</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="10"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.07751937984496123"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>gapdh</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="10"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.07751937984496123"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>sitlx</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="10"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.07751937984496123"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>pathway</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="10"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.07751937984496123"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>primer</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="10"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.07751937984496123"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>lentiviral</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="9"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06976744186046512"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>gfap</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="9"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06976744186046512"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>hippocampal</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="9"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06976744186046512"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>wnt7a expression</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="9"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06976744186046512"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>western blot analysis</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="9"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06976744186046512"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>nature cell biology volume</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="9"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06976744186046512"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>macmillan</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="19"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06950770255093272"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>proliferation</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="70"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06402780636161993"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>wnt7a sirna</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>transduction</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>gyrus</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>neurogenesis</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>transwells</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>viral</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>binding sites</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="8"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.06201550387596899"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>adult mouse</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="7"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.05426356589147286"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cell numbers</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="7"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.05426356589147286"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>progenitor</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="7"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.05426356589147286"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>brdu labelling</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>clonal rate</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cell growth</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cell survival</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>secondary clonal rate</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>adult brain</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>loading control</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="6"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.04651162790697674"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>subventricular zones</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="5"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.03875968992248061"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>brdu staining</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="5"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.03875968992248061"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cell population</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="5"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.03875968992248061"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>wnt7a sirnas</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="5"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.03875968992248061"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>mouse nscs</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="5"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.03875968992248061"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>target genes</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="5"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.03875968992248061"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>response elements</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>uncropped images</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>adult mouse nscs</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>lentiviral transduction</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>control cells</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>binding site</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>control sirna</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>brdu cells</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>brain sections</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>northern blot analysis</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>proliferation deficiency</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="4"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.031007751937984496"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>knockdown</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="7"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02560810093981732"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>fibroblast growth factor</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>standard deviation</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>error bars</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>cell maintenance</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>relative luciferase activity</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>upper chambers</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>nuclear receptor</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>control brains</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>luciferase activity</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>luciferase reporter gene</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>dentate gyrus</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>viral expression</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>hippocampal dentate gyrus</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>response element</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>galactosidase activity</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>error bars show assays</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>reporter assays</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="3"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.02325581395348837"/>
+              </f>
+            </fs>
+          </term>
+          <term>
+            <term>mouse</term>
+            <fs type="statistics">
+              <f name="frequency">
+                <numeric value="61"/>
+              </f>
+              <f name="specificity">
+                <numeric value="0.022319844097718484"/>
+              </f>
+            </fs>
+          </term>
+        </keywords>
+      </annotationBlock>
+    </listAnnotation>
+  </standOff>
+</TEI>

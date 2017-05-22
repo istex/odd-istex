@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="EN">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">
+               <hi rend="italic">De Laude Psalmorum</hi> and <hi rend="italic">Ælfwine’s Prayerbook</hi>: A Quotation from a Carolingian Psalm Devotional in a Late Anglo-Saxon
+                    Programme for Morning Prayer</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Oxford University Press</publisher>
+            <availability>
+               <p>© The Author (2012). Published by Oxford University Press. All rights reserved. For Permissions, please email:
+                    journals.permissions@oup.com</p>
+            </availability>
+            <date>2012</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="article">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Thomas</surname>
+                        <forename type="first">Kate</forename>
+                     </persName>
+                  </author>
+                  <title level="a" type="main">
+                     <hi rend="italic">De Laude Psalmorum</hi> and <hi rend="italic">Ælfwine’s Prayerbook</hi>: A Quotation from a Carolingian Psalm Devotional in a Late Anglo-Saxon
+                    Programme for Morning Prayer</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">Notes and Queries</title>
+                  <title level="j" type="publisher-id">notesj</title>
+                  <title level="j" type="hwp">notesj</title>
+                  <idno type="pISSN">0029-3970</idno>
+                  <idno type="eISSN">1471-6941</idno>
+                  <imprint>
+                     <publisher>Oxford University Press</publisher>
+                     <date type="Published" when="2012-12"/>
+                     <date type="ePublished" when="2012-10-12"/>
+                     <biblScope unit="vol">59</biblScope>
+                     <biblScope unit="issue">4</biblScope>
+                     <biblScope unit="page" from="479">479</biblScope>
+                     <biblScope unit="page" to="483">483</biblScope>
+                  </imprint>
+               </monogr>
+               <idno type="DOI">10.1093/notesj/gjs187</idno>
+               <idno type="publisherID">gjs187</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>A large number of Latin and English prayers, apparently intended for private use, can be found in Anglo-Saxon monastic manuscripts.<ref type="fn" target="#gjs187-FN1">
+               <hi rend="superscript">1</hi>
+            </ref>
+            It can often be difficult to tell in which context these prayers were said. However, a few prayers and prayer programmes give very clear guidelines for use, instructing the reader in when
+            and where to pray, which prayers and psalms to say, and why it is important to say them. One of the most interesting of these texts is a short guide to prayer found on a single leaf of the
+            eleventh-century Winchester manuscript known as <hi rend="italic">Ælfwine’s Prayerbook</hi>. Of particular significance is the fact that this Old English text contains a short,
+            carefully translated excerpt from <hi rend="italic">De laude psalmorum</hi>, a Carolingian treatise on praying for one’s personal needs using the words of the psalms. The presence of this
+            hitherto unnoticed quotation in <hi rend="italic">Ælfwine’s Prayerbook</hi> suggests that <hi rend="italic">De laude psalmorum</hi> was not only being read in late Anglo-Saxon England, but
+            was also being accurately translated into the vernacular language, and used to create a wholly new programme for morning prayer.</p>
+         <p>
+            <hi rend="italic">Ælfwine’s Prayerbook</hi> is the name given, by their editor Beate Günzel, to the manuscripts London, British Library Cotton Titus D. xxvii and xxvi.<ref type="fn" target="#gjs187-FN2">
+               <hi rend="superscript">2</hi>
+            </ref> These are believed to have originally been a single codex,<ref type="fn" target="#gjs187-FN3">
+               <hi rend="superscript">3</hi>
+            </ref> a personal
+            compendium belonging to Ælfwine, Dean of the New Minster in Winchester, which explicitly names its owner in several places and describes him as a ‘decanus’
+                (‘dean’).<ref type="fn" target="#gjs187-FN4">
+               <hi rend="superscript">4</hi>
+            </ref> Neil Ker therefore dates the composite manuscript to after 1023 and no later than 1035, the year in which
+            Ælfwine became the abbot of New Minster.<ref type="fn" target="#gjs187-FN5">
+               <hi rend="superscript">5</hi>
+            </ref> Although most of its texts were copied by two main scribes,
+                <hi rend="italic">Ælfwine’s Prayerbook</hi> also contains a further nine hands,<ref type="fn" target="#gjs187-FN6">
+               <hi rend="superscript">6</hi>
+            </ref> including some which may date from a
+            little after Ælfwine’s use of the manuscript, and the work of a twelfth-century female glossator.<ref type="fn" target="#gjs187-FN7">
+               <hi rend="superscript">7</hi>
+            </ref> The manuscript
+            contains a wide variety of texts, encompassing computus, prognostics, scientific knowledge, Ælfric of Eynsham’s <hi rend="italic">De temporibus anni</hi>, prayers, Special Offices, a
+            collectar, and three devotional miniatures.<ref type="fn" target="#gjs187-FN8">
+               <hi rend="superscript">8</hi>
+            </ref> Alicia Corrêa has suggested that Ælfwine may have carried this manuscript
+            when officiating at services on external estates owned by the New Minster, a role which, as D. H. Turner notes, was included amongst the duties of a dean.<ref type="fn" target="#gjs187-FN9">
+               <hi rend="superscript">9</hi>
+            </ref>
+         </p>
+         <p>
+            <hi rend="italic">Ælfwine’s Prayerbook</hi> includes many texts which were suitable for private prayer,<ref type="fn" target="#gjs187-FN10">
+               <hi rend="superscript">10</hi>
+            </ref> but potentially the
+            most interesting of these is a list of instructions for morning prayer found on Titus D. xxvi, fol. 2r–v, which Günzel titles ‘Directions for Private Devotions’.
+            This text gives a clear indication not only of which prayers an eleventh-century Winchester monk or nun may have used, but also of when, how, and why he or she said them. It was not
+            written in one of the two hands responsible for most of the manuscript’s texts, but in what Günzel has named Hand F, which Ker suggests may date from after Ælfwine’s
+            use of the prayerbook.<ref type="fn" target="#gjs187-FN11">
+               <hi rend="superscript">11</hi>
+            </ref> In full, the text reads as follows: <list type="order">
+               <item>
+                  <p>Ælce sunnandæg bebeod þe ðære þrynnesse naman, þæt is fæder 7 sunu 7 se halga gast.</p>
+               </item>
+               <item>
+                  <p>7 sing ‘benedicite’ 7 ‘Gloria in excelsis Deo’ 7 ‘credo in Deum’ 7 ‘pater noster’ Criste to lofe, þonne gelimpð
+                        þe ealle wucan þe bet.</p>
+               </item>
+               <item>
+                  <p>Mihtest þu gewunian þæt ðu hit sunge ælce dæge, þonne ðu ærest onwoce.</p>
+               </item>
+               <item>
+                  <p>7 cweþ ðonne God ælmihtig, ‘For þinre miclan mildheortnesse 7 for ðissa godes worda mægne, miltsa me, 7 syle me minra gedonra synna
+                        forgyfnesse, 7 ðara toweardra gescildnessa, 7 þine bletsunga to eallum þingum 7 huru minre sawle reste on ðam ecan life 7 a ðine miltse.’</p>
+               </item>
+               <item>
+                  <p>7 geþenc ælce frigedæge, þæt ðu strecce þe on eorðan godes þances, 7 sing ‘DEVS misereatur nostri.’ [Psalm 66]</p>
+               </item>
+               <item>
+                  <p>7 do þis dihlice, þær ðu sylf sy.</p>
+               </item>
+               <item>
+                  <p>7 geþenc þæt he ðrowode on þone dæg micel for eall mancyn.</p>
+               </item>
+               <item>
+                  <p>Ne mæg ænig mann on his agen geþeode þa geswinc 7 þara costnunga nearonessa, þe him onbecumað, Gode swa fulfremedlice areccan, ne his
+                        mildheortnesse biddan, swa he mæg mid þillicum sealmum 7 mid oþrum swilcum.</p>
+               </item>
+               <item>
+                  <p>Gyf þu ælce dæge þine tidsangas wel asingst, ne þearft ðu næfre to helle, 7 eac on þisse worulde þu hæfst þe
+                        gedefe lif.</p>
+               </item>
+               <item>
+                  <p>7 gyf ðu on hwilcum earfeðum byst 7 to Gode clypast, he ðe miltsað 7 eac tiþað, þonne þu hine bitsð. Amen
+                            (<hi rend="italic">Ælfwine’s Prayerbook</hi>, no. 53).<ref type="fn" target="#gjs187-FN12">
+                        <hi rend="superscript">12</hi>
+                     </ref>
+                  </p>
+               </item>
+            </list>
+        </p>
+         <p>Short as this text is, it nevertheless gives a full programme for the monk or nun’s morning prayers, to be said on Sundays (1), or simply every day (3). The reader is instructed to
+            call upon the Trinity (1) and sing the <hi rend="italic">Benedicite</hi>, <hi rend="italic">Gloria in excelsis</hi>, <hi rend="italic">Creed</hi> and <hi rend="italic">Paternoster</hi> (2), to say a vernacular
+            penitential prayer (4), and, on Fridays, to contemplate the Passion (7) in private (6) whilst singing a psalm of penitence (5). The writer subsequently comments that one should also sing
+            the Hours every day (9)—presumably referring to the communal prayer of the Offices, rather than to this private morning devotion—and that one may call upon God and receive help
+            from him in any time of trouble (10).</p>
+         <p>In the course of this prayer programme, the compiler remarks that it is ‘with these psalms and with other such’ that one is best able to express one’s sufferings to God
+            and ask his mercy (8). Although Günzel reports no analogues for the ‘Directions for Private Devotion’, this sentence is in fact a closely translated quotation from a
+            Carolingian prayer guide known as <hi rend="italic">De laude psalmorum</hi>. This text is a short treatise which teaches its reader how to pray for his or her own personal needs using the words
+            of the psalms. It appears at the beginning of the ninth-century prayer collection known as <hi rend="italic">De psalmorum usu</hi>, which was once attributed to Alcuin but subsequently shown by
+            André Wilmart not to be his work.<ref type="fn" target="#gjs187-FN13">
+               <hi rend="superscript">13</hi>
+            </ref> Wilmart nevertheless accepted <hi rend="italic">De laude psalmorum</hi> to be the genuine work
+            of Alcuin, a judgement with which Donald A. Bullough agreed, as has Jonathan Black, who has undertaken an intensive study of this prayer guide, including a comparative edition of the
+                text.<ref type="fn" target="#gjs187-FN14">
+               <hi rend="superscript">14</hi>
+            </ref> Stephan Waldhoff, by contrast, has followed Jean Chazelas in arguing against this attribution.<ref type="fn" target="#gjs187-FN15">
+               <hi rend="superscript">15</hi>
+            </ref> More than two hundred complete or incomplete copies of <hi rend="italic">De laude psalmorum</hi> survive, dating from the ninth to the fifteenth
+            centuries and mostly originating from continental Europe.<ref type="fn" target="#gjs187-FN16">
+               <hi rend="superscript">16</hi>
+            </ref> The one surviving manuscript from pre-Conquest England which includes a
+            Latin excerpt from this text will be discussed below.</p>
+         <p>
+            <hi rend="italic">De laude psalmorum</hi> is not a complete prayer programme to be followed from beginning to end, but instead it allows the reader to choose which parts to follow according to
+            his or her circumstances. Aside from a brief introduction and epilogue, the text is composed of eight short sections, each of which discusses a different reason why the reader might wish
+            to pray to God, giving a short selection of psalms to sing when in this particular situation. It is the second of these sections which is of relevance to <hi rend="italic">Ælfwine’s
+                Prayerbook</hi>: <cit>
+               <quote>
+                  <p>Si vis orare, permitte mentem tuam in virtute psalmorum quorum initium est: <hi rend="italic">Ad te, Domine, levavi animam meam</hi>; et Deus, in te speravi, Domine; necnon Inclina,
+                    Domine; et Domine Deus, in adiutorium meum; Deus, in nomine tuo; Deus misereatur nobis; Exaudi, Domine, iustitiam meam; et nullatenus potes tua propria lingua nec humano sensu tam
+                    perfecte miseriam tuam ac tribulationem angustiamque diversarum temptationum explicare et illius misericordiam implorare quam in his psalmis et ceteris his similibus (<hi rend="italic">De
+                        laude psalmorum</hi>, lines 156–70).<ref type="fn" target="#gjs187-FN17">
+                        <hi rend="superscript">17</hi>
+                     </ref>
+                  </p>
+               </quote>
+            </cit> The second half of this paragraph (beginning ‘nullatenus potes …’) is clearly the immediate source of line 8 of the prayer guide in
+                <hi rend="italic">Ælfwine’s Prayerbook</hi>. As shown above, after instructing the reader to sing Psalm 66 on Fridays, the writer of this guide comments: <cit>
+               <quote>
+                  <p>Ne mæg ænig mann on his agen geþeode þa geswinc 7 þara costnunga nearonessa, þe him onbecumað, Gode swa fulfremedlice areccan, ne his
+                    mildheortnesse biddan, swa he mæg mid þillicum sealmum 7 mid oþrum swilcum (<hi rend="italic">Ælfwine’s Prayerbook</hi>, no. 53.8).<ref type="fn" target="#gjs187-FN18">
+                        <hi rend="superscript">18</hi>
+                     </ref>
+                  </p>
+               </quote>
+            </cit> The Old English text is a very close translation of the Latin, indeed an exact one, except that it omits the words ‘nec humano sensu’ and has been adapted from
+            the second to the third person. This is difficult to explain, particularly as both <hi rend="italic">De laude psalmorum</hi> and the rest of the text in <hi rend="italic">Ælfwine’s
+                Prayerbook</hi> address their readers directly in the second person. Black observes that some manuscripts of <hi rend="italic">De laude psalmorum</hi> do in fact give
+            ‘potest’ or ‘poterit’ for ‘potes’, but in these instances the subject of the sentence is ‘tua propria lingua’ or ‘humanus
+            sensus’ rather than the reader of the treatise.<ref type="fn" target="#gjs187-FN19">
+               <hi rend="superscript">19</hi>
+            </ref> In <hi rend="italic">Ælfwine’s Prayerbook</hi>, by contrast, the
+            meaning of the sentence is preserved through the slight alteration of the text to ‘[n]e mæg ænig mann’ (‘no man can’).</p>
+         <p>It is not known where Scribe F of <hi rend="italic">Ælfwine’s Prayerbook</hi> came upon this quotation, nor whether he or she knew <hi rend="italic">De laude psalmorum</hi> in full. Of the
+            many manuscripts containing <hi rend="italic">De laude psalmorum</hi>, or parts of it, which Black lists, only one was written in pre-Conquest England, and this dates from a little later than
+                <hi rend="italic">Ælfwine’s Prayerbook</hi>. London, British Library Cotton Tiberius C. vi, known as the Tiberius Psalter, is a Winchester manuscript probably dating to the
+            1060s, which begins with thirty folios of miscellaneous texts.<ref type="fn" target="#gjs187-FN20">
+               <hi rend="superscript">20</hi>
+            </ref> Of particular interest is a text on fols. 21v–22v, which
+            outlines a plan for morning prayer using psalms and the prayer ‘Omnipotens sempiterne deus’.<ref type="fn" target="#gjs187-FN21">
+               <hi rend="superscript">21</hi>
+            </ref> This is immediately
+            followed, on fols. 22v–23r, by a short excerpt from <hi rend="italic">De laude psalmorum</hi>: the eighth use of the psalms, in which <hi rend="italic">Beati immaculati</hi> is recommended for
+            those who wish to occupy themselves with praising God and with his commands; plus the epilogue, which teaches that the psalms include every kind of divine scripture and teaching for those
+            who read them carefully.<ref type="fn" target="#gjs187-FN22">
+               <hi rend="superscript">22</hi>
+            </ref> After this extract appears a confessional <hi rend="italic">ordo</hi> for use with a priest, ending on fol.
+            27r–v with a condensed version of <hi rend="italic">De laude psalmorum</hi>: a list of all the reasons given in the full treatise for singing the psalms, followed by another list of the
+            psalms which should be sung for help every day.<ref type="fn" target="#gjs187-FN23">
+               <hi rend="superscript">23</hi>
+            </ref>
+         </p>
+         <p>The extracts from <hi rend="italic">De laude psalmorum</hi> in these two manuscripts, and in particular the summary in Tiberius C. vi, suggest that at least one complete copy of the psalm
+            devotional is likely to have existed in eleventh-century England, even if the compilers of these two texts did not draw upon it directly. Indeed, the existence of a quotation from
+                <hi rend="italic">De laude psalmorum</hi> in <hi rend="italic">Ælfwine’s Prayerbook</hi> demonstrates that this text may have been better known in England at this time than has so far
+            been thought. The extraction of individual sections of the psalm programme suggests that Anglo-Saxon scribes used <hi rend="italic">De laude psalmorum</hi> exactly as was intended: not as a
+            single prayer programme which should be followed in full by every reader, but as a list of recommendations for readers with different reasons for wanting to pray. By selecting the parts
+            which they presumably considered to be most important or most relevant, the compilers of the texts in Tiberius C. vi and <hi rend="italic">Ælfwine’s Prayerbook</hi> used <hi rend="italic">De
+                laude psalmorum</hi> in order to create entirely new programmes for morning prayer using the psalms.</p>
+         <p>In particular, it is the prayer guide in <hi rend="italic">Ælfwine’s Prayerbook</hi> which demonstrates the importance of the vernacular language in this period, as it uses Old
+            English alongside Latin not only for explaining the importance of prayer, but also for prayer itself. Although only one sentence from <hi rend="italic">De laude psalmorum</hi> was included in
+                <hi rend="italic">Ælfwine’s Prayerbook</hi>, this selection is in itself significant. From the earlier psalm treatise, the anonymous compiler chose the part which teaches that
+            the best kind of prayer, the most effective way of articulating one’s trials and temptations in both communal and private devotion, was to be found in the words of the psalms. For
+            the compilers of both texts, it was in these words that monks and nuns could express to God how great their struggles were, and how much they needed his mercy.<ref type="fn" target="#gjs187-FN24">
+               <hi rend="superscript">24</hi>
+            </ref>
+         </p>
+      </body>
+      <back>
+         <div type="fn-group">
+            <note place="inline" xml:id="gjs187-FN1">
+               <p>
+                  <hi rend="superscript">1</hi> Thomas Bestul has identified thirty-nine Anglo-Saxon manuscripts which include private prayers or devotional works. Thomas H. Bestul, ‘Continental Sources of
+                    Anglo-Saxon Devotional Writing’, in Paul E. Szarmach and Virginia Darrow Oggins (eds), <hi rend="italic">Sources of Anglo-Saxon Culture</hi>, Studies in Medieval Culture, 20
+                    (Kalamazoo, 1986), 124–6.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN2">
+               <p>
+                  <hi rend="superscript">2</hi> Beate Günzel, (ed.), Ælfwine’s Prayerbook (London, British Library, Cotton Titus D. xxvi + xxvii), Henry Bradshaw Society, 108 (London, 1993);
+                    Helmut Gneuss, Handlist of Anglo-Saxon Manuscripts: a List of Manuscripts and Manuscript Fragments Written or Owned in England up to 1100 (Tempe, 2001), no. 380; N. R. Ker,
+                    Catalogue of Manuscripts Containing Anglo-Saxon, Medieval and Renaissance Texts and Studies, 241 (Oxford, 1957), no. 202.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN3">
+               <p>
+                  <hi rend="superscript">3</hi> For evidence that the two manuscripts were originally one, see Günzel, <hi rend="italic">Ælfwine’s Prayerbook</hi>, 4–5.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN4">
+               <p>
+                  <hi rend="superscript">4</hi> Evidence for Ælfwine’s ownership can be seen in personal entries in the calendar, a cryptographic note on D. xxvii, fol. 13, an inscription above the
+                    miniature of the crucifixion, and the prayer ‘Deus, qui es iustorum gloria’ (fol. 61v), all of which mention Ælfwine by name, whilst the cryptographic entry
+                    refers to him as a ‘decanus’. Ker, <hi rend="italic">Catalogue</hi>, 265; Günzel, <hi rend="italic">Ælfwine’s Prayerbook</hi>, 70; the prayer is on page 109, (item
+                    no. 76.28).</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN5">
+               <p>
+                  <hi rend="superscript">5</hi> Ker, <hi rend="italic">Catalogue</hi>, 264–5.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN6">
+               <p>
+                  <hi rend="superscript">6</hi> A table of folios, items, and the scribes who wrote them can be found in Günzel, <hi rend="italic">Ælfwine’s Prayerbook</hi>, 10–11.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN7">
+               <p>
+                  <hi rend="superscript">7</hi> Ker, <hi rend="italic">Catalogue</hi>, 266.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN8">
+               <p>
+                  <hi rend="superscript">8</hi> Aside from the Passion according to St John and <hi rend="italic">De temporibus anni</hi>, the whole manuscript is edited by Günzel. Catherine Karkov has examined the
+                    three miniatures and their relationship to the prayers, and R. M. Liuzza has written on the prognostics. See Heinrich Henel (ed.), <hi rend="italic">Ælfric’s De Temporibus
+                        Anni</hi>, EETS o.s. 213 (London, 1942), xix–xxi; Catherine E. Karkov, ‘Text as Image in <hi rend="italic">Ælfwine’s Prayerbook</hi>’, in Hugh
+                    Magennis and Jonathan Wilcox (eds), <hi rend="italic">The Power of Words: Anglo-Saxon Studies Presented to Donald G. Scragg on his Seventieth Birthday</hi>, Medieval European Studies, 8
+                    (Morgantown, WV, 2006), 95–114; Catherine E. Karkov, ‘Abbot Ælfwine and the Sign of the Cross’, in Karen Jolly, Catherine E. Karkov, and Sarah Larratt
+                    Keefer (eds), <hi rend="italic">Cross and Cruciform in the Anglo-Saxon World: Studies to Honor the Memory of Timothy Reuter</hi>, Sancta Crux/Halig Rod, 3 (Morgantown, WV, 2010),
+                    103–32; Roy Michael Liuzza, ‘Anglo-Saxon Prognostics in Context: a Survey and Handlist of Manuscripts’, <hi rend="italic">Anglo-Saxon England</hi>, xxx (2001),
+                    181–230, especially 196–211, 219–21.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN9">
+               <p>
+                  <hi rend="superscript">9</hi> Alicia Corrêa (ed.), <hi rend="italic">The Durham Collectar</hi>, HBS 107 (London, 1992), 113, n. 2; D. H. Turner, ‘Prayer Book of Ælfwine’, in Janet
+                    Backhouse, D. H. Turner, and Leslie Webster (eds), <hi rend="italic">The Golden Age of Anglo-Saxon Art 966–1066</hi> (London, 1984), no. 61.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN10">
+               <p>
+                  <hi rend="superscript">10</hi> See especially the ‘Devotions to the Holy Cross’ (no. 46), Special Offices of the Trinity, Cross and the Virgin (nos. 49–51), and two long series of
+                    prayers which Günzel titles ‘Private Prayers’ (nos. 52 and 76). Günzel, <hi rend="italic">Ælfwine’s Prayerbook</hi>, 123–42, 184–97.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN11">
+               <p>
+                  <hi rend="superscript">11</hi> Ker, <hi rend="italic">Catalogue</hi>, 266.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN12">
+               <p>
+                  <hi rend="superscript">12</hi> Günzel, <hi rend="italic">Ælfwine’s Prayerbook</hi>, 143. The text divisions are those used by Günzel. All translations in this article are my own,
+                    except for psalm incipits, which are taken from the <hi rend="italic">Douay Rheims Bible</hi> [1582–1609] rev. Richard Challoner [1749–52] (repr. Rockford, IL, 1989).
+                    ‘(1) Every Sunday, pray in the name of the Trinity, that is the Father, Son, and the Holy Spirit. (2) And sing ‘Bless the Lord’, ‘Glory to God in the
+                    Highest’, ‘I believe in God’, and ‘Our Father’ to the praise of Christ; then all the week will go the better for you. (3) You could get used to
+                    singing it every day, when you first wake up. (4) And then say to God Almighty, ‘For your great mercy, and for the power of these words of God, have mercy on me, and grant me
+                    forgiveness of the sins I have committed, and protection against future ones, and your blessings in all things, and especially my soul’s rest in eternal life, and your mercy
+                    forever.’ (5) And every Friday, think to stretch yourself out onto the earth with thanks to God, and sing ‘May God have mercy on us’. (6) And do this secretly,
+                    where you are alone. (7) And think that he suffered greatly on that day for all humankind. (8) No man can tell God so effectively, in his own language, of the hardship and
+                    oppression of the temptations which come to him, nor ask his mercy, as he can with these psalms and with other such. (9) If you sing your Hours well every day, you need never go to
+                    hell, and in this world too you will have a good life. (10) And if you are in any kind of trouble and call to God, he will have mercy on you and also give to you, when you ask him.
+                    Amen.’</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN13">
+               <p>
+                  <hi rend="superscript">13</hi> André Wilmart (ed.), ‘Le manuel de prières de saint Jean Gualbert’, <hi rend="italic">Revue Bénédictine</hi>, xlviii, (1936),
+                    262–5; Alcuin, <hi rend="italic">De psalmorum usu liber</hi>, Patrologia Latina 101, cols. 465B–508D; <hi rend="italic">De laude psalmorum</hi> can be found at cols.
+                    465B–468A.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN14">
+               <p>
+                  <hi rend="superscript">14</hi> Wilmart, ‘Manuel de prières’, 263; Donald A. Bullough, ‘Alcuin and the Kingdom of Heaven: Liturgy, Theology, and the Carolingian Age’,
+                    in Uta-Renate Blumenthal (ed.), <hi rend="italic">Carolingian Essays: Andrew W. Mellon Lectures in Early Christian Studies</hi> (Washington, DC, 1983), 19–20. In justification of
+                    this attribution, Black notes a quotation from <hi rend="italic">De laude psalmorum</hi> in Alcuin’s <hi rend="italic">ep</hi>. 243, and the similarity between this treatise and
+                    Alcuin’s religious instruction of Charlemagne as described in the <hi rend="italic">Vita Alcuini</hi>. Jonathan Black (ed.), ‘Psalm Uses in Carolingian Prayerbooks: Alcuin
+                    and the Preface to <hi rend="italic">De psalmorum usu</hi>’, <hi rend="italic">Mediaeval Studies</hi>, lxiv (2002), 3–7; for the edition of the text, see 36–60.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN15">
+               <p>
+                  <hi rend="superscript">15</hi> Waldhoff notes that <hi rend="italic">De laude psalmorum</hi> is generally attributed to Augustine or Jerome, where an author is named at all, whereas it is only prayerbooks
+                    such as <hi rend="italic">De psalmorum usu</hi> which credit Alcuin with the work, and then only, he argues, in order to give the work increased status. Stephan Waldhoff, <hi rend="italic">Alcuins
+                        Gebetbuch für Karl den Grossen: Seine Rekonstruktion und seine Stellung in der frühmittelalterlichen Geschichte der</hi> libelli precum, Liturgiewissenschaftliche
+                    Quellen und Forschungen, 89 (Münster, 2003), 272–6. Black acknowledges some merit in Waldhoff’s argument, but notes the existence of an earlier copy of <hi rend="italic">De
+                        laude psalmorum</hi>, in Vienna, Österreichische Nationalbibliothek 1008, which probably dates from before the ninth century. Jonathan Black, ‘Review of
+                        <hi rend="italic">Alcuins Gebetbuch für Karl den Grossen</hi>, by Stephan Waldhoff’, <hi rend="italic">Speculum</hi>, lxxxiii (2008), 773.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN16">
+               <p>
+                  <hi rend="superscript">16</hi> Black, ‘Alcuin and the Preface’, 3, 36–43.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN17">
+               <p>
+                  <hi rend="superscript">17</hi>
+                  <hi rend="italic">Ibid</hi>., 53. ‘If you want to pray, entrust your mind to the power of the psalms whose beginnings are: <hi rend="italic">To thee, O Lord, have I lifted up my
+                        soul</hi>; and <hi rend="italic">In thee, O Lord, have I hoped</hi>; and also <hi rend="italic">Incline thy ear, O Lord</hi>; and <hi rend="italic">O God, come to my assistance</hi>;
+                        <hi rend="italic">Save me, O God, by thy name</hi>; <hi rend="italic">May God have mercy upon us</hi>; <hi rend="italic">Hear, O Lord, my justice</hi>; and you cannot in any way, in your own
+                    language, nor in human thought, so perfectly explain your suffering, and the trouble and constriction of various temptations, and ask his mercy as in these psalms and in others
+                    similar to them.’</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN18">
+               <p>
+                  <hi rend="superscript">18</hi> Günzel, <hi rend="italic">Ælfwine’s Prayerbook</hi>, 143. ‘No man can tell God so effectively, in his own language, of the hardship and oppression of
+                    the temptations which come to him, nor ask his mercy, as he can with these psalms and with other such.’</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN19">
+               <p>
+                  <hi rend="superscript">19</hi> Black, ‘Alcuin and the Preface’, 53.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN20">
+               <p>
+                  <hi rend="superscript">20</hi> Gneuss, <hi rend="italic">Handlist</hi>, no. 378; Ker, <hi rend="italic">Catalogue</hi>, no. 199. The main part of the manuscript is edited in A. P. Campbell (ed.), <hi rend="italic">The
+                        Tiberius Psalter, Edited From British Museum MS Cotton Tiberius C vi</hi> (Ottawa, 1974); however, this edition does not include the first thirty folios. A facsimile of the
+                    whole manuscript has been published in Phillip Pulsiano (ed.), <hi rend="italic">Psalters I</hi>, Anglo-Saxon Manuscripts in Microfiche Facsimile, 2 (Binghampton, 1994).</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN21">
+               <p>
+                  <hi rend="superscript">21</hi> This prayer can also be found in the Bury Psalter, Vatican City, Reginenses Latini 12. André Wilmart (ed.), ‘The Prayers of the Bury Psalter’, repr.
+                    from the <hi rend="italic">Downside Review</hi>, xlviii (1930), 14.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN22">
+               <p>
+                  <hi rend="superscript">22</hi> Black, ‘Alcuin and the Preface’, 43, 59–60.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN23">
+               <p>
+                  <hi rend="superscript">23</hi>
+                    <hi rend="italic">Ibid</hi>.</p>
+            </note>
+            <note place="inline" xml:id="gjs187-FN24">
+               <p>
+                  <hi rend="superscript">24</hi> I would like to thank Christine Phillips for her assistance with this article and with the doctoral research which led to it.</p>
+            </note>
+         </div>
+      </back>
+   </text>
+</TEI>

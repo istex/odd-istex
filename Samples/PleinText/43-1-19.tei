@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="EN">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Law, Religion, and the Metaphysics of Abortion: A Reply to Simmons</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Oxford University Press</publisher>
+            <availability>
+               <p>Copyright 2001 by the J. M. Dawson Institute of Church-State Studies</p>
+            </availability>
+            <date>2001</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="article">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Beckwith</surname>
+                        <forename type="first">Francis J.</forename>
+                     </persName>
+                     <roleName>associate professor of philosophy, culture and law</roleName>
+                  </author>
+                  <title level="a" type="main">Law, Religion, and the Metaphysics of Abortion: A Reply to Simmons</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">Journal of Church and State</title>
+                  <title level="j" type="hwp">jcs</title>
+                  <title level="j" type="publisher-id">jcs</title>
+                  <title level="j" type="abbrev">Journal of Church and State</title>
+                  <idno type="pISSN">0021-969X</idno>
+                  <idno type="eISSN">2040-4867</idno>
+                  <imprint>
+                     <publisher>Oxford University Press</publisher>
+                     <date type="Published" when="2001"/>
+                     <biblScope unit="vol">43</biblScope>
+                     <biblScope unit="issue">1</biblScope>
+                     <biblScope unit="page" from="19">19</biblScope>
+                     <biblScope unit="page" to="33">33</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

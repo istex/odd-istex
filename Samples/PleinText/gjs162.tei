@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="EN">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Attention and Effort in the Transfer of an Orthographic Detail?</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Oxford University Press</publisher>
+            <availability>
+               <p>© The Author (2012). Published by Oxford University Press. All rights reserved. For Permissions, please email:
+                    journals.permissions@oup.com</p>
+            </availability>
+            <date>2012</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct type="article">
+               <analytic>
+                  <author>
+                     <persName>
+                        <surname>Merriam</surname>
+                        <forename type="first">Thomas</forename>
+                     </persName>
+                  </author>
+                  <title level="a" type="main">Attention and Effort in the Transfer of an Orthographic Detail?</title>
+                  <idno type="articleId"/>
+               </analytic>
+               <monogr>
+                  <title level="j" type="main">Notes and Queries</title>
+                  <title level="j" type="publisher-id">notesj</title>
+                  <title level="j" type="hwp">notesj</title>
+                  <idno type="pISSN">0029-3970</idno>
+                  <idno type="eISSN">1471-6941</idno>
+                  <imprint>
+                     <publisher>Oxford University Press</publisher>
+                     <date type="Published" when="2012-12"/>
+                     <date type="ePublished" when="2012-10-19"/>
+                     <biblScope unit="vol">59</biblScope>
+                     <biblScope unit="issue">4</biblScope>
+                     <biblScope unit="page" from="525">525</biblScope>
+                     <biblScope unit="page" to="530">530</biblScope>
+                  </imprint>
+               </monogr>
+               <idno type="DOI">10.1093/notesj/gjs162</idno>
+               <idno type="publisherID">gjs162</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>DANIEL KAHNEMAN distinguishes between a so-called mental System 1, the automated activity of the associative memory in making intuitive decisions on the one hand, and, on the other, System
+            2 which requires attention and effort. System 1 entails conditioned patterns and habits of the mind, an unconscious mental ‘default mode’; System 2 entails the fully conscious
+            checking and re-checking of facts for accuracy.<ref type="fn" target="#gjs162-FN1">
+               <hi rend="superscript">1</hi>
+            </ref> The distinction of the two systems casts light on textual transference from one
+            literary work to another. By textual transference, I mean the borrowing of themes, concepts, verbatim wordings in context, collocations in or out of context, rare words, frequency of
+            function words and their common juxtapositions, and, in the case of handwritten manuscripts, characteristic orthographic features.</p>
+         <p>Literary themes can engage System 2: writers of one text may well be conscious of thematic or topical parallels with the texts from which they borrow. Whether there is transference of
+            deliberately chosen thematic material from one author to himself or herself (sometimes referred to as ‘self-plagiarism’), or from one author to another, both attention and
+            intention are engaged. At the unconscious level of collocations and function words on the other hand, System 1 may dominate. If, for example, motivation is absent in the choice of words,
+            the choice of phrasal patterns of words, or the choice of orthographic formations, involuntary habit is responsible.<ref type="fn" target="#gjs162-FN2">
+               <hi rend="superscript">2</hi>
+            </ref>
+         </p>
+         <p>Shakespeare consciously crafted parallels between Hermione in <hi rend="italic">The Winter’s Tale</hi> and Katherine in <hi rend="italic">Henry VIII</hi>.<ref type="fn" target="#gjs162-FN3">
+               <hi rend="superscript">3</hi>
+            </ref> Shakespeare deliberately imitated Plautus in <hi rend="italic">The Comedy of Errors</hi> with respect to plot, incident, and character. He literally transcribed
+            Holinshed on occasion with <hi rend="italic">Henry VIII</hi>.<ref type="fn" target="#gjs162-FN4">
+               <hi rend="superscript">4</hi>
+            </ref> In these three cases there is discernible motivation for the borrowing.</p>
+         <p>The dating of the Original Text of <hi rend="italic">Sir Thomas More</hi> in the early 1590s as advocated by Greg, Shapiro, Wentersdorf, Blayney, McMillin, Taylor, Melchiori, and Gabrieli permits
+            the transfer of Shakespeare’s phrasal habits (System 1) from <hi rend="italic">Henry VI, Part 2</hi> (in performance) to the Original Text of <hi rend="italic">Sir Thomas More</hi> within a
+            short time span.<ref type="fn" target="#gjs162-FN5">
+               <hi rend="superscript">5</hi>
+            </ref> In contrast, the Original Text’s dating by Schücking<ref type="fn" target="#gjs162-FN6">
+               <hi rend="superscript">6</hi>
+            </ref> and 3rd Arden <hi rend="italic">More</hi>
+            <ref type="fn" target="#gjs162-FN7">
+               <hi rend="superscript">7</hi>
+            </ref>
+            <hi rend="italic">c.</hi> 1600 requires a transfer of noted collocations and verbal features by Munday from a performance of <hi rend="italic">Henry VI, Part 2</hi> (1592 at the latest) to the
+            Original Text over a space of more than seven years—without a discernible reason (System 2) for their preservation intact.</p>
+         <p>Additionally, it must be said in parenthesis that the early dating of the Original Text disallows Chettle’s plausible involvement in its composition, according to the current state of
+            evidence cited in 3rd Arden <hi rend="italic">More</hi>. ‘There is no evidence of Munday and Chettle collaborating on a play or any other work before 1598.’<ref type="fn" target="#gjs162-FN8">
+               <hi rend="superscript">8</hi>
+            </ref> Chettle’s earliest possible contribution to Elizabethan drama was in 1597. ‘Of the revisers, neither Chettle nor Dekker can be shown to
+            have been active as a dramatist before 1597.’<ref type="fn" target="#gjs162-FN9">
+               <hi rend="superscript">9</hi>
+            </ref>
+            <cit>
+               <quote>
+                  <p>There remains a strong suspicion that Munday did not write the Original Text alone. But the clearest potential evidence is too conflicting for confident pronouncement to be made on
+                    the pattern or even the presence of collaboration. For those seeking clarity on these issues, the state of knowledge is unsatisfactory… With early modern playmaking, modern
+                    paradigms of literary writing and techniques of investigating authorship, despite their successes, can in some situations break down and leave the question unresolved, for now at
+                        least.<ref type="fn" target="#gjs162-FN10">
+                        <hi rend="superscript">10</hi>
+                     </ref>
+                  </p>
+               </quote>
+            </cit>
+        </p>
+         <p>A date of 1593 or thereabouts would allow a degree of Shakespearean authorship of the Original Text, thus suggesting composition of an unusual play for Lord Strange’s Men with its
+            ‘repertory of varied and unpredictable implications’,<ref type="fn" target="#gjs162-FN11">
+               <hi rend="superscript">11</hi>
+            </ref> plus extended roles for Edward Alleyn.<ref type="fn" target="#gjs162-FN12">
+               <hi rend="superscript">12</hi>
+            </ref> The 3rd Arden date of <hi rend="italic">c.</hi> 1600 requires the play’s composition by Munday and possibly Chettle for the Earl of Derby’s
+            company, for which neither is known to have written.<ref type="fn" target="#gjs162-FN13">
+               <hi rend="superscript">13</hi>
+            </ref>
+         </p>
+         <p>Levin L. Schücking proposed dating the Original Text by reason of its affinity with <hi rend="italic">1 Sir John Oldcastle</hi> (1599) and <hi rend="italic">Thomas Lord Cromwell</hi>
+                (<hi rend="italic">c.</hi> 1600). The association of the three is based on circumstantial evidence of the similarity of their genre as ‘unroyal’ histories. They are
+            ‘unroyal’ in contrast to most Elizabethan history plays that were named after and concerned with kings<hi rend="italic">.</hi> Schücking’s subjective perception of
+            intertextual influence among the three plays is evidenced in his belief that Fletcher’s much later <hi rend="italic">The Woman’s Prize</hi> provides a model for the Original
+            Text’s ‘feminist’ Doll Williamson. Schücking’s authorial attribution in 1925 of Addition II (Hand D) to Heywood overruled the empirical evidence of the eminent
+            palaeographer Edward Maunde Thompson in favour of his intuitive perception of a shared sentimentality—‘at the same time <hi rend="italic">he</hi> [Heywood] <hi rend="italic">has</hi> that
+            sentimental vein, so unmistakeable in the Moore speech [Addition II].’<ref type="fn" target="#gjs162-FN14">
+               <hi rend="superscript">14</hi>
+            </ref>
+         </p>
+         <p>But to return to the question of textual transference between plays: what might serve as a good example of unmotivated System 1 habits which are unaccountably transferable between different
+            authors, without attention and effort - with respect to the Original Text of <hi rend="italic">More</hi>? Munday’s <hi rend="italic">John a Kent and John a Cumber</hi> provides one. Antedating
+            the Original Text by three to eight years, Munday’s play has no words ending in a double <hi rend="italic">t</hi>. Neither do any of his known dramatic works before or after
+                <hi rend="italic">More</hi>, including the probably co-authored <hi rend="italic">Downfall</hi> and <hi rend="italic">Death of Robert Earl of Huntingdon</hi>. Chettle’s <hi rend="italic">Hoffman</hi>
+            has three words ending in <hi rend="italic">tt</hi>: <hi rend="italic">kitt</hi>, <hi rend="italic">smitt</hi>, and <hi rend="italic">allott</hi>, none of which occurs in the Original Text. The manuscript
+            Original Text of <hi rend="italic">More</hi> contains 62 tokens ending in <hi rend="italic">tt</hi>, consisting of these types:<ref type="fn" target="#gjs162-FN15">
+               <hi rend="superscript">15</hi>
+            </ref>
+            <hi rend="italic">comitt</hi>, <hi rend="italic">cutt</hi> (166, 802), <hi rend="italic">diett</hi>, <hi rend="italic">fatt</hi>, <hi rend="italic">fitt</hi> (1060, 1747), <hi rend="italic">frett</hi>, <hi rend="italic">gott</hi>
+            (335), <hi rend="italic">hott</hi> (359), <hi rend="italic">markett</hi>, <hi rend="italic">meritt</hi>, <hi rend="italic">nett</hi>, <hi rend="italic">poett</hi>, <hi rend="italic">riott</hi>, <hi rend="italic">wett</hi>,
+                <hi rend="italic">witt (</hi>see below), and <hi rend="italic">writt</hi>. The text in Hand D, attributed to Shakespeare by Thompson and 3rd Arden, has <hi rend="italic">cutt</hi> (Addition II, 243),
+                <hi rend="italic">gott</hi> (191 and 203), <hi rend="italic">sett</hi> (213), <hi rend="italic">sytt</hi>, and <hi rend="italic">whett</hi>. The Quarto of <hi rend="italic">Love’s Labour’s Lost</hi>
+            (1598) has four occurrences of <hi rend="italic">witt.</hi> The Original Text, dated by 3rd Arden <hi rend="italic">c.</hi> 1600, contains the same spelling ‘witt’ at 755, 922, 923, 927,
+            929, 949, 1006, 1007, 1008, 1010, 1016, 1019 (twice), 1020, 1021 (twice), 1025, 1037, 1040, 1041, 1054, 1061, 1064, 1079, 1084, 1092, 1103, 1113, 1119, 1125, 1128, 1131, and 1138 (33
+            times). The Quarto of <hi rend="italic">Henry IV, Part 2</hi> (1600) has one occurrence of <hi rend="italic">sett</hi>; the Folio of <hi rend="italic">Richard II</hi> (1623) also has one occurrence of
+                <hi rend="italic">sett</hi>. The Quarto of <hi rend="italic">Troilus and Cressida</hi> (1609) contains the Original Text’s <hi rend="italic">hott</hi> (twice) and <hi rend="italic">fitt</hi>, besides
+                <hi rend="italic">rott</hi> and <hi rend="italic">bitts</hi>.</p>
+         <p>If the orthographic habit of the terminal <hi rend="italic">tt</hi> in <hi rend="italic">Witt</hi>, the generic absence of which ending was Munday’s custom, indeed was transferred from its
+            occurrences in <hi rend="italic">Love’s Labour’s Lost</hi> (first printed in 1598) to its predominant use in <hi rend="italic">More</hi>’s Original Text, this was done for a reason
+            sufficient to break the habit of <hi rend="italic">not</hi> using it. If, however, the habit of doubling the terminal <hi rend="italic">t</hi> was an orthographic convention of Shakespeare’s
+            which surfaced occasionally in the printed quartos, its weaving in and out of the Original Text, Addition II (Hand D) and the printed Shakespeare plays need entail no rationale or
+            ‘motivation’. The sequence of <hi rend="italic">Love’s Labour’s Lost</hi>, the Original Text, Addition II (Hand D) and <hi rend="italic">Troilus</hi> is not essential to System
+            1. Double terminal <hi rend="italic">t</hi> is found once in Quartos of <hi rend="italic">Richard III</hi>, four times in <hi rend="italic">Love’s Labour’s Lost</hi>, once in <hi rend="italic">Henry IV,
+                Part 2</hi>, six times in <hi rend="italic">Troilus</hi>, twice in <hi rend="italic">Othello</hi>, and three times in <hi rend="italic">King Lear</hi>, all of which were mediated by printers’
+            preference for the more commonly and economically employed single terminal <hi rend="italic">t</hi>.</p>
+         <p>Addition I (Hand A) by Chettle has no occurrences of the terminal double <hi rend="italic">t</hi>. In his seminal work on orthography, A. C. Partridge wrote, <cit>
+               <quote>
+                  <p>If a certain spelling of a particular word (or a graphic rendering of a particular sound) occurs with a reasonable regularity in texts that good bibliographical or other evidence
+                    leads us to believe are based directly on autograph copy, then the spelling in question may be assumed to derive from Shakespeare himself.<ref type="fn" target="#gjs162-FN16">
+                        <hi rend="superscript">16</hi>
+                     </ref>
+                  </p>
+               </quote>
+            </cit> The terminal double <hi rend="italic">t</hi> is ‘a graphic rendering of a particular sound’ which occurs with reasonable regularity (6 times out of all 141 terminal
+                <hi rend="italic">t</hi>) in the Shakespeare autograph Addition II (Hand D).<ref type="fn" target="#gjs162-FN17">
+               <hi rend="superscript">17</hi>
+            </ref> If the ratios of terminal <hi rend="italic">tt</hi> to
+            terminal <hi rend="italic">t</hi> in Hand D and the Original Text are compared with each other by using Fisher’s Exact Test (6 -<hi rend="italic">tt</hi>:135 -<hi rend="italic">t</hi> versus 62
+                -<hi rend="italic">tt</hi>:1768 -<hi rend="italic">t</hi>), the probability is 0.47, virtually the toss of a coin and well within the parameters of likelihood. If the ratios of terminal
+                <hi rend="italic">tt</hi> to terminal <hi rend="italic">t</hi> in Hand D and <hi rend="italic">John a Kent</hi> are compared, (6 -<hi rend="italic">tt</hi>: 135 -<hi rend="italic">t</hi> versus 0
+                -<hi rend="italic">tt</hi>: 1585 -<hi rend="italic">t</hi>), the probability is less than 0.0001, less than one chance in ten thousand—as expected.</p>
+         <p>If the habit of using the terminal double <hi rend="italic">t</hi> belongs to Kahneman’s subconscious System 1, then the same author may have been responsible for its instinctive use in
+            Hand D and the Original Text of <hi rend="italic">More</hi>. If the habit of using the terminal double <hi rend="italic">t</hi> belongs to Kahneman’s fully conscious System 2, then
+            Munday’s use, entailing effort and attention, for his own and possibly Chettle’s Original Text, poses difficult questions that have not been addressed.</p>
+         <div type="cases">
+            <head>A Case in Point</head>
+            <p>Although the double <hi rend="italic">t</hi> at the end of words was often penned by writers of the period, printers were reluctant to print a redundant letter, and, as a consequence, the
+                terminal double <hi rend="italic">tt</hi> is rare in modern English spelling.</p>
+            <p>An initial search of over three hundred early modern printed plays in their original spelling reveals that 273 have no words ending with double <hi rend="italic">t</hi>, 42 contain a single
+                occurrence, 19 have two, and another 24 have from 3 to 19 occurrences. The average for 358 printed plays is 0.64 occurrences per play.</p>
+            <p>By contrast, the average number of words with terminal double <hi rend="italic">t</hi> in thirteen extant ‘manuscript’ plays is 128.6 per play. These plays were printed years
+                after their composition when antiquarian concerns preserved their original handwritten orthography. The striking contrast between printed and manuscript plays with respect to this
+                habit can be seen in <ref type="fig" target="#gjs162-F1">Figure 1</ref> where 371 plays are displayed with their numbers of terminal <hi rend="italic">tt</hi> indicated on the vertical
+                axis. Were it not for a single exception, <hi rend="italic">John a Kent</hi> with no occurrences, one could say that the search confirms the hypothesis that early modern printers
+                significantly reduced the numbers of terminal <hi rend="italic">tt</hi> originally penned in manuscripts. <figure xml:id="gjs162-F1">
+                  <head type="label">Fig. 1.</head>
+                  <figDesc>An orthographic difference between manuscript and printed plays</figDesc>
+                  <graphic url="gjs162f1p"/>
+               </figure>
+            </p>
+            <p>The thirteen MS plays are: <hi rend="italic">Woodstock</hi> (381 <hi rend="italic">tt</hi>’s), Heywood’s <hi rend="italic">The Captives</hi> (320), Dekker’s <hi rend="italic">The Welsh
+                    Ambassadors</hi> (192), Heywood’s <hi rend="italic">The Escapes of Jupiter</hi> (170), <hi rend="italic">Edmund Ironside</hi> (150), Massinger’s <hi rend="italic">The Parliament of
+                    Love</hi> (95), the Original Text of <hi rend="italic">Sir Thomas More</hi> (62), Fletcher’s <hi rend="italic">Sir John Van Olden Barnavelt</hi> (55), Marston’s <hi rend="italic">Masque
+                    Entertainment</hi> (36), Middleton’s <hi rend="italic">The Witch</hi> (32), Chapman’s <hi rend="italic">Masque of the Twelve Months</hi> (26), Greene’s <hi rend="italic">John of
+                    Bordeaux</hi> (24), and Munday’s <hi rend="italic">John a Kent and John a Cumber</hi> (0).</p>
+            <p>Munday’s MS <hi rend="italic">John a Kent</hi> is unusual for positioning itself among the printed plays without the final <hi rend="italic">tt</hi>. It is noteworthy that the Original Text
+                of <hi rend="italic">Sir Thomas More</hi>, penned in the same hand as <hi rend="italic">John a Kent</hi>, has 62 words ending in <hi rend="italic">tt</hi>. Besides these two plays, there are two other
+                MS plays in the same handwriting, Heywood’s <hi rend="italic">The Captives</hi> and <hi rend="italic">The Escapes of Jupiter</hi>, shown on the right of <ref type="fig" target="#gjs162-F1">Figure 1</ref>. The types and tokens they have in common are compared in <ref type="table" target="#gjs162-T1">Table 1</ref>, which lists the relevant orthographic word types
+                in each play with their numbers of occurrence. <figure type="table" xml:id="gjs162-T1">
+                  <head>Table 1.</head>
+                  <p>Orthographic word types and rate of occurrence</p>
+                  <ab>
+                     <table>
+                        <row>
+                           <cell role="th"/>
+                           <cell role="th">Escapes</cell>
+                           <cell role="th">Captives</cell>
+                        </row>
+                        <row>
+                           <cell role="td">abbatt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">abbott</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">18</cell>
+                        </row>
+                        <row>
+                           <cell role="td">abett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">acquitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">3</cell>
+                        </row>
+                        <row>
+                           <cell role="td">addmitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">admitt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">att</cell>
+                           <cell role="td">31</cell>
+                           <cell role="td">29</cell>
+                        </row>
+                        <row>
+                           <cell role="td">bankett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">banquett</cell>
+                           <cell role="td">4</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">beegett</cell>
+                           <cell role="td">4</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">beegott</cell>
+                           <cell role="td">5</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">begett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">beneffitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">budgett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">11</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Butt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">3</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Canott</cell>
+                           <cell role="td">8</cell>
+                           <cell role="td">20</cell>
+                        </row>
+                        <row>
+                           <cell role="td">caskett</cell>
+                           <cell role="td">4</cell>
+                           <cell role="td">5</cell>
+                        </row>
+                        <row>
+                           <cell role="td">chariott</cell>
+                           <cell role="td">3</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">closett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">cownterfett</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">cownterffett</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">creditt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">crotchett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">cutt</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">decrepitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">drawenett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">fett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">ffagott</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">ffatt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">ffett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">ffoott</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">fforfett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Fforgett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Ffishemarkett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Fitt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Fforfett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Forfett</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Forgett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Forgott</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Garrett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Gett</cell>
+                           <cell role="td">6</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Gott</cell>
+                           <cell role="td">5</cell>
+                           <cell role="td">9</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Habitt</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Ha’tt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Hitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Hott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">7</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Itt</cell>
+                           <cell role="td">8</cell>
+                           <cell role="td">18</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Lett</cell>
+                           <cell role="td">38</cell>
+                           <cell role="td">36</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Limitt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Lott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Markett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">3</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Marchantt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Meritt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Mett</cell>
+                           <cell role="td">4</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Mullett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Nett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">9</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Nott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Parrott</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Perffitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Plott</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">3</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Pockett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Profitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">5</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Putt</cell>
+                           <cell role="td">8</cell>
+                           <cell role="td">24</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Rott</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Satt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Secrett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Sett</cell>
+                           <cell role="td">8</cell>
+                           <cell role="td">18</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Shott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Shutt</cell>
+                           <cell role="td">5</cell>
+                           <cell role="td">3</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Sitt</cell>
+                           <cell role="td">5</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Spiritt</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Spitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Splitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Spyritt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Strompett</cell>
+                           <cell role="td">4</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Submitt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Surffett</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Surfett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Sweett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Swett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Turbutt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Visitt</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">wether-bett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Wertt</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Wett</cell>
+                           <cell role="td">0</cell>
+                           <cell role="td">4</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Writt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">2</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Yett</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">1</cell>
+                        </row>
+                     </table>
+                  </ab>
+                  <table/>
+               </figure>
+            </p>
+            <p>The correlation coefficient for the two column vectors is 0.79 for 88 items. As expected for habits of the same penman/author, they are highly correlated. Kahneman’s System 1
+                would account for the association.</p>
+            <p>
+               <ref type="table" target="#gjs162-T2">Table 2</ref> lists the words with terminal <hi rend="italic">tt</hi> in the Original Text of <hi rend="italic">Sir Thomas More</hi> and <hi rend="italic">John a
+                    Kent</hi>, both in the handwriting of Anthony Munday. <figure type="table" xml:id="gjs162-T2">
+                  <head>Table 2.</head>
+                  <p>Words with terminal <hi rend="italic">tt</hi> in <hi rend="italic">Sir Thomas More</hi> and <hi rend="italic">John a Kent</hi>, original texts</p>
+                  <ab>
+                     <table>
+                        <row>
+                           <cell role="th"/>
+                           <cell role="th">More</cell>
+                           <cell role="th">JaK</cell>
+                        </row>
+                        <row>
+                           <cell role="td">bett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">comitt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">cutt</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">diett</cell>
+                           <cell role="td">3</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">fatt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">Fitt</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">frett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">gott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">hott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">markett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">meritt</cell>
+                           <cell role="td">3</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">nett</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">nott</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">poett</cell>
+                           <cell role="td">4</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">riott</cell>
+                           <cell role="td">2</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">wett</cell>
+                           <cell role="td">3</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">witt</cell>
+                           <cell role="td">32</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">writt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                        <row>
+                           <cell role="td">ytt</cell>
+                           <cell role="td">1</cell>
+                           <cell role="td">0</cell>
+                        </row>
+                     </table>
+                  </ab>
+                  <table/>
+               </figure>
+            </p>
+            <p>There is no correlation. The contrast here with the comparison between the Heywood plays suggests that the same handwriting does not by itself include the habit of using the terminal
+                    <hi rend="italic">tt</hi>. There is an orthographic factor which separates <hi rend="italic">John a Kent</hi> from the Original Text of <hi rend="italic">Sir Thomas More</hi>, and thus asks for an
+                explanation. Random fluctuations in early modern spelling do not account for the systematic difference between the orthography of the Heywood plays on the one hand, and the accepted
+                Munday plays on the other with respect to terminal <hi rend="italic">tt</hi>. A difference of authorship has been ruled out by some.<ref type="fn" target="#gjs162-FN18">
+                  <hi rend="superscript">18</hi>
+               </ref>
+                If such an explanation is deemed improbable, what alternatives in terms of System 1 or System 2, or for that matter any other, might be proposed?</p>
+         </div>
+      </body>
+      <back>
+         <div type="fn-group">
+            <note place="inline" xml:id="gjs162-FN1">
+               <p>
+                  <hi rend="superscript">1</hi> D. Kahneman, <hi rend="italic">Thinking, Fast and Slow</hi> (New York, 2011), especially 19–105.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN2">
+               <p>
+                  <hi rend="superscript">2</hi> Unmotivated habits are radically altered only with the conscious intervention of System 2. The ability to swim, drive a car, play the piano, or speak a foreign language
+                    once mastered, constitute unmotivated habits (System 1) They require, however, the motivated intervention of System 2 (attention and effort) for their transfer, i.e. teaching by
+                    someone else and overcoming the difficulty of establishing a new habit in the learner.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN3">
+               <p>
+                  <hi rend="superscript">3</hi>
+                    <hi rend="italic">Henry VIII</hi> (<hi rend="italic">All is True</hi>), ed. G. McMullan (London, 2000), 119. ‘Generically and iconographically then, <hi rend="italic">The Winter’s
+                        Tale</hi> and <hi rend="italic">Henry VIII</hi> have a great deal in common, and certainly more than “late play” critics have generally cared to acknowledge. But the
+                    principal connection between the two plays is the apparent similarity of the plays’ spurned and rejected queens…’</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN4">
+               <p>
+                  <hi rend="superscript">4</hi>
+                    <hi rend="italic">Henry VIII</hi>, II.iv.123. Among many others, ‘Katherine, Queen of England, come into the court!’ Holinshed: ‘Katherine, queene of England, come into
+                    the court.’</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN5">
+               <p>
+                  <hi rend="superscript">5</hi> For collocations which appear in the Original Text of <hi rend="italic">Sir Thomas More</hi> and relatively adjacent in <hi rend="italic">Henry VI, Part 2</hi>, see T. Merriam,
+                    ‘Conjunction of collocations in <hi rend="italic">More</hi> and <hi rend="italic">2H6’</hi>, <hi rend="italic">N&amp;Q</hi>, cclvii (2012), 60. Note should be taken that there are two
+                    instances, not one as stated, of the named collocations in the 1594 Quarto, <hi rend="italic">The First part of the Contention</hi>. The collocation is <hi rend="italic">God saue the King, God
+                        saue the King</hi> at line 1922.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN6">
+               <p>
+                  <hi rend="superscript">6</hi> L. L. Schücking, ‘Das Datum des Pseudo-Shakespeareschen <hi rend="italic">Sir Thomas More</hi>’, <hi rend="italic">Englische Studien</hi>, xlvi (1912–13),
+                    228–51; ‘Shakespeare and <hi rend="italic">Sir Thomas More</hi>,’ <hi rend="italic">Review of English Studies</hi>, i (1925): 40–59.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN7">
+               <p>
+                  <hi rend="superscript">7</hi>
+                    <hi rend="italic">Sir Thomas More</hi>, ed. J. Jowett (London, 2011), 424 ff.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN8">
+               <p>
+                  <hi rend="superscript">8</hi> Jowett, 426.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN9">
+               <p>
+                  <hi rend="superscript">9</hi> Jowett, 432.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN10">
+               <p>
+                  <hi rend="superscript">10</hi> Jowett, 423.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN11">
+               <p>
+                  <hi rend="superscript">11</hi> S. McMillin, <hi rend="italic">The Elizabethan Theatre and</hi> The Book of Sir Thomas More (Ithaca, NY, 1987), 60.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN12">
+               <p>
+                  <hi rend="superscript">12</hi> McMillin, 159. ‘It [Original Text] was originally written for Alleyn and the large, risk-running company of Strange’s men in 1592–93. It was revised
+                    and cut down a decade later for the Admiral’s men, when they were reviving Alleyn’s big roles at the Fortune.’</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN13">
+               <p>
+                  <hi rend="superscript">13</hi> See Jowett, 100–01.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN14">
+               <p>
+                  <hi rend="superscript">14</hi> ‘Shakespeare and <hi rend="italic">Sir Thomas More</hi>’, 57. Schücking does raise objections to Thompson’s analysis and finds the letters
+                        <hi rend="italic">h</hi> and <hi rend="italic">s</hi> ‘hopelessly and absolutely dissimilar in signatures and manuscript [Hand D]’, 40.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN15">
+               <p>
+                  <hi rend="superscript">15</hi> Line references are to <hi rend="italic">The Book of Sir Thomas More</hi>, ed. W. W. Greg, Malone Society (Oxford, 1911 &amp; 1961). These are given for words appearing both
+                    in the Original Text and elsewhere.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN16">
+               <p>
+                  <hi rend="superscript">16</hi> A. C. Partridge, <hi rend="italic">Orthography in Shakespeare and Elizabethan Drama: a Study of Colloquial Contractions, Elisions, Prosody and Punctuation</hi> (London,
+                    1964), 5. This work does not appear in the bibliography of 3rd Arden <hi rend="italic">More</hi>. Nor does 3rd Arden include an extended consideration of orthography in the manuscripts
+                    of <hi rend="italic">John a Kent</hi> and <hi rend="italic">Sir Thomas More</hi>. The suggestion (Jowett, 416) is offered that T. Merriam, ‘Orthographic changes in <hi rend="italic">John a
+                        Kent</hi> and Hand M of <hi rend="italic">More</hi>’ <hi rend="italic">Notes and Queries</hi>, ccli (2006), 475–78 is idiosyncratic.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN17">
+               <p>
+                  <hi rend="superscript">17</hi> Shakespeare’s authorship of Hand D as established by the editor of 3rd Arden, 437–53.</p>
+            </note>
+            <note place="inline" xml:id="gjs162-FN18">
+               <p>
+                  <hi rend="superscript">18</hi> ‘There are no known examples from the period of a dramatist copying a play in which he had no hand’. Jowett, 419. The anonymous <hi rend="italic">Ironside</hi>
+                    and <hi rend="italic">Woodstock</hi> are, of course, unable to support the generalization. The statement cannot be independently proven for the remaining MS plays because of the absence
+                    of so-called controls.</p>
+            </note>
+         </div>
+      </back>
+   </text>
+</TEI>
