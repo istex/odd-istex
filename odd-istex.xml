@@ -22,7 +22,7 @@
             <divGen type="toc"/>
         </front>
         <body>
-            <p>Sp&#xE9;cification d'un sch&#xE9;ma ISTEX pour les sorties Tei</p>
+            <p>Spécification d'un schéma ISTEX pour les sorties Tei</p>
             <schemaSpec ident="istexschemaEnza" docLang="en" prefix="tei_" xml:lang="en">
                 <moduleRef key="core"
                     except="abbr add addrLine address bibl biblScope binaryObject cb choice cit citedRange corr del desc distinct divGen emph expan foreign gap gb gloss graphic headItem headLabel hi index item l label lb lg list listBibl measure measureGrp media meeting mentioned milestone orig pb q quote reg said sic soCalled sp speaker stage unclear"/>
@@ -45,7 +45,7 @@
                         <memberOf key="att.typed"/>
                     </classes>
                     <remarks>
-                        <p>Dans Istex on utilise plut&#xF4;t biblStruct</p>
+                        <p>Dans Istex on utilise plutôt biblStruct</p>
                     </remarks>
                 </elementSpec>
                 <!--déclaration de la balise TEI-->
@@ -74,11 +74,11 @@
                     </classes>
                     <content xmlns:rng="http://relaxng.org/ns/structure/1.0"> </content>
                     <exemplum xml:lang="en">
-                        <p>L'&#xE9;l&#xE9;ment listAnnotation regroupe des
+                        <p>L'élément listAnnotation regroupe des
                             <gi>annotationBlock</gi></p>
-                        <p>L'&#xE9;l&#xE9;ment annotationBlock regroupe un enrichissement
-                            (entit&#xE9; nomm&#xE9;e, cat&#xE9;gorisation, indexation) et les
-                            &#xE9;l&#xE9;ments qui lui correspondent comme les <gi>term</gi> et les
+                        <p>L'élément annotationBlock regroupe un enrichissement
+                            (entité nommée, catégorisation, indexation) et les
+                            éléments qui lui correspondent comme les <gi>term</gi> et les
                                 <gi>fs</gi></p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="date" xml:lang="en">
@@ -149,7 +149,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de
+                        <p>Modèle modifié pour bénéficier de
                                 <gi>annotationBlock</gi> dans <gi>listAnnotation</gi></p>
                     </remarks>
                 </elementSpec>
@@ -176,7 +176,7 @@
                         </alternate>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff entit&#xE9; nomm&#xE9;e</p>
+                        <p>StandOff entité nommée</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -202,7 +202,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>date</gi>,
+                        <p>Modèle modifié pour bénéficier de <gi>date</gi>,
                                 <gi>persName</gi>, <gi>orgName</gi>, <gi>placeName</gi>,
                                 <gi>geogName</gi>,<gi>ref</gi>, <gi>keywords</gi>, <gi>author</gi>
                             dans <gi>annotationBlock</gi></p>
@@ -220,7 +220,7 @@
                         </alternate>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff entit&#xE9; nomm&#xE9;e Date</p>
+                        <p>StandOff entité nommée Date</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -236,7 +236,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>date</gi> dans
+                        <p>Modèle modifié pour bénéficier de <gi>date</gi> dans
                                 <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -249,7 +249,7 @@
                         <macroRef key="macro.phraseSeq"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff entit&#xE9; nomm&#xE9;e persName</p>
+                        <p>StandOff entité nommée persName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <persName change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -265,7 +265,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>persName</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>persName</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -277,7 +277,7 @@
                         <macroRef key="macro.phraseSeq"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff entit&#xE9; nomm&#xE9;e orgName</p>
+                        <p>StandOff entité nommée orgName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -293,7 +293,7 @@
                         </egXML>
                     </exemplum>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e orgName type="funder"</p>
+                        <p>StandOff enrichissement entité nommée orgName type="funder"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -309,7 +309,7 @@
                         </egXML>
                     </exemplum>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e orgName type="provider"</p>
+                        <p>StandOff enrichissement entité nommée orgName type="provider"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -325,7 +325,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>orgName</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>orgName</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -337,7 +337,7 @@
                         <macroRef key="macro.phraseSeq"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e placeName</p>
+                        <p>StandOff enrichissement entité nommée placeName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <placeName change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -353,7 +353,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>placeName</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>placeName</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -364,7 +364,7 @@
                         <macroRef key="macro.phraseSeq"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e geogName</p>
+                        <p>StandOff enrichissement entité nommée geogName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <geogName change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -380,7 +380,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>geogName</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>geogName</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -392,7 +392,7 @@
                         <macroRef key="macro.paraContent"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e ref type="bibl"</p>
+                        <p>StandOff enrichissement entité nommée ref type="bibl"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <ref type="bibl" change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -408,7 +408,7 @@
                         </egXML>
                     </exemplum>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e ref type="url"</p>
+                        <p>StandOff enrichissement entité nommée ref type="url"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <ref type="url" change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -424,7 +424,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>ref</gi> dans
+                        <p>Modèle modifié pour bénéficier de <gi>ref</gi> dans
                                 <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -435,7 +435,7 @@
                         <macroRef key="model.biblPart"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>StandOff enrichissement entit&#xE9; nomm&#xE9;e bibl</p>
+                        <p>StandOff enrichissement entité nommée bibl</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
                                 <bibl change="#Unitex-3.2.0-alpha" resp="istex-rd"
@@ -452,7 +452,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>geogName</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>geogName</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -507,7 +507,7 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>keywords</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>keywords</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -522,17 +522,17 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <author>
                                 <name type="person" resp="#abes" change="#author-01">Nom
-                                    Pr&#xE9;nom</name>
+                                    Prénom</name>
                                 <persName>
                                     <forename type="first" resp="#abes" change="#author-01"
-                                        >Pr&#xE9;nom</forename>
+                                        >Prénom</forename>
                                     <surname resp="#abes" change="#author-01">Nom</surname>
                                 </persName>
                             </author>
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Mod&#xE8;le modifi&#xE9; pour b&#xE9;n&#xE9;ficier de <gi>author</gi>
+                        <p>Modèle modifié pour bénéficier de <gi>author</gi>
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
@@ -545,7 +545,7 @@
                         <elementRef key="f" minOccurs="0" maxOccurs="unbounded"/>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>l'&#xE9;l&#xE9;ment <gi>fs</gi>contient </p>
+                        <p>l'élément <gi>fs</gi>contient </p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples"><fs type="statistics">
                                 <f name="frequency">
                                     <numeric value="7"/>
@@ -563,7 +563,7 @@
                         </alternate>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>l'&#xE9;l&#xE9;ment <gi>f</gi>contient</p>
+                        <p>l'élément <gi>f</gi>contient</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <f name="frequency">
                                 <numeric value="2"/>
@@ -580,8 +580,8 @@
                         </alternate>
                     </content>
                     <exemplum xml:lang="en">
-                        <p>l'&#xE9;l&#xE9;ment <gi>numeric</gi>contient la valeur de la
-                            fr&#xE9;quence</p>
+                        <p>l'élément <gi>numeric</gi>contient la valeur de la
+                            fréquence</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <f name="frequency">
                                 <numeric value="2"/>
