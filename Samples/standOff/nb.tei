@@ -2,8 +2,29 @@
 <!-- Fichier générée le 13-03-2017 -->
 <!-- nb - v1.0.1 - pascal-francis -->
 <?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <standOff xmlns="http://standoff.proposal">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:stdf="http://standoff.proposal">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Production d'annotations pour les enrichissements des documents ISTEX</title>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Inist-CNRS</authority>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>L’élément standOff de ce document est distribué sous licence
+              Creative Commons 4.0 non transposée (CC BY 4.0)</p>
+            <p>Ce standOff a été créé dans le cadre du projet ISTEX –
+              Initiative d’Excellence en Information Scientifique et
+              Technique</p></licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Les annotations ont été créées sous forme d'enrichissements.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <stdf:standOff>
     <teiHeader>
       <fileDesc>
         <titleStmt>
@@ -36,15 +57,15 @@
         </appInfo>
       </encodingDesc>
       <revisionDesc>
-        <change when="24-06-2016" who="istex-rd" xml:id="rd-nb">catégorisation par approche statistique - Bayésien Naïf</change>
+        <change when="2016-06-24" who="istex-rd" xml:id="rd-nb">catégorisation par approche statistique - Bayésien Naïf</change>
       </revisionDesc>
     </teiHeader>
-    <listAnnotation type="rd-nb">
+    <stdf:listAnnotation type="rd-nb">
       <annotationBlock corresp="abstract">
         <keywords change="#rd-nb" resp="#istex-rd" scheme="http://inist-category.lod.istex.fr">
           <term cert="0.5835017764726917" key="SHS" level="1">sciences humaines et sociales</term>
         </keywords>
       </annotationBlock>
-    </listAnnotation>
-  </standOff>
+    </stdf:listAnnotation>
+  </stdf:standOff>
 </TEI>

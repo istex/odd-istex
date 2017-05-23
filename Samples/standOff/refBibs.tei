@@ -2,12 +2,67 @@
 <?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" 
     xmlns:stdf="http://standoff.proposal"
-    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ns="http://standoff.proposal">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Production d'annotations pour les enrichissements des documents ISTEX</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Inist-CNRS</authority>
+                <availability status="restricted">
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">
+                        <p>L’élément standOff de ce document est distribué sous licence
+                            Creative Commons 4.0 non transposée (CC BY 4.0)</p>
+                        <p>Ce standOff a été créé dans le cadre du projet ISTEX –
+                            Initiative d’Excellence en Information Scientifique et
+                            Technique</p></licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Les annotations ont été créées sous forme d'enrichissements.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
     <stdf:standOff>
-        <teiHeader/>
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title></title>
+                    <respStmt>
+                        <resp>ISTEX-RD</resp>
+                        <name resp="istex-rd">ISTEX-RD</name>
+                    </respStmt>
+                </titleStmt>
+                <publicationStmt>
+                    <authority>INIST-CNRS</authority>
+                    <availability status="restricted">
+                        <licence target="http://creativecommons.org/licenses/by/4.0/">
+                            <p>L’élément standOff de ce document est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0)</p>
+                            <p>Ce standOff a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique</p>
+                        </licence>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <bibl type="istexHost">
+                        <idno type="ISTEX"></idno>
+                    </bibl>
+                </sourceDesc>
+            </fileDesc>
+            <encodingDesc>
+                <appInfo>
+                    <application ident="rd-nb" version="1.0.1">
+                        <label>nb</label>
+                    </application>
+                </appInfo>
+            </encodingDesc>
+            <revisionDesc>
+                <change when="2016-06-24" who="istex-rd" xml:id="rd-nb">catégorisation par approche statistique - Bayésien Naïf</change>
+            </revisionDesc>
+        </teiHeader>
         <text>
             <front/>
-            <body/>
+            <body><div></div></body>
             <back>
                 <listBibl>
                     <biblStruct xml:id="b0">
