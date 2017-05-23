@@ -28,12 +28,12 @@
             <p>Spécification d'un schéma ISTEX pour les sorties Tei</p>
             <schemaSpec ident="istexschema" docLang="fr" 
                 prefix="tei_" xml:lang="fr" 
-                start="TEI standOff"
+                start="teiCorpus TEI standOff"
                 source="https://raw.githubusercontent.com/laurentromary/stdfSpec/AnnArbor/Specification/standoff-proposal_doc.xml">
                 <moduleRef key="core"/>
                 <moduleRef key="tei" except="fsdDecl facsimile"/>
                 <moduleRef key="header"
-                    except="cRefPattern calendar calendarDesc catDesc catRef correction correspAction correspContext correspDesc editorialDecl extent geoDecl handNote hyphenation interpretation langUsage listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl rendition samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
+                    except="cRefPattern calendar calendarDesc catDesc catRef correction correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
                 <moduleRef key="namesdates"
                     except="age birth bloc climate death district education faith floruit geo geogFeat langKnowledge langKnown listEvent listNym listPerson listRelation nationality nym occupation offset population relation residence sex socecStatus terrain trait"/>
                 <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
@@ -42,10 +42,7 @@
                 <moduleRef key="figures"/>
                 <moduleRef key="transcr"/>
                 <moduleRef key="linking"/>
-                
                 <moduleRef key="standOff"/>
-
-
                 <elementSpec ident="bibl" module="core" mode="change">
                     <classes mode="replace">
                         <memberOf key="model.biblLike"/>
@@ -99,7 +96,7 @@
                                         <term>2000</term>
                                         <fs type="statistics">
                                             <f name="frequency">
-                                                <numeric value="5">5</numeric>
+                                                <numeric value="5"/>
                                             </f>
                                         </fs>
                                     </date>
@@ -187,7 +184,7 @@
                                     <term>1997</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>7</numeric>
+                                            <numeric value="7"/>
                                         </f>
                                     </fs>
                                 </date>
@@ -211,6 +208,14 @@
                 </elementSpec>
                 <!-- date -->
                 <elementSpec ident="date" mode="change">
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée Date</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -219,7 +224,7 @@
                                     <term>1997</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>7</numeric>
+                                            <numeric value="7"/>
                                         </f>
                                     </fs>
                                 </date>
@@ -232,6 +237,14 @@
                 </elementSpec>
                 <!-- persName -->
                 <elementSpec ident="persName" mode="change">
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée persName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -240,7 +253,7 @@
                                     <term>Timothy Adams</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>1</numeric>
+                                            <numeric value="1"/>
                                         </f>
                                     </fs>
                                 </persName>
@@ -253,14 +266,17 @@
                 </elementSpec>
                 <!-- orgName type="funder" ou type="provider"-->
                 <elementSpec ident="orgName" mode="change">
-                    <!--SG-->
-                    <!--<content>
-                        <classRef key="model.nameLike.agent"/>
-                        <macroRef key="macro.phraseSeq"/>
-                    </content>-->
                     <content>
                         <macroRef key="macro.phraseSeq"/>
                     </content>
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée orgName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -269,7 +285,7 @@
                                     <term>Working Party</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>2</numeric>
+                                            <numeric value="2"/>
                                         </f>
                                     </fs>
                                 </orgName>
@@ -284,7 +300,7 @@
                                     <term>Organization for Pharmaceutical Safety and Research</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>1</numeric>
+                                            <numeric value="1"/>
                                         </f>
                                     </fs>
                                 </orgName>
@@ -299,7 +315,7 @@
                                     <term>TOMCAT at the SLS in Villigen, Switzerland</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>1</numeric>
+                                            <numeric value="1"/>
                                         </f>
                                     </fs>
                                 </orgName>
@@ -312,11 +328,18 @@
                 </elementSpec>
                 <!-- placeName -->
                 <elementSpec ident="placeName" mode="change">
-                    <!--SG-->
                     <content>
                         <classRef key="model.placeNamePart"/>
                         <macroRef key="macro.phraseSeq"/>
                     </content>
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée placeName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -325,7 +348,7 @@
                                     <term>Geneva</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>9</numeric>
+                                            <numeric value="9"/>
                                         </f>
                                     </fs>
                                 </placeName>
@@ -342,6 +365,14 @@
                         <classRef key="model.placeNamePart"/>
                         <macroRef key="macro.phraseSeq"/>
                     </content>
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée geogName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -350,7 +381,7 @@
                                     <term>Mississippi River</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>2</numeric>
+                                            <numeric value="2"/>
                                         </f>
                                     </fs>
                                 </geogName>
@@ -363,14 +394,19 @@
                 </elementSpec>
                 <!-- ref type="bibl" ou type="url" ajouter l'attribut type-->
                 <elementSpec ident="ref" mode="change">
-                    <!--<content>
+                    <content>
                         <classRef key="model.ptrLike"/>
                         <macroRef key="macro.paraContent"/>
                         <macroRef key="macro.phraseSeq"/>
-                    </content>-->
-                    <content>
-                        <macroRef key="macro.paraContent"/>
                     </content>
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée ref type="bibl"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -379,7 +415,7 @@
                                     <term>Stern et al.</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>1</numeric>
+                                            <numeric value="1"/>
                                         </f>
                                     </fs>
                                 </ref>
@@ -394,7 +430,7 @@
                                     <term>http://www.treas.gov/press/releases/js</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>3</numeric>
+                                            <numeric value="3"/>
                                         </f>
                                     </fs>
                                 </ref>
@@ -422,6 +458,14 @@
                 </elementSpec>
                 <!-- bibl -->
                 <elementSpec ident="bibl" mode="change">
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée bibl</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -430,7 +474,7 @@
                                     <term>GIRODET, Jean (2007). Dictionnaire des pièges et difficults de la langue française, Paris : Bordas</term>
                                     <fs type="statistics">
                                         <f name="frequency">
-                                            <numeric>1</numeric>
+                                            <numeric value="1"/>
                                         </f>
                                     </fs>
                                 </bibl>
@@ -552,7 +596,6 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
             </schemaSpec>
         </body>
     </text>
