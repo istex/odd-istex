@@ -208,6 +208,13 @@
                 </elementSpec>
                 <!-- date -->
                 <elementSpec ident="date" mode="change">
+                    <!-- ajout de fs au niveau de date -->
+                    <content>
+                        <alternate minOccurs="1" maxOccurs="unbounded">
+                            <classRef key="model.featureVal.complex"/>
+                            <classRef key=" model.global.meta"/>
+                        </alternate>
+                    </content>
                     <attList>
                         <attDef ident="scheme" mode="add">
                             <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>

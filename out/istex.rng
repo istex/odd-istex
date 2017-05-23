@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-23T13:52:01Z. .
+Schema generated from ODD source 2017-05-23T14:00:58Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -2630,6 +2630,9 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_stage"/>
       </oneOrMore>
    </define>
+   <define name="tei_model.featureVal.complex">
+      <notAllowed/>
+   </define>
    <define name="tei_model.entryPart">
       <notAllowed/>
    </define>
@@ -3943,14 +3946,11 @@ Measures]</a:documentation>
    <define name="tei_date">
       <element name="date">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(date) contient une date exprimée dans n'importe quel format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
-         <zeroOrMore>
+         <oneOrMore>
             <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_model.phrase"/>
-               <ref name="tei_model.global"/>
+               <ref name="tei_model.featureVal.complex"/>
             </choice>
-         </zeroOrMore>
+         </oneOrMore>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.duration.attributes"/>
