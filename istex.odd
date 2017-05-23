@@ -94,7 +94,7 @@
                                         <term>2000</term>
                                         <fs type="statistics">
                                             <f name="frequency">
-                                                <numeric>5</numeric>
+                                                <numeric value="5">5</numeric>
                                             </f>
                                         </fs>
                                     </date>
