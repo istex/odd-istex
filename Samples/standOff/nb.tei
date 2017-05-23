@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Fichier générée le 13-03-2017 -->
 <!-- nb - v1.0.1 - pascal-francis -->
+<?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI>
   <standOff>
     <teiHeader>

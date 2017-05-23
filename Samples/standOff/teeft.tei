@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Fichier générée le 18-05-2017 -->
 <!-- teeft - v1.0.1 - brown -->
+<?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI>
   <standOff>
     <teiHeader>
