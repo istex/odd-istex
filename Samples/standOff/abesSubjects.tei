@@ -26,15 +26,14 @@
       <teiHeader>
          <fileDesc>
             <titleStmt>
-               <title>Alignements sujets avec le Hub de métadonnées de l'ABES</title>
+               <title>Enrichissements subjects sous forme d'annotation dans le document</title>
                <respStmt>
                   <resp>Alignements sujets</resp>
                   <name resp="ABES">Hub de métadonnées de l'ABES</name>
                </respStmt>
             </titleStmt>
             <publicationStmt>
-               <!-- à ajouter -->
-               <authority>Inist-CNRS</authority>
+               <authority>ISTEX</authority>
                <availability status="restricted">
                   <licence target="http://creativecommons.org/licenses/by/4.0/"><p>L’élément
                         standOff de ce document est distribué sous licence Creative Commons 4.0 non
@@ -44,7 +43,6 @@
                </availability>
             </publicationStmt>
             <sourceDesc>
-               <!-- à ajouter-->
                <bibl type="istex-host">
                   <idno type="book-doi">10.1007/978-3-642-04164-8</idno>
                   <idno type="ISTEX">3206BB65FF43993D2CC98E2B9095913F1B53B5B3</idno>

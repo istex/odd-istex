@@ -10,11 +10,11 @@
             <publicationStmt>
                 <authority>Inist-CNRS</authority>
                 <availability status="restricted">
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">
-                        <p>L’élément standOff de ce document est distribué sous licence Creative
-                            Commons 4.0 non transposée (CC BY 4.0)</p>
-                        <p>Ce standOff a été créé dans le cadre du projet ISTEX – Initiative
-                            d’Excellence en Information Scientifique et Technique</p></licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/"><p>L’élément
+                            standOff de ce document est distribué sous licence Creative Commons 4.0
+                            non transposée (CC BY 4.0)</p><p>Ce standOff a été créé dans le cadre du
+                            projet ISTEX – Initiative d’Excellence en Information Scientifique et
+                            Technique</p></licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -62,8 +62,7 @@
         </teiHeader>
         <stdf:listAnnotation type="date" xml:lang="en">
             <annotationBlock corresp="text">
-                <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
-                    scheme="http://date-entity.lod.istex.fr">
+                <date change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://date-entity.lod.istex.fr">
                     <term>2010</term>
                     <fs type="statistics">
                         <f name="frequency">
@@ -75,8 +74,7 @@
         </stdf:listAnnotation>
         <stdf:listAnnotation type="persName" xml:lang="en">
             <annotationBlock corresp="text">
-                <persName change="#Unitex-3.2.0-alpha" resp="istex-rd"
-                    scheme="http://persname-entity.lod.istex.fr"><term>J. Neurosci</term><fs
+                <persName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://persname-entity.lod.istex.fr"><term>J. Neurosci</term><fs
                         type="statistics">
                         <f name="frequency"><numeric>4</numeric></f>
                     </fs></persName>
@@ -181,7 +179,7 @@
             </annotationBlock>
             <annotationBlock corresp="text">
                 <persName change="#Unitex-3.2.0-alpha" resp="istex-rd"
-                    scheme="http://persname-entity.lod.istex.fr"><term>K. Slides</term><fs
+                    corresp="http://persname-entity.lod.istex.fr"><term>K. Slides</term><fs
                         type="statistics">
                         <f name="frequency"><numeric>1</numeric></f>
                     </fs></persName>
