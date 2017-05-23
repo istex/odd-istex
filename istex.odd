@@ -210,9 +210,13 @@
                 <elementSpec ident="date" mode="change">
                     <!-- ajout de fs au niveau de date -->
                     <content>
-                        <alternate minOccurs="1" maxOccurs="unbounded">
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <classRef key="model.gLike"/>
+                            <classRef key="model.phrase"/>
+                            <classRef key="model.global"/>
                             <classRef key="model.featureVal.complex"/>
-                            <classRef key=" model.global.meta"/>
                         </alternate>
                     </content>
                     <attList>
