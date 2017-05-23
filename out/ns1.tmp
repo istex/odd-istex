@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://standoff.proposal" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:ns1="http://standoff.proposal" xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.tmp"/>
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="istex.xsd.tmp"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.tmp"/>
+  <xs:element name="standOff" substitutionGroup="tei:tei_model.resourceLike">
+    <xs:annotation>
+      <xs:documentation>Container element for standoff annotations</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="tei:teiHeader"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:listAnnotation"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:standOff"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.ascribed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.w3c.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listAnnotation">
+    <xs:annotation>
+      <xs:documentation>Groups together various annotations, for instance for parallel interpretations of a spoken segment</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element maxOccurs="unbounded" ref="ns1:listAnnotation"/>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.annotation"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.ascribed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
