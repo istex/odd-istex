@@ -439,7 +439,7 @@
                 <!-- SG - keywords hub de mta-->
                 <elementSpec ident="keywords" mode="change">
                     <exemplum xml:lang="fr">
-                        <p>StandOff enrichissement subject hub de mtadonnes Abes</p>
+                        <p>StandOff enrichissement subject hub de métadonnées Abes</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="#subject-01">
                                 <keywords resp="#abes" change="#abes-01">
