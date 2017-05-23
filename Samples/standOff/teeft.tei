@@ -2,8 +2,8 @@
 <!-- Fichier générée le 18-05-2017 -->
 <!-- teeft - v1.0.1 - brown -->
 <?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI>
-  <standOff>
+<TEI xmlns:stdf="http://standoff.proposal" xmlns="http://www.tei-c.org/ns/1.0">
+  <stdf:standOff>
     <teiHeader>
       <fileDesc>
         <titleStmt>
@@ -14,6 +14,7 @@
           </respStmt>
         </titleStmt>
         <publicationStmt>
+          <authority>INIST-CNRS</authority>
           <availability status="restricted">
             <licence target="http://creativecommons.org/licenses/by/4.0/">
               <p>L’élément standOff de ce document est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0)</p>
@@ -22,9 +23,9 @@
           </availability>
         </publicationStmt>
         <sourceDesc>
-          <biblStruct>
+          <bibl>
             <idno type="ISTEX">087661D669BF44CA05AA6CE08ADD6399F6A439C4</idno>
-          </biblStruct>
+          </bibl>
         </sourceDesc>
         <encodingDesc>
           <appInfo>
@@ -1089,5 +1090,5 @@
         </keywords>
       </annotationBlock>
     </listAnnotation>
-  </standOff>
+  </stdf:standOff>
 </TEI>

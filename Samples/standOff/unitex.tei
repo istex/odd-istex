@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-model href="../../out/istex.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
-    <standOff>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+    xmlns:stdf="http://standoff.proposal"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+    <standOff >
         <teiHeader>
             <fileDesc>
                 <titleStmt>

@@ -33,7 +33,7 @@
                 <moduleRef key="core"/>
                 <moduleRef key="tei" except="fsdDecl facsimile"/>
                 <moduleRef key="header"
-                    except="appInfo application cRefPattern calendar calendarDesc catDesc catRef correction correspAction correspContext correspDesc editorialDecl extent geoDecl handNote hyphenation interpretation langUsage listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl rendition samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
+                    except="cRefPattern calendar calendarDesc catDesc catRef correction correspAction correspContext correspDesc editorialDecl extent geoDecl handNote hyphenation interpretation langUsage listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl rendition samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
                 <moduleRef key="namesdates"
                     except="age birth bloc climate death district education faith floruit geo geogFeat langKnowledge langKnown listEvent listNym listPerson listRelation nationality nym occupation offset population relation residence sex socecStatus terrain trait"/>
                 <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
@@ -540,6 +540,19 @@
                         </egXML>
                     </exemplum>
                 </elementSpec>
+                
+                <!-- ajout d'un attribut level dans <term> -->
+                <elementSpec ident="term" mode="change">
+                    <attList>
+                        <attDef ident="level" mode="add">
+                            <desc>Niveau hiérarchique du terme dans le code de classement</desc>
+                            <datatype>
+                                <dataRef key="teidata.count"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
             </schemaSpec>
         </body>
     </text>

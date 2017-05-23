@@ -12,20 +12,17 @@
                </respStmt>
             </titleStmt>
             <publicationStmt>
+               <authority>INIST-CNRS</authority>
                <availability status="restricted">
                   <licence target="http://creativecommons.org/licenses/by/4.0/"><p>L’élément standOff de ce document est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0)</p><p>Ce
                         standOff a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique</p></licence>
                </availability>
             </publicationStmt>
             <sourceDesc>
-               <biblStruct>
-                  <analytic>
-                     <title/>
-                     <author/>
-                  </analytic>
+               <bibl type="istexHost">
                   <idno type="book-doi">10.1007/978-3-642-04164-8</idno>
                   <idno type="ISTEX">3206BB65FF43993D2CC98E2B9095913F1B53B5B3</idno>
-               </biblStruct>
+               </bibl>
             </sourceDesc>
          </fileDesc>
          <encodingDesc>
@@ -152,7 +149,9 @@
             </keywords>
          </annotationBlock>
          <annotationBlock corresp="#subject-07">
-            <keywords scheme="#dewey" resp="#abes" change="#dewey-abes-07" key="005.1"/>
+            <keywords scheme="#dewey" resp="#abes" change="#dewey-abes-07" >
+               <term key="005.1"/>
+            </keywords>
          </annotationBlock>
          <annotationBlock corresp="#subject-08">
             <keywords resp="#abes" scheme="idref" change="#idref-abes-08">
