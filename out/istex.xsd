@@ -10,7 +10,7 @@
    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
               schemaLocation="xml.tmp"/>
    <!--
-    Schema generated from ODD source 2017-05-23T08:55:58Z. .
+    Schema generated from ODD source 2017-05-24T09:57:06Z. .
     TEI Edition: 
     TEI Edition Location: http://www.tei-c.org/Vault/P5//
     
@@ -1744,6 +1744,49 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          </xs:annotation>
       </xs:attribute>
    </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.styleDef.attribute.scheme">
+      <xs:attribute name="scheme">
+         <xs:annotation>
+            <xs:documentation>identifie la langue employée pour décrire le rendu</xs:documentation>
+         </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="css">
+                  <xs:annotation>
+                     <xs:documentation>langage CSS (Cascading Stylesheet )</xs:documentation>
+                  </xs:annotation>
+               </xs:enumeration>
+               <xs:enumeration value="xslfo">
+                  <xs:annotation>
+                     <xs:documentation>Langage XSL (Extensible Stylesheet )Formatting Objects</xs:documentation>
+                  </xs:annotation>
+               </xs:enumeration>
+               <xs:enumeration value="free">
+                  <xs:annotation>
+                     <xs:documentation>description en texte libre non structuré.</xs:documentation>
+                  </xs:annotation>
+               </xs:enumeration>
+               <xs:enumeration value="other">
+                  <xs:annotation>
+                     <xs:documentation>langue de description de l'interprétation définie par l'utilisateur</xs:documentation>
+                  </xs:annotation>
+               </xs:enumeration>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.styleDef.attribute.schemeVersion">
+      <xs:attribute name="schemeVersion">
+         <xs:annotation>
+            <xs:documentation>supplies a version number for the style language provided in scheme.</xs:documentation>
+         </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:pattern value="[\d]+[a-z]*[\d]*(\.[\d]+[a-z]*[\d]*){0,3}"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.tableDecoration.attributes">
       <xs:attributeGroup ref="tei:tei_att.tableDecoration.attribute.role"/>
       <xs:attributeGroup ref="tei:tei_att.tableDecoration.attribute.rows"/>
@@ -2436,6 +2479,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <xs:element ref="tei:index"/>
          <xs:element ref="tei:substJoin"/>
          <xs:element ref="tei:listTranspose"/>
+         <xs:element ref="tei:fs"/>
+         <xs:element ref="tei:fLib"/>
+         <xs:element ref="tei:fvLib"/>
          <xs:element ref="tei:link"/>
          <xs:element ref="tei:linkGrp"/>
          <xs:element ref="tei:timeline"/>
@@ -2735,6 +2781,15 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <xs:element maxOccurs="unbounded" ref="tei:stage"/>
       </xs:sequence>
    </xs:group>
+   <xs:group name="tei_model.featureVal.complex">
+      <xs:choice>
+         <xs:element ref="tei:fs"/>
+         <xs:element ref="tei:vColl"/>
+         <xs:element ref="tei:vNot"/>
+         <xs:element ref="tei:vMerge"/>
+      </xs:choice>
+   </xs:group>
+   <xs:element name="tei_model.featureVal.single" abstract="true"/>
    <xs:element name="tei_model.eventLike" abstract="true">
       <xs:complexType>
          <xs:sequence>
@@ -3186,6 +3241,12 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <xs:element ref="tei:metamark"/>
       </xs:choice>
    </xs:group>
+   <xs:group name="tei_model.featureVal">
+      <xs:choice>
+         <xs:group ref="tei:tei_model.featureVal.complex"/>
+         <xs:element ref="tei:tei_model.featureVal.single"/>
+      </xs:choice>
+   </xs:group>
    <xs:group name="tei_model.biblPart">
       <xs:choice>
          <xs:group ref="tei:tei_model.respLike"/>
@@ -3196,6 +3257,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <xs:element ref="tei:relatedItem"/>
          <xs:element ref="tei:textLang"/>
          <xs:element ref="tei:edition"/>
+         <xs:element ref="tei:extent"/>
          <xs:element ref="tei:availability"/>
       </xs:choice>
    </xs:group>
@@ -3346,17 +3408,33 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
       </xs:complexType>
    </xs:element>
    <xs:element name="tei_model.teiHeaderPart" abstract="true"/>
-   <xs:element name="tei_model.encodingDescPart" abstract="true"/>
+   <xs:group name="tei_model.encodingDescPart">
+      <xs:choice>
+         <xs:element ref="tei:schemaRef"/>
+         <xs:element ref="tei:classDecl"/>
+         <xs:element ref="tei:appInfo"/>
+         <xs:element ref="tei:fsdDecl"/>
+      </xs:choice>
+   </xs:group>
    <xs:group name="tei_model.profileDescPart">
       <xs:choice>
          <xs:element ref="tei:abstract"/>
          <xs:element ref="tei:creation"/>
+         <xs:element ref="tei:langUsage"/>
          <xs:element ref="tei:textClass"/>
          <xs:element ref="tei:handNotes"/>
          <xs:element ref="tei:listTranspose"/>
       </xs:choice>
    </xs:group>
-   <xs:element name="tei_model.resourceLike" abstract="true"/>
+   <xs:group name="tei_model.resourceLike">
+      <xs:choice>
+         <xs:element ref="tei:text"/>
+         <xs:element ref="tei:facsimile"/>
+         <xs:element ref="tei:sourceDoc"/>
+         <xs:element ref="tei:fsdDecl"/>
+         <xs:element ref="ns1:standOff"/>
+      </xs:choice>
+   </xs:group>
    <xs:attributeGroup name="tei_att.personal.attributes">
       <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.personal.attribute.full"/>
@@ -4296,6 +4374,11 @@ Measures]</xs:documentation>
          <xs:attributeGroup ref="tei:tei_att.duration.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attribute name="scheme" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="time">
@@ -4371,6 +4454,11 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
                <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.cReferencing.attributes"/>
+               <xs:attribute name="scheme" type="xs:anyURI">
+                  <xs:annotation>
+                     <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+                  </xs:annotation>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4778,6 +4866,7 @@ Elements]</xs:documentation>
             <xs:element ref="tei:imprint"/>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element ref="tei:imprint"/>
+               <xs:element ref="tei:extent"/>
                <xs:element ref="tei:biblScope"/>
             </xs:choice>
          </xs:sequence>
@@ -5008,6 +5097,11 @@ Sample values include: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ; 4] sho
          <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attribute name="scheme" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="biblStruct">
@@ -5278,7 +5372,7 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
             <xs:element ref="tei:teiHeader"/>
             <xs:choice>
                <xs:sequence>
-                  <xs:element maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
+                  <xs:group maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
                   <xs:choice minOccurs="0" maxOccurs="unbounded">
                      <xs:element ref="tei:TEI"/>
                      <xs:element ref="tei:teiCorpus"/>
@@ -5382,6 +5476,7 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
             <xs:sequence>
                <xs:element ref="tei:titleStmt"/>
                <xs:element minOccurs="0" ref="tei:editionStmt"/>
+               <xs:element minOccurs="0" ref="tei:extent"/>
                <xs:element ref="tei:publicationStmt"/>
                <xs:element minOccurs="0" ref="tei:seriesStmt"/>
                <xs:element minOccurs="0" ref="tei:notesStmt"/>
@@ -5434,6 +5529,15 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
    <xs:element name="edition">
       <xs:annotation>
          <xs:documentation>(édition) décrit les particularités de l’édition d’un texte. [2.2.2. The Edition Statement]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:group ref="tei:tei_macro.phraseSeq"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="extent">
+      <xs:annotation>
+         <xs:documentation>(étendue) décrit la taille approximative d’un texte stocké sur son support, numérique ou non numérique, exprimé dans une unité quelconque appropriée. [2.2.3. Type and Extent of File 2.2. The File Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 10.7.1. Object Description]</xs:documentation>
       </xs:annotation>
       <xs:complexType mixed="true">
          <xs:group ref="tei:tei_macro.phraseSeq"/>
@@ -5672,6 +5776,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
                <xs:sequence>
                   <xs:element ref="tei:titleStmt"/>
                   <xs:element minOccurs="0" ref="tei:editionStmt"/>
+                  <xs:element minOccurs="0" ref="tei:extent"/>
                   <xs:element ref="tei:publicationStmt"/>
                   <xs:element minOccurs="0" ref="tei:seriesStmt"/>
                   <xs:element minOccurs="0" ref="tei:notesStmt"/>
@@ -5695,13 +5800,13 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
       </xs:annotation>
       <xs:complexType>
          <xs:choice maxOccurs="unbounded">
-            <xs:element ref="tei:tei_model.encodingDescPart"/>
+            <xs:group ref="tei:tei_model.encodingDescPart"/>
             <xs:group ref="tei:tei_model.pLike"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="schemaRef" substitutionGroup="tei:tei_model.encodingDescPart">
+   <xs:element name="schemaRef">
       <xs:annotation>
          <xs:documentation>(schema reference) describes or points to a related customization or schema file [2.3.9. The Schema Specification]</xs:documentation>
       </xs:annotation>
@@ -5717,7 +5822,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          </xs:attribute>
       </xs:complexType>
    </xs:element>
-   <xs:element name="classDecl" substitutionGroup="tei:tei_model.encodingDescPart">
+   <xs:element name="classDecl">
       <xs:annotation>
          <xs:documentation>(déclaration de classification) contient une ou plusieurs taxinomies définissant les codes de classification utilisés n’importe où dans le texte. [2.3.7. The Classification Declaration 2.3. The Encoding Description]</xs:documentation>
       </xs:annotation>
@@ -5776,7 +5881,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="appInfo" substitutionGroup="tei:tei_model.encodingDescPart">
+   <xs:element name="appInfo">
       <xs:annotation>
          <xs:documentation>(informations d'application) enregistre des informations sur l'application qui a été utilisée pour traiter le fichier TEI. [2.3.10. The Application Information Element]</xs:documentation>
       </xs:annotation>
@@ -5826,6 +5931,54 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
                    ref="tei:tei_model.limitedPhrase"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="langUsage">
+      <xs:annotation>
+         <xs:documentation>(langue utilisée) décrit les langues, variétés de langues, registres, dialectes, etc. présents à l’intérieur d’un texte. [2.4.2. Language Usage 2.4. The Profile Description 15.3.2. Declarable Elements]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:choice>
+            <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+            <xs:element maxOccurs="unbounded" ref="tei:language"/>
+         </xs:choice>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="language">
+      <xs:annotation>
+         <xs:documentation>(langue) caractérise une langue ou une variété de langue utilisée dans un texte. [2.4.2. Language Usage]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="tei:tei_macro.phraseSeq.limited">
+               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+               <xs:attribute name="ident" use="required">
+                  <xs:annotation>
+                     <xs:documentation>(identificateur) fournit un code de langue issu de la recommandation BCP 47 (ou son successeur) utilisé pour identifier la langue précisée par cet élément, référencé par l’attribut global xml:lang s’appliquant à l’élément considéré.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:union memberTypes="xs:language">
+                        <xs:simpleType>
+                           <xs:restriction base="xs:token">
+                              <xs:enumeration value="">
+                                 <xs:annotation>
+                                    <xs:documentation/>
+                                 </xs:annotation>
+                              </xs:enumeration>
+                           </xs:restriction>
+                        </xs:simpleType>
+                     </xs:union>
+                  </xs:simpleType>
+               </xs:attribute>
+               <xs:attribute name="usage" type="xs:nonNegativeInteger">
+                  <xs:annotation>
+                     <xs:documentation>précise approximativement le pourcentage du volume de texte utilisant cette langue.</xs:documentation>
+                  </xs:annotation>
+               </xs:attribute>
+            </xs:extension>
+         </xs:complexContent>
       </xs:complexType>
    </xs:element>
    <xs:element name="textClass">
@@ -6203,6 +6356,11 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attribute name="scheme" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="persName">
@@ -6216,6 +6374,11 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attribute name="scheme" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="surname">
@@ -6288,15 +6451,17 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:documentation>(nom de lieu) contient un nom de lieu absolu ou relatif. [13.2.3. Place Names]</xs:documentation>
       </xs:annotation>
       <xs:complexType mixed="true">
-         <xs:sequence>
-            <xs:group ref="tei:tei_model.placeNamePart"/>
-            <xs:group ref="tei:tei_macro.phraseSeq"/>
-         </xs:sequence>
+         <xs:group ref="tei:tei_macro.phraseSeq"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attribute name="scheme" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="country">
@@ -6349,6 +6514,11 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attribute name="scheme" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="affiliation">
@@ -6684,18 +6854,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:documentation>groups together various annotations, e.g. for parallel interpretations of a spoken segment. [8.4.6. Analytic Coding]</xs:documentation>
       </xs:annotation>
       <xs:complexType>
-         <xs:choice maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.divPart.spoken"/>
-            <xs:group ref="tei:tei_model.dateLike"/>
-            <xs:group ref="tei:tei_model.publicationStmtPart.detail"/>
-            <xs:group ref="tei:tei_model.nameLike.agent"/>
-            <xs:group ref="tei:tei_model.persStateLike"/>
-            <xs:group ref="tei:tei_model.placeNamePart"/>
-            <xs:element ref="tei:tei_model.ptrLike"/>
-            <xs:group ref="tei:tei_model.nameLike.agent"/>
-            <xs:element ref="tei:keywords"/>
-            <xs:group ref="tei:tei_model.respLike"/>
-         </xs:choice>
+         <xs:group maxOccurs="unbounded" ref="tei:tei_model.annotation"/>
          <xs:attributeGroup ref="tei:tei_att.ascribed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
@@ -6708,7 +6867,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
       <xs:complexType>
          <xs:sequence>
             <xs:element ref="tei:teiHeader"/>
-            <xs:element maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
+            <xs:group maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
@@ -6724,7 +6883,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          </xs:attribute>
       </xs:complexType>
    </xs:element>
-   <xs:element name="text" substitutionGroup="tei:tei_model.resourceLike">
+   <xs:element name="text">
       <xs:annotation>
          <xs:documentation>(texte) contient un seul texte quelconque, simple ou composite, par exemple un poème ou une pièce de théâtre, un recueil d’essais, un roman, un dictionnaire ou un échantillon de corpus. [4. Default Text Structure 15.1. Varieties of Composite Text]</xs:documentation>
       </xs:annotation>
@@ -7204,7 +7363,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
-   <xs:element name="facsimile" substitutionGroup="tei:tei_model.resourceLike">
+   <xs:element name="facsimile">
       <xs:annotation>
          <xs:documentation>contient une représentation d'une source écrite quelconque sous la forme d'un ensemble d'images plutôt que sous la forme d'un texte transcrit ou encodé. [11.1. Digital Facsimiles]</xs:documentation>
       </xs:annotation>
@@ -7222,7 +7381,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="sourceDoc" substitutionGroup="tei:tei_model.resourceLike">
+   <xs:element name="sourceDoc">
       <xs:annotation>
          <xs:documentation>contains a transcription or other representation of a single source document potentially forming part of a dossier génétique or collection of sources. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</xs:documentation>
       </xs:annotation>
@@ -7777,6 +7936,505 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
          </xs:attribute>
       </xs:complexType>
    </xs:element>
+   <xs:element name="fsdDecl">
+      <xs:annotation>
+         <xs:documentation>(Déclaration de système de traits (FSD)) fournit une déclaration du système de traits consistant en une ou plusieurs déclarations de structure de traits ou des liens vers une déclaration de structure de traits. [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:choice maxOccurs="unbounded">
+            <xs:element ref="tei:fsDecl"/>
+            <xs:element ref="tei:fsdLink"/>
+         </xs:choice>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fsDecl">
+      <xs:annotation>
+         <xs:documentation>(déclaration de structure de traits) déclare un type de structure de traits [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element minOccurs="0" ref="tei:fsDescr"/>
+            <xs:element maxOccurs="unbounded" ref="tei:fDecl"/>
+            <xs:element minOccurs="0" ref="tei:fsConstraints"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attribute name="type" use="required">
+            <xs:annotation>
+               <xs:documentation>attribue un nom au type de structure de traits déclaré.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="baseTypes">
+            <xs:annotation>
+               <xs:documentation>donne le nom d'une ou plusieurs structures de traits "type", de laquelle ou desquelles il hérite des spécifications et des contraintes de traits. Si ce type inclut une spécification de traits du même nom que l'une de celles spécifiées par cet attribut, ou si plus d'une spécification du même nom est transmise par héritage, l'ensemble des valeurs possibles est définie par unification. De même, l'ensemble des contraintes applicables résulte de la combinaison de celles qui sont spécifiées explicitement à l'intérieur de cet élément et de celles qui découlent de l'attribut baseTypes. Quand aucun attribut baseTypes n'est précisé, aucune spécification de traits ni contrainte n'est transmise par héritage.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction>
+                  <xs:simpleType>
+                     <xs:list itemType="xs:Name"/>
+                  </xs:simpleType>
+                  <xs:minLength value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fsDescr">
+      <xs:annotation>
+         <xs:documentation>(description de système de traits (dans FSD)) décrit en texte libre ce que représente le type de structure de traits déclaré dans le fsDecl englobant [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="tei:tei_macro.limitedContent">
+               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fsdLink">
+      <xs:annotation>
+         <xs:documentation>(lien vers la déclaration d'une structure de traits) associe le nom d'une structure de traits "type" à sa déclaration de structure de traits. [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attribute name="type" use="required">
+            <xs:annotation>
+               <xs:documentation>identifie le type de structure de traits à documenter ; ce sera la valeur de l’attribut type d’au moins une structure de traits.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="target" use="required" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>fournit un pointeur vers un élément de déclaration de structure de traits (fsDecl) dans le document courant ou ailleurs.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fDecl">
+      <xs:annotation>
+         <xs:documentation>(déclaration de trait) déclare un trait unique, en en précisant le nom, l'organisation, la liste de valeurs autorisées et, éventuellement, la valeur par défaut. [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element minOccurs="0" ref="tei:fDescr"/>
+            <xs:element ref="tei:vRange"/>
+            <xs:element minOccurs="0" ref="tei:vDefault"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attribute name="name" use="required" type="xs:Name">
+            <xs:annotation>
+               <xs:documentation>indique le nom du trait déclaré ; correspond à l'attribut name des éléments f du texte.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+         <xs:attribute name="optional" default="true" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>indique si la valeur de ce trait peut ou non exister</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fDescr">
+      <xs:annotation>
+         <xs:documentation>(description de trait (dans FSD)) décrit en texte libre le trait déclaré et ses valeurs [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="tei:tei_macro.limitedContent">
+               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vRange">
+      <xs:annotation>
+         <xs:documentation>(gamme de valeurs) définit la plage de valeurs autorisées pour un trait, sous la forme d'un fs, vAlt, ou d'une valeur primitive ; pour que la valeur d'un élément f soit valide, elle doit être englobée dans la plage spécifiée. Si le f contient des valeurs multiples (comme prévu par l'attribut org), chacune des valeurs doit être englobée dans l'élément vRange. [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group ref="tei:tei_model.featureVal"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vDefault">
+      <xs:annotation>
+         <xs:documentation>(valeur par défaut) déclare la valeur par défaut à fournir quand une structure de traits ne contient aucun cas de f pour ce nom ; si elle est inconditionnelle, on l'indique comme un élément fs (ou plusieurs, selon la valeur de l'attribut org du fDecl englobant) ; si elle est conditionnelle, on l'indique comme un ou plusieurs éléments if ; si aucune valeur par défaut n'est précisée ou si aucune condition ne correspond, la valeur nulle est retenue. [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:choice>
+            <xs:group maxOccurs="unbounded" ref="tei:tei_model.featureVal"/>
+            <xs:element maxOccurs="unbounded" ref="tei:if"/>
+         </xs:choice>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="if">
+      <xs:annotation>
+         <xs:documentation>définit une valeur conditionnelle par défaut pour un trait ; la condition est indiquée comme une structure de traits et remplie si elle englobe la structure de traits dans le texte pour lequel on cherche une valeur par défaut. [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:choice>
+               <xs:element ref="tei:fs"/>
+               <xs:element ref="tei:f"/>
+            </xs:choice>
+            <xs:element ref="tei:then"/>
+            <xs:group ref="tei:tei_model.featureVal"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="then">
+      <xs:annotation>
+         <xs:documentation>sépare la condition de la valeur par défaut dans un if, ou l'antécédent de la conséquence dans un élément cond [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fsConstraints">
+      <xs:annotation>
+         <xs:documentation>(contraintes de structure de traits) définit les contraintes sur le contenu de structures de traits bien formées [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:cond"/>
+            <xs:element ref="tei:bicond"/>
+         </xs:choice>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="cond">
+      <xs:annotation>
+         <xs:documentation>(contrainte conditionnelle de structure de traits) définit une contrainte conditionnelle de structure de traits ; la conséquence et l'antécédent sont indiqués comme structures de traits ou comme groupes de structures de traits ; la contrainte est satisfaite si à la fois l'antécédent et la conséquence englobent une structure de traits donnée, ou si l'antécédent ne l'englobe pas [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:choice>
+               <xs:element ref="tei:fs"/>
+               <xs:element ref="tei:f"/>
+            </xs:choice>
+            <xs:element ref="tei:then"/>
+            <xs:choice>
+               <xs:element ref="tei:fs"/>
+               <xs:element ref="tei:f"/>
+            </xs:choice>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="bicond">
+      <xs:annotation>
+         <xs:documentation>(contrainte bi-conditionnelle de structure de traits) définit une contrainte bi-conditionnelle de structure de traits ; la conséquence et l'antécédent sont tous deux indiqués comme structures de traits ou comme groupes de structures de traits ; la contrainte est satisfaite si chacun des deux englobe une structure de traits donnée, ou si aucun ne le fait [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:choice>
+               <xs:element ref="tei:fs"/>
+               <xs:element ref="tei:f"/>
+            </xs:choice>
+            <xs:element ref="tei:iff"/>
+            <xs:choice>
+               <xs:element ref="tei:fs"/>
+               <xs:element ref="tei:f"/>
+            </xs:choice>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="iff">
+      <xs:annotation>
+         <xs:documentation>(si et seulement si) sépare la condition de la conséquence dans un élément bicond [18.11. Feature System Declaration]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fs">
+      <xs:annotation>
+         <xs:documentation>(structure de traits) représente une structure de traits, c'est-à-dire un ensemble de paires trait-valeur organisé comme une unité structurelle. [18.2. Elementary Feature Structures and the Binary
+Feature Value]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:f"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+         <xs:attribute name="type">
+            <xs:annotation>
+               <xs:documentation>spécifie le type de la structure de traits.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="feats">
+            <xs:annotation>
+               <xs:documentation>(traits) référence les spécifications trait-valeur qui caractérisent cette structure de traits.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction>
+                  <xs:simpleType>
+                     <xs:list itemType="xs:anyURI"/>
+                  </xs:simpleType>
+                  <xs:minLength value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="f">
+      <xs:annotation>
+         <xs:documentation>(trait) représente une spécification trait-valeur, c'est-à-dire l'association d'un nom avec une valeur d’un type quelconque parmi plusieurs. [18.2. Elementary Feature Structures and the Binary
+Feature Value]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:group minOccurs="0" ref="tei:tei_model.featureVal"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+         <xs:attribute name="name" use="required" type="xs:Name">
+            <xs:annotation>
+               <xs:documentation>donne un nom pour le trait</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+         <xs:attribute name="fVal" type="xs:anyURI">
+            <xs:annotation>
+               <xs:documentation>(valeur de traits) référence n'importe quel élément pouvant être utilisé pour représenter la valeur d'un trait.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="binary" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(valeur binaire) représente la partie valeur d'une spécification trait-valeur qui peut contenir l'une ou l'autre des deux valeurs possibles. [18.2. Elementary Feature Structures and the Binary
+Feature Value]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+         <xs:attribute name="value" use="required" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>fournit une valeur binaire.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="symbol" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(valeur symbolique) représente la partie valeur d'une spécification trait-valeur qui contient un symbole extrait d'une liste finie. [18.3. Other Atomic Feature Values]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+         <xs:attribute name="value" use="required">
+            <xs:annotation>
+               <xs:documentation>donne la valeur symbolique pour le trait, extraite d'une liste finie qui peut être spécifiée dans une déclaration de traits.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="numeric" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(valeur numérique) représente la partie valeur d'une spécification trait-valeur qui contient une valeur ou une série numériques. [18.3. Other Atomic Feature Values]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+         <xs:attribute name="value" use="required">
+            <xs:annotation>
+               <xs:documentation>donne une limite inférieure pour la valeur numérique représentée et aussi (simax n'est pas donné) sa limite supérieure.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:union memberTypes="xs:double xs:decimal">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                        <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:union>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="max">
+            <xs:annotation>
+               <xs:documentation>donne une limite supérieure pour la valeur numérique représentée.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:union memberTypes="xs:double xs:decimal">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                        <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:union>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="trunc" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>spécifie si la valeur représentée doit être tronquée pour donner un nombre entier.</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="string" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(valeur de chaîne) représente la partie valeur d'une spécification trait-valeur qui contient une chaîne de caractères. [18.3. Other Atomic Feature Values]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="true">
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vLabel" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(étiquette de valeur) représente la partie valeur d'une spécification trait-valeur qui apparaît en plus d’un point dans une structure de traits. [18.6. Re-entrant Feature Structures]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group minOccurs="0" ref="tei:tei_model.featureVal"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attribute name="name" use="required">
+            <xs:annotation>
+               <xs:documentation>fournit un nom pour le point de partage.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vColl">
+      <xs:annotation>
+         <xs:documentation>(collection de valeurs) représente la partie valeur d'une spécification trait-valeur qui contient des valeurs multiples organisées comme un ensemble, un paquet ou une liste. [18.7. Collections as Complex Feature Values]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:fs"/>
+            <xs:element ref="tei:tei_model.featureVal.single"/>
+         </xs:choice>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attribute name="org">
+            <xs:annotation>
+               <xs:documentation>(organisation) indique l'organisation de la ou des valeurs données sous forme d'ensemble, de paquet ou de liste.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:enumeration value="set">
+                     <xs:annotation>
+                        <xs:documentation>indique que les valeurs données sont organisées en ensemble.</xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="bag">
+                     <xs:annotation>
+                        <xs:documentation>indique que les valeurs données sont organisées en paquet (de plusieurs ensembles). </xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="list">
+                     <xs:annotation>
+                        <xs:documentation>indique que les valeurs données sont organisées en liste.</xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="default" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(valeur de trait par défaut) représente la partie valeur d'une spécification trait-valeur contenant une valeur par défaut [18.9. Default Values]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vAlt" substitutionGroup="tei:tei_model.featureVal.single">
+      <xs:annotation>
+         <xs:documentation>(valeur alternative) représente la partie valeur d'une spécification trait-valeur qui contient un jeu de valeurs, dont une seule peut être valide [18.8.1. Alternation]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:group ref="tei:tei_model.featureVal" minOccurs="2" maxOccurs="unbounded"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vNot">
+      <xs:annotation>
+         <xs:documentation>(négation de valeur) représente une valeur de trait qui est la négation de son contenu. [18.8.2. Negation]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group ref="tei:tei_model.featureVal"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vMerge">
+      <xs:annotation>
+         <xs:documentation>(collection fusionnée de valeurs) représente une valeur de trait , résultant de la fusion des valeurs de trait contenues dans les éléments enfants, qui utilisent l'agencement indiqué par l'attribut org. [18.8.3. Collection of Values]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group maxOccurs="unbounded" ref="tei:tei_model.featureVal"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attribute name="org">
+            <xs:annotation>
+               <xs:documentation>indique l'agencement des valeurs fusionnées résultantes comme un ensemble, un paquet ou une liste.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:enumeration value="set">
+                     <xs:annotation>
+                        <xs:documentation>indique que les valeurs résultantes sont organisées en ensemble.</xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="bag">
+                     <xs:annotation>
+                        <xs:documentation>indique que les valeurs résultantes sont organisées en paquet (de plusieurs ensembles). </xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="list">
+                     <xs:annotation>
+                        <xs:documentation>indique que les valeurs résultantes sont organisées en liste.</xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fLib">
+      <xs:annotation>
+         <xs:documentation>(bibliothèque de traits) rassemble une bibliothèque de traits [18.4. Feature Libraries and Feature-Value Libraries]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="tei:f"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="fvLib">
+      <xs:annotation>
+         <xs:documentation>(bibliothèque trait-valeur) rassemble une bibliothèque d'éléments trait-valeur réutilisables (y compris des structures de traits complètes). [18.4. Feature Libraries and Feature-Value Libraries]</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.featureVal"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      </xs:complexType>
+   </xs:element>
    <xs:attributeGroup name="tei_att.global.linking.attributes">
       <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.corresp"/>
       <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.synch"/>
@@ -8295,9 +8953,14 @@ Suggested values include: 1] d(days) ; 2] h(hours) ; 3] min(minutes) ; 4] s(seco
    </xs:element>
    <xs:group name="tei_model.annotation">
       <xs:choice>
+         <xs:group ref="tei:tei_model.dateLike"/>
+         <xs:element ref="tei:tei_model.ptrLike"/>
          <xs:group ref="tei:tei_model.global.meta"/>
+         <xs:group ref="tei:tei_model.biblLike"/>
          <xs:group ref="tei:tei_model.listLike"/>
-         <xs:element ref="tei:listBibl"/>
+         <xs:group ref="tei:tei_model.nameLike"/>
+         <xs:element ref="tei:author"/>
+         <xs:element ref="tei:keywords"/>
          <xs:element ref="tei:annotationBlock"/>
          <xs:element ref="tei:zone"/>
          <xs:element ref="tei:seg"/>

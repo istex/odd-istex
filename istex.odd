@@ -26,9 +26,7 @@
         </front>
         <body>
             <p>Spécification d'un schéma ISTEX pour les sorties Tei</p>
-            <schemaSpec ident="istexschema" docLang="fr" 
-                prefix="tei_" xml:lang="fr" 
-                start="teiCorpus TEI standOff"
+            <schemaSpec ident="istexschema" docLang="fr" prefix="tei_" xml:lang="fr" start="teiCorpus TEI standOff"
                 source="https://raw.githubusercontent.com/laurentromary/stdfSpec/AnnArbor/Specification/standoff-proposal_doc.xml">
                 <moduleRef key="core"/>
                 <moduleRef key="tei" except="fsdDecl facsimile"/>
@@ -45,6 +43,7 @@
                 <moduleRef key="iso-fs"/>
                 <moduleRef key="linking"/>
                 <moduleRef key="standOff"/>
+
                 <elementSpec ident="bibl" module="core" mode="change">
                     <classes mode="replace">
                         <memberOf key="model.biblLike"/>
@@ -81,12 +80,9 @@
                 </elementSpec>
 
                 <elementSpec ident="listAnnotation" mode="change" ns="http://www.example.org/ns/nonTEI">
-                    <desc/>
                     <classes>
                         <memberOf key="model.divPart.spoken"/>
-                        <memberOf key="att.typed"/>
                     </classes>
-                    <content xmlns:rng="http://relaxng.org/ns/structure/1.0"> </content>
                     <exemplum xml:lang="fr">
                         <p>L'élément listAnnotation regroupe des <gi>annotationBlock</gi></p>
                         <p>L'élément annotationBlock regroupe un enrichissement (entité nommée, catégorisation, indexation) et les éléments qui lui correspondent comme les <gi>term</gi> et les
@@ -158,26 +154,6 @@
                 </elementSpec>
                 <!-- annotationBlock -->
                 <elementSpec ident="annotationBlock" mode="change">
-                    <content>
-                        <alternate minOccurs="1" maxOccurs="unbounded">
-                            <classRef key="model.divPart.spoken"/>
-                            <!--modele pour date-->
-                            <classRef key="model.dateLike"/>
-                            <classRef key="model.publicationStmtPart.detail"/>
-                            <!--modele pour persName-->
-                            <classRef key="model.nameLike.agent"/>
-                            <classRef key="model.persStateLike"/>
-                            <!--modele pour placeName-->
-                            <classRef key="model.placeNamePart"/>
-                            <classRef key="model.ptrLike"/>
-                            <!--modele pour orgName-->
-                            <classRef key="model.nameLike.agent"/>
-                            <!-- subject -->
-                            <elementRef key="keywords"/>
-                            <!-- author -->
-                            <classRef key="model.respLike"/>
-                        </alternate>
-                    </content>
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -208,19 +184,9 @@
                             dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- date -->
                 <elementSpec ident="date" mode="change">
-                    <!-- ajout de fs au niveau de date -->
-                    <content>
-                        <alternate minOccurs="0"
-                            maxOccurs="unbounded">
-                            <textNode/>
-                            <classRef key="model.gLike"/>
-                            <classRef key="model.phrase"/>
-                            <classRef key="model.global"/>
-                            <classRef key="model.featureVal.complex"/>
-                        </alternate>
-                    </content>
                     <attList>
                         <attDef ident="scheme" mode="add">
                             <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
@@ -339,6 +305,7 @@
                         <p>Modèle modifié pour bénéficier de <gi>orgName</gi> dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- placeName -->
                 <elementSpec ident="placeName" mode="change">
                     <attList>
@@ -401,6 +368,7 @@
                         <p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- ref type="bibl" ou type="url" ajouter l'attribut type-->
                 <elementSpec ident="ref" mode="change">
                     <attList>
@@ -489,8 +457,12 @@
                         <p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+                
                 <!-- SG - keywords hub de mta-->
                 <elementSpec ident="keywords" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.annotation" mode="add"/>
+                    </classes>
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement subject hub de métadonnées Abes</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -536,8 +508,12 @@
                         <p>Modèle modifié pour bénéficier de <gi>keywords</gi> dans <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+                
                 <!-- SG - author hub de mta-->
                 <elementSpec ident="author" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.annotation" mode="add"/>
+                    </classes>
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement auteur hub de mtadonnes Abes</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -577,8 +553,12 @@
                         </egXML>
                     </exemplum>
                 </elementSpec>
+
                 <!-- numeric -->
                 <elementSpec ident="numeric" mode="change">
+                    <content>
+                        <macroRef key="macro.xtext"/>
+                    </content>
                     <exemplum xml:lang="fr">
                         <p>l'élément <gi>numeric</gi>contient la valeur de la fréquence</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -588,7 +568,7 @@
                         </egXML>
                     </exemplum>
                 </elementSpec>
-                
+
                 <!-- ajout d'un attribut level dans <term> -->
                 <elementSpec ident="term" mode="change">
                     <attList>
@@ -600,6 +580,25 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+
+                <classSpec type="model" ident="model.nameLike" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.annotation" mode="add"/>
+                    </classes>
+                </classSpec>
+
+                <classSpec type="model" ident="model.ptrLike" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.annotation" mode="add"/>
+                    </classes>
+                </classSpec>
+
+                <classSpec type="model" ident="model.dateLike" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.annotation" mode="add"/>
+                    </classes>
+                </classSpec>
+                
             </schemaSpec>
         </body>
     </text>
