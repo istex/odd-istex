@@ -41,6 +41,8 @@
                     except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docEdition docImprint epigraph group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
                 <moduleRef key="figures"/>
                 <moduleRef key="transcr"/>
+                <!-- ajout modèle iso-fs pour prendre en charge les <fs> -->
+                <moduleRef key="iso-fs"/>
                 <moduleRef key="linking"/>
                 <moduleRef key="standOff"/>
                 <elementSpec ident="bibl" module="core" mode="change">
@@ -339,10 +341,6 @@
                 </elementSpec>
                 <!-- placeName -->
                 <elementSpec ident="placeName" mode="change">
-                    <content>
-                        <classRef key="model.placeNamePart"/>
-                        <macroRef key="macro.phraseSeq"/>
-                    </content>
                     <attList>
                         <attDef ident="scheme" mode="add">
                             <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
@@ -405,11 +403,6 @@
                 </elementSpec>
                 <!-- ref type="bibl" ou type="url" ajouter l'attribut type-->
                 <elementSpec ident="ref" mode="change">
-                    <content>
-                        <classRef key="model.ptrLike"/>
-                        <macroRef key="macro.paraContent"/>
-                        <macroRef key="macro.phraseSeq"/>
-                    </content>
                     <attList>
                         <attDef ident="scheme" mode="add">
                             <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>

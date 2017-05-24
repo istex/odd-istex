@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-23T14:10:23Z. .
+Schema generated from ODD source 2017-05-24T08:43:16Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -2286,6 +2286,9 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_index"/>
          <ref name="tei_substJoin"/>
          <ref name="tei_listTranspose"/>
+         <ref name="tei_fs"/>
+         <ref name="tei_fLib"/>
+         <ref name="tei_fvLib"/>
          <ref name="tei_link"/>
          <ref name="tei_linkGrp"/>
          <ref name="tei_timeline"/>
@@ -2631,7 +2634,23 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       </oneOrMore>
    </define>
    <define name="tei_model.featureVal.complex">
-      <notAllowed/>
+      <choice>
+         <ref name="tei_fs"/>
+         <ref name="tei_vColl"/>
+         <ref name="tei_vNot"/>
+         <ref name="tei_vMerge"/>
+      </choice>
+   </define>
+   <define name="tei_model.featureVal.single">
+      <choice>
+         <ref name="tei_binary"/>
+         <ref name="tei_symbol"/>
+         <ref name="tei_numeric"/>
+         <ref name="tei_string"/>
+         <ref name="tei_vLabel"/>
+         <ref name="tei_default"/>
+         <ref name="tei_vAlt"/>
+      </choice>
    </define>
    <define name="tei_model.entryPart">
       <notAllowed/>
@@ -3176,6 +3195,12 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_metamark"/>
       </choice>
    </define>
+   <define name="tei_model.featureVal">
+      <choice>
+         <ref name="tei_model.featureVal.complex"/>
+         <ref name="tei_model.featureVal.single"/>
+      </choice>
+   </define>
    <define name="tei_model.biblPart">
       <choice>
          <ref name="tei_model.respLike"/>
@@ -3288,6 +3313,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_schemaRef"/>
          <ref name="tei_classDecl"/>
          <ref name="tei_appInfo"/>
+         <ref name="tei_fsdDecl"/>
       </choice>
    </define>
    <define name="tei_model.profileDescPart">
@@ -3305,6 +3331,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_text"/>
          <ref name="tei_facsimile"/>
          <ref name="tei_sourceDoc"/>
+         <ref name="tei_fsdDecl"/>
          <ref name="tei_standOff"/>
       </choice>
    </define>
@@ -4038,9 +4065,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
    <define name="tei_ref">
       <element name="ref">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(référence) définit une référence vers un autre emplacement, la référence étant éventuellement modifiée ou complétée par un texte ou un commentaire. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
-         <ref name="tei_model.ptrLike"/>
          <ref name="tei_macro.paraContent"/>
-         <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="istexschema-ref-refAtts-constraint-report-7">
             <rule context="tei:ref">
@@ -6086,7 +6111,6 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
    <define name="tei_placeName">
       <element name="placeName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(nom de lieu) contient un nom de lieu absolu ou relatif. [13.2.3. Place Names]</a:documentation>
-         <ref name="tei_model.placeNamePart"/>
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
@@ -7858,6 +7882,460 @@ Exemple de valeurs possibles: 1] header; 2] footer; 3] pageNum(page number) ; 4]
          <empty/>
       </element>
    </define>
+   <define name="tei_fsdDecl">
+      <element name="fsdDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Déclaration de système de traits (FSD)) fournit une déclaration du système de traits consistant en une ou plusieurs déclarations de structure de traits ou des liens vers une déclaration de structure de traits. [18.11. Feature System Declaration]</a:documentation>
+         <oneOrMore>
+            <choice>
+               <ref name="tei_fsDecl"/>
+               <ref name="tei_fsdLink"/>
+            </choice>
+         </oneOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fsDecl">
+      <element name="fsDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(déclaration de structure de traits) déclare un type de structure de traits [18.11. Feature System Declaration]</a:documentation>
+         <group>
+            <optional>
+               <ref name="tei_fsDescr"/>
+            </optional>
+            <oneOrMore>
+               <ref name="tei_fDecl"/>
+            </oneOrMore>
+            <optional>
+               <ref name="tei_fsConstraints"/>
+            </optional>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">attribue un nom au type de structure de traits déclaré.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+         <optional>
+            <attribute name="baseTypes">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne le nom d'une ou plusieurs structures de traits "type", de laquelle ou desquelles il hérite des spécifications et des contraintes de traits. Si ce type inclut une spécification de traits du même nom que l'une de celles spécifiées par cet attribut, ou si plus d'une spécification du même nom est transmise par héritage, l'ensemble des valeurs possibles est définie par unification. De même, l'ensemble des contraintes applicables résulte de la combinaison de celles qui sont spécifiées explicitement à l'intérieur de cet élément et de celles qui découlent de l'attribut baseTypes. Quand aucun attribut baseTypes n'est précisé, aucune spécification de traits ni contrainte n'est transmise par héritage.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="Name"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fsDescr">
+      <element name="fsDescr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description de système de traits (dans FSD)) décrit en texte libre ce que représente le type de structure de traits déclaré dans le fsDecl englobant [18.11. Feature System Declaration]</a:documentation>
+         <ref name="tei_macro.limitedContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fsdLink">
+      <element name="fsdLink">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lien vers la déclaration d'une structure de traits) associe le nom d'une structure de traits "type" à sa déclaration de structure de traits. [18.11. Feature System Declaration]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifie le type de structure de traits à documenter ; ce sera la valeur de l’attribut type d’au moins une structure de traits.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fournit un pointeur vers un élément de déclaration de structure de traits (fsDecl) dans le document courant ou ailleurs.</a:documentation>
+            <data type="anyURI"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fDecl">
+      <element name="fDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(déclaration de trait) déclare un trait unique, en en précisant le nom, l'organisation, la liste de valeurs autorisées et, éventuellement, la valeur par défaut. [18.11. Feature System Declaration]</a:documentation>
+         <group>
+            <optional>
+               <ref name="tei_fDescr"/>
+            </optional>
+            <ref name="tei_vRange"/>
+            <optional>
+               <ref name="tei_vDefault"/>
+            </optional>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique le nom du trait déclaré ; correspond à l'attribut name des éléments f du texte.</a:documentation>
+            <data type="Name"/>
+         </attribute>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="optional"
+                       a:defaultValue="true">
+               <a:documentation>indique si la valeur de ce trait peut ou non exister</a:documentation>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fDescr">
+      <element name="fDescr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description de trait (dans FSD)) décrit en texte libre le trait déclaré et ses valeurs [18.11. Feature System Declaration]</a:documentation>
+         <ref name="tei_macro.limitedContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vRange">
+      <element name="vRange">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(gamme de valeurs) définit la plage de valeurs autorisées pour un trait, sous la forme d'un fs, vAlt, ou d'une valeur primitive ; pour que la valeur d'un élément f soit valide, elle doit être englobée dans la plage spécifiée. Si le f contient des valeurs multiples (comme prévu par l'attribut org), chacune des valeurs doit être englobée dans l'élément vRange. [18.11. Feature System Declaration]</a:documentation>
+         <ref name="tei_model.featureVal"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vDefault">
+      <element name="vDefault">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur par défaut) déclare la valeur par défaut à fournir quand une structure de traits ne contient aucun cas de f pour ce nom ; si elle est inconditionnelle, on l'indique comme un élément fs (ou plusieurs, selon la valeur de l'attribut org du fDecl englobant) ; si elle est conditionnelle, on l'indique comme un ou plusieurs éléments if ; si aucune valeur par défaut n'est précisée ou si aucune condition ne correspond, la valeur nulle est retenue. [18.11. Feature System Declaration]</a:documentation>
+         <choice>
+            <oneOrMore>
+               <ref name="tei_model.featureVal"/>
+            </oneOrMore>
+            <oneOrMore>
+               <ref name="tei_if"/>
+            </oneOrMore>
+         </choice>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_if">
+      <element name="if">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">définit une valeur conditionnelle par défaut pour un trait ; la condition est indiquée comme une structure de traits et remplie si elle englobe la structure de traits dans le texte pour lequel on cherche une valeur par défaut. [18.11. Feature System Declaration]</a:documentation>
+         <group>
+            <choice>
+               <ref name="tei_fs"/>
+               <ref name="tei_f"/>
+            </choice>
+            <ref name="tei_then"/>
+            <ref name="tei_model.featureVal"/>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_then">
+      <element name="then">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sépare la condition de la valeur par défaut dans un if, ou l'antécédent de la conséquence dans un élément cond [18.11. Feature System Declaration]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fsConstraints">
+      <element name="fsConstraints">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(contraintes de structure de traits) définit les contraintes sur le contenu de structures de traits bien formées [18.11. Feature System Declaration]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_cond"/>
+               <ref name="tei_bicond"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_cond">
+      <element name="cond">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(contrainte conditionnelle de structure de traits) définit une contrainte conditionnelle de structure de traits ; la conséquence et l'antécédent sont indiqués comme structures de traits ou comme groupes de structures de traits ; la contrainte est satisfaite si à la fois l'antécédent et la conséquence englobent une structure de traits donnée, ou si l'antécédent ne l'englobe pas [18.11. Feature System Declaration]</a:documentation>
+         <group>
+            <choice>
+               <ref name="tei_fs"/>
+               <ref name="tei_f"/>
+            </choice>
+            <ref name="tei_then"/>
+            <choice>
+               <ref name="tei_fs"/>
+               <ref name="tei_f"/>
+            </choice>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_bicond">
+      <element name="bicond">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(contrainte bi-conditionnelle de structure de traits) définit une contrainte bi-conditionnelle de structure de traits ; la conséquence et l'antécédent sont tous deux indiqués comme structures de traits ou comme groupes de structures de traits ; la contrainte est satisfaite si chacun des deux englobe une structure de traits donnée, ou si aucun ne le fait [18.11. Feature System Declaration]</a:documentation>
+         <group>
+            <choice>
+               <ref name="tei_fs"/>
+               <ref name="tei_f"/>
+            </choice>
+            <ref name="tei_iff"/>
+            <choice>
+               <ref name="tei_fs"/>
+               <ref name="tei_f"/>
+            </choice>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_iff">
+      <element name="iff">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(si et seulement si) sépare la condition de la conséquence dans un élément bicond [18.11. Feature System Declaration]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fs">
+      <element name="fs">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structure de traits) représente une structure de traits, c'est-à-dire un ensemble de paires trait-valeur organisé comme une unité structurelle. [18.2. Elementary Feature Structures and the Binary
+Feature Value]</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_f"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datcat.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">spécifie le type de la structure de traits.</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="feats">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(traits) référence les spécifications trait-valeur qui caractérisent cette structure de traits.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_f">
+      <element name="f">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(trait) représente une spécification trait-valeur, c'est-à-dire l'association d'un nom avec une valeur d’un type quelconque parmi plusieurs. [18.2. Elementary Feature Structures and the Binary
+Feature Value]</a:documentation>
+         <choice>
+            <text/>
+            <ref name="tei_model.featureVal"/>
+         </choice>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datcat.attributes"/>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne un nom pour le trait</a:documentation>
+            <data type="Name"/>
+         </attribute>
+         <optional>
+            <attribute name="fVal">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur de traits) référence n'importe quel élément pouvant être utilisé pour représenter la valeur d'un trait.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_binary">
+      <element name="binary">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur binaire) représente la partie valeur d'une spécification trait-valeur qui peut contenir l'une ou l'autre des deux valeurs possibles. [18.2. Elementary Feature Structures and the Binary
+Feature Value]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datcat.attributes"/>
+         <attribute name="value">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fournit une valeur binaire.</a:documentation>
+            <data type="boolean"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_symbol">
+      <element name="symbol">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur symbolique) représente la partie valeur d'une spécification trait-valeur qui contient un symbole extrait d'une liste finie. [18.3. Other Atomic Feature Values]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datcat.attributes"/>
+         <attribute name="value">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne la valeur symbolique pour le trait, extraite d'une liste finie qui peut être spécifiée dans une déclaration de traits.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_numeric">
+      <element name="numeric">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur numérique) représente la partie valeur d'une spécification trait-valeur qui contient une valeur ou une série numériques. [18.3. Other Atomic Feature Values]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datcat.attributes"/>
+         <attribute name="value">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne une limite inférieure pour la valeur numérique représentée et aussi (simax n'est pas donné) sa limite supérieure.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+         <optional>
+            <attribute name="max">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donne une limite supérieure pour la valeur numérique représentée.</a:documentation>
+               <choice>
+                  <data type="double"/>
+                  <data type="token">
+                     <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+                  </data>
+                  <data type="decimal"/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="trunc">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">spécifie si la valeur représentée doit être tronquée pour donner un nombre entier.</a:documentation>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_string">
+      <element name="string">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur de chaîne) représente la partie valeur d'une spécification trait-valeur qui contient une chaîne de caractères. [18.3. Other Atomic Feature Values]</a:documentation>
+         <ref name="tei_macro.xtext"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datcat.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vLabel">
+      <element name="vLabel">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(étiquette de valeur) représente la partie valeur d'une spécification trait-valeur qui apparaît en plus d’un point dans une structure de traits. [18.6. Re-entrant Feature Structures]</a:documentation>
+         <optional>
+            <ref name="tei_model.featureVal"/>
+         </optional>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fournit un nom pour le point de partage.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vColl">
+      <element name="vColl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collection de valeurs) représente la partie valeur d'une spécification trait-valeur qui contient des valeurs multiples organisées comme un ensemble, un paquet ou une liste. [18.7. Collections as Complex Feature Values]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_fs"/>
+               <ref name="tei_model.featureVal.single"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="org">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organisation) indique l'organisation de la ou des valeurs données sous forme d'ensemble, de paquet ou de liste.</a:documentation>
+               <choice>
+                  <value>set</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique que les valeurs données sont organisées en ensemble.</a:documentation>
+                  <value>bag</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique que les valeurs données sont organisées en paquet (de plusieurs ensembles). </a:documentation>
+                  <value>list</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique que les valeurs données sont organisées en liste.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_default">
+      <element name="default">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur de trait par défaut) représente la partie valeur d'une spécification trait-valeur contenant une valeur par défaut [18.9. Default Values]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vAlt">
+      <element name="vAlt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(valeur alternative) représente la partie valeur d'une spécification trait-valeur qui contient un jeu de valeurs, dont une seule peut être valide [18.8.1. Alternation]</a:documentation>
+         <group>
+            <ref name="tei_model.featureVal"/>
+            <oneOrMore>
+               <ref name="tei_model.featureVal"/>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vNot">
+      <element name="vNot">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(négation de valeur) représente une valeur de trait qui est la négation de son contenu. [18.8.2. Negation]</a:documentation>
+         <ref name="tei_model.featureVal"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_vMerge">
+      <element name="vMerge">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collection fusionnée de valeurs) représente une valeur de trait , résultant de la fusion des valeurs de trait contenues dans les éléments enfants, qui utilisent l'agencement indiqué par l'attribut org. [18.8.3. Collection of Values]</a:documentation>
+         <oneOrMore>
+            <ref name="tei_model.featureVal"/>
+         </oneOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="org">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique l'agencement des valeurs fusionnées résultantes comme un ensemble, un paquet ou une liste.</a:documentation>
+               <choice>
+                  <value>set</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique que les valeurs résultantes sont organisées en ensemble.</a:documentation>
+                  <value>bag</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique que les valeurs résultantes sont organisées en paquet (de plusieurs ensembles). </a:documentation>
+                  <value>list</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique que les valeurs résultantes sont organisées en liste.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fLib">
+      <element name="fLib">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliothèque de traits) rassemble une bibliothèque de traits [18.4. Feature Libraries and Feature-Value Libraries]</a:documentation>
+         <oneOrMore>
+            <ref name="tei_f"/>
+         </oneOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_fvLib">
+      <element name="fvLib">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliothèque trait-valeur) rassemble une bibliothèque d'éléments trait-valeur réutilisables (y compris des structures de traits complètes). [18.4. Feature Libraries and Feature-Value Libraries]</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_model.featureVal"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_att.global.linking.attributes">
       <ref name="tei_att.global.linking.attribute.corresp"/>
       <ref name="tei_att.global.linking.attribute.synch"/>
@@ -8315,9 +8793,6 @@ You must supply at least two values for @target on <name/>
          <zeroOrMore>
             <ref name="tei_listAnnotation"/>
          </zeroOrMore>
-         <zeroOrMore>
-            <ref name="tei_standOff"/>
-         </zeroOrMore>
          <ns xmlns="http://purl.oclc.org/dsdl/schematron"
              prefix="stdf"
              uri="http://standoff.proposal"/>
@@ -8325,8 +8800,7 @@ You must supply at least two values for @target on <name/>
                   id="istexschema-standOff-SecondLevelStandOffTyping-constraint-assert-18">
             <rule context="stdf:standOff">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                       test="@type or not(ancestor::stdf:standOff)">This <name/> element
-                                must have a @type attribute, since it has an ancestor
+                       test="@type or not(ancestor::stdf:standOff)">This <name/> element must have a @type attribute, since it has an ancestor
                                 <name/>
                </assert>
             </rule>
@@ -8343,14 +8817,9 @@ You must supply at least two values for @target on <name/>
    <define name="tei_listAnnotation">
       <element name="listAnnotation" ns="http://standoff.proposal">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups together various annotations, for instance for parallel interpretations of a spoken segment</a:documentation>
-         <choice>
-            <oneOrMore>
-               <ref name="tei_listAnnotation"/>
-            </oneOrMore>
-            <oneOrMore>
-               <ref name="tei_model.annotation"/>
-            </oneOrMore>
-         </choice>
+         <oneOrMore>
+            <ref name="tei_model.annotation"/>
+         </oneOrMore>
          <ref name="tei_att.timed.attributes"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.ascribed.attributes"/>
