@@ -30,13 +30,12 @@
                 source="https://raw.githubusercontent.com/laurentromary/stdfSpec/AnnArbor/Specification/standoff-proposal_doc.xml">
                 <moduleRef key="core"/>
                 <moduleRef key="tei" except="fsdDecl facsimile"/>
-                <moduleRef key="header"
-                    except="cRefPattern calendar calendarDesc catDesc catRef correction correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
+                <moduleRef key="header" except="cRefPattern calendar calendarDesc catDesc catRef correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
                 <moduleRef key="namesdates"
                     except="age birth bloc climate death district education faith floruit geo geogFeat langKnowledge langKnown listEvent listNym listPerson listRelation nationality nym occupation offset population relation residence sex socecStatus terrain trait"/>
                 <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
                 <moduleRef key="textstructure"
-                    except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docEdition docImprint epigraph group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
+                    except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docImprint epigraph imprimatur opener postscript salute signed trailer"/>
                 <moduleRef key="figures"/>
                 <moduleRef key="transcr"/>
                 <!-- ajout modèle iso-fs pour prendre en charge les <fs> -->
@@ -154,6 +153,7 @@
                 </elementSpec>
                 <!-- annotationBlock -->
                 <elementSpec ident="annotationBlock" mode="change">
+                    
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -580,6 +580,44 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+                
+                <!-- ajout de <text> dans <annotationBlock> pour prendre en charge les travaux de réocérisation -->
+                <elementSpec ident="text" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.annotation" mode="add"/>
+                    </classes>
+                    <exemplum xml:lang="fr">
+                        <p>l'élément <gi>annotationBlock</gi>contient la réocérisation du texte extrait du pdf dans <gi>text</gi></p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <listAnnotation type="subject">
+                                <annotationBlock corresp="#subject-01">
+                                    <text>
+                                        <body source="#ocr-001" resp="#ISTEX">
+                                            <div>
+                                                <p>Action Algebras and Model Algebras in Denotational Semantics Luiz
+                                                    Carlos Castro Guedes1 and Edward Hermann Haeusler2 1 2 1 Instituto
+                                                    de Computa¸ao, UFF, Niteroi, Brasil c˜ Departamento de Inform´tica,
+                                                    PUC-Rio, Rio de Janeiro, Brasil a Introduction This article
+                                                    describes some results concerning the conceptual separation of model
+                                                    dependent and language inherent aspects in a denotational semantics
+                                                    of a programming language. Before going into the technical
+                                                    explanation, the authors wish to relate a story that illustrates how
+                                                    correctly and precisely posed questions can inﬂuence the direction
+                                                    of research. By means of his questions, Professor Mosses aided the
+                                                    PhD research of one of the authors of this article and taught the
+                                                    other, who at the time was a novice supervisor, the real meaning of
+                                                    careful PhD supervision. The student’s research had been partially
+                                                    developed towards the implementation of programming languages
+                                                    through denotational semantics speciﬁcation, and the student had
+                                                    developed a prototype</p>
+                                            </div>
+                                        </body>
+                                    </text>
+                                </annotationBlock>
+                            </listAnnotation>
+                        </egXML>
+                    </exemplum>
+                </elementSpec>
 
                 <classSpec type="model" ident="model.nameLike" mode="change">
                     <classes mode="change">
@@ -598,7 +636,6 @@
                         <memberOf key="model.annotation" mode="add"/>
                     </classes>
                 </classSpec>
-                
             </schemaSpec>
         </body>
     </text>
