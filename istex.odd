@@ -9,11 +9,16 @@
             <publicationStmt>
                 <authority>INIST-CNRS</authority>
                 <availability>
-                    <licence>A voir?</licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">
+                        <p> Ce schéma est distribué sous licence Creative
+                            Commons 4.0 non transposée (CC BY 4.0) </p>
+                        <p> ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative
+                            d’Excellence en Information Scientifique et Technique </p>
+                    </licence>
                 </availability>
             </publicationStmt>
             <notesStmt>
-                <note type="ns">http://www.example.org/ns/nonTEI</note>
+                <note type="ns">http://www.istex.fr</note>
             </notesStmt>
             <sourceDesc>
                 <p>created on Tuesday 04th April 2017 08:45:30 AM</p>
@@ -26,14 +31,17 @@
         </front>
         <body>
             <p>Spécification d'un schéma ISTEX pour les sorties Tei</p>
-            <schemaSpec ident="istexschema" docLang="fr" prefix="tei_" xml:lang="fr" start="teiCorpus TEI standOff"
+            <schemaSpec ident="istexschema" docLang="fr" prefix="tei_" xml:lang="fr"
+                start="teiCorpus TEI standOff"
                 source="https://raw.githubusercontent.com/laurentromary/stdfSpec/AnnArbor/Specification/standoff-proposal_doc.xml">
                 <moduleRef key="core"/>
                 <moduleRef key="tei" except="fsdDecl facsimile"/>
-                <moduleRef key="header" except="cRefPattern calendar calendarDesc catDesc catRef correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
+                <moduleRef key="header"
+                    except="cRefPattern calendar calendarDesc catDesc catRef correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
                 <moduleRef key="namesdates"
                     except="age birth bloc climate death district education faith floruit geo geogFeat langKnowledge langKnown listEvent listNym listPerson listRelation nationality nym occupation offset population relation residence sex socecStatus terrain trait"/>
-                <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
+                <moduleRef key="spoken"
+                    except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
                 <moduleRef key="textstructure"
                     except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docImprint epigraph imprimatur opener postscript salute signed trailer"/>
                 <moduleRef key="figures"/>
@@ -70,26 +78,33 @@
                     </content>
                     <exemplum xml:lang="fr">
                         <p>Cas où un abstract contient un titre</p>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples"><abstract><head>Méthode</head><p>Contenu de la méthode.</p><head>Expérience</head><p>Contenu de
-                            l'expérience.</p></abstract></egXML>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"
+                                    ><abstract><head>Méthode</head><p>Contenu de la
+                                    méthode.</p><head>Expérience</head><p>Contenu de
+                                    l'expérience.</p></abstract></egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>head</gi> dans <gi>abstract</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>head</gi> dans
+                            <gi>abstract</gi></p>
                     </remarks>
                 </elementSpec>
 
-                <elementSpec ident="listAnnotation" mode="change" ns="http://www.example.org/ns/nonTEI">
+                <!-- listAnnotation -->
+                <elementSpec ident="listAnnotation" mode="change"
+                    ns="http://www.example.org/ns/nonTEI">
                     <classes>
                         <memberOf key="model.divPart.spoken"/>
                     </classes>
                     <exemplum xml:lang="fr">
                         <p>L'élément listAnnotation regroupe des <gi>annotationBlock</gi></p>
-                        <p>L'élément annotationBlock regroupe un enrichissement (entité nommée, catégorisation, indexation) et les éléments qui lui correspondent comme les <gi>term</gi> et les
-                                <gi>fs</gi></p>
+                        <p>L'élément annotationBlock regroupe un enrichissement (entité nommée,
+                            catégorisation, indexation) et les éléments qui lui correspondent comme
+                            les <gi>term</gi> et les <gi>fs</gi></p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="date" xml:lang="fr">
-                                <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                    <date change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://date-entity.lod.istex.fr">
+                                <annotationBlock corresp="text">
+                                    <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                        scheme="https://date-entity.data.istex.fr">
                                         <term>2000</term>
                                         <fs type="statistics">
                                             <f name="frequency">
@@ -104,12 +119,42 @@
                     <exemplum xml:lang="fr">
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="rd-nb">
-                                <annotationBlock corresp="abstract" xmls="https//www.tei-c.org/ns/1.0">
-                                    <keywords change="#rd-nb" resp="#istex-rd" scheme="http://inist-category.lod.istex.fr">
-                                        <term cert="0.651637563297372" key="refCode : STM" level="1">SCIENCES APPLIQUEES, TECHNOLOGIE ET MEDECINE</term>
-                                        <term cert="0.5541006144477459" key="refCode : 001" level="2">SCIENCES EXACTES ET TECHNOLOGIE</term>
-                                        <term cert="0.20272618300842637" key="refCode : 001E" level="3">TERRE, OCEAN, ESPACE</term>
-                                        <term cert="0.31605416143215126" key="refCode : 001E02" level="4">GEOPHYSIQUE EXTERNE</term>
+                                <annotationBlock corresp="abstract">
+                                    <keywords change="#rd-nb" resp="#istex-rd"
+                                        scheme="https://inist-category.data.istex.fr">
+                                        <term cert="0.651637563297372" key="refCode : STM" level="1"
+                                            >SCIENCES APPLIQUEES, TECHNOLOGIE ET MEDECINE</term>
+                                        <term cert="0.5541006144477459" key="refCode : 001"
+                                            level="2">SCIENCES EXACTES ET TECHNOLOGIE</term>
+                                        <term cert="0.20272618300842637" key="refCode : 001E"
+                                            level="3">TERRE, OCEAN, ESPACE</term>
+                                        <term cert="0.31605416143215126" key="refCode : 001E02"
+                                            level="4">GEOPHYSIQUE EXTERNE</term>
+                                    </keywords>
+                                </annotationBlock>
+                            </listAnnotation>
+                        </egXML>
+                    </exemplum>
+                    <exemplum xml:lang="fr">
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <listAnnotation type="rd-multicat">
+                                <annotationBlock>
+                                    <keywords change="#rd-multicat" resp="#istex-rd"
+                                        scheme="https://inist-category.data.istex.fr">
+                                        <term level="1">SOCIAL SCIENCE</term>
+                                        <term level="2">TRANSPORTATION</term>
+                                    </keywords>
+                                    <keywords change="#rd-multicat" resp="#istex-rd"
+                                        scheme="https://inist-category.data.istex.fr">
+                                        <term level="1">SCIENCE</term>
+                                        <term level="2">TRANSPORTATION SCIENCE AND TECHNOLOGY</term>
+                                        <term level="3">ENGINEERING, CIVIL</term>
+                                    </keywords>
+                                    <keywords change="#rd-multicat" resp="#istex-rd"
+                                        scheme="https://inist-category.data.istex.fr">
+                                        <term level="1">ECONOMIC AND SOCIAL SCIENCE</term>
+                                        <term level="2">ECONOMIC AND BUSINESS</term>
+                                        <term level="3">LOGISTICS AND TRANSPORTATION</term>
                                     </keywords>
                                 </annotationBlock>
                             </listAnnotation>
@@ -118,16 +163,16 @@
                     <exemplum xml:lang="fr">
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="rd-teeft">
-                                <annotationBlock corresp="text" xmls="https//www.tei-c.org/ns/1.0">
-                                    <keywords change="#istex-rd" resp="#istex-rd">
+                                <annotationBlock corresp="text">
+                                    <keywords change="#rd-teeft" resp="#istex-rd">
                                         <term>
                                             <term>prepulse inhibition</term>
                                             <fs type="statistics">
                                                 <f name="frequency">
-                                                    <numeric value="4"/>
+                                                  <numeric value="4"/>
                                                 </f>
                                                 <f name="specificity">
-                                                    <numeric value="1"/>
+                                                  <numeric value="1"/>
                                                 </f>
                                             </fs>
                                         </term>
@@ -135,10 +180,10 @@
                                             <term>decompensated inpatients</term>
                                             <fs type="statistics">
                                                 <f name="frequency">
-                                                    <numeric value="2"/>
+                                                  <numeric value="2"/>
                                                 </f>
                                                 <f name="specificity">
-                                                    <numeric value="0.5"/>
+                                                  <numeric value="0.5"/>
                                                 </f>
                                             </fs>
                                         </term>
@@ -148,17 +193,19 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>annotationBlock</gi> dans <gi>listAnnotation</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>annotationBlock</gi> dans
+                                <gi>listAnnotation</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- annotationBlock -->
                 <elementSpec ident="annotationBlock" mode="change">
-                    
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <date change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://date-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://date-entity.data.istex.fr">
                                     <term>1997</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -180,8 +227,10 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>date</gi>, <gi>persName</gi>, <gi>orgName</gi>, <gi>placeName</gi>, <gi>geogName</gi>,<gi>ref</gi>, <gi>keywords</gi>, <gi>author</gi>
-                            dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>date</gi>, <gi>persName</gi>,
+                                <gi>orgName</gi>, <gi>placeName</gi>,
+                            <gi>geogName</gi>,<gi>ref</gi>, <gi>keywords</gi>, <gi>author</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
 
@@ -189,7 +238,8 @@
                 <elementSpec ident="date" mode="change">
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -198,8 +248,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée Date</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <date change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://date-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://date-entity.data.istex.fr">
                                     <term>1997</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -211,14 +262,17 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>date</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>date</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- persName -->
                 <elementSpec ident="persName" mode="change">
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -227,8 +281,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée persName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <persName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://persname-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <persName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://persname-entity.data.istex.fr">
                                     <term>Timothy Adams</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -240,9 +295,11 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>persName</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>persName</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- orgName type="funder" ou type="provider"-->
                 <elementSpec ident="orgName" mode="change">
                     <content>
@@ -250,7 +307,8 @@
                     </content>
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -259,8 +317,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff entité nommée orgName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://orgname-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://orgname-entity.data.istex.fr">
                                     <term>Working Party</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -274,8 +333,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée orgName type="funder"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://orgnamefunder-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://orgnamefunder-entity.data.istex.fr">
                                     <term>Organization for Pharmaceutical Safety and Research</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -289,8 +349,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée orgName type="provider"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://orgnameprovider-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://orgnameprovider-entity.data.istex.fr">
                                     <term>TOMCAT at the SLS in Villigen, Switzerland</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -302,7 +363,8 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>orgName</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>orgName</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
 
@@ -310,7 +372,8 @@
                 <elementSpec ident="placeName" mode="change">
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -319,8 +382,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée placeName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <placeName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://placename-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <placeName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://placename-entity.data.istex.fr">
                                     <term>Geneva</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -332,9 +396,11 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>placeName</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>placeName</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- geogName -->
                 <elementSpec ident="geogName" mode="change">
                     <content>
@@ -343,7 +409,8 @@
                     </content>
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -352,8 +419,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée geogName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <geogName change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://geogname-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <geogName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://geogname-entity.data.istex.fr">
                                     <term>Mississippi River</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -365,7 +433,8 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
 
@@ -373,7 +442,8 @@
                 <elementSpec ident="ref" mode="change">
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -382,8 +452,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée ref type="bibl"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <ref type="bibl" change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://refbibl-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <ref type="bibl" change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://refbibl-entity.data.istex.fr">
                                     <term>Stern et al.</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -397,8 +468,9 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée ref type="url"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <ref type="url" change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://refurl-entity.lod.istex.fr">
+                            <annotationBlock corresp="text">
+                                <ref type="url" change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://refurl-entity.data.istex.fr">
                                     <term>http://www.treas.gov/press/releases/js</term>
                                     <fs type="statistics">
                                         <f name="frequency">
@@ -409,6 +481,7 @@
                             </annotationBlock>
                         </egXML>
                     </exemplum>
+
                     <!-- exemple nature
                     <cite id="n1"><jtl>Nature</jtl>
         <vid>402</vid>, <ppf> 255</ppf>ndash;<ppl>262</ppl>; <cd year="1999">1999</cd></cite>-->
@@ -417,22 +490,28 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <p>Originally published as <ref type="cit" xml:id="n1">
                                     <title level="j" type="main">Nature</title>
-                                    <biblScope unit="vol">402</biblScope>, <biblScope unit="page" from=" 255"> 255</biblScope>ndash;<biblScope unit="page" to="262">262</biblScope>; </ref>
+                                    <biblScope unit="vol">402</biblScope>, <biblScope unit="page"
+                                        from=" 255"> 255</biblScope>ndash;<biblScope unit="page"
+                                        to="262">262</biblScope>; </ref>
                             </p>
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>biblScope</gi> dans <gi>ref</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>biblScope</gi> dans
+                            <gi>ref</gi></p>
                     </remarks>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>ref</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>ref</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- bibl -->
                 <elementSpec ident="bibl" mode="change">
                     <attList>
                         <attDef ident="scheme" mode="add">
-                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</desc>
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
                             <datatype>
                                 <dataRef key="teidata.pointer"/>
                             </datatype>
@@ -441,9 +520,11 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement entité nommée bibl</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https://wwww.tei-c.org/ns/1.0">
-                                <bibl change="#Unitex-3.2.0-alpha" resp="istex-rd" scheme="http://bibl-entity.lod.istex.fr">
-                                    <term>GIRODET, Jean (2007). Dictionnaire des pièges et difficults de la langue française, Paris : Bordas</term>
+                            <annotationBlock corresp="text">
+                                <bibl change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    scheme="https://bibl-entity.data.istex.fr">
+                                    <term>GIRODET, Jean (2007). Dictionnaire des pièges et
+                                        difficults de la langue française, Paris : Bordas</term>
                                     <fs type="statistics">
                                         <f name="frequency">
                                             <numeric value="1"/>
@@ -454,10 +535,11 @@
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
-                
+
                 <!-- SG - keywords hub de mta-->
                 <elementSpec ident="keywords" mode="change">
                     <classes mode="change">
@@ -476,7 +558,7 @@
                     <exemplum xml:lang="fr">
                         <p>StandOff enrichissement indexation rd-teeft</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <annotationBlock corresp="text" xmls="https//www.tei-c.org/ns/1.0">
+                            <annotationBlock corresp="text">
                                 <keywords change="#istex-rd" resp="#istex-rd">
                                     <term>
                                         <term>prepulse inhibition</term>
@@ -504,37 +586,85 @@
                             </annotationBlock>
                         </egXML>
                     </exemplum>
+                    <exemplum xml:lang="en">
+                        <p>StandOff enrichissement categorisation rd-nb</p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <annotationBlock corresp="abstract">
+                                <keywords change="#rd-nb" resp="#istex-rd"
+                                    scheme="https://inist-category.data.istex.fr">
+                                    <term cert="0.651637563297372" key="refCode : STM" level="1"
+                                        >SCIENCES APPLIQUEES, TECHNOLOGIE ET MEDECINE</term>
+                                    <term cert="0.5541006144477459" key="refCode : 001" level="2"
+                                        >SCIENCES EXACTES ET TECHNOLOGIE</term>
+                                    <term cert="0.20272618300842637" key="refCode : 001E" level="3"
+                                        >TERRE, OCEAN, ESPACE</term>
+                                    <term cert="0.31605416143215126" key="refCode : 001E02"
+                                        level="4">GEOPHYSIQUE EXTERNE</term>
+                                </keywords>
+                            </annotationBlock>
+                        </egXML>
+                    </exemplum>
+                    <exemplum xml:lang="en">
+                        <p>StandOff enrichissement categorisation rd-multicat</p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <annotationBlock>
+                                <keywords change="#rd-multicat" resp="#istex-rd"
+                                    scheme="https://inist-category.data.istex.fr">
+                                    <term level="1">SOCIAL SCIENCE</term>
+                                    <term level="2">TRANSPORTATION</term>
+                                </keywords>
+                                <keywords change="#rd-multicat" resp="#istex-rd"
+                                    scheme="https://inist-category.data.istex.fr">
+                                    <term level="1">SCIENCE</term>
+                                    <term level="2">TRANSPORTATION SCIENCE AND TECHNOLOGY</term>
+                                    <term level="3">ENGINEERING, CIVIL</term>
+                                </keywords>
+                                <keywords change="#rd-multicat" resp="#istex-rd"
+                                    scheme="https://inist-category.data.istex.fr">
+                                    <term level="1">ECONOMIC AND SOCIAL SCIENCE</term>
+                                    <term level="2">ECONOMIC AND BUSINESS</term>
+                                    <term level="3">LOGISTICS AND TRANSPORTATION</term>
+                                </keywords>
+                            </annotationBlock>
+                        </egXML>
+                    </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>keywords</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>keywords</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
-                
+
                 <!-- SG - author hub de mta-->
                 <elementSpec ident="author" mode="change">
                     <classes mode="change">
                         <memberOf key="model.annotation" mode="add"/>
                     </classes>
                     <exemplum xml:lang="fr">
-                        <p>StandOff enrichissement auteur hub de mtadonnes Abes</p>
+                        <p>StandOff enrichissement auteur hub de métadonnées Abes</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <author>
-                                <name type="person" resp="#abes" change="#author-01">Nom Prénom</name>
+                                <name type="person" resp="#abes" change="#author-01">Nom
+                                    Prénom</name>
                                 <persName>
-                                    <forename type="first" resp="#abes" change="#author-01">Prénom</forename>
+                                    <forename type="first" resp="#abes" change="#author-01"
+                                        >Prénom</forename>
                                     <surname resp="#abes" change="#author-01">Nom</surname>
                                 </persName>
                             </author>
                         </egXML>
                     </exemplum>
                     <remarks>
-                        <p>Modèle modifié pour bénéficier de <gi>author</gi> dans <gi>annotationBlock</gi></p>
+                        <p>Modèle modifié pour bénéficier de <gi>author</gi> dans
+                                <gi>annotationBlock</gi></p>
                     </remarks>
                 </elementSpec>
+
                 <!-- fs -->
                 <elementSpec ident="fs" mode="change">
                     <exemplum xml:lang="fr">
                         <p>l'élément <gi>fs</gi>contient </p>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples"><fs type="statistics">
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <fs type="statistics">
                                 <f name="frequency">
                                     <numeric value="7"/>
                                 </f>
@@ -542,6 +672,7 @@
                         </egXML>
                     </exemplum>
                 </elementSpec>
+
                 <!-- f -->
                 <elementSpec ident="f" mode="change">
                     <exemplum xml:lang="fr">
@@ -580,36 +711,43 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
+
                 <!-- ajout de <text> dans <annotationBlock> pour prendre en charge les travaux de réocérisation -->
                 <elementSpec ident="text" mode="change">
                     <classes mode="change">
                         <memberOf key="model.annotation" mode="add"/>
                     </classes>
                     <exemplum xml:lang="fr">
-                        <p>l'élément <gi>annotationBlock</gi>contient la réocérisation du texte extrait du pdf dans <gi>text</gi></p>
+                        <p>l'élément <gi>annotationBlock</gi>contient la réocérisation du texte
+                            extrait du pdf dans <gi>text</gi></p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="subject">
                                 <annotationBlock corresp="#subject-01">
                                     <text>
                                         <body source="#ocr-001" resp="#ISTEX">
                                             <div>
-                                                <p>Action Algebras and Model Algebras in Denotational Semantics Luiz
-                                                    Carlos Castro Guedes1 and Edward Hermann Haeusler2 1 2 1 Instituto
-                                                    de Computa¸ao, UFF, Niteroi, Brasil c˜ Departamento de Inform´tica,
-                                                    PUC-Rio, Rio de Janeiro, Brasil a Introduction This article
-                                                    describes some results concerning the conceptual separation of model
-                                                    dependent and language inherent aspects in a denotational semantics
-                                                    of a programming language. Before going into the technical
-                                                    explanation, the authors wish to relate a story that illustrates how
-                                                    correctly and precisely posed questions can inﬂuence the direction
-                                                    of research. By means of his questions, Professor Mosses aided the
-                                                    PhD research of one of the authors of this article and taught the
-                                                    other, who at the time was a novice supervisor, the real meaning of
-                                                    careful PhD supervision. The student’s research had been partially
-                                                    developed towards the implementation of programming languages
-                                                    through denotational semantics speciﬁcation, and the student had
-                                                    developed a prototype</p>
+                                                <p>Action Algebras and Model Algebras in
+                                                  Denotational Semantics Luiz Carlos Castro Guedes1
+                                                  and Edward Hermann Haeusler2 1 2 1 Instituto de
+                                                  Computa¸ao, UFF, Niteroi, Brasil c˜ Departamento
+                                                  de Inform´tica, PUC-Rio, Rio de Janeiro, Brasil a
+                                                  Introduction This article describes some results
+                                                  concerning the conceptual separation of model
+                                                  dependent and language inherent aspects in a
+                                                  denotational semantics of a programming language.
+                                                  Before going into the technical explanation, the
+                                                  authors wish to relate a story that illustrates
+                                                  how correctly and precisely posed questions can
+                                                  inﬂuence the direction of research. By means of
+                                                  his questions, Professor Mosses aided the PhD
+                                                  research of one of the authors of this article and
+                                                  taught the other, who at the time was a novice
+                                                  supervisor, the real meaning of careful PhD
+                                                  supervision. The student’s research had been
+                                                  partially developed towards the implementation of
+                                                  programming languages through denotational
+                                                  semantics speciﬁcation, and the student had
+                                                  developed a prototype</p>
                                             </div>
                                         </body>
                                     </text>

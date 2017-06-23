@@ -5,11 +5,11 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-29T11:59:21Z. .
+Schema generated from ODD source 2017-06-23T10:02:54Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
---><!--A voir?--><define name="tei_macro.paraContent">
+--><!--[http://creativecommons.org/licenses/by/4.0/] Ce schéma est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0) ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique --><define name="tei_macro.paraContent">
       <zeroOrMore>
          <choice>
             <text/>
