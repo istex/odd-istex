@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-06-23T10:02:54Z. .
+Schema generated from ODD source 2017-06-27T19:27:15Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -3450,6 +3450,12 @@ Les valeurs suggérées comprennent: 1] page; 2] column; 3] line; 4] book; 5] po
          <ref name="tei_att.declaring.attributes"/>
          <ref name="tei_att.fragmentable.attributes"/>
          <ref name="tei_att.written.attributes"/>
+         <optional>
+            <attribute name="scheme">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -4253,6 +4259,12 @@ Les valeurs suggérées comprennent: 1] gloss; 2] index; 3] instructions; 4] lit
          <ref name="tei_att.typed.attributes"/>
          <ref name="tei_att.written.attributes"/>
          <optional>
+            <attribute name="scheme">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="anchored"
                        a:defaultValue="true">
@@ -4689,6 +4701,12 @@ Exemple de valeurs possibles: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ;
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(éditeur) donne le nom de l'organisme responsable de la publication ou de la distribution d'un élément de la bibliographie. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="scheme">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>

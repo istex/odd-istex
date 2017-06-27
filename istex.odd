@@ -90,8 +90,7 @@
                 </elementSpec>
 
                 <!-- listAnnotation -->
-                <elementSpec ident="listAnnotation" mode="change"
-                    ns="http://www.example.org/ns/nonTEI">
+                <elementSpec ident="listAnnotation" mode="change">
                     <classes>
                         <memberOf key="model.divPart.spoken"/>
                     </classes>
@@ -756,6 +755,42 @@
                         </egXML>
                     </exemplum>
                 </elementSpec>
+                <!--ajout de @scheme à publisher -->
+                <elementSpec ident="publisher" mode="change">
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!--ajout de @scheme à note -->
+                <elementSpec ident="note" mode="change">
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!--ajout de @scheme à p -->
+                <elementSpec ident="p" mode="change">
+                    <attList>
+                        <attDef ident="scheme" mode="add">
+                            <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+                                concernés sont définis.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
 
                 <classSpec type="model" ident="model.nameLike" mode="change">
                     <classes mode="change">
@@ -775,6 +810,7 @@
                     </classes>
                 </classSpec>
             </schemaSpec>
+            
         </body>
     </text>
 </TEI>
