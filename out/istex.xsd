@@ -4,7 +4,7 @@
   <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2017-06-27T19:42:47Z. .
+    Schema generated from ODD source 2017-07-18T09:30:10Z. .
     TEI Edition: 
     TEI Edition Location: http://www.tei-c.org/Vault/P5//
     
@@ -2146,11 +2146,22 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element maxOccurs="unbounded" ref="tei:time"/>
     </xs:sequence>
   </xs:group>
+  <xs:group name="tei_model.dimLike">
+    <xs:choice>
+      <xs:element ref="tei:height"/>
+      <xs:element ref="tei:depth"/>
+      <xs:element ref="tei:width"/>
+    </xs:choice>
+  </xs:group>
   <xs:group name="tei_model.measureLike">
     <xs:choice>
       <xs:element ref="tei:num"/>
       <xs:element ref="tei:measure"/>
       <xs:element ref="tei:measureGrp"/>
+      <xs:element ref="tei:dim"/>
+      <xs:element ref="tei:height"/>
+      <xs:element ref="tei:depth"/>
+      <xs:element ref="tei:width"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.measureLike_alternation">
@@ -2158,6 +2169,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:num"/>
       <xs:element ref="tei:measure"/>
       <xs:element ref="tei:measureGrp"/>
+      <xs:element ref="tei:dim"/>
+      <xs:element ref="tei:height"/>
+      <xs:element ref="tei:depth"/>
+      <xs:element ref="tei:width"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.measureLike_sequence">
@@ -2165,6 +2180,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:num"/>
       <xs:element ref="tei:measure"/>
       <xs:element ref="tei:measureGrp"/>
+      <xs:element ref="tei:dim"/>
+      <xs:element ref="tei:height"/>
+      <xs:element ref="tei:depth"/>
+      <xs:element ref="tei:width"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.measureLike_sequenceOptional">
@@ -2172,6 +2191,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element minOccurs="0" ref="tei:num"/>
       <xs:element minOccurs="0" ref="tei:measure"/>
       <xs:element minOccurs="0" ref="tei:measureGrp"/>
+      <xs:element minOccurs="0" ref="tei:dim"/>
+      <xs:element minOccurs="0" ref="tei:height"/>
+      <xs:element minOccurs="0" ref="tei:depth"/>
+      <xs:element minOccurs="0" ref="tei:width"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.measureLike_sequenceOptionalRepeatable">
@@ -2179,6 +2202,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:num"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:measure"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:measureGrp"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:dim"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:height"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:depth"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:width"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.measureLike_sequenceRepeatable">
@@ -2186,6 +2213,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element maxOccurs="unbounded" ref="tei:num"/>
       <xs:element maxOccurs="unbounded" ref="tei:measure"/>
       <xs:element maxOccurs="unbounded" ref="tei:measureGrp"/>
+      <xs:element maxOccurs="unbounded" ref="tei:dim"/>
+      <xs:element maxOccurs="unbounded" ref="tei:height"/>
+      <xs:element maxOccurs="unbounded" ref="tei:depth"/>
+      <xs:element maxOccurs="unbounded" ref="tei:width"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.graphicLike">
@@ -2194,6 +2225,23 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:graphic"/>
       <xs:element ref="tei:binaryObject"/>
       <xs:element ref="tei:formula"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.pPart.msdesc">
+    <xs:choice>
+      <xs:element ref="tei:catchwords"/>
+      <xs:element ref="tei:dimensions"/>
+      <xs:element ref="tei:heraldry"/>
+      <xs:element ref="tei:locus"/>
+      <xs:element ref="tei:locusGrp"/>
+      <xs:element ref="tei:material"/>
+      <xs:element ref="tei:objectType"/>
+      <xs:element ref="tei:origDate"/>
+      <xs:element ref="tei:origPlace"/>
+      <xs:element ref="tei:secFol"/>
+      <xs:element ref="tei:signatures"/>
+      <xs:element ref="tei:stamp"/>
+      <xs:element ref="tei:watermark"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.pPart.editorial">
@@ -2428,6 +2476,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:joinGrp"/>
       <xs:element ref="tei:alt"/>
       <xs:element ref="tei:altGrp"/>
+      <xs:element ref="tei:source"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.milestoneLike">
@@ -2447,6 +2496,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:biblStruct"/>
       <xs:element ref="tei:listBibl"/>
       <xs:element ref="tei:biblFull"/>
+      <xs:element ref="tei:msDesc"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.biblLike_alternation">
@@ -2455,6 +2505,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:biblStruct"/>
       <xs:element ref="tei:listBibl"/>
       <xs:element ref="tei:biblFull"/>
+      <xs:element ref="tei:msDesc"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.biblLike_sequence">
@@ -2463,6 +2514,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:biblStruct"/>
       <xs:element ref="tei:listBibl"/>
       <xs:element ref="tei:biblFull"/>
+      <xs:element ref="tei:msDesc"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.biblLike_sequenceOptional">
@@ -2471,6 +2523,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element minOccurs="0" ref="tei:biblStruct"/>
       <xs:element minOccurs="0" ref="tei:listBibl"/>
       <xs:element minOccurs="0" ref="tei:biblFull"/>
+      <xs:element minOccurs="0" ref="tei:msDesc"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.biblLike_sequenceOptionalRepeatable">
@@ -2479,6 +2532,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:biblStruct"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listBibl"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:biblFull"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:msDesc"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.biblLike_sequenceRepeatable">
@@ -2487,6 +2541,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element maxOccurs="unbounded" ref="tei:biblStruct"/>
       <xs:element maxOccurs="unbounded" ref="tei:listBibl"/>
       <xs:element maxOccurs="unbounded" ref="tei:biblFull"/>
+      <xs:element maxOccurs="unbounded" ref="tei:msDesc"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.headLike">
@@ -3039,6 +3094,30 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:docDate"/>
     </xs:choice>
   </xs:group>
+  <xs:group name="tei_model.msQuoteLike">
+    <xs:choice>
+      <xs:element ref="tei:title"/>
+      <xs:element ref="tei:colophon"/>
+      <xs:element ref="tei:explicit"/>
+      <xs:element ref="tei:finalRubric"/>
+      <xs:element ref="tei:incipit"/>
+      <xs:element ref="tei:rubric"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.msItemPart">
+    <xs:choice>
+      <xs:group ref="tei:tei_model.biblLike"/>
+      <xs:group ref="tei:tei_model.quoteLike"/>
+      <xs:group ref="tei:tei_model.respLike"/>
+      <xs:group ref="tei:tei_model.msQuoteLike"/>
+      <xs:element ref="tei:textLang"/>
+      <xs:element ref="tei:idno"/>
+      <xs:element ref="tei:filiation"/>
+      <xs:element ref="tei:msItem"/>
+      <xs:element ref="tei:msItemStruct"/>
+      <xs:element ref="tei:decoNote"/>
+    </xs:choice>
+  </xs:group>
   <xs:group name="tei_model.choicePart">
     <xs:choice>
       <xs:element ref="tei:sic"/>
@@ -3178,6 +3257,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:edition"/>
       <xs:element ref="tei:extent"/>
       <xs:element ref="tei:availability"/>
+      <xs:element ref="tei:msIdentifier"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.frontPart">
@@ -3224,6 +3304,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:group ref="tei:tei_model.segLike"/>
       <xs:group ref="tei:tei_model.highlighted"/>
       <xs:group ref="tei:tei_model.graphicLike"/>
+      <xs:group ref="tei:tei_model.pPart.msdesc"/>
       <xs:group ref="tei:tei_model.pPart.edit"/>
       <xs:group ref="tei:tei_model.ptrLike"/>
       <xs:group ref="tei:tei_model.pPart.data"/>
@@ -3233,6 +3314,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
     <xs:choice>
       <xs:group ref="tei:tei_model.hiLike"/>
       <xs:group ref="tei:tei_model.emphLike"/>
+      <xs:group ref="tei:tei_model.pPart.msdesc"/>
       <xs:group ref="tei:tei_model.pPart.editorial"/>
       <xs:group ref="tei:tei_model.ptrLike"/>
       <xs:group ref="tei:tei_model.pPart.data"/>
@@ -3606,6 +3688,7 @@ Les valeurs suggérées comprennent: 1] page; 2] column; 3] line; 4] book; 5] po
         <xs:extension base="tei:tei_macro.specialPara">
           <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
           <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.msExcerpt.attributes"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -9089,4 +9172,1174 @@ Les valeurs suggérées comprennent: 1] d(days) ; 2] h(hours) ; 3] min(minutes) 
       <xs:element ref="ns1:listAnnotation"/>
     </xs:choice>
   </xs:group>
+  <xs:attributeGroup name="tei_att.msExcerpt.attributes">
+    <xs:attributeGroup ref="tei:tei_att.msExcerpt.attribute.defective"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="tei_att.msExcerpt.attribute.defective">
+    <xs:attribute name="defective" default="false">
+      <xs:annotation>
+        <xs:documentation>indique si le passage décrit est fautif, i.e. incomplet en raison d'une lacune ou d'une détérioration.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:boolean">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="unknown"/>
+              <xs:enumeration value="inapplicable"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="msDesc">
+    <xs:annotation>
+      <xs:documentation>(description d'un manuscrit) contient la description d'un manuscrit individuel [10.1. Overview]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tei:msIdentifier"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
+        <xs:choice>
+          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="tei:msContents"/>
+            <xs:element minOccurs="0" ref="tei:physDesc"/>
+            <xs:element minOccurs="0" ref="tei:history"/>
+            <xs:element minOccurs="0" ref="tei:additional"/>
+            <xs:choice>
+              <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:msPart"/>
+              <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:msFrag"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="catchwords">
+    <xs:annotation>
+      <xs:documentation>(réclames) décrit le système utilisé pour s'assurer que les cahiers formant un manuscrit ou un incunable sont dans le bon ordre, typiquement au moyen d'annotations en bas de page. [10.3.7. Catchwords, Signatures, Secundo Folio]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dimensions">
+    <xs:annotation>
+      <xs:documentation>(dimensions) contient une spécification des dimensions. [10.3.4. Dimensions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:dim"/>
+        <xs:group ref="tei:tei_model.dimLike"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
+      <xs:attribute name="type">
+        <xs:annotation>
+          <xs:documentation>indique quel aspect de l'objet est mesuré.
+Exemple de valeurs possibles: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniatures; 6] binding; 7] box</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dim">
+    <xs:annotation>
+      <xs:documentation>contains any single measurement forming part of a dimensional specification of some sort. [10.3.4. Dimensions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="height">
+    <xs:annotation>
+      <xs:documentation>(hauteur) contient une dimension prise sur l'axe parallèle au dos du manuscrit. [10.3.4. Dimensions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="depth">
+    <xs:annotation>
+      <xs:documentation>(épaisseur) contient une dimension mesurée sur le dos du manuscrit. [10.3.4. Dimensions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="width">
+    <xs:annotation>
+      <xs:documentation>(largeur) contient une dimension mesurée sur l'axe perpendiculaire au dos du manuscrit. [10.3.4. Dimensions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="heraldry">
+    <xs:annotation>
+      <xs:documentation>(héraldique) contient une devise ou une formule d'héraldique, comme celles qu'on trouve sur un blason, des armoiries, etc. [10.3.8. Heraldry]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="locus">
+    <xs:annotation>
+      <xs:documentation>(locus) définit un emplacement au sein d'un manuscrit ou d'une partie de manuscrit, souvent une séquence, éventuellement discontinue, de références de feuillets. [10.3.5. References to Locations within a Manuscript]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
+      <xs:attribute name="scheme" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>(système) désigne le système de foliotation utilisé pour localiser la subdivision du manuscrit qui est en cours de description.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="from">
+        <xs:annotation>
+          <xs:documentation>(depuis) Spécifie, sous une forme normalisée, le point de départ de la localisation.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="to">
+        <xs:annotation>
+          <xs:documentation>(jusqu'à) Spécifie, sous une forme normalisée, la borne de fin pour la localisation.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="locusGrp">
+    <xs:annotation>
+      <xs:documentation>(groupe d'emplacements) regroupe un certain nombre d'emplacements qui forment ensemble un item identifiable bien que discontinu dans un manuscrit ou une partie de manuscrit selon une foliotation spécifique. [10.3.5. References to Locations within a Manuscript]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="tei:locus"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attribute name="scheme" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>(système) désigne le système de foliotation selon lequel les emplacements contenus dans le groupe sont définis.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="material">
+    <xs:annotation>
+      <xs:documentation>(matériau) Contient un mot ou une expression décrivant le ou les matériau(x) utilisé(s) pour fabriquer un manuscrit (ou une partie d'un manuscrit). [10.3.2. Material and Object Type]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="objectType">
+    <xs:annotation>
+      <xs:documentation>(type d'objet) contient un mot ou une expression qui décrit le type de l'objet consideré. [10.3.2. Material and Object Type]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="origDate">
+    <xs:annotation>
+      <xs:documentation>(date de la création) Contient une date, dans une forme libre, utilisée pour dater la création d'un manuscrit ou d'une partie d'un manuscrit. [10.3.1. Origination]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="origPlace">
+    <xs:annotation>
+      <xs:documentation>(lieu de création) Contient un nom de lieu, dans une forme libre, utilisé pour désigner l'endroit où a été produit un manuscrit ou une partie d'un manuscrit. [10.3.1. Origination]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="secFol">
+    <xs:annotation>
+      <xs:documentation>(deuxième folio) Le mot ou les mots repris d'un point précisément connu d'un codex (comme le début du second feuillet) pour identifier celui-ci de façon univoque. [10.3.7. Catchwords, Signatures, Secundo Folio]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="signatures">
+    <xs:annotation>
+      <xs:documentation>(signatures) Contient une étude des signatures trouvées sur un feuillet ou sur un cahier dans un manuscrit. [10.3.7. Catchwords, Signatures, Secundo Folio]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stamp">
+    <xs:annotation>
+      <xs:documentation>(cachet) Contient un mot ou une expression décrivant un cachet ou une marque du même genre. [10.3.3. Watermarks and Stamps]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="watermark">
+    <xs:annotation>
+      <xs:documentation>(filigrane) Contient un mot ou une expression décrivant un filigrane ou une marque du même genre. [10.3.3. Watermarks and Stamps]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msIdentifier">
+    <xs:annotation>
+      <xs:documentation>(identifiant du manuscrit) Contient les informations requises pour identifier le manuscrit en cours de description. [10.4. The Manuscript Identifier]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:placeName"/>
+          <xs:element minOccurs="0" ref="tei:country"/>
+          <xs:element minOccurs="0" ref="tei:region"/>
+          <xs:element minOccurs="0" ref="tei:settlement"/>
+          <xs:element minOccurs="0" ref="tei:geogName"/>
+          <xs:element minOccurs="0" ref="tei:institution"/>
+          <xs:element minOccurs="0" ref="tei:repository"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:collection"/>
+          <xs:element minOccurs="0" ref="tei:idno"/>
+        </xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="tei:msName"/>
+          <xs:element ref="tei:altIdentifier"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="institution">
+    <xs:annotation>
+      <xs:documentation>(institution) Contient le nom d'un organisme (comme une université ou une bibliothèque), avec lequel un manuscrit est identifié ; en général c'est le nom de l'institution qui conserve ce manuscrit. [10.4. The Manuscript Identifier]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="repository">
+    <xs:annotation>
+      <xs:documentation>(lieu de conservation) Contient le nom d'un dépôt dans lequel des manuscrits sont entreposés, et qui peut faire partie d'une institution. [10.4. The Manuscript Identifier]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collection">
+    <xs:annotation>
+      <xs:documentation>(collection) Contient le nom d'une collection de manuscrits, ceux-ci ne se trouvant pas nécessairement dans le même lieu de conservation. [10.4. The Manuscript Identifier]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="altIdentifier">
+    <xs:annotation>
+      <xs:documentation>(autre identifiant) Contient un autre ou un ancien identifiant pour un manuscrit, par exemple un numéro anciennement utilisé dans un catalogue. [10.4. The Manuscript Identifier]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="tei:placeName"/>
+        <xs:element minOccurs="0" ref="tei:country"/>
+        <xs:element minOccurs="0" ref="tei:region"/>
+        <xs:element minOccurs="0" ref="tei:settlement"/>
+        <xs:element minOccurs="0" ref="tei:geogName"/>
+        <xs:element minOccurs="0" ref="tei:institution"/>
+        <xs:element minOccurs="0" ref="tei:repository"/>
+        <xs:element minOccurs="0" ref="tei:collection"/>
+        <xs:element ref="tei:idno"/>
+        <xs:element minOccurs="0" ref="tei:note"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msName">
+    <xs:annotation>
+      <xs:documentation>(autre nom) contient un autre nom, dans une forme libre, utilisé pour désigner le manuscrit, tel qu'un surnom ou un ocellus nominum. [10.4. The Manuscript Identifier]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="colophon">
+    <xs:annotation>
+      <xs:documentation>(colophon) contient le colophon d'une section d'un manuscrit, c'est-à-dire la transcription des informations relatives à la date, au lieu, à l'organisme commanditaire ou aux raisons de la production du manuscrit. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="explicit">
+    <xs:annotation>
+      <xs:documentation>(explicit) contient l'explicit d'une section d'un manuscrit, c'est-à-dire les mots terminant le texte proprement dit, à l'exclusion de toute rubrique ou colophon qui pourraient le suivre. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.msExcerpt.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filiation">
+    <xs:annotation>
+      <xs:documentation>(filiation) contient les informations sur la filiation du manuscrit, c'est-à-dire sur ses relations avec d'autres manuscrits connus du même texte, ses protographes, antigraphes et apographes. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="finalRubric">
+    <xs:annotation>
+      <xs:documentation>(rubrique de fin) Contient les derniers mots d'une section de texte, qui incluent souvent la mention de son auteur et de son titre, et sont généralement différenciés du texte lui-même par l'utilisation d'une encre rouge, par une taille ou un style d'écriture particuliers, ou par tout autre moyen visuel. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="incipit">
+    <xs:annotation>
+      <xs:documentation>contient l'incipit d'une section d'un manuscrit, c'est-à-dire les mots commençant le texte proprement dit, à l'exclusion de toute rubrique qui pourrait les précéder, la transcription étant de longueur suffisante pour permettre l'identification de l'œuvre. De tels incipit étaient autrefois souvent utilisés à la place du titre de l'œuvre, pour l'identifier. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.msExcerpt.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msContents">
+    <xs:annotation>
+      <xs:documentation>(contenu du manuscrit) décrit le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments structurés msItem concernant les items du manuscrit. [10.6. Intellectual Content]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:summary"/>
+          <xs:element minOccurs="0" ref="tei:textLang"/>
+          <xs:element minOccurs="0" ref="tei:titlePage"/>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="tei:msItem"/>
+            <xs:element ref="tei:msItemStruct"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.msExcerpt.attributes"/>
+      <xs:attribute name="class">
+        <xs:annotation>
+          <xs:documentation>spécifie la ou les catégories ou classes auxquelles le manuscrit appartient.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list itemType="xs:anyURI"/>
+            </xs:simpleType>
+            <xs:minLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msItem">
+    <xs:annotation>
+      <xs:documentation>(item de manuscrit) décrit une œuvre ou un item individualisés dans le contenu intellectuel d'un manuscrit ou d'une partie de manuscrit. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="tei:locus"/>
+          <xs:element ref="tei:locusGrp"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+          <xs:choice maxOccurs="unbounded">
+            <xs:group ref="tei:tei_model.titlepagePart"/>
+            <xs:group ref="tei:tei_model.msItemPart"/>
+            <xs:group ref="tei:tei_model.global"/>
+          </xs:choice>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.msExcerpt.attributes"/>
+      <xs:attribute name="class">
+        <xs:annotation>
+          <xs:documentation>spécifie la ou les catégories ou classes auxquelles l'item appartient.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list itemType="xs:anyURI"/>
+            </xs:simpleType>
+            <xs:minLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msItemStruct">
+    <xs:annotation>
+      <xs:documentation>(description structurée d'un item de manuscrit) contient la description structurée d'un item ou d'une œuvre, dans le contenu intellectuel d'un manuscrit ou d'une partie d'un manuscrit. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0">
+          <xs:element ref="tei:locus"/>
+          <xs:element ref="tei:locusGrp"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:author"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:respStmt"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:title"/>
+            <xs:element minOccurs="0" ref="tei:rubric"/>
+            <xs:element minOccurs="0" ref="tei:incipit"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:msItemStruct"/>
+            <xs:element minOccurs="0" ref="tei:explicit"/>
+            <xs:element minOccurs="0" ref="tei:finalRubric"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:colophon"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:decoNote"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:listBibl"/>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="tei:bibl"/>
+              <xs:element ref="tei:biblStruct"/>
+            </xs:choice>
+            <xs:element minOccurs="0" ref="tei:filiation"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.noteLike"/>
+            <xs:element minOccurs="0" ref="tei:textLang"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.msExcerpt.attributes"/>
+      <xs:attribute name="class">
+        <xs:annotation>
+          <xs:documentation>(classe) spécifie la ou les catégories ou classes auxquelles l'item appartient.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list itemType="xs:anyURI"/>
+            </xs:simpleType>
+            <xs:minLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rubric">
+    <xs:annotation>
+      <xs:documentation>(rubrique) contient le texte d'une rubrique ou d'un intitulé propres à un item, c'est-à-dire des mots qui signalent le début du texte, qui incluent souvent la mention de son auteur et de son titre, et qui sont différenciés du texte lui-même, généralement à l'encre rouge, par une taille ou un style d'écriture particuliers, ou par tout autre procédé de ce genre. [10.6.1. The msItem and msItemStruct Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="summary">
+    <xs:annotation>
+      <xs:documentation>contains an overview of the available information concerning some aspect of an item (for example, its intellectual content, history, layout, typography etc.) as a complement or alternative to the more detailed information carried by more specific elements. [10.6. Intellectual Content]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="physDesc">
+    <xs:annotation>
+      <xs:documentation>(description physique) contient la description physique complète d'un manuscrit ou d'une partie d'un manuscrit, éventuellement structurée en utilisant les éléments plus spécialisés appartenant à la classe model.physDescPart. [10.7. Physical Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:element minOccurs="0" ref="tei:objectDesc"/>
+        <xs:element minOccurs="0" ref="tei:handDesc"/>
+        <xs:element minOccurs="0" ref="tei:typeDesc"/>
+        <xs:element minOccurs="0" ref="tei:scriptDesc"/>
+        <xs:element minOccurs="0" ref="tei:musicNotation"/>
+        <xs:element minOccurs="0" ref="tei:decoDesc"/>
+        <xs:element minOccurs="0" ref="tei:additions"/>
+        <xs:element minOccurs="0" ref="tei:bindingDesc"/>
+        <xs:element minOccurs="0" ref="tei:sealDesc"/>
+        <xs:element minOccurs="0" ref="tei:accMat"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="objectDesc">
+    <xs:annotation>
+      <xs:documentation>(description d'objet) contient la description des composants matériels de l'objet en cours de traitement [10.7.1. Object Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:supportDesc"/>
+          <xs:element minOccurs="0" ref="tei:layoutDesc"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attribute name="form">
+        <xs:annotation>
+          <xs:documentation>(forme) contient un nom abrégé spécifique au projet, désignant la forme physique du support, par exemple : codex, rouleau, fragment, fragment de feuillet, découpe, etc.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="supportDesc">
+    <xs:annotation>
+      <xs:documentation>(description du support) Regroupe les éléments décrivant le support physique du texte du manuscrit. [10.7.1. Object Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:support"/>
+          <xs:element minOccurs="0" ref="tei:extent"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:foliation"/>
+          <xs:element minOccurs="0" ref="tei:collation"/>
+          <xs:element minOccurs="0" ref="tei:condition"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attribute name="material">
+        <xs:annotation>
+          <xs:documentation>(matériau) contient un nom abrégé propre au projet désignant le matériau qui a principalement servi pour fabriquer le support.
+Les valeurs suggérées comprennent: 1] paper; 2] parch(parchment) ; 3] mixed</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="paper"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="parch">
+                  <xs:annotation>
+                    <xs:documentation>(parchemin) </xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="mixed"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="support">
+    <xs:annotation>
+      <xs:documentation>(support) contient la description des matériaux, techniques, etc., qui ont servi à fabriquer le support physique du texte du manuscrit. [10.7.1. Object Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collation">
+    <xs:annotation>
+      <xs:documentation>(collation) contient la description de l'organisation des feuillets ou bifeuillets d'un manuscrit [10.7.1. Object Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="foliation">
+    <xs:annotation>
+      <xs:documentation>(foliotation) décrit le ou les systèmes de numérotation des feuillets ou pages d'un codex [10.7.1.4. Foliation]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="condition">
+    <xs:annotation>
+      <xs:documentation>(état matériel) contient la description de l'état matériel du manuscrit. [10.7.1.5. Condition]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="layoutDesc">
+    <xs:annotation>
+      <xs:documentation>(description de la mise en page) rassemble les descriptions des mises en page d' un manuscrit. [10.7.2. Writing, Decoration, and Other Notations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:summary"/>
+          <xs:element maxOccurs="unbounded" ref="tei:layout"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="layout">
+    <xs:annotation>
+      <xs:documentation>(mise en page) décrit comment le texte est disposé sur la page, ce qui inclut les informations sur d'éventuels systèmes de réglure, de piqûre ou d'autres techniques de préparation de la page. [10.7.2. Writing, Decoration, and Other Notations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attribute name="columns">
+            <xs:annotation>
+              <xs:documentation>(colonnes) spécifie le nombre de colonnes présentes sur une page</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction>
+                <xs:simpleType>
+                  <xs:list>
+                    <xs:simpleType>
+                      <xs:union memberTypes="xs:nonNegativeInteger xs:nonNegativeInteger"/>
+                    </xs:simpleType>
+                  </xs:list>
+                </xs:simpleType>
+                <xs:minLength value="1"/>
+                <xs:maxLength value="2"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ruledLines">
+            <xs:annotation>
+              <xs:documentation>(lignes de réglure) spécifie le nombre de lignes de réglure présentes par colonne</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction>
+                <xs:simpleType>
+                  <xs:list>
+                    <xs:simpleType>
+                      <xs:union memberTypes="xs:nonNegativeInteger xs:nonNegativeInteger"/>
+                    </xs:simpleType>
+                  </xs:list>
+                </xs:simpleType>
+                <xs:minLength value="1"/>
+                <xs:maxLength value="2"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="writtenLines">
+            <xs:annotation>
+              <xs:documentation>(lignes d'écriture) spécifie le nombre de lignes écrites par colonne</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction>
+                <xs:simpleType>
+                  <xs:list>
+                    <xs:simpleType>
+                      <xs:union memberTypes="xs:nonNegativeInteger xs:nonNegativeInteger"/>
+                    </xs:simpleType>
+                  </xs:list>
+                </xs:simpleType>
+                <xs:minLength value="1"/>
+                <xs:maxLength value="2"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="handDesc">
+    <xs:annotation>
+      <xs:documentation>(description des écritures) contient la description des différents types d'écriture utilisés dans un manuscrit. [10.7.2. Writing, Decoration, and Other Notations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:element minOccurs="0" ref="tei:summary"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attribute name="hands" type="xs:nonNegativeInteger">
+        <xs:annotation>
+          <xs:documentation>(mains) spécifie le nombre de mains différentes qui ont pu être identifiées dans le manuscrit</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="typeDesc">
+    <xs:annotation>
+      <xs:documentation>(description des styles de caractère) contient la description des styles de caractères ou d'autres aspects de l'impression d'un incunable ou d'une autre source imprimée. [10.7.2.1. Writing]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:element minOccurs="0" ref="tei:summary"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scriptDesc">
+    <xs:annotation>
+      <xs:documentation>contains a description of the scripts used in a manuscript or similar source. [10.7.2.1. Writing]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:element minOccurs="0" ref="tei:summary"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musicNotation">
+    <xs:annotation>
+      <xs:documentation>(notation musicale) contient la description d'un type de notation musicale. [10.7.2. Writing, Decoration, and Other Notations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="decoDesc">
+    <xs:annotation>
+      <xs:documentation>(description de la décoration) contient la description de la décoration du manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments thématiques decoNote [10.7.3. Bindings, Seals, and Additional Material]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:summary"/>
+          <xs:element maxOccurs="unbounded" ref="tei:decoNote"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="decoNote">
+    <xs:annotation>
+      <xs:documentation>(note sur un élément de décoration) contient une note décrivant soit un élément de décoration du mansucrit, soit une catégorie relativement homogène de tels éléments. [10.7.3. Bindings, Seals, and Additional Material]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="additions">
+    <xs:annotation>
+      <xs:documentation>(ajouts) contient la description des ajouts significatifs trouvés dans un manuscrit, tels que gloses marginales ou autres annotations. [10.7.2. Writing, Decoration, and Other Notations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bindingDesc">
+    <xs:annotation>
+      <xs:documentation>(description de la reliure) décrit les reliures actuelles et anciennes d'un manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments binding, un pour chaque reliure [10.7.3.1. Binding Descriptions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:choice maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.pLike"/>
+          <xs:element ref="tei:decoNote"/>
+          <xs:element ref="tei:condition"/>
+        </xs:choice>
+        <xs:element maxOccurs="unbounded" ref="tei:binding"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="binding">
+    <xs:annotation>
+      <xs:documentation>(reliure) contient la description d'une reliure, i.e. du type de couverture, d'ais, etc., rencontrés. [10.7.3.1. Binding Descriptions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.pLike"/>
+        <xs:element ref="tei:condition"/>
+        <xs:element ref="tei:decoNote"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+      <xs:attribute name="contemporary">
+        <xs:annotation>
+          <xs:documentation>(contemporaine) spécifie si la reliure est contemporaine ou non de l'essentiel du contenu du manuscrit.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:boolean">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="unknown"/>
+                <xs:enumeration value="inapplicable"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sealDesc">
+    <xs:annotation>
+      <xs:documentation>(description des sceaux) décrit les sceaux ou autres objets attachés au manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments seal, complétés éventuellement par des éléments decoNote. [10.7.3.2. Seals]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:summary"/>
+          <xs:choice maxOccurs="unbounded">
+            <xs:element ref="tei:decoNote"/>
+            <xs:element ref="tei:seal"/>
+            <xs:element ref="tei:condition"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="seal">
+    <xs:annotation>
+      <xs:documentation>(sceau) contient la description d'un sceau ou d'un objet similaire, attaché au manuscrit. [10.7.3.2. Seals]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.pLike"/>
+        <xs:element ref="tei:decoNote"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+      <xs:attribute name="contemporary">
+        <xs:annotation>
+          <xs:documentation>(contemporain) spécifie si le sceau est ou non contemporain du manuscrit auquel il est attaché.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:boolean">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="unknown"/>
+                <xs:enumeration value="inapplicable"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accMat">
+    <xs:annotation>
+      <xs:documentation>(matériel d'accompagnement) donne des détails sur tout matériel d'accompagnement étroitement associé au manuscrit, tel que documents non contemporains ou fragments reliés avec le manuscrit à une époque antérieure. [10.7.3.3. Accompanying Material]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="history">
+    <xs:annotation>
+      <xs:documentation>(histoire) rassemble les éléments servant à donner un historique complet du manuscrit ou d'une partie du manuscrit. [10.8. History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tei:summary"/>
+          <xs:element minOccurs="0" ref="tei:origin"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:provenance"/>
+          <xs:element minOccurs="0" ref="tei:acquisition"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="origin">
+    <xs:annotation>
+      <xs:documentation>(origine) contient des informations sur l'origine du manuscrit ou de la partie de manuscrit. [10.8. History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="provenance">
+    <xs:annotation>
+      <xs:documentation>(provenance) contient des informations sur un épisode précis de l'histoire du manuscrit ou de la partie du manuscrit, après sa création et avant son acquisition [10.8. History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="acquisition">
+    <xs:annotation>
+      <xs:documentation>(acquisition) contient des informations sur les modalités et circonstances de l'entrée du manuscrit ou de la partie du manuscrit dans l'institution qui le détient [10.8. History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="additional">
+    <xs:annotation>
+      <xs:documentation>(informations complémentaires) regroupe les informations complémentaires sur le manuscrit, incluant une bibliographie, des indications sur ses reproductions, ou des informations sur sa conservation et sur sa gestion [10.9. Additional Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="tei:adminInfo"/>
+        <xs:element minOccurs="0" ref="tei:surrogates"/>
+        <xs:element minOccurs="0" ref="tei:listBibl"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="adminInfo">
+    <xs:annotation>
+      <xs:documentation>(informations administratives) contient, pour le manuscrit en cours de description, les informations sur son détenteur actuel, sur ses conditions d'accès et sur les modalités de sa description. [10.9.1. Administrative Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="tei:recordHist"/>
+        <xs:element minOccurs="0" ref="tei:availability"/>
+        <xs:element minOccurs="0" ref="tei:custodialHist"/>
+        <xs:group minOccurs="0" ref="tei:tei_model.noteLike"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recordHist">
+    <xs:annotation>
+      <xs:documentation>(histoire de la description) donne des informations sur la source de la description et sur les modifications apportées à la description précédente. [10.9.1. Administrative Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:sequence>
+          <xs:element ref="tei:source"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:change"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="source">
+    <xs:annotation>
+      <xs:documentation>(source) décrit la source des informations contenues dans la description du manuscrit. [10.9.1.1. Record History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="custodialHist">
+    <xs:annotation>
+      <xs:documentation>(histoire de la conservation) contient des informations sur l'histoire de la conservation, soit en texte libre, soit sous la forme d'une série d'éléments custEvent. [10.9.1.2. Availability and Custodial History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+        <xs:element maxOccurs="unbounded" ref="tei:custEvent"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="custEvent">
+    <xs:annotation>
+      <xs:documentation>(événement dans la conservation) décrit un événement dans l'histoire de la conservation du manuscrit. [10.9.1.2. Availability and Custodial History]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="surrogates">
+    <xs:annotation>
+      <xs:documentation>(reproductions) contient des informations sur toute reproduction numérique ou photographique du manuscrit en cours de description, qu'elle soit détenue par l'institution de conservation ou ailleurs. [10.9. Additional Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.specialPara">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msPart">
+    <xs:annotation>
+      <xs:documentation>(unité codicologique d'un manuscrit) contient des informations sur un manuscrit ou sur une partie d'un manuscrit, distinct à l'origine, qui fait aujourd'hui partie d'un manuscrit composite. [10.10. Manuscript Parts]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tei:msIdentifier"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
+        <xs:choice>
+          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="tei:msContents"/>
+            <xs:element minOccurs="0" ref="tei:physDesc"/>
+            <xs:element minOccurs="0" ref="tei:history"/>
+            <xs:element minOccurs="0" ref="tei:additional"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:msPart"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="msFrag">
+    <xs:annotation>
+      <xs:documentation>(fragment d'un manuscrit) contient des informations sur un fragment d'un manuscrit dispersé, aujourd'hui conservé séparément ou incorporé dans un autre manuscrit. [10.11. Manuscript Fragments]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="tei:altIdentifier"/>
+          <xs:element ref="tei:msIdentifier"/>
+        </xs:choice>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
+        <xs:choice>
+          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="tei:msContents"/>
+            <xs:element minOccurs="0" ref="tei:physDesc"/>
+            <xs:element minOccurs="0" ref="tei:history"/>
+            <xs:element minOccurs="0" ref="tei:additional"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

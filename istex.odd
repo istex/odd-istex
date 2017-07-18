@@ -50,6 +50,8 @@
                 <moduleRef key="iso-fs"/>
                 <moduleRef key="linking"/>
                 <moduleRef key="standOff"/>
+                <!-- ajout modèle msdescription pour récupérer <source> -->
+                <moduleRef key="msdescription"/>
 
                 <elementSpec ident="bibl" module="core" mode="change">
                     <classes mode="replace">
@@ -633,7 +635,7 @@
                     </remarks>
                 </elementSpec>
 
-                <!-- SG - author hub de mta-->
+                <!-- SG - author hub de méta-->
                 <elementSpec ident="author" mode="change">
                     <classes mode="change">
                         <memberOf key="model.annotation" mode="add"/>
@@ -781,6 +783,14 @@
                 </elementSpec>
                 <!--ajout de @scheme à p -->
                 <elementSpec ident="p" mode="change">
+                    
+                       <!--<alternate>
+                            <classRef key="model.pLike"/>
+                            <sequence>
+                                <elementRef key="source" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="change" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
+                        </alternate>-->
                     <attList>
                         <attDef ident="scheme" mode="add">
                             <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
@@ -790,8 +800,32 @@
                             </datatype>
                         </attDef>
                     </attList>
+                    <exemplum xml:lang="fr">
+                        <p>
+                            l'élément
+                            <gi>p</gi>
+                            peut contenir un élément
+                            <gi>source</gi>
+                        </p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <listAnnotation type="subject">
+                                <figure type="box">
+                                    <p>
+                                        Workers never organised because they were intimidated. There were so many temporary workers that even the slightest hint of organisation and you were gone … even the people who were permanent were afraid to lose their jobs
+                                        <source>(Leader B)</source>
+                                        .
+                                    </p>
+                                </figure>
+                            </listAnnotation>
+                        </egXML>
+                    </exemplum>
                 </elementSpec>
-
+                <!-- ajout source à <p> -->
+                <elementSpec ident="source" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.global.meta" mode="add"/>
+                    </classes>
+                </elementSpec>
                 <classSpec type="model" ident="model.nameLike" mode="change">
                     <classes mode="change">
                         <memberOf key="model.annotation" mode="add"/>
