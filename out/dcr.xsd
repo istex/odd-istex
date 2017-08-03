@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.isocat.org/ns/dcr" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:ns1="http://standoff.proposal" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.isocat.org/ns/dcr" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:ns1="http://standoff.proposal" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wiley="http://www.wiley.com/namespaces/wiley">
   <xs:import namespace="http://standoff.proposal" schemaLocation="ns1.xsd"/>
   <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="istex.xsd"/>
+  <xs:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="mathml.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:import namespace="http://www.wiley.com/namespaces/wiley" schemaLocation="wiley.xsd"/>
   <xs:attribute name="datcat">
     <xs:annotation>
       <xs:documentation>contains a PID (persistent identifier) that aligns the given element with the appropriate Data Category (or categories) in ISOcat.</xs:documentation>

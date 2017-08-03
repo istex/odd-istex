@@ -68,7 +68,7 @@
                         <p>Dans Istex on utilise plutôt biblStruct</p>
                     </remarks>
                 </elementSpec>
-
+                
                 <!-- abstract -->
                 <elementSpec ident="abstract" mode="change">
                     <content>
@@ -81,8 +81,8 @@
                     <exemplum xml:lang="fr">
                         <p>Cas où un abstract contient un titre</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples"
-                                    ><abstract><head>Méthode</head><p>Contenu de la
-                                    méthode.</p><head>Expérience</head><p>Contenu de
+                            ><abstract><head>Méthode</head><p>Contenu de la
+                                méthode.</p><head>Expérience</head><p>Contenu de
                                     l'expérience.</p></abstract></egXML>
                     </exemplum>
                     <remarks>
@@ -90,7 +90,1174 @@
                             <gi>abstract</gi></p>
                     </remarks>
                 </elementSpec>
-
+                
+                <!-- ajout <math> à <formula> -->
+                <elementSpec ident="math" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <desc>MathML</desc>
+                    <classes mode="replace">
+                        <memberOf key="model.graphicLike" mode="add"/>
+                    </classes>
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="display" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="display"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="altimg" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="altimg"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="location" mode="add" ns="http://www.wiley.com/namespaces/wiley">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="location"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="overflow" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="overflow"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                    <exemplum xml:lang="fr">
+                        <p>Présence de mathML</p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"
+                            ></egXML>
+                    </exemplum>
+                    <remarks>
+                        <p>Modèle modifié pour bénéficier de <gi>math</gi> dans
+                            <gi>cell</gi> et <gi>formula</gi></p>
+                    </remarks>
+                </elementSpec>
+                <!-- mrow -->
+                <elementSpec ident="mrow" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <classes>
+                        <memberOf key="model.graphicLike"/>
+                    </classes>
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- mfenced -->
+                <elementSpec ident="mfenced" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="open" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="open"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="close" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="close"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="separators" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="separators"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mtable -->
+                <elementSpec ident="mtable" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="columnalign" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnalign"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="columnspan" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnspan"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="columnlines" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnlines"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="equalrows" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="equalrows"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="equalcolumns" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="equalcolumns"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mmultiscripts -->
+                <elementSpec ident="mmultiscripts" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- mtr -->
+                <elementSpec ident="mtr" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="columnalign" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnalign"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="columnspan" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnspan"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mtd -->
+                <elementSpec ident="mtd" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="columnalign" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnalign"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="columnspan" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnspan"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="rowalign" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="rowalign"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- msqrt -->
+                <elementSpec ident="msqrt" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="open" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="open"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="close" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="close"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mi -->
+                <elementSpec ident="mi" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="stretchy" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="stretchy"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathvariant" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathvariant"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fontstyle" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathsize" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="movablelimits" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="movablelimits"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="form" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="form"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fence" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fence"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mn -->
+                <elementSpec ident="mn" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="stretchy" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="stretchy"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathvariant" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathvariant"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fontstyle" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathsize" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="movablelimits" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="movablelimits"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="form" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="form"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fence" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fence"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mo -->
+                <elementSpec ident="mo" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="stretchy" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="stretchy"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fontstyle" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathvariant" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathvariant"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="movablelimits" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="movablelimits"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="form" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="form"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fence" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fence"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathsize" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mfrac -->
+                <elementSpec ident="mfrac" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="bevelled" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="bevelled"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="linethickness" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="linethickness"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mspace -->
+                <elementSpec ident="mspace" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="width" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="width"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- msup -->
+                <elementSpec ident="msup" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- msup -->
+                <elementSpec ident="msub" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- msupsub -->
+                <elementSpec ident="msupsub" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- msubsup -->
+                <elementSpec ident="msubsup" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- mtext -->
+                <elementSpec ident="mtext" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="fontstyle" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathvariant" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathvariant"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mover -->
+                <elementSpec ident="mover" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- munderover -->
+                <elementSpec ident="munderover" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="accentunder" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accentunder"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mprescripts -->
+                <elementSpec ident="mprescripts" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- none -->
+                <elementSpec ident="none" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                </elementSpec>
+                <!-- mstyle -->
+                <elementSpec ident="mstyle" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="scriptlevel" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="scriptlevel"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathvariant" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathvariant"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="displaystyle" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="displaystyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="mathsize" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fontsize" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontsize"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- munder -->
+                <elementSpec ident="munder" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="accentunder" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accentunder"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- mphantom -->
+                <elementSpec ident="mphantom" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                </elementSpec>
+                <!-- mphantom -->
+                <elementSpec ident="mpadded" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="width" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="width"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="depth" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="depth"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="height" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="height"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- menclose -->
+                <elementSpec ident="menclose" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="notation" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="notation"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
                 <!-- listAnnotation -->
                 <elementSpec ident="listAnnotation" mode="change">
                     <classes>

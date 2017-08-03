@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-07-18T09:31:24Z. .
+Schema generated from ODD source 2017-08-03T09:13:52Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -1971,6 +1971,8 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_graphic"/>
          <ref name="tei_binaryObject"/>
          <ref name="tei_formula"/>
+         <ref name="tei_math"/>
+         <ref name="tei_mrow"/>
       </choice>
    </define>
    <define name="tei_model.offsetLike">
@@ -10387,6 +10389,1165 @@ Les valeurs suggérées comprennent: 1] paper; 2] parch(parchment) ; 3] mixed</a
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_math">
+      <element name="math" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MathML</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="display">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="altimg">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="location" ns="http://www.wiley.com/namespaces/wiley">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_location"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="overflow">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mrow">
+      <element name="mrow" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_mfenced">
+      <element name="mfenced" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="open">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="close">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="separators">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mtable">
+      <element name="mtable" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="columnalign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="columnspan">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="columnlines">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="equalrows">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="equalcolumns">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mmultiscripts">
+      <element name="mmultiscripts" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_mtr">
+      <element name="mtr" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="columnalign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="columnspan">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mtd">
+      <element name="mtd" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="columnalign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="columnspan">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowalign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_msqrt">
+      <element name="msqrt" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="open">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="close">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mi">
+      <element name="mi" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="stretchy">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathvariant">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fontstyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathsize">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="movablelimits">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="form">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fence">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mn">
+      <element name="mn" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="stretchy">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathvariant">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fontstyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathsize">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="movablelimits">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="form">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fence">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mo">
+      <element name="mo" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="stretchy">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fontstyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathvariant">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="movablelimits">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="form">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fence">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathsize">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mfrac">
+      <element name="mfrac" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="bevelled">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="linethickness">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mspace">
+      <element name="mspace" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="width">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_width"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_msup">
+      <element name="msup" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_msub">
+      <element name="msub" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_msupsub">
+      <element name="msupsub" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_msubsup">
+      <element name="msubsup" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_mtext">
+      <element name="mtext" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="fontstyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathvariant">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mover">
+      <element name="mover" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_munderover">
+      <element name="munderover" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="accentunder">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mprescripts">
+      <element name="mprescripts" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_none">
+      <element name="none" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="tei_mstyle">
+      <element name="mstyle" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="scriptlevel">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathvariant">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="displaystyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mathsize">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fontsize">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_munder">
+      <element name="munder" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="accentunder">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_mphantom">
+      <element name="mphantom" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tei_mpadded">
+      <element name="mpadded" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="width">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_width"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="depth">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_depth"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="height">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_height"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_menclose">
+      <element name="menclose" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="notation">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
