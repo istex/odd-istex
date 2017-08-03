@@ -6,7 +6,7 @@
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.wiley.com/namespaces/wiley" schemaLocation="wiley.xsd"/>
   <!--
-    Schema generated from ODD source 2017-08-03T09:12:06Z. .
+    Schema generated from ODD source 2017-08-03T09:44:31Z. .
     TEI Edition: 
     TEI Edition Location: http://www.tei-c.org/Vault/P5//
     
@@ -21,12 +21,14 @@
       <xs:group ref="tei:tei_model.lLike"/>
     </xs:choice>
   </xs:complexType>
-  <xs:complexType name="tei_macro.limitedContent" mixed="true">
-    <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:group ref="tei:tei_model.limitedPhrase"/>
-      <xs:group ref="tei:tei_model.inter"/>
-    </xs:choice>
-  </xs:complexType>
+  <xs:group name="tei_macro.limitedContent">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.limitedPhrase"/>
+        <xs:group ref="tei:tei_model.inter"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
   <xs:group name="tei_macro.phraseSeq">
     <xs:sequence>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -827,6 +829,7 @@ Les valeurs suggérées comprennent: 1] internal; 2] external; 3] conjecture</xs
   <xs:attributeGroup name="tei_att.global.attributes">
     <xs:attributeGroup ref="tei:tei_att.global.rendition.attributes"/>
     <xs:attributeGroup ref="tei:tei_att.global.linking.attributes"/>
+    <xs:attributeGroup ref="tei:tei_att.global.analytic.attributes"/>
     <xs:attributeGroup ref="tei:tei_att.global.facs.attributes"/>
     <xs:attributeGroup ref="tei:tei_att.global.change.attributes"/>
     <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
@@ -1041,6 +1044,38 @@ Les valeurs suggérées comprennent: 1] internal; 2] external; 3] conjecture</xs
       <xs:annotation>
         <xs:documentation>(adresse URL) specifies the URL from which the media concerned may be obtained.</xs:documentation>
       </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="tei_att.interpLike.attributes">
+    <xs:attributeGroup ref="tei:tei_att.interpLike.attribute.type"/>
+    <xs:attributeGroup ref="tei:tei_att.interpLike.attribute.inst"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="tei_att.interpLike.attribute.type">
+    <xs:attribute name="type">
+      <xs:annotation>
+        <xs:documentation>indique quel genre de phénomène est noté dans le passage.
+Exemple de valeurs possibles: 1] image; 2] character; 3] theme; 4] allusion</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="tei_att.interpLike.attribute.inst">
+    <xs:attribute name="inst">
+      <xs:annotation>
+        <xs:documentation>(cas) pointe vers les instances de l'analyse ou de l'interprétation représentées par l'élément courant.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:attributeGroup name="tei_att.measurement.attributes">
@@ -2000,9 +2035,16 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.segLike">
-    <xs:sequence>
+    <xs:choice>
       <xs:element ref="tei:seg"/>
-    </xs:sequence>
+      <xs:element ref="tei:s"/>
+      <xs:element ref="tei:cl"/>
+      <xs:element ref="tei:phr"/>
+      <xs:element ref="tei:w"/>
+      <xs:element ref="tei:m"/>
+      <xs:element ref="tei:c"/>
+      <xs:element ref="tei:pc"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.hiLike">
     <xs:sequence>
@@ -2457,6 +2499,9 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:retrace"/>
       <xs:element ref="tei:undo"/>
       <xs:element ref="tei:seg"/>
+      <xs:element ref="tei:w"/>
+      <xs:element ref="tei:c"/>
+      <xs:element ref="tei:pc"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.ptrLike">
@@ -2481,6 +2526,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:alt"/>
       <xs:element ref="tei:altGrp"/>
       <xs:element ref="tei:source"/>
+      <xs:element ref="tei:span"/>
+      <xs:element ref="tei:spanGrp"/>
+      <xs:element ref="tei:interp"/>
+      <xs:element ref="tei:interpGrp"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.milestoneLike">
@@ -3843,14 +3892,11 @@ Les valeurs suggérées comprennent: 1] spoken; 2] thought; 3] written; 4] soCal
     <xs:annotation>
       <xs:documentation>(description) contient une courte description de l'objet documenté par son élément parent, qui comprend son utilisation prévue, son but, ou son application là où c'est approprié. [22.4.1. Description of Components]</xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:tei_macro.limitedContent">
-          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-          <xs:attributeGroup ref="tei:tei_att.translatable.attributes"/>
-          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.limitedContent"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.translatable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="gloss">
@@ -4949,13 +4995,10 @@ Exemple de valeurs possibles: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ;
     <xs:annotation>
       <xs:documentation>contient le titre descriptif formalisé d’une réunion ou d’une conférence, employé dans une description bibliographique pour un article provenant d'une telle réunion, ou comme le titre ou le préambule aux publications qui en émanent. [3.11.2.2. Titles, Authors, and Editors]</xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:tei_macro.limitedContent">
-          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-          <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.limitedContent"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="imprint">
@@ -7422,12 +7465,12 @@ Les valeurs suggérées comprennent: 1] main; 2] sub(subordinate) ; 3] alt(alter
     <xs:annotation>
       <xs:documentation>(description d'une figure) contient une brève description de l'apparence ou du contenu d'une représentation graphique, pour documenter une image sans avoir à l'afficher [14.4. Specific Elements for Graphic Images]</xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:tei_macro.limitedContent">
-          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.graphicLike"/>
+        <xs:group ref="tei:tei_macro.limitedContent"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="tei_att.global.facs.attributes">
@@ -7846,6 +7889,7 @@ Exemple de valeurs possibles: 1] header; 2] footer; 3] pageNum(page number) ; 4]
       <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.prev"/>
       <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.exclude"/>
       <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.select"/>
+      <xs:attributeGroup ref="tei:tei_att.global.analytic.attribute.ana"/>
       <xs:attributeGroup ref="tei:tei_att.global.facs.attribute.facs"/>
       <xs:attributeGroup ref="tei:tei_att.global.change.attribute.change"/>
       <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
@@ -8209,12 +8253,9 @@ Exemple de valeurs possibles: 1] header; 2] footer; 3] pageNum(page number) ; 4]
     <xs:annotation>
       <xs:documentation>(description de système de traits (dans FSD)) décrit en texte libre ce que représente le type de structure de traits déclaré dans le fsDecl englobant [18.11. Feature System Declaration]</xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:tei_macro.limitedContent">
-          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.limitedContent"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="fsdLink">
@@ -8267,12 +8308,9 @@ Exemple de valeurs possibles: 1] header; 2] footer; 3] pageNum(page number) ; 4]
     <xs:annotation>
       <xs:documentation>(description de trait (dans FSD)) décrit en texte libre le trait déclaré et ses valeurs [18.11. Feature System Declaration]</xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="tei:tei_macro.limitedContent">
-          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-        </xs:extension>
-      </xs:complexContent>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.limitedContent"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="vRange">
@@ -10344,6 +10382,236 @@ Les valeurs suggérées comprennent: 1] paper; 2] parch(parchment) ; 3] mixed</x
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="tei_att.global.analytic.attributes">
+    <xs:attributeGroup ref="tei:tei_att.global.analytic.attribute.ana"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="tei_att.global.analytic.attribute.ana">
+    <xs:attribute name="ana">
+      <xs:annotation>
+        <xs:documentation>(analyse) indique un ou plusieurs éléments contenant des interprétations de l'élément qui porte l'attribut ana.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="s">
+    <xs:annotation>
+      <xs:documentation>(phrase) contient une division textuelle de type phrase [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cl">
+    <xs:annotation>
+      <xs:documentation>(proposition) représente une proposition grammaticale [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="phr">
+    <xs:annotation>
+      <xs:documentation>(syntagme) représente un syntagme grammatical [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="w">
+    <xs:annotation>
+      <xs:documentation>(mot) représente un mot grammatical (pas nécessairement orthographique) [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:seg"/>
+        <xs:element ref="tei:w"/>
+        <xs:element ref="tei:m"/>
+        <xs:element ref="tei:c"/>
+        <xs:element ref="tei:pc"/>
+        <xs:group ref="tei:tei_model.global"/>
+        <xs:group ref="tei:tei_model.hiLike"/>
+        <xs:group ref="tei:tei_model.pPart.edit"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attribute name="lemma" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>fournit le lemme du mot (entrée du dictionnaire)</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="lemmaRef" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>provides a pointer to a definition of the lemma for the word, for example in an online lexicon.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m">
+    <xs:annotation>
+      <xs:documentation>(morphème) représente un morphème grammatical [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.hiLike"/>
+        <xs:element ref="tei:seg"/>
+        <xs:element ref="tei:m"/>
+        <xs:element ref="tei:c"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attribute name="baseForm">
+        <xs:annotation>
+          <xs:documentation>identifie la forme de base du morphème</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="c">
+    <xs:annotation>
+      <xs:documentation>(caractère) représente un caractère [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pc">
+    <xs:annotation>
+      <xs:documentation>(punctuation character) contient un caractère ou une chaîne de caractères considérés comme un signe de ponctuation unique. [17.1. Linguistic Segment Categories]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:c"/>
+        <xs:group ref="tei:tei_model.pPart.edit"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.segLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attribute name="force">
+        <xs:annotation>
+          <xs:documentation>indicates the extent to which this punctuation mark conventionally separates words or phrases</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="strong">
+              <xs:annotation>
+                <xs:documentation>the punctuation mark is a word separator</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="weak">
+              <xs:annotation>
+                <xs:documentation>the punctuation mark is not a word separator</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="inter">
+              <xs:annotation>
+                <xs:documentation>the punctuation mark may or may not be a word separator</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="unit">
+        <xs:annotation>
+          <xs:documentation>provides a name for the kind of unit delimited by this punctuation mark.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="pre" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>indicates whether this punctuation mark precedes or follows the unit it delimits.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="span">
+    <xs:annotation>
+      <xs:documentation>associe une interprétation sous forme d'annotation directement à un passage donné dans un texte. [17.3. Spans and Interpretations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.phraseSeq.limited">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.interpLike.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
+          <xs:attribute name="from" type="xs:anyURI">
+            <xs:annotation>
+              <xs:documentation>précise le début du passage sur lequel porte l'annotation ; s'il n'est pas accompagné d'un attribut to, désigne alors l'intégralité du passage</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="to" type="xs:anyURI">
+            <xs:annotation>
+              <xs:documentation>spécifie la fin du passage annoté.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spanGrp">
+    <xs:annotation>
+      <xs:documentation>(groupement de fragments de texte) regroupe des éléments span [17.3. Spans and Interpretations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:span"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.interpLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interp">
+    <xs:annotation>
+      <xs:documentation>(interprétation) interprétation sous la forme d'une annotation concise, pouvant être liée à un passage dans un texte [17.3. Spans and Interpretations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.descLike"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.interpLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interpGrp">
+    <xs:annotation>
+      <xs:documentation>(groupe d'interprétations) regroupe un ensemble d'interprétations ayant en commun une mention de responsabilité ou un type [17.3. Spans and Interpretations]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.descLike"/>
+        <xs:element maxOccurs="unbounded" ref="tei:interp"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.interpLike.attributes"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>

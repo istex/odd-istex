@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-08-03T09:13:52Z. .
+Schema generated from ODD source 2017-08-03T09:45:40Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -800,6 +800,7 @@ Les valeurs suggérées comprennent: 1] internal; 2] external; 3] conjecture</a:
    <define name="tei_att.global.attributes">
       <ref name="tei_att.global.rendition.attributes"/>
       <ref name="tei_att.global.linking.attributes"/>
+      <ref name="tei_att.global.analytic.attributes"/>
       <ref name="tei_att.global.facs.attributes"/>
       <ref name="tei_att.global.change.attributes"/>
       <ref name="tei_att.global.responsibility.attributes"/>
@@ -1007,6 +1008,33 @@ Les valeurs suggérées comprennent: 1] internal; 2] external; 3] conjecture</a:
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(adresse URL) specifies the URL from which the media concerned may be obtained.</a:documentation>
          <data type="anyURI"/>
       </attribute>
+   </define>
+   <define name="tei_att.interpLike.attributes">
+      <ref name="tei_att.interpLike.attribute.type"/>
+      <ref name="tei_att.interpLike.attribute.inst"/>
+   </define>
+   <define name="tei_att.interpLike.attribute.type">
+      <optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique quel genre de phénomène est noté dans le passage.
+Exemple de valeurs possibles: 1] image; 2] character; 3] theme; 4] allusion</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.interpLike.attribute.inst">
+      <optional>
+         <attribute name="inst">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cas) pointe vers les instances de l'analyse ou de l'interprétation représentées par l'élément courant.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
    </define>
    <define name="tei_att.measurement.attributes">
       <ref name="tei_att.measurement.attribute.unit"/>
@@ -1652,6 +1680,13 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
    <define name="tei_model.segLike">
       <choice>
          <ref name="tei_seg"/>
+         <ref name="tei_s"/>
+         <ref name="tei_cl"/>
+         <ref name="tei_phr"/>
+         <ref name="tei_w"/>
+         <ref name="tei_m"/>
+         <ref name="tei_c"/>
+         <ref name="tei_pc"/>
       </choice>
    </define>
    <define name="tei_model.hiLike">
@@ -2341,6 +2376,9 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_retrace"/>
          <ref name="tei_undo"/>
          <ref name="tei_seg"/>
+         <ref name="tei_w"/>
+         <ref name="tei_c"/>
+         <ref name="tei_pc"/>
       </choice>
    </define>
    <define name="tei_model.ptrLike">
@@ -2368,6 +2406,10 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_alt"/>
          <ref name="tei_altGrp"/>
          <ref name="tei_source"/>
+         <ref name="tei_span"/>
+         <ref name="tei_spanGrp"/>
+         <ref name="tei_interp"/>
+         <ref name="tei_interpGrp"/>
       </choice>
    </define>
    <define name="tei_model.milestoneLike">
@@ -7415,7 +7457,12 @@ Les valeurs suggérées comprennent: 1] main; 2] sub(subordinate) ; 3] alt(alter
    <define name="tei_figDesc">
       <element name="figDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description d'une figure) contient une brève description de l'apparence ou du contenu d'une représentation graphique, pour documenter une image sans avoir à l'afficher [14.4. Specific Elements for Graphic Images]</a:documentation>
-         <ref name="tei_macro.limitedContent"/>
+         <oneOrMore>
+            <choice>
+               <ref name="tei_model.graphicLike"/>
+               <ref name="tei_macro.limitedContent"/>
+            </choice>
+         </oneOrMore>
          <ref name="tei_att.global.attributes"/>
          <empty/>
       </element>
@@ -7862,6 +7909,7 @@ Exemple de valeurs possibles: 1] header; 2] footer; 3] pageNum(page number) ; 4]
          <ref name="tei_att.global.linking.attribute.prev"/>
          <ref name="tei_att.global.linking.attribute.exclude"/>
          <ref name="tei_att.global.linking.attribute.select"/>
+         <ref name="tei_att.global.analytic.attribute.ana"/>
          <ref name="tei_att.global.facs.attribute.facs"/>
          <ref name="tei_att.global.change.attribute.change"/>
          <ref name="tei_att.global.responsibility.attribute.cert"/>
@@ -10389,6 +10437,272 @@ Les valeurs suggérées comprennent: 1] paper; 2] parch(parchment) ; 3] mixed</a
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_att.global.analytic.attributes">
+      <ref name="tei_att.global.analytic.attribute.ana"/>
+   </define>
+   <define name="tei_att.global.analytic.attribute.ana">
+      <optional>
+         <attribute name="ana">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analyse) indique un ou plusieurs éléments contenant des interprétations de l'élément qui porte l'attribut ana.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_s">
+      <element name="s">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(phrase) contient une division textuelle de type phrase [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="istex-s-noNestedS-constraint-report-19">
+            <rule context="tei:s">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="tei:s">You may not nest one s element within
+      another: use seg instead</report>
+            </rule>
+         </pattern>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_cl">
+      <element name="cl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(proposition) représente une proposition grammaticale [17.1. Linguistic Segment Categories]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_phr">
+      <element name="phr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(syntagme) représente un syntagme grammatical [17.1. Linguistic Segment Categories]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_w">
+      <element name="w">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mot) représente un mot grammatical (pas nécessairement orthographique) [17.1. Linguistic Segment Categories]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_seg"/>
+               <ref name="tei_w"/>
+               <ref name="tei_m"/>
+               <ref name="tei_c"/>
+               <ref name="tei_pc"/>
+               <ref name="tei_model.global"/>
+               <ref name="tei_model.lPart"/>
+               <ref name="tei_model.hiLike"/>
+               <ref name="tei_model.pPart.edit"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <optional>
+            <attribute name="lemma">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fournit le lemme du mot (entrée du dictionnaire)</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="lemmaRef">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a pointer to a definition of the lemma for the word, for example in an online lexicon.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_m">
+      <element name="m">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(morphème) représente un morphème grammatical [17.1. Linguistic Segment Categories]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_model.hiLike"/>
+               <ref name="tei_seg"/>
+               <ref name="tei_m"/>
+               <ref name="tei_c"/>
+               <ref name="tei_model.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <optional>
+            <attribute name="baseForm">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifie la forme de base du morphème</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_c">
+      <element name="c">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(caractère) représente un caractère [17.1. Linguistic Segment Categories]</a:documentation>
+         <ref name="tei_macro.xtext"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_pc">
+      <element name="pc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(punctuation character) contient un caractère ou une chaîne de caractères considérés comme un signe de ponctuation unique. [17.1. Linguistic Segment Categories]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_c"/>
+               <ref name="tei_model.pPart.edit"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <optional>
+            <attribute name="force">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the extent to which this punctuation mark conventionally separates words or phrases</a:documentation>
+               <choice>
+                  <value>strong</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the punctuation mark is a word separator</a:documentation>
+                  <value>weak</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the punctuation mark is not a word separator</a:documentation>
+                  <value>inter</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the punctuation mark may or may not be a word separator</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="unit">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a name for the kind of unit delimited by this punctuation mark.</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pre">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether this punctuation mark precedes or follows the unit it delimits.</a:documentation>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_span">
+      <element name="span">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">associe une interprétation sous forme d'annotation directement à un passage donné dans un texte. [17.3. Spans and Interpretations]</a:documentation>
+         <ref name="tei_macro.phraseSeq.limited"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="istex-span-targetfrom-constraint-report-20">
+            <rule context="tei:span">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="@from and @target">
+Only one of the attributes @target and @from may be supplied on <name/>
+               </report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="istex-span-targetto-constraint-report-21">
+            <rule context="tei:span">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="@to and @target">
+Only one of the attributes @target and @to may be supplied on <name/>
+               </report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="istex-span-tonotfrom-constraint-report-22">
+            <rule context="tei:span">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="@to and not(@from)">
+If @to is supplied on <name/>, @from must be supplied as well</report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="istex-span-tofrom-constraint-report-23">
+            <rule context="tei:span">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="contains(normalize-space(@to),' ') or contains(normalize-space(@from),' ')">
+The attributes @to and @from on <name/> may each contain only a single value</report>
+            </rule>
+         </pattern>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.interpLike.attributes"/>
+         <ref name="tei_att.pointing.attributes"/>
+         <optional>
+            <attribute name="from">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">précise le début du passage sur lequel porte l'annotation ; s'il n'est pas accompagné d'un attribut to, désigne alors l'intégralité du passage</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="to">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">spécifie la fin du passage annoté.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_spanGrp">
+      <element name="spanGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(groupement de fragments de texte) regroupe des éléments span [17.3. Spans and Interpretations]</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_span"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.interpLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_interp">
+      <element name="interp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interprétation) interprétation sous la forme d'une annotation concise, pouvant être liée à un passage dans un texte [17.3. Spans and Interpretations]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_model.descLike"/>
+               <ref name="tei_model.certLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.interpLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_interpGrp">
+      <element name="interpGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(groupe d'interprétations) regroupe un ensemble d'interprétations ayant en commun une mention de responsabilité ou un type [17.3. Spans and Interpretations]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.descLike"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tei_interp"/>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.interpLike.attributes"/>
          <empty/>
       </element>
    </define>

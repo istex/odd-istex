@@ -52,6 +52,8 @@
                 <moduleRef key="standOff"/>
                 <!-- ajout modèle msdescription pour récupérer <source> -->
                 <moduleRef key="msdescription"/>
+                <!-- ajout modèle analysis pour récupérer <span> -->
+                <moduleRef key="analysis"/>
 
                 <elementSpec ident="bibl" module="core" mode="change">
                     <classes mode="replace">
@@ -88,6 +90,39 @@
                     <remarks>
                         <p>Modèle modifié pour bénéficier de <gi>head</gi> dans
                             <gi>abstract</gi></p>
+                    </remarks>
+                </elementSpec>
+                
+                <!-- figDesc -->
+                <elementSpec ident="figDesc" mode="change">
+                    <content>
+                        <alternate minOccurs="1" maxOccurs="unbounded">
+                            <classRef key="model.graphicLike"/>
+                            <classRef key="macro.limitedContent"/>
+                        </alternate>
+                    </content>
+                    <exemplum xml:lang="fr">
+                        <p>Cas où une description de figure contient du mathML</p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"
+                            ><figDesc>Parameter estimates for <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <msub>
+                                        <mrow>
+                                            <mi mathvariant="normal">F</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mi mathvariant="normal">ST</mi>
+                                        </mrow>
+                                    </msub>
+                                </mrow>
+                            </math>
+                                (black, top panel), <hi rend="italic">α</hi> (blue, bottom panel), <hi rend="italic">β</hi> (red, bottom
+                                panel) by their physical position across one of the largest scaffolds in the
+                                <hi rend="italic">M. vitellinus</hi> draft genome assembly.</figDesc></egXML>
+                    </exemplum>
+                    <remarks>
+                        <p>Modèle modifié pour bénéficier de <gi>math</gi> dans
+                            <gi>figDesc</gi></p>
                     </remarks>
                 </elementSpec>
                 
@@ -1950,14 +1985,6 @@
                 </elementSpec>
                 <!--ajout de @scheme à p -->
                 <elementSpec ident="p" mode="change">
-                    
-                       <!--<alternate>
-                            <classRef key="model.pLike"/>
-                            <sequence>
-                                <elementRef key="source" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="change" minOccurs="0" maxOccurs="unbounded"/>
-                            </sequence>
-                        </alternate>-->
                     <attList>
                         <attDef ident="scheme" mode="add">
                             <desc>désigne la liste des ontologies dans lequel l'ensemble des termes
