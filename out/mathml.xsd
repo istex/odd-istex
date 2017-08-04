@@ -20,6 +20,8 @@
         <xs:element ref="mathml:mspace"/>
         <xs:element ref="mathml:msqrt"/>
         <xs:element ref="mathml:msub"/>
+        <xs:element ref="mathml:msubsup"/>
+        <xs:element ref="mathml:msupsub"/>
         <xs:element ref="mathml:msup"/>
         <xs:element ref="mathml:mo"/>
         <xs:element ref="mathml:mfenced"/>

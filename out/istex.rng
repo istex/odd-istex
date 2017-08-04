@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-08-03T09:45:40Z. .
+Schema generated from ODD source 2017-08-04T08:18:14Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10721,6 +10721,8 @@ The attributes @to and @from on <name/> may each contain only a single value</re
                <ref name="tei_mspace"/>
                <ref name="tei_msqrt"/>
                <ref name="tei_msub"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
                <ref name="tei_msup"/>
                <ref name="tei_mo"/>
                <ref name="tei_mfenced"/>

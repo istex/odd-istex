@@ -145,6 +145,8 @@
                             <elementRef key="mspace"/>
                             <elementRef key="msqrt"/>
                             <elementRef key="msub"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
                             <elementRef key="msup"/>
                             <elementRef key="mo"/>
                             <elementRef key="mfenced"/>
