@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-08-04T08:18:14Z. .
+Schema generated from ODD source 2017-11-06T09:09:41Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -10734,6 +10734,7 @@ The attributes @to and @from on <name/> may each contain only a single value</re
                <ref name="tei_mphantom"/>
                <ref name="tei_mpadded"/>
                <ref name="tei_menclose"/>
+               <ref name="tei_semantics"/>
             </choice>
          </zeroOrMore>
          <optional>
@@ -10754,6 +10755,36 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          </optional>
          <optional>
             <attribute name="overflow">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="alttext">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="maxwidth">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="altimg-width">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="altimg-height">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="altimg-valign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="cdgroup">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
@@ -11122,6 +11153,11 @@ The attributes @to and @from on <name/> may each contain only a single value</re
             </attribute>
          </optional>
          <optional>
+            <attribute name="fontweight">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="mathsize">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
@@ -11174,6 +11210,11 @@ The attributes @to and @from on <name/> may each contain only a single value</re
             </attribute>
          </optional>
          <optional>
+            <attribute name="fontweight">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="mathsize">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
@@ -11217,6 +11258,11 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          </optional>
          <optional>
             <attribute name="fontstyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fontweight">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
@@ -11473,6 +11519,11 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          <text/>
          <optional>
             <attribute name="fontstyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fontweight">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
@@ -11861,6 +11912,66 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          </zeroOrMore>
          <optional>
             <attribute name="notation">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_semantics">
+      <element name="semantics" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+               <ref name="tei_annotation"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="definitionURL">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="encoding">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_annotation">
+      <element name="annotation" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="encoding">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
