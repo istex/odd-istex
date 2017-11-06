@@ -158,6 +158,7 @@
                             <elementRef key="mphantom"/>
                             <elementRef key="mpadded"/>
                             <elementRef key="menclose"/>
+                            <elementRef key="semantics"/>
                         </alternate>
                     </content>
                     <attList>
@@ -179,6 +180,36 @@
                         <attDef ident="overflow" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="overflow"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="alttext" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="alttext"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="maxwidth" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="maxwidth"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="altimg-width" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="altimg-width"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="altimg-height" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="altimg-height"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="altimg-valign" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="altimg-valign"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="cdgroup" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="cdgroup"/>
                             </datatype>
                         </attDef>
                     </attList>
@@ -556,6 +587,11 @@
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
                             </datatype>
                         </attDef>
+                        <attDef ident="fontweight" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontweight"/>
+                            </datatype>
+                        </attDef>
                         <attDef ident="mathsize" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
@@ -609,6 +645,11 @@
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
                             </datatype>
                         </attDef>
+                        <attDef ident="fontweight" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontweight"/>
+                            </datatype>
+                        </attDef>
                         <attDef ident="mathsize" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
@@ -655,6 +696,11 @@
                         <attDef ident="fontstyle" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fontweight" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontweight"/>
                             </datatype>
                         </attDef>
                         <attDef ident="mathvariant" mode="add">
@@ -908,6 +954,11 @@
                         <attDef ident="fontstyle" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontstyle"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="fontweight" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="fontweight"/>
                             </datatype>
                         </attDef>
                         <attDef ident="mathvariant" mode="add">
@@ -1291,6 +1342,67 @@
                         <attDef ident="notation" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="notation"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- semantics -->
+                <elementSpec ident="semantics" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                            <elementRef key="annotation"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="definitionURL" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="definitionURL"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="encoding" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="encoding"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- annotation -->
+                <elementSpec ident="annotation" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <textNode/>
+                    </content>
+                    <attList>
+                        <attDef ident="encoding" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="encoding"/>
                             </datatype>
                         </attDef>
                     </attList>
