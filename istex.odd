@@ -803,6 +803,11 @@
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
                             </datatype>
                         </attDef>
+                        <attDef ident="linebreak" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="linebreak"/>
+                            </datatype>
+                        </attDef>
                     </attList>
                 </elementSpec>
                 <!-- msup -->
