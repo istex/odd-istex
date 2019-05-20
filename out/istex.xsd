@@ -5027,6 +5027,13 @@ Exemple de valeurs possibles: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ;
     <xs:complexType mixed="true">
       <xs:group ref="tei:tei_macro.phraseSeq"/>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.global.rendition.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.global.linking.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.global.analytic.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.global.change.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.global.source.attributes"/>
+	    <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
       <xs:attribute name="scheme" type="xs:anyURI">
         <xs:annotation>
           <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
