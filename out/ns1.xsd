@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://standoff.proposal" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:ns1="http://standoff.proposal" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wiley="http://www.wiley.com/namespaces/wiley">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://standoff.proposal" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:ns1="http://standoff.proposal" xmlns:wiley="http://www.wiley.com/namespaces/wiley" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.xsd"/>
-  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="istex.xsd"/>
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="document.xsd"/>
   <xs:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="mathml.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.wiley.com/namespaces/wiley" schemaLocation="wiley.xsd"/>
   <xs:element name="standOff">
     <xs:annotation>
-      <xs:documentation>Container element for standoff annotations</xs:documentation>
+      <xs:documentation>Container element for stand-off annotations embedded in a TEI document</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
@@ -16,11 +16,10 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:listAnnotation"/>
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.ascribed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.notated.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.datable.w3c.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="listAnnotation">
@@ -28,11 +27,14 @@
       <xs:documentation>Groups together various annotations, for instance for parallel interpretations of a spoken segment</xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:group maxOccurs="unbounded" ref="tei:tei_model.annotation"/>
-      <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.annotation"/>
+      </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.ascribed.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.notated.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
     </xs:complexType>
   </xs:element>
