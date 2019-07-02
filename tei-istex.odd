@@ -37,7 +37,7 @@
                 <moduleRef key="core"/>
                 <moduleRef key="tei" except="fsdDecl facsimile"/>
                 <moduleRef key="header"
-                    except="cRefPattern calendar calendarDesc catDesc catRef correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl typeNote xenoData"/>
+                    except="cRefPattern calendar calendarDesc catDesc catRef correspAction correspContext correspDesc editorialDecl geoDecl handNote hyphenation interpretation listChange listPrefixDef normalization prefixDef principal projectDesc punctuation quotation refState refsDecl samplingDecl scriptNote segmentation sponsor stdVals styleDefDecl tagUsage typeNote xenoData"/>
                 <moduleRef key="namesdates"
                     except="age birth bloc climate death district education faith floruit geo geogFeat langKnowledge langKnown listEvent listNym listPerson listRelation nationality nym occupation offset population relation residence sex socecStatus terrain trait"/>
                 <moduleRef key="spoken"
