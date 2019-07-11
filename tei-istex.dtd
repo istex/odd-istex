@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2019-06-14T07:38:54Z. .[http://creativecommons.org/licenses/by/4.0/] Ce schéma est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0) ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique 
+DTD generated from ODD source 2019-07-11T05:14:57Z. .[http://creativecommons.org/licenses/by/4.0/] Ce schéma est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0) ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique 
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
 
@@ -520,11 +520,11 @@ source CDATA  #IMPLIED'>
 <!ENTITY % model.sourceDescPart_sequenceOptional ""> 
 <!ENTITY % model.sourceDescPart_sequenceOptionalRepeatable ""> 
 <!ENTITY % model.sourceDescPart_sequenceRepeatable ""> 
-<!ENTITY % model.encodingDescPart "schemaRef |classDecl |appInfo |fsdDecl"> 
-<!ENTITY % model.encodingDescPart_sequence "schemaRef, classDecl, appInfo, fsdDecl"> 
-<!ENTITY % model.encodingDescPart_sequenceOptional "schemaRef?, classDecl?, appInfo?, fsdDecl?"> 
-<!ENTITY % model.encodingDescPart_sequenceOptionalRepeatable "schemaRef*, classDecl*, appInfo*, fsdDecl*"> 
-<!ENTITY % model.encodingDescPart_sequenceRepeatable "schemaRef+, classDecl+, appInfo+, fsdDecl+"> 
+<!ENTITY % model.encodingDescPart "schemaRef |tagsDecl |classDecl |appInfo |fsdDecl"> 
+<!ENTITY % model.encodingDescPart_sequence "schemaRef, tagsDecl, classDecl, appInfo, fsdDecl"> 
+<!ENTITY % model.encodingDescPart_sequenceOptional "schemaRef?, tagsDecl?, classDecl?, appInfo?, fsdDecl?"> 
+<!ENTITY % model.encodingDescPart_sequenceOptionalRepeatable "schemaRef*, tagsDecl*, classDecl*, appInfo*, fsdDecl*"> 
+<!ENTITY % model.encodingDescPart_sequenceRepeatable "schemaRef+, tagsDecl+, classDecl+, appInfo+, fsdDecl+"> 
 <!ENTITY % model.profileDescPart "abstract |creation |langUsage |textClass |handNotes |listTranspose"> 
 <!ENTITY % model.profileDescPart_sequence "abstract, creation, langUsage, textClass, handNotes, listTranspose"> 
 <!ENTITY % model.profileDescPart_sequenceOptional "abstract?, creation?, langUsage?, textClass?, handNotes?, listTranspose?"> 
@@ -1473,11 +1473,11 @@ to %teidata.word;  #IMPLIED'>
 <!ENTITY % model.sourceDescPart_sequenceOptional ""> 
 <!ENTITY % model.sourceDescPart_sequenceOptionalRepeatable ""> 
 <!ENTITY % model.sourceDescPart_sequenceRepeatable ""> 
-<!ENTITY % model.encodingDescPart "schemaRef |classDecl |appInfo |fsdDecl"> 
-<!ENTITY % model.encodingDescPart_sequence "schemaRef, classDecl, appInfo, fsdDecl"> 
-<!ENTITY % model.encodingDescPart_sequenceOptional "schemaRef?, classDecl?, appInfo?, fsdDecl?"> 
-<!ENTITY % model.encodingDescPart_sequenceOptionalRepeatable "schemaRef*, classDecl*, appInfo*, fsdDecl*"> 
-<!ENTITY % model.encodingDescPart_sequenceRepeatable "schemaRef+, classDecl+, appInfo+, fsdDecl+"> 
+<!ENTITY % model.encodingDescPart "schemaRef |tagsDecl |classDecl |appInfo |fsdDecl"> 
+<!ENTITY % model.encodingDescPart_sequence "schemaRef, tagsDecl, classDecl, appInfo, fsdDecl"> 
+<!ENTITY % model.encodingDescPart_sequenceOptional "schemaRef?, tagsDecl?, classDecl?, appInfo?, fsdDecl?"> 
+<!ENTITY % model.encodingDescPart_sequenceOptionalRepeatable "schemaRef*, tagsDecl*, classDecl*, appInfo*, fsdDecl*"> 
+<!ENTITY % model.encodingDescPart_sequenceRepeatable "schemaRef+, tagsDecl+, classDecl+, appInfo+, fsdDecl+"> 
 <!ENTITY % model.profileDescPart "abstract |creation |langUsage |textClass |handNotes |listTranspose"> 
 <!ENTITY % model.profileDescPart_sequence "abstract, creation, langUsage, textClass, handNotes, listTranspose"> 
 <!ENTITY % model.profileDescPart_sequenceOptional "abstract?, creation?, langUsage?, textClass?, handNotes?, listTranspose?"> 
@@ -3849,6 +3849,12 @@ value %teidata.word;  #REQUIRED >
  %tei_att.typed.attributes;
 rows %teidata.count;  #IMPLIED
 cols %teidata.count;  #IMPLIED >
+<!--doc:(déclaration de balisage) donne l’information détaillée sur le balisage appliqué à un document . [2.3.4. The Tagging Declaration 2.3. The Encoding Description] -->
+<!ELEMENT tagsDecl (((rendition)*,(namespace)*))>
+<!ATTLIST tagsDecl xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST tagsDecl
+ %tei_att.global.attributes;
+partial %teidata.truthValue;  #IMPLIED >
 <!--doc:(taxinomie) définit une typologie soit implicitement au moyen d’une référence bibliographique, soit explicitement au moyen d’une taxinomie structurée. [2.3.7. The Classification Declaration] -->
 <!ELEMENT taxonomy (((category|taxonomy)+|((%model.glossLike;|%model.descLike;)+,(category|taxonomy)*))|((%model.biblLike;),(category|taxonomy)*))>
 <!ATTLIST taxonomy xmlns CDATA "http://www.tei-c.org/ns/1.0">
