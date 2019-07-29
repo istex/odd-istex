@@ -5922,7 +5922,7 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
           <xs:documentation>fournit un identifiant pour l'application, indépendamment de son numéro de version ou du nom affiché.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="version" use="required">
+      <xs:attribute name="version">
         <xs:annotation>
           <xs:documentation>fournit un numéro de version pour l'application, indépendamment de son identifiant ou du nom affiché.</xs:documentation>
         </xs:annotation>
@@ -6950,7 +6950,7 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="tei:teiHeader"/>
+        <xs:element ref="tei:teiHeader" minOccurs="0"/>
         <xs:group maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
