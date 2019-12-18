@@ -59,6 +59,7 @@
                     <classes mode="replace">
                         <memberOf key="model.biblLike"/>
                         <memberOf key="model.biblPart"/>
+                        <memberOf key="model.graphicLike" mode="add"/>
                         <memberOf key="att.declarable"/>
                         <memberOf key="att.docStatus"/>
                         <memberOf key="att.global"/>

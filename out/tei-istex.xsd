@@ -80,6 +80,10 @@
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
+  <xs:attributeGroup name="tei_att.styleDef.attributes">
+    <xs:attributeGroup ref="tei:tei_att.styleDef.attribute.scheme"/>
+    <xs:attributeGroup ref="tei:tei_att.styleDef.attribute.schemeVersion"/>
+  </xs:attributeGroup>
   <xs:attributeGroup name="tei_att.canonical.attribute.ref">
     <xs:attribute name="ref">
       <xs:annotation>
@@ -3400,6 +3404,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:classDecl"/>
       <xs:element ref="tei:appInfo"/>
       <xs:element ref="tei:fsdDecl"/>
+      <xs:element ref="tei:tagsDecl"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.profileDescPart">
@@ -5078,6 +5083,7 @@ Exemple de valeurs possibles: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ;
     </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.graphicLike"/>
         <xs:group ref="tei:tei_model.highlighted"/>
         <xs:group ref="tei:tei_model.pPart.data"/>
         <xs:group ref="tei:tei_model.pPart.edit"/>
@@ -5917,7 +5923,7 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
           <xs:documentation>fournit un identifiant pour l'application, indépendamment de son numéro de version ou du nom affiché.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="version" use="required">
+      <xs:attribute name="version">
         <xs:annotation>
           <xs:documentation>fournit un numéro de version pour l'application, indépendamment de son identifiant ou du nom affiché.</xs:documentation>
         </xs:annotation>
@@ -6945,7 +6951,7 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="tei:teiHeader"/>
+        <xs:element ref="tei:teiHeader" minOccurs="0"/>
         <xs:group maxOccurs="unbounded" ref="tei:tei_model.resourceLike"/>
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
@@ -10619,6 +10625,62 @@ Les valeurs suggérées comprennent: 1] paper; 2] parch(parchment) ; 3] mixed</x
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.interpLike.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tagsDecl">
+    <xs:annotation>
+      <xs:documentation>(déclaration de balisage) donne l’information détaillée sur le balisage appliqué à un document . [2.3.4. The Tagging Declaration 2.3. The Encoding Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:rendition"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:namespace"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attribute name="partial" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>indicates whether the element types listed exhaustively include all those found within text, or represent only a subset.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="namespace">
+    <xs:annotation>
+      <xs:documentation>(espace de noms) fournit le nom formel de l'espace de noms auquel appartiennent les éléments documentés par ses éléments fils. [2.3.4. The Tagging Declaration]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attribute name="name" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>le nom formel complet de l'espace de noms concerné.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rendition">
+    <xs:annotation>
+      <xs:documentation>(rendu) donne des informations sur le rendu ou sur l'apparence d'un ou de plusieurs éléments dans le texte source. [2.3.4. The Tagging Declaration]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.limitedContent"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.styleDef.attributes"/>
+      <xs:attribute name="scope">
+        <xs:annotation>
+          <xs:documentation>where CSS is used, provides a way of defining pseudo-elements, that is, styling rules applicable to specific sub-portions of an element.
+            Exemple de valeurs possibles: 1] first-line; 2] first-letter; 3] before; 4] after</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="selector" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>contains a selector or series of selectors specifying the elements to which the contained style description applies, expressed in the language specified in the scheme attribute.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
 </xs:schema>

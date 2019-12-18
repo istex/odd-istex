@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-06-14T07:38:21Z. .
+Schema generated from ODD source 2019-07-11T05:20:38Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -1413,6 +1413,10 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
                   </sch:assert>
           </sch:rule>
    </pattern>
+   <define name="tei_att.styleDef.attributes">
+      <ref name="tei_att.styleDef.attribute.scheme"/>
+      <ref name="tei_att.styleDef.attribute.schemeVersion"/>
+   </define>
    <define name="tei_att.styleDef.attribute.scheme">
       <optional>
          <attribute name="scheme">
@@ -3483,6 +3487,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
    <define name="tei_model.encodingDescPart">
       <choice>
          <ref name="tei_schemaRef"/>
+         <ref name="tei_tagsDecl"/>
          <ref name="tei_classDecl"/>
          <ref name="tei_appInfo"/>
          <ref name="tei_fsdDecl"/>
@@ -4926,6 +4931,7 @@ Exemple de valeurs possibles: 1] main; 2] sub (subordinate) ; 3] alt (alternate)
          <zeroOrMore>
             <choice>
                <text/>
+               <ref name="tei_model.graphicLike"/>
                <ref name="tei_model.gLike"/>
                <ref name="tei_model.highlighted"/>
                <ref name="tei_model.pPart.data"/>
@@ -5660,6 +5666,62 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
             <attribute name="key">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the identifier used for the customization or schema</a:documentation>
                <data type="NCName"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_tagsDecl">
+      <element name="tagsDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(déclaration de balisage) donne l’information détaillée sur le balisage appliqué à un document . [2.3.4. The Tagging Declaration 2.3. The Encoding Description]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_rendition"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_namespace"/>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="partial">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether the element types listed exhaustively include all those found within text, or represent only a subset.</a:documentation>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_namespace">
+      <element name="namespace">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(espace de noms) fournit le nom formel de l'espace de noms auquel appartiennent les éléments documentés par ses éléments fils. [2.3.4. The Tagging Declaration]</a:documentation>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">le nom formel complet de l'espace de noms concerné.</a:documentation>
+            <data type="anyURI"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_rendition">
+      <element name="rendition">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendu) donne des informations sur le rendu ou sur l'apparence d'un ou de plusieurs éléments dans le texte source. [2.3.4. The Tagging Declaration]</a:documentation>
+         <ref name="tei_macro.limitedContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.styleDef.attributes"/>
+         <optional>
+            <attribute name="scope">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where CSS is used, provides a way of defining pseudo-elements, that is, styling rules applicable to specific sub-portions of an element.
+Exemple de valeurs possibles: 1] first-line; 2] first-letter; 3] before; 4] after</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="selector">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a selector or series of selectors specifying the elements to which the contained style description applies, expressed in the language specified in the scheme attribute.</a:documentation>
+               <data type="string"/>
             </attribute>
          </optional>
          <empty/>
