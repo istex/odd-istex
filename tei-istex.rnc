@@ -9,7 +9,7 @@ namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2019-06-14T07:38:03Z. .
+# Schema generated from ODD source 2019-07-11T05:24:28Z. .
 # TEI Edition: 
 # TEI Edition Location: http://www.tei-c.org/Vault/P5//
 #
@@ -1064,6 +1064,9 @@ sch:pattern [
   "\x{a}" ~
   "   "
 ]
+tei_att.styleDef.attributes =
+  tei_att.styleDef.attribute.scheme,
+  tei_att.styleDef.attribute.schemeVersion
 tei_att.styleDef.attribute.scheme =
   
   ## identifie la langue employée pour décrire le rendu
@@ -1928,7 +1931,11 @@ tei_model.applicationLike = tei_application
 tei_model.teiHeaderPart = tei_encodingDesc | tei_profileDesc
 tei_model.sourceDescPart = notAllowed
 tei_model.encodingDescPart =
-  tei_schemaRef | tei_classDecl | tei_appInfo | tei_fsdDecl
+  tei_schemaRef
+  | tei_tagsDecl
+  | tei_classDecl
+  | tei_appInfo
+  | tei_fsdDecl
 tei_model.profileDescPart =
   tei_abstract
   | tei_creation
@@ -3640,6 +3647,45 @@ tei_schemaRef =
     
     ## the identifier used for the customization or schema
     attribute key { xsd:NCName }?,
+    empty
+  }
+tei_tagsDecl =
+  
+  ## (déclaration de balisage) donne l’information détaillée sur le balisage appliqué à un document . [2.3.4. The Tagging Declaration 2.3. The Encoding Description]
+  element tei:tagsDecl {
+    (tei_rendition*, tei_namespace*),
+    tei_att.global.attributes,
+    
+    ## indicates whether the element types listed exhaustively include all those found within text, or represent only a subset.
+    attribute partial { xsd:boolean }?,
+    empty
+  }
+tei_namespace =
+  
+  ## (espace de noms) fournit le nom formel de l'espace de noms auquel appartiennent les éléments documentés par ses éléments fils. [2.3.4. The Tagging Declaration]
+  element tei:namespace {
+    tei_att.global.attributes,
+    
+    ## le nom formel complet de l'espace de noms concerné.
+    attribute name { xsd:anyURI },
+    empty
+  }
+tei_rendition =
+  
+  ## (rendu) donne des informations sur le rendu ou sur l'apparence d'un ou de plusieurs éléments dans le texte source. [2.3.4. The Tagging Declaration]
+  element tei:rendition {
+    tei_macro.limitedContent,
+    tei_att.global.attributes,
+    tei_att.styleDef.attributes,
+    
+    ## where CSS is used, provides a way of defining pseudo-elements, that is, styling rules applicable to specific sub-portions of an element.
+    ## Exemple de valeurs possibles: 1] first-line; 2] first-letter; 3] before; 4] after
+    attribute scope {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
+    
+    ## contains a selector or series of selectors specifying the elements to which the contained style description applies, expressed in the language specified in the scheme attribute.
+    attribute selector { xsd:string }?,
     empty
   }
 tei_classDecl =

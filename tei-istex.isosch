@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *********************************************************************************************************** -->
+<!-- *********************************************************************************************************** -->
+<error msg="I/O error reported by XML parser processing file:/usr/local/common/functions.xsl: /usr/local/common/functions.xsl (No such file or directory)" exclass="class pl.psnc.dl.ege.exception.ConverterException" >pl.psnc.dl.ege.exception.ConverterException: I/O error reported by XML parser processing file:/usr/local/common/functions.xsl: /usr/local/common/functions.xsl (No such file or directory)
+	at pl.psnc.dl.ege.MultiXslConverter.convert(MultiXslConverter.java:109)
+	at pl.psnc.dl.ege.component.NamedConverter.convert(NamedConverter.java:44)
+	at pl.psnc.dl.ege.ConversionPerformer.run(ConversionPerformer.java:45)
+	at java.lang.Thread.run(Thread.java:748)
+</error>
+
+<!-- *********************************************************************************************************** -->
+<!-- *********************************************************************************************************** -->

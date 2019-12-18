@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/1998/Math/MathML" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:ns1="http://standoff.proposal" xmlns:wiley="http://www.wiley.com/namespaces/wiley" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/1998/Math/MathML" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:ns1="http://standoff.proposal" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wiley="http://www.wiley.com/namespaces/wiley">
   <xs:import namespace="http://standoff.proposal" schemaLocation="ns1.xsd"/>
   <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.xsd"/>
-  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="document.xsd"/>
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei-istex.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.wiley.com/namespaces/wiley" schemaLocation="wiley.xsd"/>
   <xs:element name="math">
@@ -35,58 +35,19 @@
         <xs:element ref="mathml:menclose"/>
         <xs:element ref="mathml:semantics"/>
       </xs:choice>
-      <xs:attribute name="display">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="altimg">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="display"/>
+      <xs:attribute name="altimg"/>
       <xs:attribute ref="wiley:location"/>
-      <xs:attribute name="overflow">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="alttext">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="maxwidth">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="altimg-width">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="altimg-height">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="altimg-valign">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="cdgroup">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="overflow"/>
+      <xs:attribute name="alttext"/>
+      <xs:attribute name="maxwidth"/>
+      <xs:attribute name="altimg-width"/>
+      <xs:attribute name="altimg-height"/>
+      <xs:attribute name="altimg-valign"/>
+      <xs:attribute name="cdgroup"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mrow">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -119,9 +80,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="mfenced">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -151,27 +109,12 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="open">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="close">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="separators">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="open"/>
+      <xs:attribute name="close"/>
+      <xs:attribute name="separators"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mtable">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -201,42 +144,15 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="columnalign">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="columnspan">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="columnlines">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="equalrows">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="equalcolumns">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="columnalign"/>
+      <xs:attribute name="columnspan"/>
+      <xs:attribute name="columnlines"/>
+      <xs:attribute name="equalrows"/>
+      <xs:attribute name="equalcolumns"/>
+      <xs:attribute name="class"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mmultiscripts">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -269,9 +185,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="mtr">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -301,22 +214,11 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="columnalign">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="columnspan">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="columnalign"/>
+      <xs:attribute name="columnspan"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mtd">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -346,32 +248,13 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="columnalign">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="columnspan">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="rowalign">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="columnalign"/>
+      <xs:attribute name="columnspan"/>
+      <xs:attribute name="rowalign"/>
+      <xs:attribute name="class"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="msqrt">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -401,193 +284,53 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="open">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="close">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="open"/>
+      <xs:attribute name="close"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mi">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:attribute name="stretchy">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathvariant">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontstyle">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontweight">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathsize">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="movablelimits">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="accent">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="form">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fence">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="stretchy"/>
+      <xs:attribute name="mathvariant"/>
+      <xs:attribute name="fontstyle"/>
+      <xs:attribute name="fontweight"/>
+      <xs:attribute name="mathsize"/>
+      <xs:attribute name="movablelimits"/>
+      <xs:attribute name="class"/>
+      <xs:attribute name="accent"/>
+      <xs:attribute name="form"/>
+      <xs:attribute name="fence"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mn">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:attribute name="stretchy">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathvariant">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontstyle">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontweight">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathsize">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="movablelimits">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="accent">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="form">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fence">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="stretchy"/>
+      <xs:attribute name="mathvariant"/>
+      <xs:attribute name="fontstyle"/>
+      <xs:attribute name="fontweight"/>
+      <xs:attribute name="mathsize"/>
+      <xs:attribute name="movablelimits"/>
+      <xs:attribute name="class"/>
+      <xs:attribute name="accent"/>
+      <xs:attribute name="form"/>
+      <xs:attribute name="fence"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mo">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:attribute name="stretchy">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontstyle">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontweight">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathvariant">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="movablelimits">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="accent">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="form">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fence">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathsize">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="stretchy"/>
+      <xs:attribute name="fontstyle"/>
+      <xs:attribute name="fontweight"/>
+      <xs:attribute name="mathvariant"/>
+      <xs:attribute name="movablelimits"/>
+      <xs:attribute name="class"/>
+      <xs:attribute name="accent"/>
+      <xs:attribute name="form"/>
+      <xs:attribute name="fence"/>
+      <xs:attribute name="mathsize"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mfrac">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -617,44 +360,18 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="bevelled">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="linethickness">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="bevelled"/>
+      <xs:attribute name="linethickness"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mspace">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:attribute name="width">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="linebreak">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="width"/>
+      <xs:attribute name="class"/>
+      <xs:attribute name="linebreak"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="msup">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -687,9 +404,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="msub">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -722,9 +436,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="msupsub">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -757,9 +468,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="msubsup">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -792,31 +500,13 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="mtext">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:attribute name="fontstyle">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontweight">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathvariant">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="fontstyle"/>
+      <xs:attribute name="fontweight"/>
+      <xs:attribute name="mathvariant"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mover">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -846,22 +536,11 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="accent">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="accent"/>
+      <xs:attribute name="class"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="munderover">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -891,22 +570,11 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="accentunder">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="accent">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="accentunder"/>
+      <xs:attribute name="accent"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mprescripts">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -938,15 +606,8 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
-  <xs:element name="none" type="xs:string">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
-  </xs:element>
+  <xs:element name="none" type="xs:string"/>
   <xs:element name="mstyle">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -976,37 +637,14 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="scriptlevel">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathvariant">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="displaystyle">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="mathsize">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="fontsize">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="scriptlevel"/>
+      <xs:attribute name="mathvariant"/>
+      <xs:attribute name="displaystyle"/>
+      <xs:attribute name="mathsize"/>
+      <xs:attribute name="fontsize"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="munder">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -1036,27 +674,12 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="accent">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="accentunder">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="class">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="accent"/>
+      <xs:attribute name="accentunder"/>
+      <xs:attribute name="class"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mphantom">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -1089,9 +712,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="mpadded">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -1121,27 +741,12 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="width">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="depth">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="height">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="width"/>
+      <xs:attribute name="depth"/>
+      <xs:attribute name="height"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="menclose">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -1171,17 +776,10 @@
         <xs:element ref="mathml:mpadded"/>
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
-      <xs:attribute name="notation">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="notation"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="semantics">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="mathml:mstyle"/>
@@ -1212,28 +810,13 @@
         <xs:element ref="mathml:menclose"/>
         <xs:element ref="mathml:annotation"/>
       </xs:choice>
-      <xs:attribute name="definitionURL">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
-      <xs:attribute name="encoding">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="definitionURL"/>
+      <xs:attribute name="encoding"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="annotation">
-    <xs:annotation>
-      <xs:documentation/>
-    </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:attribute name="encoding">
-        <xs:annotation>
-          <xs:documentation/>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attribute name="encoding"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>
