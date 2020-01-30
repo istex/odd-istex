@@ -150,6 +150,7 @@
                             <elementRef key="msupsub"/>
                             <elementRef key="msup"/>
                             <elementRef key="mo"/>
+                            <elementRef key="mover"/>
                             <elementRef key="mfenced"/>
                             <elementRef key="mtable"/>
                             <elementRef key="munderover"/>

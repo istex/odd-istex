@@ -24,6 +24,7 @@
         <xs:element ref="mathml:msupsub"/>
         <xs:element ref="mathml:msup"/>
         <xs:element ref="mathml:mo"/>
+        <xs:element ref="mathml:mover"/>
         <xs:element ref="mathml:mfenced"/>
         <xs:element ref="mathml:mtable"/>
         <xs:element ref="mathml:munderover"/>
