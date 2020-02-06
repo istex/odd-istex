@@ -5951,6 +5951,7 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
     <xs:complexType>
       <xs:choice maxOccurs="unbounded">
         <xs:group ref="tei:tei_model.pLike"/>
+        <xs:group ref="tei:tei_model.divLike"/>
         <xs:group ref="tei:tei_model.listLike"/>
         <xs:group ref="tei:tei_model.headLike"/>
       </xs:choice>
