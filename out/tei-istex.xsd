@@ -2277,6 +2277,11 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="mathml:mrow"/>
     </xs:choice>
   </xs:group>
+  <xs:group name="tei_model.gLike">
+    <xs:sequence>
+      <xs:element ref="tei:g"/>
+    </xs:sequence>
+  </xs:group>
   <xs:group name="tei_model.pPart.msdesc">
     <xs:choice>
       <xs:element ref="tei:catchwords"/>
@@ -7482,9 +7487,24 @@ Les valeurs suggérées comprennent: 1] main; 2] sub(subordinate) ; 3] alt(alter
     <xs:complexType mixed="true">
       <xs:choice maxOccurs="unbounded">
         <xs:group ref="tei:tei_model.graphicLike"/>
+        <xs:group ref="tei:tei_model.gLike"/>
         <xs:group ref="tei:tei_macro.limitedContent"/>
       </xs:choice>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="g">
+    <xs:annotation>
+      <xs:documentation>(caractère ou glyphe) représente un glyphe, ou un caractère non standard [5. Characters, Glyphs, and Writing Modes]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attribute name="ref" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>pointe vers la description du caractère ou du glyphe visé</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="tei_att.global.facs.attributes">

@@ -100,6 +100,7 @@
                     <content>
                         <alternate minOccurs="1" maxOccurs="unbounded">
                             <classRef key="model.graphicLike"/>
+                            <classRef key="model.gLike"/>
                             <classRef key="macro.limitedContent"/>
                         </alternate>
                     </content>
