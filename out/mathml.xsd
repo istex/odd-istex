@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/1998/Math/MathML" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:ns1="http://standoff.proposal" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wiley="http://www.wiley.com/namespaces/wiley">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  targetNamespace="http://www.w3.org/1998/Math/MathML" xmlns:dcr="http://www.isocat.org/ns/dcr"
+  xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:ns1="http://standoff.proposal"
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wiley="http://www.wiley.com/namespaces/wiley">
   <xs:import namespace="http://standoff.proposal" schemaLocation="ns1.xsd"/>
   <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.xsd"/>
   <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei-istex.xsd"/>
@@ -52,6 +55,7 @@
   <xs:element name="mrow">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -84,6 +88,7 @@
   <xs:element name="mfenced">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -119,6 +124,7 @@
   <xs:element name="mtable">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -157,6 +163,7 @@
   <xs:element name="mmultiscripts">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -189,6 +196,7 @@
   <xs:element name="mtr">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -223,6 +231,7 @@
   <xs:element name="mtd">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -259,6 +268,7 @@
   <xs:element name="msqrt">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -292,6 +302,9 @@
   </xs:element>
   <xs:element name="mi">
     <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
+      </xs:choice>
       <xs:attribute name="stretchy"/>
       <xs:attribute name="mathvariant"/>
       <xs:attribute name="fontstyle"/>
@@ -306,6 +319,9 @@
   </xs:element>
   <xs:element name="mn">
     <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
+      </xs:choice>
       <xs:attribute name="stretchy"/>
       <xs:attribute name="mathvariant"/>
       <xs:attribute name="fontstyle"/>
@@ -320,6 +336,9 @@
   </xs:element>
   <xs:element name="mo">
     <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
+      </xs:choice>
       <xs:attribute name="stretchy"/>
       <xs:attribute name="fontstyle"/>
       <xs:attribute name="fontweight"/>
@@ -335,6 +354,7 @@
   <xs:element name="mfrac">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -368,6 +388,9 @@
   </xs:element>
   <xs:element name="mspace">
     <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
+      </xs:choice>
       <xs:attribute name="width"/>
       <xs:attribute name="class"/>
       <xs:attribute name="linebreak"/>
@@ -376,6 +399,7 @@
   <xs:element name="msup">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -408,6 +432,7 @@
   <xs:element name="msub">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -440,6 +465,7 @@
   <xs:element name="msupsub">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -472,6 +498,7 @@
   <xs:element name="msubsup">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -503,6 +530,9 @@
   </xs:element>
   <xs:element name="mtext">
     <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
+      </xs:choice>
       <xs:attribute name="fontstyle"/>
       <xs:attribute name="fontweight"/>
       <xs:attribute name="mathvariant"/>
@@ -511,6 +541,7 @@
   <xs:element name="mover">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -545,6 +576,7 @@
   <xs:element name="munderover">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -579,6 +611,7 @@
   <xs:element name="mprescripts">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -612,6 +645,7 @@
   <xs:element name="mstyle">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -649,6 +683,7 @@
   <xs:element name="munder">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -684,6 +719,7 @@
   <xs:element name="mphantom">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -716,6 +752,7 @@
   <xs:element name="mpadded">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -751,6 +788,7 @@
   <xs:element name="menclose">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
@@ -784,6 +822,7 @@
   <xs:element name="semantics">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mtr"/>
         <xs:element ref="mathml:mtd"/>
