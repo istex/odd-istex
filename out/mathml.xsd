@@ -11,6 +11,7 @@
     </xs:annotation>
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:hi"/>
         <xs:element ref="mathml:mrow"/>
         <xs:element ref="mathml:mstyle"/>
         <xs:element ref="mathml:mi"/>
