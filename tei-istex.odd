@@ -216,6 +216,26 @@
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="cdgroup"/>
                             </datatype>
                         </attDef>
+                        <attDef ident="indentalign" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="indentalign"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="indentshift" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="indentshift"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="indentshiftfirst" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="indentshiftfirst"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="linebreak" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="linebreak"/>
+                            </datatype>
+                        </attDef>
                     </attList>
                     <exemplum xml:lang="fr">
                         <p>Présence de mathML</p>
@@ -740,6 +760,21 @@
                         <attDef ident="mathsize" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mathsize"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="linebreak" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="linebreak"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="lspace" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="lspace"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="rspace" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="rspace"/>
                             </datatype>
                         </attDef>
                     </attList>

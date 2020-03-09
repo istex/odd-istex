@@ -50,6 +50,10 @@
       <xs:attribute name="altimg-height"/>
       <xs:attribute name="altimg-valign"/>
       <xs:attribute name="cdgroup"/>
+      <xs:attribute name="indentalign"/>
+      <xs:attribute name="indentshift"/>
+      <xs:attribute name="indentshiftfirst"/>
+      <xs:attribute name="linebreak"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mrow">
@@ -349,6 +353,9 @@
       <xs:attribute name="form"/>
       <xs:attribute name="fence"/>
       <xs:attribute name="mathsize"/>
+      <xs:attribute name="linebreak"/>
+      <xs:attribute name="lspace"/>
+      <xs:attribute name="rspace"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mfrac">
@@ -392,6 +399,8 @@
         <xs:element ref="tei:hi"/>
       </xs:choice>
       <xs:attribute name="width"/>
+      <xs:attribute name="depth"/>
+      <xs:attribute name="height"/>
       <xs:attribute name="class"/>
       <xs:attribute name="linebreak"/>
     </xs:complexType>
