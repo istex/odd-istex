@@ -163,6 +163,7 @@
                             <elementRef key="mpadded"/>
                             <elementRef key="menclose"/>
                             <elementRef key="semantics"/>
+                            <elementRef key="malignmark"/>
                         </alternate>
                     </content>
                     <attList>
@@ -1231,6 +1232,58 @@
                 </elementSpec>
                 <!-- munder -->
                 <elementSpec ident="munder" mode="add" ns="http://www.w3.org/1998/Math/MathML">
+                    <content>
+                        <alternate minOccurs="0"
+                            maxOccurs="unbounded">
+                            <textNode/>
+                            <elementRef key="mstyle"/>
+                            <elementRef key="mtr"/>
+                            <elementRef key="mtd"/>
+                            <elementRef key="mrow"/>
+                            <elementRef key="mi"/>
+                            <elementRef key="mn"/>
+                            <elementRef key="mtext"/>
+                            <elementRef key="mfrac"/>
+                            <elementRef key="mspace"/>
+                            <elementRef key="msqrt"/>
+                            <elementRef key="msub"/>
+                            <elementRef key="msup"/>
+                            <elementRef key="mo"/>
+                            <elementRef key="mover"/>
+                            <elementRef key="mfenced"/>
+                            <elementRef key="mtable"/>
+                            <elementRef key="msubsup"/>
+                            <elementRef key="msupsub"/>
+                            <elementRef key="mmultiscripts"/>
+                            <elementRef key="munderover"/>
+                            <elementRef key="mprescripts"/>
+                            <elementRef key="none"/>
+                            <elementRef key="munder"/>
+                            <elementRef key="mphantom"/>
+                            <elementRef key="mpadded"/>
+                            <elementRef key="menclose"/>
+                        </alternate>
+                    </content>
+                    <attList>
+                        <attDef ident="accent" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accent"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="accentunder" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="accentunder"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="class" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!-- malignmark -->
+                <elementSpec ident="malignmark" mode="add" ns="http://www.w3.org/1998/Math/MathML">
                     <content>
                         <alternate minOccurs="0"
                             maxOccurs="unbounded">
