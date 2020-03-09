@@ -161,7 +161,11 @@
       <xs:attribute name="columnlines"/>
       <xs:attribute name="equalrows"/>
       <xs:attribute name="equalcolumns"/>
+      <xs:attribute name="width"/>
+      <xs:attribute name="depth"/>
+      <xs:attribute name="height"/>
       <xs:attribute name="class"/>
+      <xs:attribute name="linebreak"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="mmultiscripts">

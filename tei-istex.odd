@@ -402,6 +402,26 @@
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="class"/>
                             </datatype>
                         </attDef>
+                        <attDef ident="width" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="width"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="depth" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="depth"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="height" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="height"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="linebreak" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="linebreak"/>
+                            </datatype>
+                        </attDef>
                     </attList>
                 </elementSpec>
                 <!-- mmultiscripts -->
