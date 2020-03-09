@@ -158,6 +158,7 @@
         <xs:element ref="mathml:menclose"/>
       </xs:choice>
       <xs:attribute name="columnalign"/>
+      <xs:attribute name="columnspacing"/>
       <xs:attribute name="columnspan"/>
       <xs:attribute name="columnlines"/>
       <xs:attribute name="equalrows"/>

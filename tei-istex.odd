@@ -373,6 +373,11 @@
                         </alternate>
                     </content>
                     <attList>
+                        <attDef ident="columnspacing" mode="add">
+                            <datatype>
+                                <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnspacing"/>
+                            </datatype>
+                        </attDef>
                         <attDef ident="columnalign" mode="add">
                             <datatype>
                                 <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="columnalign"/>
