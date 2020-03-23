@@ -41,6 +41,7 @@
         <xs:element ref="mathml:semantics"/>
         <xs:element ref="mathml:malignmark"/>
       </xs:choice>
+      <xs:attribute name="id"/>
       <xs:attribute name="display"/>
       <xs:attribute name="altimg"/>
       <xs:attribute ref="wiley:location"/>
