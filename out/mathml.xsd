@@ -32,6 +32,7 @@
         <xs:element ref="mathml:mfenced"/>
         <xs:element ref="mathml:mtable"/>
         <xs:element ref="mathml:munderover"/>
+        <xs:element ref="mathml:mmultiscripts"/>
         <xs:element ref="mathml:mprescripts"/>
         <xs:element ref="mathml:none"/>
         <xs:element ref="mathml:munder"/>
