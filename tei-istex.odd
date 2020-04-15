@@ -43,7 +43,7 @@
                 <moduleRef key="spoken"
                     except="broadcast equipment incident kinesic pause recording recordingStmt scriptStmt shift transcriptionDesc u vocal writing"/>
                 <moduleRef key="textstructure"
-                    except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docImprint epigraph imprimatur opener postscript salute signed trailer"/>
+                    except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7"/>
                 <moduleRef key="figures"/>
                 <moduleRef key="transcr"/>
                 <!-- ajout modèle iso-fs pour prendre en charge les <fs> -->
@@ -1542,7 +1542,7 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="date" xml:lang="fr">
                                 <annotationBlock corresp="text">
-                                    <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                    <date change="#Unitex-3.2.0-alpha" resp="istex"
                                         scheme="https://date-entity.data.istex.fr">
                                         <term>2000</term>
                                         <fs type="statistics">
@@ -1559,7 +1559,7 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="rd-nb">
                                 <annotationBlock corresp="abstract">
-                                    <keywords change="#rd-nb" resp="#istex-rd"
+                                    <keywords change="#rd-nb" resp="#istex"
                                         scheme="https://inist-category.data.istex.fr">
                                         <term cert="0.651637563297372" key="refCode : STM" level="1"
                                             >SCIENCES APPLIQUEES, TECHNOLOGIE ET MEDECINE</term>
@@ -1578,18 +1578,18 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="rd-multicat">
                                 <annotationBlock>
-                                    <keywords change="#rd-multicat" resp="#istex-rd"
+                                    <keywords change="#rd-multicat" resp="#istex"
                                         scheme="https://inist-category.data.istex.fr">
                                         <term level="1">SOCIAL SCIENCE</term>
                                         <term level="2">TRANSPORTATION</term>
                                     </keywords>
-                                    <keywords change="#rd-multicat" resp="#istex-rd"
+                                    <keywords change="#rd-multicat" resp="#istex"
                                         scheme="https://inist-category.data.istex.fr">
                                         <term level="1">SCIENCE</term>
                                         <term level="2">TRANSPORTATION SCIENCE AND TECHNOLOGY</term>
                                         <term level="3">ENGINEERING, CIVIL</term>
                                     </keywords>
-                                    <keywords change="#rd-multicat" resp="#istex-rd"
+                                    <keywords change="#rd-multicat" resp="#istex"
                                         scheme="https://inist-category.data.istex.fr">
                                         <term level="1">ECONOMIC AND SOCIAL SCIENCE</term>
                                         <term level="2">ECONOMIC AND BUSINESS</term>
@@ -1603,7 +1603,7 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <listAnnotation type="rd-teeft">
                                 <annotationBlock corresp="text">
-                                    <keywords change="#rd-teeft" resp="#istex-rd">
+                                    <keywords change="#rd-teeft" resp="#istex">
                                         <term>
                                             <term>prepulse inhibition</term>
                                             <fs type="statistics">
@@ -1643,7 +1643,7 @@
                         <p>StandOff entité nommée</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <date change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://date-entity.data.istex.fr">
                                     <term>1997</term>
                                     <fs type="statistics">
@@ -1688,7 +1688,7 @@
                         <p>StandOff entité nommée Date</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <date change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <date change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://date-entity.data.istex.fr">
                                     <term>1997</term>
                                     <fs type="statistics">
@@ -1721,7 +1721,7 @@
                         <p>StandOff entité nommée persName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <persName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <persName change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://persname-entity.data.istex.fr">
                                     <term>Timothy Adams</term>
                                     <fs type="statistics">
@@ -1757,7 +1757,7 @@
                         <p>StandOff entité nommée orgName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <orgName change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://orgname-entity.data.istex.fr">
                                     <term>Working Party</term>
                                     <fs type="statistics">
@@ -1773,7 +1773,7 @@
                         <p>StandOff enrichissement entité nommée orgName type="funder"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <orgName change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://orgnamefunder-entity.data.istex.fr">
                                     <term>Organization for Pharmaceutical Safety and Research</term>
                                     <fs type="statistics">
@@ -1789,7 +1789,7 @@
                         <p>StandOff enrichissement entité nommée orgName type="provider"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <orgName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <orgName change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://orgnameprovider-entity.data.istex.fr">
                                     <term>TOMCAT at the SLS in Villigen, Switzerland</term>
                                     <fs type="statistics">
@@ -1822,7 +1822,7 @@
                         <p>StandOff enrichissement entité nommée placeName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <placeName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <placeName change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://placename-entity.data.istex.fr">
                                     <term>Geneva</term>
                                     <fs type="statistics">
@@ -1859,7 +1859,7 @@
                         <p>StandOff enrichissement entité nommée geogName</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <geogName change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <geogName change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://geogname-entity.data.istex.fr">
                                     <term>Mississippi River</term>
                                     <fs type="statistics">
@@ -1892,7 +1892,7 @@
                         <p>StandOff enrichissement entité nommée ref type="bibl"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <ref type="bibl" change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <ref type="bibl" change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://refbibl-entity.data.istex.fr">
                                     <term>Stern et al.</term>
                                     <fs type="statistics">
@@ -1908,7 +1908,7 @@
                         <p>StandOff enrichissement entité nommée ref type="url"</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <ref type="url" change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <ref type="url" change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://refurl-entity.data.istex.fr">
                                     <term>http://www.treas.gov/press/releases/js</term>
                                     <fs type="statistics">
@@ -1960,7 +1960,7 @@
                         <p>StandOff enrichissement entité nommée bibl</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <bibl change="#Unitex-3.2.0-alpha" resp="istex-rd"
+                                <bibl change="#Unitex-3.2.0-alpha" resp="istex"
                                     scheme="https://bibl-entity.data.istex.fr">
                                     <term>GIRODET, Jean (2007). Dictionnaire des pièges et
                                         difficults de la langue française, Paris : Bordas</term>
@@ -1998,7 +1998,7 @@
                         <p>StandOff enrichissement indexation rd-teeft</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="text">
-                                <keywords change="#istex-rd" resp="#istex-rd">
+                                <keywords change="#istex" resp="#istex">
                                     <term>
                                         <term>prepulse inhibition</term>
                                         <fs type="statistics">
@@ -2029,7 +2029,7 @@
                         <p>StandOff enrichissement categorisation rd-nb</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock corresp="abstract">
-                                <keywords change="#rd-nb" resp="#istex-rd"
+                                <keywords change="#rd-nb" resp="#istex"
                                     scheme="https://inist-category.data.istex.fr">
                                     <term cert="0.651637563297372" key="refCode : STM" level="1"
                                         >SCIENCES APPLIQUEES, TECHNOLOGIE ET MEDECINE</term>
@@ -2047,18 +2047,18 @@
                         <p>StandOff enrichissement categorisation rd-multicat</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <annotationBlock>
-                                <keywords change="#rd-multicat" resp="#istex-rd"
+                                <keywords change="#rd-multicat" resp="#istex"
                                     scheme="https://inist-category.data.istex.fr">
                                     <term level="1">SOCIAL SCIENCE</term>
                                     <term level="2">TRANSPORTATION</term>
                                 </keywords>
-                                <keywords change="#rd-multicat" resp="#istex-rd"
+                                <keywords change="#rd-multicat" resp="#istex"
                                     scheme="https://inist-category.data.istex.fr">
                                     <term level="1">SCIENCE</term>
                                     <term level="2">TRANSPORTATION SCIENCE AND TECHNOLOGY</term>
                                     <term level="3">ENGINEERING, CIVIL</term>
                                 </keywords>
-                                <keywords change="#rd-multicat" resp="#istex-rd"
+                                <keywords change="#rd-multicat" resp="#istex"
                                     scheme="https://inist-category.data.istex.fr">
                                     <term level="1">ECONOMIC AND SOCIAL SCIENCE</term>
                                     <term level="2">ECONOMIC AND BUSINESS</term>

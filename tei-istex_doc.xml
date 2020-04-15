@@ -12687,7 +12687,7 @@ epistemology, methodology and history of
     structurée dans laquelle les sous-composants peuvent ou non être explicitement balisés.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una cita bibliográfica estructurada libremente,
     los componentes de la cual pueden nohaber sido etiquetados explícitamente.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una citazione bibliografica strutturata
     liberamente i cui componeneti potrebbero o meno essere codificati esplicitamente.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">enthält eine lose strukturierte bibliografische Angabe, in der einzelne Komponenten explizit
-    ausgezeichnet sein können.</desc><classes><memberOf key="model.biblLike"/><memberOf key="model.biblPart"/><memberOf key="att.declarable"/><memberOf key="att.docStatus"/><memberOf key="att.global"/><memberOf key="att.sortable"/><memberOf key="att.timed" mode="add"/><memberOf key="att.typed"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode xmlns:rng="http://relaxng.org/ns/structure/1.0"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.gLike"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.highlighted"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.pPart.data"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.pPart.edit"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.segLike"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.ptrLike"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.biblPart"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.global"/></alternate></content><attList><attDef ident="scheme"><desc>désigne la liste des ontologies dans lequel l'ensemble des termes
+    ausgezeichnet sein können.</desc><classes><memberOf key="model.biblLike"/><memberOf key="model.biblPart"/><memberOf key="model.graphicLike" mode="add"/><memberOf key="att.declarable"/><memberOf key="att.docStatus"/><memberOf key="att.global"/><memberOf key="att.sortable"/><memberOf key="att.timed" mode="add"/><memberOf key="att.typed"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode xmlns:rng="http://relaxng.org/ns/structure/1.0"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.gLike"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.highlighted"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.pPart.data"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.pPart.edit"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.segLike"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.ptrLike"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.biblPart"/><classRef xmlns:rng="http://relaxng.org/ns/structure/1.0" key="model.global"/></alternate></content><attList><attDef ident="scheme"><desc>désigne la liste des ontologies dans lequel l'ensemble des termes
                                 concernés sont définis.</desc><datatype><dataRef key="teidata.pointer"/></datatype></attDef></attList><exemplum xml:lang="fr"><p>StandOff enrichissement entité nommée bibl</p><egXML xmlns="http://www.tei-c.org/ns/Examples"><annotationBlock corresp="text"><bibl change="#Unitex-3.2.0-alpha" resp="istex" scheme="https://bibl-entity.data.istex.fr"><term>GIRODET, Jean (2007). Dictionnaire des pièges et
                                         difficults de la langue française, Paris : Bordas</term><fs type="statistics"><f name="frequency"><numeric value="1"/></f></fs></bibl></annotationBlock></egXML></exemplum><remarks><p>Dans Istex on utilise plutôt biblStruct</p></remarks><remarks><p>Modèle modifié pour bénéficier de <gi>geogName</gi> dans
                                 <gi>annotationBlock</gi></p></remarks><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
@@ -15708,7 +15708,7 @@ elements of  <gi>profileDesc</gi> unless these are documenting multiple texts.</
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD4">2.4. The Profile Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD11">2.1.1. The TEI Header and Its Components</ref>
   </listRef></elementSpec><elementSpec rend="add" module="header" ident="abstract"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2012-12-27" xml:lang="en">contains a summary or formal
-    abstract prefixed to an existing source document by the encoder.</desc><classes><memberOf key="att.global"/><memberOf key="model.profileDescPart"/></classes><content><alternate minOccurs="1" maxOccurs="unbounded"><classRef key="model.pLike"/><classRef key="model.listLike"/><classRef key="model.headLike"/></alternate></content><attList/><exemplum xml:lang="fr"><p>Cas où un abstract contient un titre</p><egXML xmlns="http://www.tei-c.org/ns/Examples"><abstract><head>Méthode</head><p>Contenu de la
+    abstract prefixed to an existing source document by the encoder.</desc><classes><memberOf key="att.global"/><memberOf key="model.profileDescPart"/></classes><content><alternate minOccurs="1" maxOccurs="unbounded"><classRef key="model.pLike"/><classRef key="model.divLike"/><classRef key="model.listLike"/><classRef key="model.headLike"/></alternate></content><attList/><exemplum xml:lang="fr"><p>Cas où un abstract contient un titre</p><egXML xmlns="http://www.tei-c.org/ns/Examples"><abstract><head>Méthode</head><p>Contenu de la
                                 méthode.</p><head>Expérience</head><p>Contenu de
                                     l'expérience.</p></abstract></egXML></exemplum><remarks><p>Modèle modifié pour bénéficier de <gi>head</gi> dans
                             <gi>abstract</gi></p></remarks><listRef xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:rng="http://relaxng.org/ns/structure/1.0">
@@ -18124,6 +18124,599 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
     </egXML>
   </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDIV">4.1. Divisions of the Body</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="trailer"><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains a closing title or footer appearing at the end of a division of a text.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타나는 마지막 제목 또는 꼬리말을 포함한다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含文本中一個區段結束時的結尾題名或尾錄。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">テキスト部分の最後にある，結びのタイトルや脚注を示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient un titre de fin ou de bas de page à la fin d’une
+    division du texte.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-25" xml:lang="de">enthält einen abschließenden Nachsatz oder eine Fußzeile am Ende eines Textabschnitts.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una fórmula de clausura o un elemento a pie de
+    página que aparece al final de una sección de texto</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una formula di chiusura o un elemento a piè di
+    pagina che compare alla fine di una sezione di testo</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="att.typed"/>
+    <memberOf key="model.divBottomPart"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="lg"/><classRef key="model.gLike"/><classRef key="model.phrase"/><classRef key="model.inter"/><classRef key="model.lLike"/><classRef key="model.global"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="mul">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <trailer>Explicit pars tertia</trailer>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <trailer>
+	<l>In stead of FINIS this advice <hi>I</hi> send,</l>
+	<l>Let Rogues and Thieves beware of <lb/>
+	<hi>Hamans</hi> END.</l>
+      </trailer>
+    </egXML>
+    <p>From EEBO A87070</p>
+   </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <trailer>Explicit pars tertia</trailer>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n61">
+      <trailer>畢竟董卓性命如何，且聽下文分解。</trailer>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="de" versionDate="2017-06-25">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <trailer>
+        <l>In stead of FINIS this advice <hi>I</hi> send,</l>
+        <l>Let Rogues and Thieves beware of <lb/>
+          <hi>Hamans</hi> END.</l>
+      </trailer>
+    </egXML>
+    <p>Aus EEBO A87070</p>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSCO">4.2.4. Content of Textual Divisions</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="byline"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">mention de responsabilité</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">Verfasserzeile</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains the primary statement of responsibility given for a work
+on its title page or at the head or end of the work.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">제목 페이지 또는 작품의 시작부 또는 종료부에서 작품 책임성에 대한 주요 진술을 포함한다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含作品的主要責任陳述，出現在題名頁或作品開頭或結尾處。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">タイトルページや作品の冒頭や最後にある，作品の責任者を表す第一位の記
+  述．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">indique la responsabilité principale
+            pour une œuvre donnée sur la page de titre ou au début ou à la fin de
+        l’œuvre.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">enthält Angaben zur Hauptverantwortlichkeit eines Werks, entweder auf der Titelseite oder am
+    Anfang oder Ende des Werks.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene la declaración principal de responsabilidad para una obra, así como aparece en su título correspondiente, o al inicio o fin de la obra.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene la principale dichiarazione di responsabilità per un'opera così come appare sul corrispondente frontespizio oppure all'inizio o alla fine dell'opera stessa</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.divWrapper"/>
+    <memberOf key="model.titlepagePart"/>
+    <memberOf key="model.pLike.front"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><textNode/><classRef key="model.gLike"/><classRef key="model.phrase"/><elementRef key="docAuthor"/><classRef key="model.global"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#AI-BIBL-2">
+      <byline>Written by a CITIZEN who continued all the
+while in London. Never made publick before.</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Montherlant-Pitie">
+      <byline>écrit par Costals sur le feuillet blanc de cette lettre : " cette correspondance n'
+          était pour vous qu' un jeu. "</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Constant-Journal">
+      <byline>extraits de Villoison et de Schlegel. Commencé la rédaction du quatrième
+        livre.</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>Reportage céleste de notre envoyé spécial au paradis</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <dateline>Zagreb :</dateline>
+      <byline>de notre envoyé spécial.</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>Par le docteur<docAuthor>Martin Becanus,</docAuthor> au tome troisiesme de ses
+          opuscules</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>由一個倫敦土生土長的市民撰寫，先前未曾出版過。</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>錄自她自己的回憶錄</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>來自華盛頓的政治編輯喬治．瓊斯</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <dateline>重慶:</dateline>
+      <byline>外交使節專用</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>源自美國哥倫比亞大學博士<docAuthor>胡適</docAuthor>
+         </byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>Written from her own MEMORANDUMS</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <byline>By George Jones, Political Editor, in Washington</byline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#PHILIPOTT">
+      <byline>BY
+<docAuthor>THOMAS PHILIPOTT,</docAuthor>
+Master of Arts,
+(Somtimes)
+Of Clare-Hall in Cambridge.</byline>
+    </egXML>
+  </exemplum><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">
+    <p>The byline on a title page may include either the name
+or a description for the document's author. Where the name is included,
+it may optionally be tagged using the <gi>docAuthor</gi> element.</p>
+  </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="fr" versionDate="2007-06-12">
+    <p>La mention de reponsabilité sur une page de titre peut inclure, soit le nom, soit la description de
+                l'auteur d'un document. Lorsque le nom y est donné, on peut éventuellement l'encoder
+                au moyen de l'élément <gi>docAuthor</gi>.</p>
+  </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="ja" versionDate="2008-04-05">
+    <p>
+    タイトルページにある署名欄には，当該文書の作者名や説明があるかもし
+    れない．作者名がある場合，要素<gi>docAuthor</gi>を使い符号化しても
+    よい．
+    </p>
+  </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">
+    <p>Die Verfasserzeile auf einer Titelseite kann entweder den Namen oder die Beschreibung des
+      Dokumentautors enthalten. Wenn der Name angegeben wird, kann er optional mit dem
+      <gi>docAuthor</gi>-Element ausgezeichnet werden.</p>
+  </remarks><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSOC">4.2.2. Openers and Closers</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSFRONT">4.5. Front Matter</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="dateline"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">mention de date</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains a brief description of the place, date, time, etc. of production of a letter,
+    newspaper story, or other work, prefixed or suffixed to it as a kind of heading or trailer.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">편지, 신문 기사 또는 다른 작품에 제목부 또는 종료 요약부로서, 앞에 또는 뒤에 부착되어 있는,
+    그것이 생성된 장소, 날짜, 시간 등의 간단한 기술.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含簡短的地點、日期及時間等的描述，通常出現在信件、報紙文章、或其他作品中的開頭或結尾，作為一種標頭或結尾。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">手紙や新聞記事などの前後に付加されている，場所，日付，時間などを簡易 に示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient une brève description des lieux, date, heure,
+    etc. concernant la production d’une lettre, d’un article de journal ou d’un autre texte qui,
+    placée au début ou à la fin, lui est associée comme en-tête ou annonce de fin.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">enthält kurze Angaben zu Entstehungsort, -datum, -zeit, usw. eines Briefs, Zeitungsartikels oder
+    anderen Werks. Diese können als Überschrift oder Nachsatz dem Text voran- bzw. nachgestellt
+    werden.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una breve descripción de lugar, fecha, hora,
+    etc. de producción de una carta, un artículo periodístico u otro tipo de texto; viene antepuesto
+    o pospuesto a este como elemento de abertura o clausura.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una breve descrizione di luogo, data, ora, ecc.
+    di produzione di una lettera, un articolo di giornale o altro tipo di testo; viene anteposto o
+    posposto a mo' di elemento di apertura o chiusura</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.divWrapper"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+    
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><textNode/><classRef key="model.gLike"/><classRef key="model.phrase"/><classRef key="model.global"/><elementRef key="docDate"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <dateline>Walden, this 29. of August 1592</dateline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <dateline>Avignon, le 11 février. </dateline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Constant-Journal">
+      <div type="chapter">
+        <p>Et, sur cet océan bourdonnant de mille vaguelettes, se leva l'armée caressante et si
+            tendre des merveilleuses sirènes blondes aux seins durs comme ça. </p>
+        <closer>
+          <dateline><name type="place">Thionne-Paris</name>, <date>1950-1951.</date></dateline>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <dateline>2008年7月3日，香港。</dateline>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="chapter">
+        <p> 自己想吃人，又怕被別人吃了，都用著疑心极深的眼光，面面相覷。…… </p>
+        <closer>
+          <dateline>
+            <name type="place">南京</name>
+            <date>1918–1919</date>
+          </dateline>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DSCO-eg-53">
+      <div type="chapter">
+        <p><!-- ... --> and his heart was going like mad and yes I said yes I will Yes.</p>
+        <closer>
+          <dateline>
+            <name type="place">Trieste-Zürich-Paris,</name>
+            <date>1914–1921</date>
+          </dateline>
+        </closer>
+      </div>
+    </egXML>
+    
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSOC">4.2.2. Openers and Closers</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="argument"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">argument</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2012-12-27" xml:lang="en">contains a formal list or prose description of the topics addressed by
+	a subdivision of a text.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">텍스트의 하위 구역에서 서술된 주제에 대한 형식적 목록 또는 산문체 기술</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">規則列表或文字敘述，說明文本分段內容包含的主題。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">下位部分にあるテキストのトピックを整形のリストまたは散文で示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">liste formelle ou description en texte libre
+            des sujets traités dans une subdivision d’un texte</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">beinhaltet eine systematische Aufzählung oder eine Prosabeschreibung der Themen, die in einem
+    Unterabschnitt des Textes behandelt werden.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">lista formal o descripción de los argumentos contenidos en una sección de texto.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">lista formale o descrizione degli argomenti contenuti in una sezione di testo</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.divWrapper"/>
+    <memberOf key="model.titlepagePart"/>
+    <memberOf key="model.pLike.front"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.headLike"/></alternate><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence>
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#beagle">
+      <argument>
+        <p>Monte Video — Maldonado — Excursion
+to R Polanco — Lazo and Bolas — Partridges —
+Absence of Trees — Deer — Capybara, or River Hog —
+Tucutuco — Molothrus, cuckoo-like habits — Tyrant
+Flycatcher — Mocking-bird — Carrion Hawks —
+Tubes formed by Lightning — House struck</p>
+      </argument>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Gide-Journ_fx">
+      <argument>
+        <p>28 janvier. J’ai le plus grand mal à me réatteler aux Faux-Monnayeurs — La  Bastide. Fin mars. Besoin de couper mon travail. — Cuverville . Fin mai. Mise au net et       dactylographie de cinq chapitres des Faux-Monnayeurs. — 8 juin. Achevé les Faux- Monnayeurs. — 14 juillet. Départ pour le Congo. </p>
+      </argument>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n49">
+      <argument>
+        <p>自我與他者的關係— 個體感性存在—共有性—交流性—同時性— 責任感/回應性—亦此亦彼—你中有我、我中有你—同時共存——非非此即彼—非你死我活—視域剩餘—外在性—超在性</p>
+      </argument>
+    </egXML>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="epigraph"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">Motto</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2011-11-05" xml:lang="en">contains a quotation, anonymous or attributed, appearing at
+  the start or end of a section or on a title page.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">절 또는 장의 시작, 또는 제목 페이지에 나타나는 인용, 작자미상, 또는 추정을 포함한다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含一段匿名或署名引文，出現在段落或章節的開頭，或在題名頁中。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">章や節の始め，タイトルページなどにある引用(題辞)を示す． </desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient une citation, anonyme ou attribuée et qui apparaît au
+    début d’une section ou d’un chapitre ou sur une page de titre.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-13" xml:lang="de">enthält ein anonymes oder jemandem zugeschriebenes Zitat, das am Beginn eines Abschnitts,
+    Kapitels oder auf einer Titelseite steht.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una cita, anónima o atribuida, que aparece al
+    inicio de una sección o capítulo, o en el frontispicio.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una citazione, anonima o attribuita, che appare
+    all'inizio di una sezione o capitolo, o sul frontespizio</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.divWrapper"/>
+    <memberOf key="model.titlepagePart"/>
+    <memberOf key="model.pLike.front"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="mul">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="la" source="#DRPAL-eg-44">
+      <epigraph xml:lang="la">
+        <cit>
+          <bibl>Lucret.</bibl>
+          <quote>
+            <l part="F">petere inde coronam,</l>
+            <l>Vnde prius nulli velarint tempora Musae.</l>
+          </quote>
+        </cit>
+      </epigraph>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n56">
+      <epigraph xml:lang="zh">
+        <cit>
+          <bibl>俞平伯</bibl>
+          <quote>
+            <l part="N">小燕子其實也無所愛，</l>
+            <l>只是沉浸在朦朧而飄忽的夏夜夢里罷了。</l>
+          </quote>
+        </cit>
+      </epigraph>
+    </egXML>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSAE">4.2.3. Arguments, Epigraphs, and Postscripts</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="opener"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">formule de début</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">groups together dateline, byline, salutation, and similar phrases appearing as a preliminary
+    group at the start of a division, especially of a letter.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">구역, 특히 편지의 시작부에 서문군으로 나타나는 날짜 표시란, 필자명 행, 인사말, 그리고 유사 구를
+    합하여 모아 놓는다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">匯集日期地點、署名、稱呼語及其他在區段開端出現的類似措辭，尤指信件開頭。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">テキスト部分の始まりに，日付欄，署名欄，挨拶文言など，前置き的な部分
+    としてあるものをまとめる．典型例は，手紙の場合である．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">regroupe la date, la mention de responsabilité, la
+    formule de politesse et d'autres expressions de ce type dans un groupe préliminaire au début
+    d’une division, en particulier au commencement d’une lettre.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">fasst Datumszeile, Verfasserangabe, Anredeformel und ähnliche Phrasen zusammen, die einleitend zu
+    Beginn eines Abschnitts stehen, vor allem bei einem Brief.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">agrupa la fecha, autoria, fórmula introductiva o de
+    saludo o expresiones similares utilizades al inicio de una división textual, especialmente en
+    una carta.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">raggruppa dateline, byline, formule introduttive o di
+    saluto ed espressioni simili utilizzate all'inizio di una partizione testuale, soprattutto in
+    una lettera</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.divTopPart"/>
+    <memberOf key="att.written"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><textNode/><classRef key="model.gLike"/><classRef key="model.phrase"/><elementRef key="argument"/><elementRef key="byline"/><elementRef key="dateline"/><elementRef key="epigraph"/><elementRef key="salute"/><elementRef key="signed"/><classRef key="model.global"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#harveyFour">
+      <opener>
+        <dateline>Walden, this 29. of August 1592</dateline>
+      </opener>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <opener>
+        <dateline>Avignon, le 11 février.</dateline>
+      </opener>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Diderot-Corresp_SV">
+      <opener>
+        <dateline><name type="place"> à Paris </name>, <date>le 2 septembre 1769</date></dateline>
+      </opener>
+      <p>Mais non, ma bonne amie, vous n' aviez pas raison de vous plaindre... </p>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <opener>
+        <dateline>1983年7月3日</dateline>
+      </opener>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <opener>
+        <dateline>
+          <name type="place">杭州西湖</name>
+          <date>2008年4月1日</date>
+        </dateline>
+        <salute>親愛的小張：</salute>
+      </opener>
+      <p>很抱歉，我今天有事無法赴約，希望您能諒解...</p>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DSCO-eg-51">
+      <opener>
+        <dateline>
+          <name type="place">Great Marlborough Street</name>
+          <date>November 11, 1848</date>
+        </dateline>
+        <salute>My dear Sir,</salute>
+      </opener>
+      <p>I am sorry to say that absence from town and other circumstances have prevented me from
+        earlier enquiring...</p>
+    </egXML>
+    
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="closer"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">formule finale</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-04-06" xml:lang="en">groups together salutations, datelines, and similar phrases appearing as a final group at
+    the end of a division, especially of a letter.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">구역의 마지막, 특히 편지의 종료부에 발문으로 나타나는 인사말, 날짜 표시란, 그리고 유사 구를 합하여
+    모아 놓는다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">匯集日期地點、署名、稱呼語、及其他在區段結尾出現的類似措辭，尤指信件結尾。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">挨拶文言，日付欄など，ある区分の終わり，特に手紙の終わりにある一連の 文言をまとめる．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">regroupe une formule de politesse, une indication d'une
+    date et d'autres expressions semblables figurant comme expression à la fin d’une division, en
+    particulier à la fin d’une lettre.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">fasst Grußformeln, Datumszeilen und ähnliche Phrasen zusammen, die am Ende eines Abschnitts
+    stehen, vor allem bei einem Brief.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">agrupa saludos, fechas, y expresiones similares que
+    aparecen al final de una división textual, especialmente en una letra.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">raggruppa dateline, byline, formule conclusive o di
+    saluto ed espressioni simili utilizzate alla fine di una partizione, soprattutto in una lettera</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="att.written"/>
+    <memberOf key="model.divBottomPart"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><textNode/><classRef key="model.gLike"/><elementRef key="signed"/><elementRef key="dateline"/><elementRef key="salute"/><classRef key="model.phrase"/><classRef key="model.global"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="letter">
+        <p> perhaps you will favour me with a sight of it when convenient.</p>
+        <closer>
+          <salute>I remain, &amp;c. &amp;c.</salute>
+          <signed>H. Colburn</signed>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Billetdoux">
+      <div type="letter">
+        <p> N'y voyez que le signe de l'intérêt que je que je porte à une profession qui fut la
+            mienne. Je désire en effet, insérer votre article dans un ouvrage sur la presse
+            française contemporaine. </p>
+        <closer>
+          <salute>Veuillez agréer, je vous prie, Monsieur, l'assurance de mes sentiments les
+              meilleurs. </salute>
+          <signed> Françoise Giroud</signed>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Montesquieu">
+      <div type="chapter">
+        <p>Voilà, cher Rhedi, ce que j' appelle le droit public. Voilà le droit des gens, ou
+            plutôt celui de la raison. </p>
+        <closer>
+          <dateline><name type="place">à Paris </name>, <date>le 4 de la lune de Zilhagé, 1716. </date></dateline>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="letter">
+        <p> 不久，我們就能再見面。</p>
+        <closer>
+          <salute>祝事事順心</salute>
+          <signed>謝甯</signed>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="chapter">
+        <p> 自己想吃人，又怕被別人吃了，都用著疑心极深的眼光，面面相覷。…… </p>
+        <closer>
+          <dateline>
+            <name type="place">南京</name>
+            <date>1918–1919</date>
+          </dateline>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DSCO-eg-53">
+      <div type="chapter">
+        <p><!-- ... --> and his heart was going like mad and yes I said yes I will Yes.</p>
+        <closer>
+          <dateline>
+            <name type="place">Trieste-Zürich-Paris,</name>
+            <date>1914–1921</date>
+          </dateline>
+        </closer>
+      </div>
+    </egXML>
+    
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+    
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSOC">4.2.2. Openers and Closers</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="salute"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">salutation</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">인사말</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">稱呼語</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">formule de politesse</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">Grußformel</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">saludo</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">formula di saluto</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains a salutation or greeting prefixed to a foreword, dedicatory epistle, or other
+    division of a text, or the salutation in the closing of a letter, preface, etc.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">머리말, 헌정 서한, 또는 텍스트의 다른 구역 앞에 첨부되는 인사말 또는 환영사, 아니면 편지, 서문
+    등의 결문의 인사말.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含在序言、獻詞、或其他文本區段開頭的稱呼語或問候語，或是信件、引言等結尾處的致意詞。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">(著者以外の)序文や献呈書簡などのテキスト部分に附属する挨拶文言または
+    挨拶，または書簡や(著者による)序文の大和にある挨拶文言を示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient un dédicace ou une formule de salut qui précède
+    un avant-propos ou autre division du texte;  ou bien encore la formule de
+    politesse qui conclut une lettre, une préface, etc.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">enthält eine Anrede oder Grußformel, die einem Vorwort, einer Widmung oder einem anderen
+    Abschnitt eines Textes vorangestellt ist oder die Grußformel am Ende eines Briefes, eines
+    Vorworts, usw.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una fórmula introductiva o de saludo previa a un
+    prefacio, a una dedicatoria o a atra división textual, o bien una fórmula conclusiva o de saludo
+    al final de una carta, prefacio, etc.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una formula introduttiva o di saluto anteposta
+    rispetto a una prefazione, una lettera di dedica o altra partizione testuale, oppure una formula
+    conclusiva o di saluto alla fine di una lettera, prefazione, ecc</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="att.written"/>
+    <memberOf key="model.divWrapper"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <macroRef key="macro.paraContent"/>
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#harveyFour">
+      <salute>To all courteous mindes, that will voutchsafe the readinge.</salute>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Mendes-France">
+      <salute>Faites toutes mes amitiés à votre femme et recevez, mon cher ami, l'expression de
+          mes sentiments affectueux et dévoués. </salute>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <salute>致敬啟者</salute>
+    </egXML>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSOC">4.2.2. Openers and Closers</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="signed"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">signature</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">서명</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">簽名</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">Signatur</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">firma</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">firma</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains the closing salutation, etc., appended to a foreword,
+dedicatory epistle, or other division of a text.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">머리말, 헌정 서한 또는 텍스트의 다른 구역에 첨부되는 결문 인사.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-10-02" xml:lang="fr">contient la dernière salutation,  ajoutée à un avant-propos,
+    à une  dédicace ou à une autre division du texte.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含結尾致意詞等，附加在序言、獻詞、或其他文本區段中。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">(著者以外の)序文や献呈書簡などのテキスト部分にある，結びの挨拶などを
+  示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">enthält die abschließende Grußformel o.Ä. die ein Vorwort, eine Widmung oder einen anderen Abschnitt des Textes beendet.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una fórmula conclusiva o de saludo pospuesta a un prefacio, dedicatoria, u otro tipo de división textual.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una formula conclusiva o di saluto posposta rispetto a una prefazione, lettera di dedica, o altra partizione testuale.</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="att.written"/>
+    <memberOf key="model.divBottomPart"/>
+    <memberOf key="model.divTopPart"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <macroRef key="macro.paraContent"/>
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#miltPo">
+      <signed>Thine to command <name>Humph. Moseley</name>
+         </signed>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#swiftLaw">
+      <closer>
+        <signed>Sign'd and Seal'd,
+	<list><item>John Bull,</item><item>Nic. Frog.</item></list>
+	           </signed>
+      </closer>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Mauriac-Marquise">
+      <signed>votre fidèle amante, <name>Manon Lescaut.</name>
+        </signed>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <signed><name>李敖</name>，于台北。
+      </signed>
+    </egXML>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSOC">4.2.2. Openers and Closers</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="postscript"><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-08-04" xml:lang="en">contains a postscript, e.g. to a letter.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">예를 들어 편지의, 추신.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="es">contiene una posdata, p.ej. en una carta.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">追伸を示す．例えば，手紙の場合など．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-03-30" xml:lang="fr">contient un post-scriptum,  par exemple au bas d' une
+lettre.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-11-06" xml:lang="it">contiene un post scriptum, come nel caso di una lettera</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">enthält einen Nachtrag (Postskriptum), z. B. zu einem Brief.</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="att.written"/>
+    <memberOf key="model.divBottomPart"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divTopPart"/></alternate><classRef key="model.common"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.common"/></alternate><sequence minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottomPart"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence>
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="letter">
+        <opener>
+          <dateline>
+            <placeName>Rimaone</placeName>
+            <date when="2006-11-21">21 Nov 06</date>
+          </dateline>
+          <salute>Dear Susan,</salute>
+        </opener>
+        <p>Thank you very much for the assistance splitting those
+	logs. I'm sorry about the misunderstanding as to the size of
+	the task. I really was not asking for help, only to borrow the
+	axe. Hope you had fun in any case.</p>
+        <closer>
+          <salute>Sincerely yours,</salute>
+          <signed>Seymour</signed>
+        </closer>
+        <postscript>
+          <label>P.S.</label>
+          <p>The collision occured on <date when="2001-07-06">06 Jul 01</date>.</p>
+        </postscript>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Weil-Atares">
+      <div type="letter">
+        <opener>
+          <dateline>
+            <date when="1942">Printemps 1942 </date>
+          </dateline>
+          <salute>Cher ami, </salute>
+        </opener>
+        <p>Le printemps vient maintenant. J'espère que là où tu es le climat à cette saison n'est
+            pas encore pénible. C'est le moment des travaux des champs ; peut-être arrivera-t-on à
+            quelque chose pour toi. S'il n'y a pas moyen de te faire venir en France, faut-il faire
+            des démarches pour essayer de te faire quitter l'Europe ? Écris-le-moi. </p>
+        <p>[...] </p>
+        <closer>
+          <salute> Crois à mon amitié fraternelle. </salute>
+          <signed>Simone Weil </signed>
+        </closer>
+        <postscript>
+          <label>P.S.</label>
+          <p>Voici la traduction de quelques vers grecs d'Eschyle. Ils sont prononcés par
+              Prométhée, le dieu qui, d'après les croyances des Grecs, avait sauvé les hommes de la
+              destruction, avait volé le feu pour le leur donner et leur avait appris le langage, le
+              nombre, l'astronomie, les métiers et les arts. Il en fut puni et fut cloué sur un
+              rocher. La tragédie d'Eschyle commence par la scène où on le cloue ; il se tait
+              pendant ce temps, puis, quand ses bourreaux sont partis, il dit : [...]</p>
+        </postscript>
+      </div>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n58">
+      <div type="letter">
+        <opener>
+          <dateline>
+            <date when="1911-03-26">辛亥三月二十六</date>
+          </dateline>
+          <salute>意映卿卿如晤：</salute>
+        </opener>
+        <p>吾今以此書與汝永別矣！吾作此書，淚珠和筆墨齊下，不能竟書，而欲擱筆！又恐汝不察吾衷，謂吾忍舍汝而死，謂吾不知汝之不欲吾死也，故遂忍悲為汝言之。...</p>
+        <closer>
+          <signed>夜四鼓<name>意洞</name>手書</signed>
+        </closer>
+      </div>
+    </egXML>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
   </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="titlePage"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">title page</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">제목 페이지</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">題名頁</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">page de titre</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">Titelseite</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">frontispicio</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">frontespizio</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains the title page of a text, appearing within the front or back matter.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">전면부 또는 후면부 자료 내에서 나타나는 텍스트의 제목 페이지를 포함한다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含文本的題名頁，出現在正文前資訊或正文後資訊之中。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">前付や後付中にある，テキストのタイトルページを示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient la page de titre d’un texte qui figure dans
     les parties liminaires.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">enthält die Titelseite eines Textes, die entweder im
     Vorspann (front) oder Nachspann (back) stehen kann.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene el frontispicio de un texto incluido en el
@@ -18446,6 +19039,30 @@ and then a Captain of several Ships</byline>
       eines <gi>docAuthor</gi>-Elements benutzt.)</p>
   </remarks><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="imprimatur"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">Imprimatur</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains a formal statement authorizing the publication of a work, sometimes required to
+    appear on a title page or its verso.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">작품 출판을 인가하는 공식적 진술. 이는 제목 페이지 또는 그 이면에 나타나도록 종종 요구된다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含作品出版的正式授權聲明，有時必須出現在題名頁或反頁上。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">作品の出版に関する公式の情報を示す．場合によっては，タイトルページや その左ページに出現する必要がある．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient une mention formalisée autorisant la publication
+    d’un ouvrage, parfois exigée sur une page de titre ou à son verso.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">enthält eine formelle Erklärung zur Autorisation der
+    Veröffentlichung, die manchmal auf der Titel- oder Rückseite erscheinen muss.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una declaración formal que autoriza la
+    publicazione de una obra, normalmente contenida en el recto o en el verso del frontispicio.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una dichiarazione formale che autorizza la
+    pubblicazione di un'opera, di solito riportata sul recto o sul verso del frontespizio</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.titlepagePart"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <macroRef key="macro.paraContent"/>
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <imprimatur>Licensed and entred acording to Order.</imprimatur>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-catechisme">
+      <imprimatur>Paris, 20 juin 1968; E. Berrat, Vicaire général.</imprimatur>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <imprimatur>版權所有 翻印必究</imprimatur>
+    </egXML>
+  </exemplum><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
   </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="docEdition"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">document edition</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">문서 편집</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">文件版本</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">édition du document</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">Ausgabe des Dokuments</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">edición del documento</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">edizione del documento</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains an edition statement as presented on a title page of a
 document.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">문서의 제목 페이지에 제시되는 편집 진술을 포함한다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含一份版本陳述，與文件題名頁所顯示的相同。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">タイトルページにある当該文書の版を示す．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient une mention d’édition telle qu’elle
             figure sur la page de titre d’un document.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">enthält Angaben zur Ausgabe, entsprechend den Informationen auf dem Titelblatt eines
@@ -18482,6 +19099,95 @@ more frequent element.</p>
   </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">
     <p>Vgl. das <gi>edition</gi>-Element für bibliografische Angaben. Wie üblich wurde der kürzere Name
       für das häufiger benutzte Element verwendet.</p>
+  </remarks><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="docImprint"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">document imprint</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">문서 간기</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">文件出版說明</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">mention d'impression</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">Impressum des Dokuments</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">declaración de imprenta</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">sigla editoriale del documento</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">contains the imprint statement (place and date of publication,
+publisher name), as given
+(usually) at the foot of a title page.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">대개 제목 페이지 아래에 제시되는 인쇄 판 진술(출판 장소와 날짜, 출판사명)을 포함한다.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">包含文件出版陳述 (出版日期、地點以及出版公司名稱) ，同於 (通常) 題名頁尾所顯示的出版資訊。</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">刊記にある出版関連情報を示す．例えば，出版日，出版者名など．一般には
+  タイトルページの下にある．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient la mention d'impression 
+            de l'éditeur (lieu et date de publication, nom de l’éditeur), telle qu’elle est
+            généralement donnée au bas de la page de titre.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-25" xml:lang="de">enthält das Impressum (Erscheinungsort und -datum, Verlag), das (üblicherweise) am unteren Rand der Titelseite steht.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene la declaración de la publicación (lugar y fecha de publicación, casa editorial) tal y como consta al pie del frontispicio.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene la dichiarazione di pubblicazione (luogo e data di pubblicazione, casa editrice) così come riportata di norma in fondo al frontespizio</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <memberOf key="att.global"/>
+    <memberOf key="model.titlepagePart"/>
+    <memberOf key="model.pLike.front"/>
+  </classes><content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    
+      <alternate minOccurs="0" maxOccurs="unbounded"><textNode/><classRef key="model.gLike"/><classRef key="model.phrase"/><elementRef key="pubPlace"/><elementRef key="docDate"/><elementRef key="publisher"/><classRef key="model.global"/></alternate>
+    
+  </content><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <docImprint>Oxford, Clarendon Press, 1987</docImprint>
+    </egXML>
+    <p>Imprints may be somewhat more complex:
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><docImprint><pubPlace>London</pubPlace>
+Printed for <name>E. Nutt</name>,
+at 
+<pubPlace>Royal Exchange</pubPlace>;
+<name>J. Roberts</name> in 
+<pubPlace>wick-Lane</pubPlace>;
+<name>A. Dodd</name> without 
+<pubPlace>Temple-Bar</pubPlace>;
+and <name>J. Graves</name> in 
+<pubPlace>St. James's-street.</pubPlace>
+               <date>1722.</date>
+            </docImprint></egXML>
+      </p>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="de" versionDate="2017-06-25">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <docImprint>Oxford, Clarendon Press, 1987</docImprint>
+    </egXML>
+    <p>Das Impressum kann auch etwas komplexer sein:
+      <egXML xmlns="http://www.tei-c.org/ns/Examples"><docImprint><pubPlace>London</pubPlace>
+        Printed for <name>E. Nutt</name>,
+        at 
+        <pubPlace>Royal Exchange</pubPlace>;
+        <name>J. Roberts</name> in 
+        <pubPlace>wick-Lane</pubPlace>;
+        <name>A. Dodd</name> without 
+        <pubPlace>Temple-Bar</pubPlace>;
+        and <name>J. Graves</name> in 
+        <pubPlace>St. James's-street.</pubPlace>
+        <date>1722.</date>
+      </docImprint></egXML>
+    </p>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <docImprint>2006, Les Editions Trintexte, Trinity College, Toronto, Canada M5S
+        1H8</docImprint>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="fr">
+    <p>La description de l'impression est parfois plus complexe:</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <docImprint><pubPlace>PARIS</pubPlace>, <name>Delangle Frères</name> Éditeurs-libraires,
+            <pubPlace>Place de la Bourse</pubPlace>
+        </docImprint>
+      <docDate>MDCCCXXX</docDate>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <docImprint>上海：中華書局，2001年。</docImprint>
+    </egXML>
+  </exemplum><exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <docImprint><date>1995</date>年初版發行於<pubPlace>台北</pubPlace>：<pubPlace>麥田出版</pubPlace>，<name>王德威</name>主編 ; 另外亦出版於<pubPlace>香港</pubPlace>： <pubPlace>城邦</pubPlace>; <pubPlace>馬來西亞</pubPlace>：<pubPlace>城邦</pubPlace>。</docImprint>
+    </egXML>
+  </exemplum><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">
+    <p>Cf. the <gi>imprint</gi> element of bibliographic
+citations.  As with title, author, and editions, the shorter name is
+reserved for the element likely to be used more often.</p>
+  </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="fr" versionDate="2007-06-12">
+    <p>Voir l'élément <gi>imprint</gi> dans une citation bibliographique. Comme pour le
+                titre, l'auteur, et la mention d'édition, le nom le plus court est réservé à
+                l'élément le plus fréquemment utilisé.</p>
+  </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="ja" versionDate="2008-04-05">
+    <p>
+    書誌情報向けの要素<gi>imprint</gi>も参照のこと．タイトル，著者名，
+    版については，よく使われる要素により簡単な名前が記述される．
+    </p>
+  </remarks><remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-25" xml:lang="de">
+    <p>Vgl. das <gi>imprint</gi>-Element für bibliografische Angaben. Wie bei <gi>title</gi>,
+      <gi>author</gi> und <gi>edition</gi> ist der kürzere Name für das häufiger benutzte Element
+      reserviert.</p>
   </remarks><listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
   </listRef></elementSpec><elementSpec rend="add" module="textstructure" ident="docDate"><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2005-01-14" xml:lang="en">document date</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">문서 날짜</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">文件日期</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">date du document</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2006-10-18" xml:lang="de">Datierung des Dokuments</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">fecha del documento</gloss><gloss xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">data del documento</gloss><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2013-11-12" xml:lang="en">contains the date of a document, as given
@@ -19218,7 +19924,7 @@ displaying it.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versi
   で記録する場合に使用される．</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">contient une brève description de l'apparence ou
 			du contenu d'une représentation graphique, pour documenter une image sans avoir à
 			l'afficher</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">contiene una breve descripción de la apariencia o del contenido de una figura gráfica, para utilizarla al documentar una imagen sin mostrarla.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">contiene una breve descrizione dell'aspetto o del contenuto di una figura, da utilizzare quando si vuole documentare un'immagine senza mostrarla.</desc><desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2017-06-19" xml:lang="de">enthält einen kurzen Beschreibungstext des Inhalts oder des Aussehens einer Abbildung, um etwa
-    ein Bild ohne dessen Anzeige dokumentieren zu können.</desc><classes><memberOf key="att.global"/></classes><content><alternate minOccurs="1" maxOccurs="unbounded"><classRef key="model.graphicLike"/><classRef key="macro.limitedContent"/></alternate></content><attList/><exemplum xml:lang="fr"><p>Cas où une description de figure contient du mathML</p><egXML xmlns="http://www.tei-c.org/ns/Examples"><figDesc>Parameter estimates for <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">F</mi></mrow><mrow><mi mathvariant="normal">ST</mi></mrow></msub></mrow></math>
+    ein Bild ohne dessen Anzeige dokumentieren zu können.</desc><classes><memberOf key="att.global"/></classes><content><alternate minOccurs="1" maxOccurs="unbounded"><classRef key="model.graphicLike"/><classRef key="model.gLike"/><classRef key="macro.limitedContent"/></alternate></content><attList/><exemplum xml:lang="fr"><p>Cas où une description de figure contient du mathML</p><egXML xmlns="http://www.tei-c.org/ns/Examples"><figDesc>Parameter estimates for <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">F</mi></mrow><mrow><mi mathvariant="normal">ST</mi></mrow></msub></mrow></math>
                                 (black, top panel), <hi rend="italic">α</hi> (blue, bottom panel), <hi rend="italic">β</hi> (red, bottom
                                 panel) by their physical position across one of the largest scaffolds in the
                                 <hi rend="italic">M. vitellinus</hi> draft genome assembly.</figDesc></egXML></exemplum><remarks><p>Modèle modifié pour bénéficier de <gi>math</gi> dans

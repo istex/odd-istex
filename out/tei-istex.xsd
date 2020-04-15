@@ -9,7 +9,7 @@
     Schema generated from ODD source 2017-11-06T09:07:42Z. .
     TEI Edition: 
     TEI Edition Location: http://www.tei-c.org/Vault/P5//
-    
+    MAJ 2020-04-15
   -->
   <!-- [http://creativecommons.org/licenses/by/4.0/] Ce schéma est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0) ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique -->
   <xs:complexType name="tei_macro.paraContent" mixed="true">
@@ -3115,14 +3115,21 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
   <xs:group name="tei_model.divWrapper">
     <xs:choice>
       <xs:element ref="tei:meeting"/>
+      <xs:element ref="tei:byline"/>
+      <xs:element ref="tei:dateline"/>
+      <xs:element ref="tei:argument"/>
+      <xs:element ref="tei:epigraph"/>
+      <xs:element ref="tei:salute"/>
       <xs:element ref="tei:docAuthor"/>
       <xs:element ref="tei:docDate"/>
     </xs:choice>
   </xs:group>
   <xs:group name="tei_model.divTopPart">
-    <xs:sequence>
+    <xs:choice>
       <xs:group ref="tei:tei_model.headLike"/>
-    </xs:sequence>
+      <xs:element ref="tei:opener"/>
+      <xs:element ref="tei:signed"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.divTop">
     <xs:choice>
@@ -3140,10 +3147,19 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       <xs:element ref="tei:docDate"/>
     </xs:choice>
   </xs:group>
+  <xs:group name="tei_model.divBottomPart">
+    <xs:choice>
+      <xs:element ref="tei:trailer"/>
+      <xs:element ref="tei:closer"/>
+      <xs:element ref="tei:signed"/>
+      <xs:element ref="tei:postscript"/>
+    </xs:choice>
+  </xs:group>
   <xs:group name="tei_model.divBottom">
-    <xs:sequence>
+    <xs:choice>
       <xs:group ref="tei:tei_model.divWrapper"/>
-    </xs:sequence>
+      <xs:group ref="tei:tei_model.divBottomPart"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.titlepagePart">
     <xs:choice>
@@ -7150,6 +7166,163 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
       <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trailer">
+    <xs:annotation>
+      <xs:documentation>contient un titre de fin ou de bas de page à la fin d’une division du texte. [4.2.4. Content of Textual Divisions 4.2. Elements Common to All Divisions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:lg"/>
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:group ref="tei:tei_model.inter"/>
+        <xs:group ref="tei:tei_model.lLike"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="byline">
+    <xs:annotation>
+      <xs:documentation>(mention de responsabilité) indique la responsabilité principale pour une œuvre donnée sur la page de titre ou au début ou à la fin de l’œuvre. [4.2.2. Openers and Closers 4.5. Front Matter]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:element ref="tei:docAuthor"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dateline">
+    <xs:annotation>
+      <xs:documentation>(mention de date) contient une brève description des lieux, date, heure, etc. concernant la production d’une lettre, d’un article de journal ou d’un autre texte qui, placée au début ou à la fin, lui est associée comme en-tête ou annonce de fin. [4.2.2. Openers and Closers]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:group ref="tei:tei_model.global"/>
+        <xs:element ref="tei:docDate"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="argument">
+    <xs:annotation>
+      <xs:documentation>(argument) liste formelle ou description en texte libre des sujets traités dans une subdivision d’un texte [4.2. Elements Common to All Divisions 4.6. Title Pages]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.global"/>
+          <xs:group ref="tei:tei_model.headLike"/>
+        </xs:choice>
+        <xs:sequence maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.common"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="epigraph">
+    <xs:annotation>
+      <xs:documentation>contient une citation, anonyme ou attribuée et qui apparaît au début d’une section ou d’un chapitre ou sur une page de titre. [4.2.3. Arguments, Epigraphs, and Postscripts 4.2. Elements Common to All Divisions 4.6. Title Pages]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.common"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opener">
+    <xs:annotation>
+      <xs:documentation>(formule de début) regroupe la date, la mention de responsabilité, la formule de politesse et d'autres expressions de ce type dans un groupe préliminaire au début d’une division, en particulier au commencement d’une lettre. [4.2. Elements Common to All Divisions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:element ref="tei:argument"/>
+        <xs:element ref="tei:byline"/>
+        <xs:element ref="tei:dateline"/>
+        <xs:element ref="tei:epigraph"/>
+        <xs:element ref="tei:salute"/>
+        <xs:element ref="tei:signed"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="closer">
+    <xs:annotation>
+      <xs:documentation>(formule finale) regroupe une formule de politesse, une indication d'une date et d'autres expressions semblables figurant comme expression à la fin d’une division, en particulier à la fin d’une lettre. [4.2.2. Openers and Closers 4.2. Elements Common to All Divisions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="tei:signed"/>
+        <xs:element ref="tei:dateline"/>
+        <xs:element ref="tei:salute"/>
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salute">
+    <xs:annotation>
+      <xs:documentation>(formule de politesse) contient un dédicace ou une formule de salut qui précède un avant-propos ou autre division du texte; ou bien encore la formule de politesse qui conclut une lettre, une préface, etc. [4.2.2. Openers and Closers]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.paraContent">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="signed">
+    <xs:annotation>
+      <xs:documentation>(signature) contient la dernière salutation, ajoutée à un avant-propos, à une dédicace ou à une autre division du texte. [4.2.2. Openers and Closers]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.paraContent">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postscript">
+    <xs:annotation>
+      <xs:documentation>contient un post-scriptum, par exemple au bas d' une lettre. [4.2. Elements Common to All Divisions]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.global"/>
+          <xs:group ref="tei:tei_model.divTopPart"/>
+        </xs:choice>
+        <xs:group ref="tei:tei_model.common"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.global"/>
+          <xs:group ref="tei:tei_model.common"/>
+        </xs:choice>
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.divBottomPart"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
     </xs:complexType>
   </xs:element>

@@ -2013,6 +2013,7 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
          <ref name="tei_media"/>
          <ref name="tei_graphic"/>
          <ref name="tei_binaryObject"/>
+         <ref name="tei_bibl"/>
          <ref name="tei_formula"/>
          <ref name="tei_math"/>
          <ref name="tei_mrow"/>
@@ -3122,6 +3123,11 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
    <define name="tei_model.divWrapper">
       <choice>
          <ref name="tei_meeting"/>
+         <ref name="tei_byline"/>
+         <ref name="tei_dateline"/>
+         <ref name="tei_argument"/>
+         <ref name="tei_epigraph"/>
+         <ref name="tei_salute"/>
          <ref name="tei_docAuthor"/>
          <ref name="tei_docDate"/>
       </choice>
@@ -3129,6 +3135,8 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
    <define name="tei_model.divTopPart">
       <choice>
          <ref name="tei_model.headLike"/>
+         <ref name="tei_opener"/>
+         <ref name="tei_signed"/>
       </choice>
    </define>
    <define name="tei_model.divTop">
@@ -3143,15 +3151,24 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
    <define name="tei_model.pLike.front">
       <choice>
          <ref name="tei_head"/>
+         <ref name="tei_byline"/>
+         <ref name="tei_argument"/>
+         <ref name="tei_epigraph"/>
          <ref name="tei_docTitle"/>
          <ref name="tei_titlePart"/>
          <ref name="tei_docAuthor"/>
          <ref name="tei_docEdition"/>
+         <ref name="tei_docImprint"/>
          <ref name="tei_docDate"/>
       </choice>
    </define>
    <define name="tei_model.divBottomPart">
-      <notAllowed/>
+      <choice>
+         <ref name="tei_trailer"/>
+         <ref name="tei_closer"/>
+         <ref name="tei_signed"/>
+         <ref name="tei_postscript"/>
+      </choice>
    </define>
    <define name="tei_model.divBottom">
       <choice>
@@ -3160,13 +3177,18 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
       </choice>
    </define>
    <define name="tei_model.titlepagePart">
-      <choice>
+       <choice>
          <ref name="tei_graphic"/>
          <ref name="tei_binaryObject"/>
+         <ref name="tei_byline"/>
+         <ref name="tei_argument"/>
+         <ref name="tei_epigraph"/>
          <ref name="tei_docTitle"/>
          <ref name="tei_titlePart"/>
          <ref name="tei_docAuthor"/>
+         <ref name="tei_imprimatur"/>
          <ref name="tei_docEdition"/>
+         <ref name="tei_docImprint"/>
          <ref name="tei_docDate"/>
       </choice>
    </define>
@@ -5855,6 +5877,7 @@ Exemple de valeurs possibles: 1] first-line; 2] first-letter; 3] before; 4] afte
          <oneOrMore>
             <choice>
                <ref name="tei_model.pLike"/>
+               <ref name="tei_model.divLike"/>
                <ref name="tei_model.listLike"/>
                <ref name="tei_model.headLike"/>
             </choice>
@@ -7356,10 +7379,36 @@ Les valeurs suggérées comprennent: 1] main; 2] sub (subordinate) ; 3] alt (alt
          <empty/>
       </element>
    </define>
+   <define name="tei_imprimatur">
+      <element name="imprimatur">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contient une mention formalisée autorisant la publication d’un ouvrage, parfois exigée sur une page de titre ou à son verso. [4.6. Title Pages]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_docEdition">
       <element name="docEdition">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(édition du document) contient une mention d’édition telle qu’elle figure sur la page de titre d’un document. [4.6. Title Pages]</a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_docImprint">
+      <element name="docImprint">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mention d'impression) contient la mention d'impression de l'éditeur (lieu et date de publication, nom de l’éditeur), telle qu’elle est généralement donnée au bas de la page de titre. [4.6. Title Pages]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_model.phrase"/>
+               <ref name="tei_pubPlace"/>
+               <ref name="tei_docDate"/>
+               <ref name="tei_publisher"/>
+               <ref name="tei_model.global"/>
+            </choice>
+         </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
          <empty/>
       </element>
@@ -7628,6 +7677,7 @@ Les valeurs suggérées comprennent: 1] main; 2] sub (subordinate) ; 3] alt (alt
          <oneOrMore>
             <choice>
                <ref name="tei_model.graphicLike"/>
+               <ref name="tei_model.gLike"/>
                <ref name="tei_macro.limitedContent"/>
             </choice>
          </oneOrMore>
@@ -10936,6 +10986,7 @@ The attributes @to and @from on <name/> may each contain only a single value</re
                <ref name="tei_msupsub"/>
                <ref name="tei_msup"/>
                <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
                <ref name="tei_mfenced"/>
                <ref name="tei_mtable"/>
                <ref name="tei_munderover"/>
@@ -10946,6 +10997,7 @@ The attributes @to and @from on <name/> may each contain only a single value</re
                <ref name="tei_mpadded"/>
                <ref name="tei_menclose"/>
                <ref name="tei_semantics"/>
+               <ref name="tei_malignmark"/>
             </choice>
          </zeroOrMore>
          <optional>
@@ -10996,6 +11048,26 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          </optional>
          <optional>
             <attribute name="cdgroup">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="indentalign">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="indentshift">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="indentshiftfirst">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="linebreak">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
@@ -11151,6 +11223,29 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          </optional>
          <optional>
             <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="width">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_width"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="depth">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_depth"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="height">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="tei_height"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="linebreak">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
@@ -11509,6 +11604,21 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          </optional>
          <optional>
             <attribute name="mathsize">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="linebreak">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="lspace">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rspace">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </attribute>
          </optional>
@@ -11951,6 +12061,58 @@ The attributes @to and @from on <name/> may each contain only a single value</re
    </define>
    <define name="tei_munder">
       <element name="munder" ns="http://www.w3.org/1998/Math/MathML">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_mstyle"/>
+               <ref name="tei_mtr"/>
+               <ref name="tei_mtd"/>
+               <ref name="tei_mrow"/>
+               <ref name="tei_mi"/>
+               <ref name="tei_mn"/>
+               <ref name="tei_mtext"/>
+               <ref name="tei_mfrac"/>
+               <ref name="tei_mspace"/>
+               <ref name="tei_msqrt"/>
+               <ref name="tei_msub"/>
+               <ref name="tei_msup"/>
+               <ref name="tei_mo"/>
+               <ref name="tei_mover"/>
+               <ref name="tei_mfenced"/>
+               <ref name="tei_mtable"/>
+               <ref name="tei_msubsup"/>
+               <ref name="tei_msupsub"/>
+               <ref name="tei_mmultiscripts"/>
+               <ref name="tei_munderover"/>
+               <ref name="tei_mprescripts"/>
+               <ref name="tei_none"/>
+               <ref name="tei_munder"/>
+               <ref name="tei_mphantom"/>
+               <ref name="tei_mpadded"/>
+               <ref name="tei_menclose"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="accent">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="accentunder">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="class">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_malignmark">
+      <element name="malignmark" ns="http://www.w3.org/1998/Math/MathML">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <zeroOrMore>
             <choice>

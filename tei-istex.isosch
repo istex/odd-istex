@@ -1,13 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- *********************************************************************************************************** -->
-<!-- *********************************************************************************************************** -->
-<error msg="I/O error reported by XML parser processing file:/usr/local/common/functions.xsl: /usr/local/common/functions.xsl (No such file or directory)" exclass="class pl.psnc.dl.ege.exception.ConverterException" >pl.psnc.dl.ege.exception.ConverterException: I/O error reported by XML parser processing file:/usr/local/common/functions.xsl: /usr/local/common/functions.xsl (No such file or directory)
-	at pl.psnc.dl.ege.MultiXslConverter.convert(MultiXslConverter.java:109)
-	at pl.psnc.dl.ege.component.NamedConverter.convert(NamedConverter.java:44)
-	at pl.psnc.dl.ege.ConversionPerformer.run(ConversionPerformer.java:45)
-	at java.lang.Thread.run(Thread.java:748)
-</error>
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
+   <title>ISO Schematron rules</title>
+   <!-- This file generated 2020-04-08T13:49:55Z by 'extract-isosch.xsl'. -->
 
-<!-- *********************************************************************************************************** -->
-<!-- *********************************************************************************************************** -->
+   <!-- ********************* -->
+   <!-- namespaces, declared: -->
+   <!-- ********************* -->
+
+
+   <!-- ********************* -->
+   <!-- namespaces, implicit: -->
+   <!-- ********************* -->
+   <ns prefix="dcr" uri="http://www.isocat.org/ns/dcr"/>
+   <ns prefix="esp-d2e69292" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69334" uri="http://www.wiley.com/namespaces/wiley"/>
+   <ns prefix="esp-d2e69386" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69420" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69462" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69529" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69561" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69600" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69645" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69684" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69718" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69752" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69796" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69835" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69848" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69880" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69913" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69945" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69977" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e69990" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70029" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70068" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70100" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70103" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70151" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70193" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70235" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70268" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70310" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70346" uri="http://www.w3.org/1998/Math/MathML"/>
+   <ns prefix="esp-d2e70386" uri="http://www.w3.org/1998/Math/MathML"/>
+
+   <!-- ************ -->
+   <!-- constraints: -->
+   <!-- ************ -->
+
+
+   <!-- *********** -->
+   <!-- deprecated: -->
+   <!-- *********** -->
+   <pattern>
+      <rule context="tei:gap">
+         <report test="@hand" role="nonfatal">WARNING: use of deprecated attribute — @hand of the gap element will be removed from the TEI on 2017-08-01.
+                </report>
+      </rule>
+   </pattern>
+   <pattern>
+      <rule context="tei:unclear">
+         <report test="@hand" role="nonfatal">WARNING: use of deprecated attribute — @hand of the unclear element will be removed from the TEI on 2017-08-01.
+                </report>
+      </rule>
+   </pattern>
+</schema>

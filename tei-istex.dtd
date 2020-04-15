@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2019-07-11T05:14:57Z. .[http://creativecommons.org/licenses/by/4.0/] Ce schéma est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0) ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique 
+DTD generated from ODD source 2020-04-08T13:50:20Z. .[http://creativecommons.org/licenses/by/4.0/] Ce schéma est distribué sous licence Creative Commons 4.0 non transposée (CC BY 4.0) ODD-ISTEX a été créé dans le cadre du projet ISTEX – Initiative d’Excellence en Information Scientifique et Technique 
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
 
@@ -1709,7 +1709,7 @@ version %teidata.version;  #IMPLIED >
  %tei_att.typed.attribute.subtype;
 type %teidata.enumerated;  #IMPLIED >
 <!--doc:contains a summary or formal abstract prefixed to an existing source document by the encoder. [2.4.4. Abstracts] -->
-<!ELEMENT abstract (%model.pLike;|%model.listLike;|%model.headLike;)+>
+<!ELEMENT abstract (%model.pLike;|%model.divLike;|%model.listLike;|%model.headLike;)+>
 <!ATTLIST abstract xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST abstract
  %tei_att.global.attributes; >
@@ -1854,6 +1854,11 @@ encoding %encoding;  #IMPLIED >
  %tei_att.datable.attributes;
 ident %teidata.name;  #REQUIRED
 version %teidata.versionNumber;  #REQUIRED >
+<!--doc:(argument) liste formelle ou description en texte libre des sujets traités dans une subdivision d’un texte [4.2. Elements Common to All Divisions 4.6. Title Pages] -->
+<!ELEMENT argument (((%model.global;|%model.headLike;)*,((%model.common;),(%model.global;)*)+))>
+<!ATTLIST argument xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST argument
+ %tei_att.global.attributes; >
 <!--doc:(auteur) dans une référence bibliographique contient le nom de la (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement] -->
 <!ELEMENT author %macro.phraseSeq;>
 <!ATTLIST author xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -1952,6 +1957,11 @@ contemporary %teidata.xTruthValue;  #IMPLIED >
 <!ATTLIST body
  %tei_att.global.attributes;
  %tei_att.declaring.attributes; >
+<!--doc:(mention de responsabilité) indique la responsabilité principale pour une œuvre donnée sur la page de titre ou au début ou à la fin de l’œuvre. [4.2.2. Openers and Closers 4.5. Front Matter] -->
+<!ELEMENT byline (#PCDATA|_DUMMY_model.gLike|%model.phrase;|docAuthor|%model.global;)*>
+<!ATTLIST byline xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST byline
+ %tei_att.global.attributes; >
 <!--doc:(caractère) représente un caractère [17.1. Linguistic Segment Categories] -->
 <!ELEMENT c %macro.xtext;>
 <!ATTLIST c xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2031,6 +2041,12 @@ scheme %teidata.pointer;  #REQUIRED >
 <!ATTLIST classDecl xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST classDecl
  %tei_att.global.attributes; >
+<!--doc:(formule finale) regroupe une formule de politesse, une indication d'une date et d'autres expressions semblables figurant comme expression à la fin d’une division, en particulier à la fin d’une lettre. [4.2.2. Openers and Closers 4.2. Elements Common to All Divisions] -->
+<!ELEMENT closer (#PCDATA|_DUMMY_model.gLike|signed|dateline|salute|%model.phrase;|%model.global;)*>
+<!ATTLIST closer xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST closer
+ %tei_att.global.attributes;
+ %tei_att.written.attributes; >
 <!--doc:(collation) contient la description de l'organisation des feuillets ou bifeuillets d'un manuscrit [10.7.1. Object Description] -->
 <!ELEMENT collation %macro.specialPara;>
 <!ATTLIST collation xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2125,6 +2141,11 @@ method (silent|markup) "silent"  >
  %tei_att.editLike.attributes;
  %tei_att.typed.attributes;
 scheme %teidata.pointer;  #IMPLIED >
+<!--doc:(mention de date) contient une brève description des lieux, date, heure, etc. concernant la production d’une lettre, d’un article de journal ou d’un autre texte qui, placée au début ou à la fin, lui est associée comme en-tête ou annonce de fin. [4.2.2. Openers and Closers] -->
+<!ELEMENT dateline (#PCDATA|_DUMMY_model.gLike|%model.phrase;|%model.global;|docDate)*>
+<!ATTLIST dateline xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST dateline
+ %tei_att.global.attributes; >
 <!--doc:(description de la décoration) contient la description de la décoration du manuscrit, soit en une série de paragraphes p, soit sous la forme d'une série d'éléments thématiques decoNote [10.7.3. Bindings, Seals, and Additional Material] -->
 <!ELEMENT decoDesc ((%model.pLike;)+|((summary)?,(decoNote)+))>
 <!ATTLIST decoDesc xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2229,6 +2250,11 @@ when %teidata.temporal.w3c;  #IMPLIED >
 <!ATTLIST docEdition xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST docEdition
  %tei_att.global.attributes; >
+<!--doc:(mention d'impression) contient la mention d'impression de l'éditeur (lieu et date de publication, nom de l’éditeur), telle qu’elle est généralement donnée au bas de la page de titre. [4.6. Title Pages] -->
+<!ELEMENT docImprint (#PCDATA|_DUMMY_model.gLike|%model.phrase;|pubPlace|docDate|publisher|%model.global;)*>
+<!ATTLIST docImprint xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST docImprint
+ %tei_att.global.attributes; >
 <!--doc:(titre du document) contient le titre d’un document, incluant la totalité de ses composants tels qu’ils sont donnés sur la page de titre. [4.6. Title Pages] -->
 <!ELEMENT docTitle (((%model.global;)*,(titlePart,(%model.global;)*)+))>
 <!ATTLIST docTitle xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2265,6 +2291,11 @@ when %teidata.temporal.w3c;  #IMPLIED >
 <!ELEMENT encodingDesc (%model.encodingDescPart;|%model.pLike;)+>
 <!ATTLIST encodingDesc xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST encodingDesc
+ %tei_att.global.attributes; >
+<!--doc:contient une citation, anonyme ou attribuée et qui apparaît au début d’une section ou d’un chapitre ou sur une page de titre. [4.2.3. Arguments, Epigraphs, and Postscripts 4.2. Elements Common to All Divisions 4.6. Title Pages] -->
+<!ELEMENT epigraph (%model.common;|%model.global;)*>
+<!ATTLIST epigraph xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST epigraph
  %tei_att.global.attributes; >
 <!--doc:(évènement) contient des données liées à tout type d'évènement significatif dans l'existence d'une personne, d'un lieu ou d'une organisation. [13.3.1. Basic Principles] -->
 <!ELEMENT event (((%model.headLike;)*,((%model.pLike;)+|(%model.labelLike;)+),(%model.noteLike;|%model.biblLike;|linkGrp|link)*,(event)*))>
@@ -2334,7 +2365,7 @@ optional %teidata.truthValue;  "true"  >
  %tei_att.global.attributes;
  %tei_att.declaring.attributes; >
 <!--doc:(description d'une figure) contient une brève description de l'apparence ou du contenu d'une représentation graphique, pour documenter une image sans avoir à l'afficher [14.4. Specific Elements for Graphic Images] -->
-<!ELEMENT figDesc (%model.graphicLike;|_DUMMY_macro.limitedContent)+>
+<!ELEMENT figDesc (%model.graphicLike;|_DUMMY_model.gLike|_DUMMY_macro.limitedContent)+>
 <!ATTLIST figDesc xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST figDesc
  %tei_att.global.attributes; >
@@ -2594,6 +2625,11 @@ type %teidata.enumerated;  #IMPLIED >
 <!ATTLIST iff xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST iff
  %tei_att.global.attributes; >
+<!--doc:contient une mention formalisée autorisant la publication d’un ouvrage, parfois exigée sur une page de titre ou à son verso. [4.6. Title Pages] -->
+<!ELEMENT imprimatur %macro.paraContent;>
+<!ATTLIST imprimatur xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST imprimatur
+ %tei_att.global.attributes; >
 <!--doc:regroupe des informations relatives à la publication ou à la distribution d'un élément bibliographique. [3.11.2.4. Imprint, Size of a Document, and Reprint Information] -->
 <!ELEMENT imprint (((classCode|catRef)*,((%model.imprintPart;|%model.dateLike;),(respStmt)*,(%model.global;)*)+))>
 <!ATTLIST imprint xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2823,6 +2859,13 @@ scheme %teidata.pointer;  #IMPLIED >
  %tei_att.segLike.attributes;
  %tei_att.typed.attributes;
 baseForm %teidata.word;  #IMPLIED >
+<!--doc: -->
+<!ELEMENT malignmark (#PCDATA|mstyle|mtr|mtd|mrow|mi|mn|mtext|mfrac|mspace|msqrt|msub|msup|mo|mover|mfenced|mtable|msubsup|msupsub|mmultiscripts|munderover|mprescripts|none|munder|mphantom|mpadded|menclose)*>
+<!ATTLIST malignmark xmlns CDATA "http://www.w3.org/1998/Math/MathML">
+<!ATTLIST malignmark
+accent %accent;  #IMPLIED
+accentunder %accentunder;  #IMPLIED
+class %class;  #IMPLIED >
 <!--doc:(matériau) Contient un mot ou une expression décrivant le ou les matériau(x) utilisé(s) pour fabriquer un manuscrit (ou une partie d'un manuscrit). [10.3.2. Material and Object Type] -->
 <!ELEMENT material %macro.phraseSeq;>
 <!ATTLIST material xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2830,7 +2873,7 @@ baseForm %teidata.word;  #IMPLIED >
  %tei_att.global.attributes;
  %tei_att.canonical.attributes; >
 <!--doc:MathML -->
-<!ELEMENT math (#PCDATA|mrow|mstyle|mi|mn|mtext|mfrac|mspace|msqrt|msub|msubsup|msupsub|msup|mo|mfenced|mtable|munderover|mprescripts|none|munder|mphantom|mpadded|menclose|semantics)*>
+<!ELEMENT math (#PCDATA|mrow|mstyle|mi|mn|mtext|mfrac|mspace|msqrt|msub|msubsup|msupsub|msup|mo|mover|mfenced|mtable|munderover|mprescripts|none|munder|mphantom|mpadded|menclose|semantics|malignmark)*>
 <!ATTLIST math xmlns CDATA "http://www.w3.org/1998/Math/MathML">
 <!ATTLIST math
 display %display;  #IMPLIED
@@ -2842,7 +2885,11 @@ maxwidth %maxwidth;  #IMPLIED
 altimg-width %altimg-width;  #IMPLIED
 altimg-height %altimg-height;  #IMPLIED
 altimg-valign %altimg-valign;  #IMPLIED
-cdgroup %cdgroup;  #IMPLIED >
+cdgroup %cdgroup;  #IMPLIED
+indentalign %indentalign;  #IMPLIED
+indentshift %indentshift;  #IMPLIED
+indentshiftfirst %indentshiftfirst;  #IMPLIED
+linebreak %linebreak;  #IMPLIED >
 <!--doc:(mesure) contient un mot ou une expression faisant référence à la quantité d'un objet ou d'un produit, comprenant en général un nombre, une unité et le nom d'un produit. [3.5.3. Numbers and
 Measures] -->
 <!ELEMENT measure %macro.phraseSeq;>
@@ -2964,7 +3011,10 @@ class %class;  #IMPLIED
 accent %accent;  #IMPLIED
 form %form;  #IMPLIED
 fence %fence;  #IMPLIED
-mathsize %mathsize;  #IMPLIED >
+mathsize %mathsize;  #IMPLIED
+linebreak %linebreak;  #IMPLIED
+lspace %lspace;  #IMPLIED
+rspace %rspace;  #IMPLIED >
 <!--doc:represents any kind of modification identified within a single document. [11.3.4.1. Generic Modification] -->
 <!ELEMENT mod %macro.paraContent;>
 <!ATTLIST mod xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -3091,12 +3141,17 @@ fontsize %fontsize;  #IMPLIED >
 <!ELEMENT mtable (#PCDATA|mstyle|mtr|mtd|mrow|mi|mn|mtext|mfrac|mspace|msqrt|msub|msup|mo|mover|mfenced|mtable|msubsup|msupsub|mmultiscripts|munderover|mprescripts|none|munder|mphantom|mpadded|menclose)*>
 <!ATTLIST mtable xmlns CDATA "http://www.w3.org/1998/Math/MathML">
 <!ATTLIST mtable
+columnspacing %columnspacing;  #IMPLIED
 columnalign %columnalign;  #IMPLIED
 columnspan %columnspan;  #IMPLIED
 columnlines %columnlines;  #IMPLIED
 equalrows %equalrows;  #IMPLIED
 equalcolumns %equalcolumns;  #IMPLIED
-class %class;  #IMPLIED >
+class %class;  #IMPLIED
+width %width;  #IMPLIED
+depth %depth;  #IMPLIED
+height %height;  #IMPLIED
+linebreak %linebreak;  #IMPLIED >
 <!--doc: -->
 <!ELEMENT mtd (#PCDATA|mstyle|mtr|mtd|mrow|mi|mn|mtext|mfrac|mspace|msqrt|msub|msup|mo|mover|mfenced|mtable|msubsup|msupsub|mmultiscripts|munderover|mprescripts|none|munder|mphantom|mpadded|menclose)*>
 <!ATTLIST mtd xmlns CDATA "http://www.w3.org/1998/Math/MathML">
@@ -3214,6 +3269,12 @@ form %teidata.enumerated;  #IMPLIED >
 <!ATTLIST objectType
  %tei_att.global.attributes;
  %tei_att.canonical.attributes; >
+<!--doc:(formule de début) regroupe la date, la mention de responsabilité, la formule de politesse et d'autres expressions de ce type dans un groupe préliminaire au début d’une division, en particulier au commencement d’une lettre. [4.2. Elements Common to All Divisions] -->
+<!ELEMENT opener (#PCDATA|_DUMMY_model.gLike|%model.phrase;|argument|byline|dateline|epigraph|salute|signed|%model.global;)*>
+<!ATTLIST opener xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST opener
+ %tei_att.global.attributes;
+ %tei_att.written.attributes; >
 <!--doc:(organisation) fournit des informations sur une organisation identifiable, telle qu'une entreprise, une tribu ou tout autre groupement de personnes. [13.2.2. Organizational Names] -->
 <!ELEMENT org (((%model.headLike;)*,((%model.pLike;)*|(%model.labelLike;|%model.nameLike;|%model.placeLike;|%model.orgPart;|%model.milestoneLike;)*),(%model.noteLike;|%model.biblLike;|linkGrp|link)*,(%model.personLike;)*))>
 <!ATTLIST org xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -3372,6 +3433,12 @@ scheme %teidata.pointer;  #IMPLIED >
 <!ATTLIST postCode xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST postCode
  %tei_att.global.attributes; >
+<!--doc:contient un post-scriptum, par exemple au bas d' une lettre. [4.2. Elements Common to All Divisions] -->
+<!ELEMENT postscript (((%model.global;|%model.divTopPart;)*,(%model.common;),(%model.global;|%model.common;)*,((%model.divBottomPart;),(%model.global;)*)*))>
+<!ATTLIST postscript xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST postscript
+ %tei_att.global.attributes;
+ %tei_att.written.attributes; >
 <!--doc:(description du profil) fournit une description détaillée des aspects non bibliographiques du texte, notamment les langues utilisées et leurs variantes, les circonstances de sa production, les collaborateurs et leur statut. [2.4. The Profile Description 2.1.1. The TEI Header and Its Components] -->
 <!ELEMENT profileDesc (%model.profileDescPart;)*>
 <!ATTLIST profileDesc xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -3562,6 +3629,12 @@ selector %teidata.text;  #IMPLIED >
 aloud %teidata.xTruthValue;  "unknown" 
 direct %teidata.xTruthValue;  "true"  >
 <!--doc: (schema reference) describes or points to a related customization or schema file [2.3.9. The Schema Specification] -->
+<!ELEMENT salute %macro.paraContent;>
+<!ATTLIST salute xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST salute
+ %tei_att.global.attributes;
+ %tei_att.written.attributes; >
+<!--doc:(schema reference) describes or points to a related customization or schema file [2.3.9. The Schema Specification] -->
 <!ELEMENT schemaRef (((%model.descLike;)?))>
 <!ATTLIST schemaRef xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST schemaRef
@@ -3641,6 +3714,12 @@ encoding %encoding;  #IMPLIED >
 <!ATTLIST signatures xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST signatures
  %tei_att.global.attributes; >
+<!--doc:(signature) contient la dernière salutation, ajoutée à un avant-propos, à une dédicace ou à une autre division du texte. [4.2.2. Openers and Closers] -->
+<!ELEMENT signed %macro.paraContent;>
+<!ATTLIST signed xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST signed
+ %tei_att.global.attributes;
+ %tei_att.written.attributes; >
 <!--doc:contient une expression ou un mot pour lesquels l'auteur ou le narrateur renonce à toute responsabilité, par exemple en utilisant de l'italique ou des guillemets. [3.3.3. Quotation] -->
 <!ELEMENT soCalled %macro.phraseSeq;>
 <!ATTLIST soCalled xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -3957,6 +4036,12 @@ type %teidata.enumerated;  "main"  >
 <!ATTLIST titleStmt xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST titleStmt
  %tei_att.global.attributes; >
+<!--doc:contient un titre de fin ou de bas de page à la fin d’une division du texte. [4.2.4. Content of Textual Divisions 4.2. Elements Common to All Divisions] -->
+<!ELEMENT trailer (#PCDATA|lg|_DUMMY_model.gLike|%model.phrase;|%model.inter;|%model.lLike;|%model.global;)*>
+<!ATTLIST trailer xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST trailer
+ %tei_att.global.attributes;
+ %tei_att.typed.attributes; >
 <!--doc:describes a single textual transposition as an ordered list of at least two pointers specifying the order in which the elements indicated should be re-combined. [11.3.4.5. Transpositions] -->
 <!ELEMENT transpose ((ptr,(ptr)+))>
 <!ATTLIST transpose xmlns CDATA "http://www.tei-c.org/ns/1.0">

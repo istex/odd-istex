@@ -1381,6 +1381,7 @@ tei_model.graphicLike =
   tei_media
   | tei_graphic
   | tei_binaryObject
+  | tei_bibl
   | tei_formula
   | tei_math
   | tei_mrow
@@ -1755,26 +1756,44 @@ tei_model.qLike_sequenceRepeatable =
   tei_floatingText+
 tei_model.respLike =
   tei_author | tei_editor | tei_respStmt | tei_meeting | tei_funder
-tei_model.divWrapper = tei_meeting | tei_docAuthor | tei_docDate
-tei_model.divTopPart = tei_model.headLike
+tei_model.divWrapper =
+  tei_meeting
+  | tei_byline
+  | tei_dateline
+  | tei_argument
+  | tei_epigraph
+  | tei_salute
+  | tei_docAuthor
+  | tei_docDate
+tei_model.divTopPart = tei_model.headLike | tei_opener | tei_signed
 tei_model.divTop = tei_model.divWrapper | tei_model.divTopPart
 tei_model.frontPart.drama = notAllowed
 tei_model.pLike.front =
   tei_head
+  | tei_byline
+  | tei_argument
+  | tei_epigraph
   | tei_docTitle
   | tei_titlePart
   | tei_docAuthor
   | tei_docEdition
+  | tei_docImprint
   | tei_docDate
-tei_model.divBottomPart = notAllowed
+tei_model.divBottomPart =
+  tei_trailer | tei_closer | tei_signed | tei_postscript
 tei_model.divBottom = tei_model.divWrapper | tei_model.divBottomPart
 tei_model.titlepagePart =
   tei_graphic
   | tei_binaryObject
+  | tei_byline
+  | tei_argument
+  | tei_epigraph
   | tei_docTitle
   | tei_titlePart
   | tei_docAuthor
+  | tei_imprimatur
   | tei_docEdition
+  | tei_docImprint
   | tei_docDate
 tei_model.msQuoteLike =
   tei_title
@@ -4584,6 +4603,125 @@ tei_div =
     tei_att.written.attributes,
     empty
   }
+tei_trailer =
+  
+  ## contient un titre de fin ou de bas de page à la fin d’une division du texte. [4.2.4. Content of Textual Divisions 4.2. Elements Common to All Divisions]
+  element tei:trailer {
+    (text
+     | tei_lg
+     | tei_model.gLike
+     | tei_model.phrase
+     | tei_model.inter
+     | tei_model.lLike
+     | tei_model.global)*,
+    tei_att.global.attributes,
+    tei_att.typed.attributes,
+    empty
+  }
+tei_byline =
+  
+  ## (mention de responsabilité) indique la responsabilité principale pour une œuvre donnée sur la page de titre ou au début ou à la fin de l’œuvre. [4.2.2. Openers and Closers 4.5. Front Matter]
+  element tei:byline {
+    (text
+     | tei_model.gLike
+     | tei_model.phrase
+     | tei_docAuthor
+     | tei_model.global)*,
+    tei_att.global.attributes,
+    empty
+  }
+tei_dateline =
+  
+  ## (mention de date) contient une brève description des lieux, date, heure, etc. concernant la production d’une lettre, d’un article de journal ou d’un autre texte qui, placée au début ou à la fin, lui est associée comme en-tête ou annonce de fin. [4.2.2. Openers and Closers]
+  element tei:dateline {
+    (text
+     | tei_model.gLike
+     | tei_model.phrase
+     | tei_model.global
+     | tei_docDate)*,
+    tei_att.global.attributes,
+    empty
+  }
+tei_argument =
+  
+  ## (argument) liste formelle ou description en texte libre des sujets traités dans une subdivision d’un texte [4.2. Elements Common to All Divisions 4.6. Title Pages]
+  element tei:argument {
+    ((tei_model.global | tei_model.headLike)*,
+     (tei_model.common, tei_model.global*)+),
+    tei_att.global.attributes,
+    empty
+  }
+tei_epigraph =
+  
+  ## contient une citation, anonyme ou attribuée et qui apparaît au début d’une section ou d’un chapitre ou sur une page de titre. [4.2.3. Arguments, Epigraphs, and Postscripts 4.2. Elements Common to All Divisions 4.6. Title Pages]
+  element tei:epigraph {
+    (tei_model.common | tei_model.global)*,
+    tei_att.global.attributes,
+    empty
+  }
+tei_opener =
+  
+  ## (formule de début) regroupe la date, la mention de responsabilité, la formule de politesse et d'autres expressions de ce type dans un groupe préliminaire au début d’une division, en particulier au commencement d’une lettre. [4.2. Elements Common to All Divisions]
+  element tei:opener {
+    (text
+     | tei_model.gLike
+     | tei_model.phrase
+     | tei_argument
+     | tei_byline
+     | tei_dateline
+     | tei_epigraph
+     | tei_salute
+     | tei_signed
+     | tei_model.global)*,
+    tei_att.global.attributes,
+    tei_att.written.attributes,
+    empty
+  }
+tei_closer =
+  
+  ## (formule finale) regroupe une formule de politesse, une indication d'une date et d'autres expressions semblables figurant comme expression à la fin d’une division, en particulier à la fin d’une lettre. [4.2.2. Openers and Closers 4.2. Elements Common to All Divisions]
+  element tei:closer {
+    (text
+     | tei_model.gLike
+     | tei_signed
+     | tei_dateline
+     | tei_salute
+     | tei_model.phrase
+     | tei_model.global)*,
+    tei_att.global.attributes,
+    tei_att.written.attributes,
+    empty
+  }
+tei_salute =
+  
+  ## (formule de politesse) contient un dédicace ou une formule de salut qui précède un avant-propos ou autre division du texte; ou bien encore la formule de politesse qui conclut une lettre, une préface, etc. [4.2.2. Openers and Closers]
+  element tei:salute {
+    tei_macro.paraContent,
+    tei_att.global.attributes,
+    tei_att.written.attributes,
+    empty
+  }
+tei_signed =
+  
+  ## (signature) contient la dernière salutation, ajoutée à un avant-propos, à une dédicace ou à une autre division du texte. [4.2.2. Openers and Closers]
+  element tei:signed {
+    tei_macro.paraContent,
+    tei_att.global.attributes,
+    tei_att.written.attributes,
+    empty
+  }
+tei_postscript =
+  
+  ## contient un post-scriptum, par exemple au bas d' une lettre. [4.2. Elements Common to All Divisions]
+  element tei:postscript {
+    ((tei_model.global | tei_model.divTopPart)*,
+     tei_model.common,
+     (tei_model.global | tei_model.common)*,
+     (tei_model.divBottomPart, tei_model.global*)*),
+    tei_att.global.attributes,
+    tei_att.written.attributes,
+    empty
+  }
 tei_titlePage =
   
   ## (page de titre) contient la page de titre d’un texte qui figure dans les parties liminaires. [4.6. Title Pages]
@@ -4649,11 +4787,31 @@ tei_docAuthor =
     tei_att.canonical.attributes,
     empty
   }
+tei_imprimatur =
+  
+  ## contient une mention formalisée autorisant la publication d’un ouvrage, parfois exigée sur une page de titre ou à son verso. [4.6. Title Pages]
+  element tei:imprimatur {
+    tei_macro.paraContent, tei_att.global.attributes, empty
+  }
 tei_docEdition =
   
   ## (édition du document) contient une mention d’édition telle qu’elle figure sur la page de titre d’un document. [4.6. Title Pages]
   element tei:docEdition {
     tei_macro.paraContent, tei_att.global.attributes, empty
+  }
+tei_docImprint =
+  
+  ## (mention d'impression) contient la mention d'impression de l'éditeur (lieu et date de publication, nom de l’éditeur), telle qu’elle est généralement donnée au bas de la page de titre. [4.6. Title Pages]
+  element tei:docImprint {
+    (text
+     | tei_model.gLike
+     | tei_model.phrase
+     | tei_pubPlace
+     | tei_docDate
+     | tei_publisher
+     | tei_model.global)*,
+    tei_att.global.attributes,
+    empty
   }
 tei_docDate =
   
@@ -4794,7 +4952,9 @@ tei_figDesc =
   
   ## (description d'une figure) contient une brève description de l'apparence ou du contenu d'une représentation graphique, pour documenter une image sans avoir à l'afficher [14.4. Specific Elements for Graphic Images]
   element tei:figDesc {
-    (tei_model.graphicLike | tei_macro.limitedContent)+,
+    (tei_model.graphicLike
+     | tei_model.gLike
+     | tei_macro.limitedContent)+,
     tei_att.global.attributes,
     empty
   }
@@ -7345,6 +7505,7 @@ tei_math =
      | tei_msupsub
      | tei_msup
      | tei_mo
+     | tei_mover
      | tei_mfenced
      | tei_mtable
      | tei_munderover
@@ -7385,6 +7546,18 @@ tei_math =
     
     ##
     attribute cdgroup { text }?,
+    
+    ##
+    attribute indentalign { text }?,
+    
+    ##
+    attribute indentshift { text }?,
+    
+    ##
+    attribute indentshiftfirst { text }?,
+    
+    ##
+    attribute linebreak { text }?,
     empty
   }
 tei_mrow =
@@ -7493,6 +7666,9 @@ tei_mtable =
      | tei_mpadded
      | tei_menclose)*,
     
+    ##
+    attribute columnspacing { text }?,
+
     ##
     attribute columnalign { text }?,
     
@@ -7776,6 +7952,15 @@ tei_mo =
     
     ##
     attribute mathsize { text }?,
+    
+    ##
+    attribute linebreak { text }?,
+    
+    ##
+    attribute lspace { text }?,
+    
+    ##
+    attribute rspace { text }?,
     empty
   }
 tei_mfrac =
@@ -8143,6 +8328,48 @@ tei_munder =
   
   ##
   element munder {
+    (text
+     | tei_mstyle
+     | tei_mtr
+     | tei_mtd
+     | tei_mrow
+     | tei_mi
+     | tei_mn
+     | tei_mtext
+     | tei_mfrac
+     | tei_mspace
+     | tei_msqrt
+     | tei_msub
+     | tei_msup
+     | tei_mo
+     | tei_mover
+     | tei_mfenced
+     | tei_mtable
+     | tei_msubsup
+     | tei_msupsub
+     | tei_mmultiscripts
+     | tei_munderover
+     | tei_mprescripts
+     | tei_none
+     | tei_munder
+     | tei_mphantom
+     | tei_mpadded
+     | tei_menclose)*,
+    
+    ##
+    attribute accent { text }?,
+    
+    ##
+    attribute accentunder { text }?,
+    
+    ##
+    attribute class { text }?,
+    empty
+  }
+tei_malignmark =
+  
+  ##
+  element malignmark {
     (text
      | tei_mstyle
      | tei_mtr
