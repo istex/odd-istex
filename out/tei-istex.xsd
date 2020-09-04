@@ -3140,10 +3140,14 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
   <xs:group name="tei_model.pLike.front">
     <xs:choice>
       <xs:element ref="tei:head"/>
+      <xs:element ref="tei:byline"/>
+      <xs:element ref="tei:argument"/>
+      <xs:element ref="tei:epigraph"/>
       <xs:element ref="tei:docTitle"/>
       <xs:element ref="tei:titlePart"/>
       <xs:element ref="tei:docAuthor"/>
       <xs:element ref="tei:docEdition"/>
+      <xs:element ref="tei:docImprint"/>
       <xs:element ref="tei:docDate"/>
     </xs:choice>
   </xs:group>
@@ -3165,10 +3169,15 @@ Les valeurs suggérées comprennent: 1] volume; 2] issue; 3] page; 4] line; 5] c
     <xs:choice>
       <xs:element ref="tei:graphic"/>
       <xs:element ref="tei:binaryObject"/>
+      <xs:element ref="tei:byline"/>
+      <xs:element ref="tei:argument"/>
+      <xs:element ref="tei:epigraph"/>
       <xs:element ref="tei:docTitle"/>
       <xs:element ref="tei:titlePart"/>
       <xs:element ref="tei:docAuthor"/>
+      <xs:element ref="tei:imprimatur"/>
       <xs:element ref="tei:docEdition"/>
+      <xs:element ref="tei:docImprint"/>
       <xs:element ref="tei:docDate"/>
     </xs:choice>
   </xs:group>
@@ -6552,19 +6561,34 @@ Les valeurs suggérées comprennent: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 
       <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
     </xs:complexType>
   </xs:element>
+  <!--<xs:element name="geogName">
+    <xs:annotation>
+      <xs:documentation>(nom de lieu géographique) un nom associé à une caractéristique géographique comme Windrush Valley ou le Mont Sinaï. [13.2.3. Place Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
+      <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+      <xs:attribute name="scheme" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>désigne la liste des ontologies dans lequel l'ensemble des termes concernés sont définis.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>-->
   <xs:element name="geogName">
     <xs:annotation>
       <xs:documentation>(nom de lieu géographique) un nom associé à une caractéristique géographique comme Windrush Valley ou le Mont Sinaï. [13.2.3. Place Names]</xs:documentation>
     </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:group ref="tei:tei_model.placeNamePart"/>
-        <xs:group ref="tei:tei_macro.phraseSeq"/>
-      </xs:sequence>
+      <xs:group ref="tei:tei_macro.phraseSeq"/>
       <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       <xs:attribute name="scheme" type="xs:anyURI">
         <xs:annotation>
@@ -7452,6 +7476,18 @@ Les valeurs suggérées comprennent: 1] main; 2] sub(subordinate) ; 3] alt(alter
       <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
     </xs:complexType>
   </xs:element>
+  <xs:element name="imprimatur">
+    <xs:annotation>
+      <xs:documentation>contient une mention formalisée autorisant la publication d’un ouvrage, parfois exigée sur une page de titre ou à son verso. [4.6. Title Pages]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.paraContent">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="docEdition">
     <xs:annotation>
       <xs:documentation>(édition du document) contient une mention d’édition telle qu’elle figure sur la page de titre d’un document. [4.6. Title Pages]</xs:documentation>
@@ -7462,6 +7498,21 @@ Les valeurs suggérées comprennent: 1] main; 2] sub(subordinate) ; 3] alt(alter
           <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
         </xs:extension>
       </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="docImprint">
+    <xs:annotation>
+      <xs:documentation>(mention d'impression) contient la mention d'impression de l'éditeur (lieu et date de publication, nom de l’éditeur), telle qu’elle est généralement donnée au bas de la page de titre. [4.6. Title Pages]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="tei:tei_model.phrase"/>
+        <xs:element ref="tei:pubPlace"/>
+        <xs:element ref="tei:docDate"/>
+        <xs:element ref="tei:publisher"/>
+        <xs:group ref="tei:tei_model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="docDate">
@@ -7644,6 +7695,7 @@ Les valeurs suggérées comprennent: 1] main; 2] sub(subordinate) ; 3] alt(alter
         <xs:group ref="tei:tei_model.headLike"/>
         <xs:group ref="tei:tei_model.common"/>
         <xs:element ref="tei:figDesc"/>
+        <xs:element ref="tei:caption"/>
         <xs:group ref="tei:tei_model.graphicLike"/>
         <xs:group ref="tei:tei_model.global"/>
         <xs:group ref="tei:tei_model.divBottom"/>
@@ -10875,6 +10927,18 @@ Les valeurs suggérées comprennent: 1] paper; 2] parch(parchment) ; 3] mixed</x
           <xs:documentation>contains a selector or series of selectors specifying the elements to which the contained style description applies, expressed in the language specified in the scheme attribute.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="caption">
+    <xs:annotation>
+      <xs:documentation>contains the text of a caption or other text displayed as part of a film script or screenplay. [7.3.1. Technical Information 7.3. Other Types of Performance Text]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.paraContent">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
     </xs:complexType>
   </xs:element>
 </xs:schema>
