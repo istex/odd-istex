@@ -23988,7 +23988,7 @@ You must supply at least two values for @target on <name/>
                     <desc xmlns:rng="http://relaxng.org/ns/structure/1.0">Class implementing the Body component from the Open Annotation model</desc>
                 </classSpec><classSpec rend="add" predeclare="true" type="model" ident="model.OAAnnotation" mode="add" module="standOff">
                     <desc xmlns:rng="http://relaxng.org/ns/structure/1.0">Class implementing the Annotation component from the Open Annotation model</desc>
-                </classSpec><elementSpec rend="add" ident="standOff" mode="add" ns="http://standoff.proposal" module="standOff"><desc xmlns:rng="http://relaxng.org/ns/structure/1.0">Container element for stand-off annotations embedded in a TEI document</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+                </classSpec><elementSpec rend="add" ident="standOff" mode="add" ns="https://xml-schema.delivery.istex.fr/formats/ns1.xsd" module="standOff"><desc xmlns:rng="http://relaxng.org/ns/structure/1.0">Container element for stand-off annotations embedded in a TEI document</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
                         <memberOf key="model.resourceLike"/>
                         
                         <memberOf key="att.global"/>
@@ -24003,14 +24003,14 @@ You must supply at least two values for @target on <name/>
                         <elementRef key="listAnnotation" minOccurs="0" maxOccurs="unbounded"/>
                     </content><constraintSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="StandOffNamespace" scheme="isoschematron" mode="add">
                         <constraint>
-                            <ns xmlns="http://purl.oclc.org/dsdl/schematron" prefix="stdf" uri="http://standoff.proposal"/>
+                            <ns xmlns="http://purl.oclc.org/dsdl/schematron" prefix="stdf" uri="https://xml-schema.delivery.istex.fr/formats/ns1.xsd"/>
                         </constraint>
                     </constraintSpec><constraintSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="SecondLevelStandOffTyping" scheme="isoschematron" mode="add">
                         <constraint>
                             <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="@type or not(ancestor::stdf:standOff)">This <name/> element must have a @type attribute, since it has an ancestor
                                 <name/></assert>
                         </constraint>
-                    </constraintSpec></elementSpec><elementSpec rend="add" ident="listAnnotation" mode="add" ns="http://standoff.proposal" module="standOff"><desc xmlns:rng="http://relaxng.org/ns/structure/1.0">Groups together various annotations, for instance for parallel interpretations of a spoken segment</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
+                    </constraintSpec></elementSpec><elementSpec rend="add" ident="listAnnotation" mode="add" ns="https://xml-schema.delivery.istex.fr/formats/ns1.xsd" module="standOff"><desc xmlns:rng="http://relaxng.org/ns/structure/1.0">Groups together various annotations, for instance for parallel interpretations of a spoken segment</desc><classes xmlns:rng="http://relaxng.org/ns/structure/1.0">
                         <memberOf key="model.annotation"/>
                         <memberOf key="att.global"/>
                         <memberOf key="att.typed"/>

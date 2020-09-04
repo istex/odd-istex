@@ -2791,7 +2791,7 @@ Elements 7.2.5. Speech Contents] -->
 type %teidata.enumerated;  #IMPLIED >
 <!--doc:Groups together various annotations, for instance for parallel interpretations of a spoken segment -->
 <!ELEMENT listAnnotation (((%model.headLike;)*,(%model.annotation;)+))>
-<!ATTLIST listAnnotation xmlns CDATA "http://standoff.proposal">
+<!ATTLIST listAnnotation xmlns CDATA "https://xml-schema.delivery.istex.fr/formats/ns1.xsd">
 <!ATTLIST listAnnotation
  %tei_att.global.attributes;
  %tei_att.typed.attributes;
@@ -3814,7 +3814,7 @@ type NMTOKENS  #IMPLIED >
  %tei_att.datable.attributes; >
 <!--doc:Container element for stand-off annotations embedded in a TEI document -->
 <!ELEMENT standOff (teiHeader)?(%model.resourceLike;)*(listAnnotation)*>
-<!ATTLIST standOff xmlns CDATA "http://standoff.proposal">
+<!ATTLIST standOff xmlns CDATA "https://xml-schema.delivery.istex.fr/formats/ns1.xsd">
 <!ATTLIST standOff
  %tei_att.global.attributes;
  %tei_att.typed.attributes;

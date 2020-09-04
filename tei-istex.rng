@@ -9315,7 +9315,7 @@ You must supply at least two values for @target on <name/>
       </choice>
    </define>
    <define name="tei_standOff">
-      <element name="standOff" ns="http://standoff.proposal">
+      <element name="standOff" ns="https://xml-schema.delivery.istex.fr/formats/ns1.xsd">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Container element for stand-off annotations embedded in a TEI document</a:documentation>
          <optional>
             <ref name="tei_teiHeader"/>
@@ -9328,7 +9328,7 @@ You must supply at least two values for @target on <name/>
          </zeroOrMore>
          <ns xmlns="http://purl.oclc.org/dsdl/schematron"
              prefix="stdf"
-             uri="http://standoff.proposal"/>
+             uri="https://xml-schema.delivery.istex.fr/formats/ns1.xsd"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-istex-standOff-SecondLevelStandOffTyping-constraint-assert-18">
             <rule context="stdf:standOff">
@@ -9347,7 +9347,7 @@ You must supply at least two values for @target on <name/>
       </element>
    </define>
    <define name="tei_listAnnotation">
-      <element name="listAnnotation" ns="http://standoff.proposal">
+      <element name="listAnnotation" ns="https://xml-schema.delivery.istex.fr/formats/ns1.xsd">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups together various annotations, for instance for parallel interpretations of a spoken segment</a:documentation>
          <group>
             <zeroOrMore>
