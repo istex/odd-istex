@@ -550,6 +550,7 @@
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="tei:hi"/>
       </xs:choice>
+      <xs:attribute name="class"/>
       <xs:attribute name="fontstyle"/>
       <xs:attribute name="fontweight"/>
       <xs:attribute name="mathvariant"/>
